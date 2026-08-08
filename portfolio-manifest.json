@@ -1,0 +1,11 @@
+{
+  "name": "The Business Translator - Financial Services Transformation Translator",
+  "status": "portfolio starter",
+  "data_policy": "synthetic examples only",
+  "projects": [
+    "trade-exception-manager",
+    "compliance-evaluator",
+    "curriculum-design-workflow"
+  ],
+  "evaluation_note": "Headline metrics must be replaced with executed, reproducible run evidence before being presented as validated results."
+}

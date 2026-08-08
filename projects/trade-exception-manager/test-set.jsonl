@@ -1,0 +1,10 @@
+{"case_id": "TX001", "message": "Trade 1001 matched on price but settlement date is absent.", "expected_type": "data_quality"}
+{"case_id": "TX002", "message": "Trade 1002 failed because the receiving account is invalid.", "expected_type": "instruction_issue"}
+{"case_id": "TX003", "message": "Trade 1003 remains unmatched with counterparty confirmation outstanding.", "expected_type": "unmatched_trade"}
+{"case_id": "TX004", "message": "Trade 1004 partially settled; remaining quantity is 2,000.", "expected_type": "partial_settlement"}
+{"case_id": "TX005", "message": "Trade 1005 missed market settlement deadline.", "expected_type": "market_deadline"}
+{"case_id": "TX006", "message": "Trade 1006 failed settlement due to insufficient securities.", "expected_type": "failed_settlement"}
+{"case_id": "TX007", "message": "Narrative says settlement is urgent but gives no deadline.", "expected_type": "data_quality"}
+{"case_id": "TX008", "message": "Counterparty name in the narrative differs from the supplied trade record.", "expected_type": "counterparty_issue"}
+{"case_id": "TX009", "message": "Message reference is malformed and cannot be verified.", "expected_type": "data_quality"}
+{"case_id": "TX010", "message": "Two instructions specify different settlement accounts.", "expected_type": "instruction_issue"}
