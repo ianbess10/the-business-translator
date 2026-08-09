@@ -1,0 +1,35 @@
+{
+  "case_id": "TX007",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Narrative says settlement is urgent but gives no deadline.",
+    "expected_type": "data_quality",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "deadline"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX007\",\n  \"exception_type\": \"market_deadline\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Settlement is urgent\"\n  ],\n  \"missing_information\": [\n    \"Deadline for settlement\"\n  ],\n  \"evidence\": [\n    \"Narrative states settlement is urgent but does not provide a deadline\"\n  ],\n  \"recommended_next_action\": \"Clarify the deadline for the urgent settlement\",\n  \"escalation_required\": false,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "TX007",
+    "exception_type": "market_deadline",
+    "severity": "high",
+    "known_facts": [
+      "Settlement is urgent"
+    ],
+    "missing_information": [
+      "Deadline for settlement"
+    ],
+    "evidence": [
+      "Narrative states settlement is urgent but does not provide a deadline"
+    ],
+    "recommended_next_action": "Clarify the deadline for the urgent settlement",
+    "escalation_required": false,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:28.746318+00:00"
+}

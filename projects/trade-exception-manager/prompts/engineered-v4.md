@@ -1,8 +1,7 @@
-# Engineered Prompt
+# Engineered Prompt (frozen V4)
 
-Current working copy of **prompt version V4**.  
-Frozen snapshot for evaluation: `prompts/engineered-v4.md`.  
-All version comparisons use `trade-exception-test-set-v1.0`.
+Prompt version: **v4**  
+Evaluate only against: **trade-exception-test-set-v1.0**
 
 ## System
 

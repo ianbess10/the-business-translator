@@ -1,0 +1,12 @@
+{
+  "case_id": "TX016",
+  "prompt_variant": "baseline",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Please resolve immediately. Also the weather in London was rainy today.",
+    "expected_type": "insufficient_information"
+  },
+  "output_text": "### Analysis of Settlement Exception\n\n**Case ID:** TX016  \n**Exception Narrative:** \"Please resolve immediately. Also the weather in London was rainy today.\"\n\n#### What Happened\nThe exception narrative indicates that there is an urgent issue that requires immediate resolution. However, the narrative lacks specific details about the nature of the exception, making it difficult to understand the underlying problem. The mention of the weather in London appears to be irrelevant to the settlement issue and does not provide any actionable information.\n\n#### What Should Be Done\n1. **Clarification Needed:**\n   - Reach out to the individual or team that submitted the exception to clarify the specific issue that needs to be resolved. Ask for details regarding the nature of the settlement exception.\n\n2. **Establish a Clear Process:**\n   - Implement a structured process for submitting exceptions that includes:\n     - **Field Definitions:** Clearly define what information is required in the exception narrative.\n     - **Evidence Boundary:** Specify what constitutes sufficient evidence for an exception.\n     - **Classification Taxonomy:** Develop a classification system for different types of exceptions to facilitate better handling and resolution.\n     - **Uncertainty Rule:** Establish guidelines for how to handle cases where the information provided is unclear or incomplete.\n     - **Output Schema:** Define a standard format for responses to exceptions to ensure consistency.\n     - **Escalation Rule:** Create a protocol for escalating unresolved exceptions to higher authorities or teams.\n\n3. **Training and Communication:**\n   - Provide training for all stakeholders on the new exception handling process to ensure everyone understands the requirements and procedures.\n\n4. **Monitoring and Feedback:**\n   - Monitor the resolution of exceptions and gather feedback to continuously improve the process and address any recurring issues.\n\nBy addressing these areas, the organization can improve the handling of settlement exceptions and reduce the likelihood of vague or irrelevant submissions in the future.",
+  "created_at": "2026-08-08T14:28:57.239098+00:00"
+}

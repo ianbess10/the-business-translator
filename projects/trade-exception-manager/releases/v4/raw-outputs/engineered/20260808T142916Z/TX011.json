@@ -1,0 +1,39 @@
+{
+  "case_id": "TX011",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1011 has no ISIN, quantity or settlement date in the free-text note.",
+    "expected_type": "insufficient_information",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "ISIN",
+      "quantity",
+      "settlement date"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX011\",\n  \"exception_type\": \"data_quality\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 1011 has been identified.\"\n  ],\n  \"missing_information\": [\n    \"ISIN\",\n    \"quantity\",\n    \"settlement date\"\n  ],\n  \"evidence\": [\n    \"Free-text note indicates missing ISIN, quantity, and settlement date.\"\n  ],\n  \"recommended_next_action\": \"Obtain the missing ISIN, quantity, and settlement date for Trade 1011.\",\n  \"escalation_required\": false,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "TX011",
+    "exception_type": "data_quality",
+    "severity": "high",
+    "known_facts": [
+      "Trade 1011 has been identified."
+    ],
+    "missing_information": [
+      "ISIN",
+      "quantity",
+      "settlement date"
+    ],
+    "evidence": [
+      "Free-text note indicates missing ISIN, quantity, and settlement date."
+    ],
+    "recommended_next_action": "Obtain the missing ISIN, quantity, and settlement date for Trade 1011.",
+    "escalation_required": false,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:36.102076+00:00"
+}

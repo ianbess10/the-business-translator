@@ -20,4 +20,6 @@ A qualified operations professional reviews the output before any consequential 
 
 ### Audit trail
 
-Store prompt version, model version, input case ID, output, evaluator score and approval status.
+Store prompt version, model version, test-set version (`trade-exception-test-set-v1.0`), input case ID, output, evaluator score and approval status.
+
+Frozen evaluation data lives under `datasets/` and must not be edited in place.

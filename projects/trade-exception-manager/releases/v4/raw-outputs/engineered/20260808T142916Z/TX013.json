@@ -1,0 +1,33 @@
+{
+  "case_id": "TX013",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1013 unmatched after allegement received; no affirming broker response.",
+    "expected_type": "unmatched_trade",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "affirming broker response"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX013\",\n  \"exception_type\": \"unmatched_trade\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 1013 is unmatched\",\n    \"Allegement received\",\n    \"No affirming broker response\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [],\n  \"recommended_next_action\": \"Investigate the lack of broker response and seek affirmation.\",\n  \"escalation_required\": false,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "TX013",
+    "exception_type": "unmatched_trade",
+    "severity": "high",
+    "known_facts": [
+      "Trade 1013 is unmatched",
+      "Allegement received",
+      "No affirming broker response"
+    ],
+    "missing_information": [],
+    "evidence": [],
+    "recommended_next_action": "Investigate the lack of broker response and seek affirmation.",
+    "escalation_required": false,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:39.701383+00:00"
+}

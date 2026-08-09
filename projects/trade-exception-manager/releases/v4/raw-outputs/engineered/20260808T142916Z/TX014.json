@@ -1,0 +1,33 @@
+{
+  "case_id": "TX014",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1014 partially settled for 5,000 of 12,000 shares; reason code PEND.",
+    "expected_type": "partial_settlement",
+    "expected_escalation": false,
+    "expected_missing_information": []
+  },
+  "output_text": "{\n  \"case_id\": \"TX014\",\n  \"exception_type\": \"partial_settlement\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"Trade 1014 partially settled for 5,000 of 12,000 shares\"\n  ],\n  \"missing_information\": [\n    \"Reason for partial settlement beyond reason code PEND\"\n  ],\n  \"evidence\": [\n    \"Trade 1014 details\"\n  ],\n  \"recommended_next_action\": \"Investigate the reason for the partial settlement and resolve the issue.\",\n  \"escalation_required\": false,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "TX014",
+    "exception_type": "partial_settlement",
+    "severity": "medium",
+    "known_facts": [
+      "Trade 1014 partially settled for 5,000 of 12,000 shares"
+    ],
+    "missing_information": [
+      "Reason for partial settlement beyond reason code PEND"
+    ],
+    "evidence": [
+      "Trade 1014 details"
+    ],
+    "recommended_next_action": "Investigate the reason for the partial settlement and resolve the issue.",
+    "escalation_required": false,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:42.052534+00:00"
+}

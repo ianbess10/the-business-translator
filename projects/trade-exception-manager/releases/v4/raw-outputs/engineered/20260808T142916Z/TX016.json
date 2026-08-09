@@ -1,0 +1,32 @@
+{
+  "case_id": "TX016",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Please resolve immediately. Also the weather in London was rainy today.",
+    "expected_type": "insufficient_information",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "trade identifier",
+      "exception details"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX016\",\n  \"exception_type\": \"other\",\n  \"severity\": \"high\",\n  \"known_facts\": [],\n  \"missing_information\": [],\n  \"evidence\": [\n    \"Request to resolve immediately\"\n  ],\n  \"recommended_next_action\": \"Investigate the request for immediate resolution.\",\n  \"escalation_required\": true,\n  \"confidence\": 0.7\n}",
+  "output_json": {
+    "case_id": "TX016",
+    "exception_type": "other",
+    "severity": "high",
+    "known_facts": [],
+    "missing_information": [],
+    "evidence": [
+      "Request to resolve immediately"
+    ],
+    "recommended_next_action": "Investigate the request for immediate resolution.",
+    "escalation_required": true,
+    "confidence": 0.7
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:45.094278+00:00"
+}

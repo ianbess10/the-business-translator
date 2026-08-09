@@ -1,0 +1,35 @@
+{
+  "case_id": "TX001",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1001 matched on price but settlement date is absent.",
+    "expected_type": "data_quality",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "settlement date"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX001\",\n  \"exception_type\": \"failed_settlement\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 1001 matched on price\"\n  ],\n  \"missing_information\": [\n    \"settlement date\"\n  ],\n  \"evidence\": [\n    \"Trade 1001 matched on price but settlement date is absent.\"\n  ],\n  \"recommended_next_action\": \"Obtain the missing settlement date for Trade 1001.\",\n  \"escalation_required\": false,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "TX001",
+    "exception_type": "failed_settlement",
+    "severity": "high",
+    "known_facts": [
+      "Trade 1001 matched on price"
+    ],
+    "missing_information": [
+      "settlement date"
+    ],
+    "evidence": [
+      "Trade 1001 matched on price but settlement date is absent."
+    ],
+    "recommended_next_action": "Obtain the missing settlement date for Trade 1001.",
+    "escalation_required": false,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:18.774299+00:00"
+}

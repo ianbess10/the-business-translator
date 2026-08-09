@@ -1,0 +1,31 @@
+{
+  "case_id": "TX002",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1002 failed because the receiving account is invalid.",
+    "expected_type": "instruction_issue",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "valid receiving account"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX002\",\n  \"exception_type\": \"failed_settlement\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 1002 failed because the receiving account is invalid.\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [],\n  \"recommended_next_action\": \"Verify the receiving account details and correct any inaccuracies.\",\n  \"escalation_required\": false,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "TX002",
+    "exception_type": "failed_settlement",
+    "severity": "high",
+    "known_facts": [
+      "Trade 1002 failed because the receiving account is invalid."
+    ],
+    "missing_information": [],
+    "evidence": [],
+    "recommended_next_action": "Verify the receiving account details and correct any inaccuracies.",
+    "escalation_required": false,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:20.349338+00:00"
+}

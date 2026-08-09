@@ -1,0 +1,32 @@
+{
+  "case_id": "TX003",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1003 remains unmatched with counterparty confirmation outstanding.",
+    "expected_type": "unmatched_trade",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "counterparty confirmation"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX003\",\n  \"exception_type\": \"unmatched_trade\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 1003 remains unmatched\",\n    \"Counterparty confirmation is outstanding\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [],\n  \"recommended_next_action\": \"Follow up with the counterparty to obtain confirmation.\",\n  \"escalation_required\": false,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "TX003",
+    "exception_type": "unmatched_trade",
+    "severity": "high",
+    "known_facts": [
+      "Trade 1003 remains unmatched",
+      "Counterparty confirmation is outstanding"
+    ],
+    "missing_information": [],
+    "evidence": [],
+    "recommended_next_action": "Follow up with the counterparty to obtain confirmation.",
+    "escalation_required": false,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:21.976424+00:00"
+}

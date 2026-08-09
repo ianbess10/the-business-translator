@@ -1,0 +1,32 @@
+{
+  "case_id": "TX015",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1015 failed because cash funding was not available at cut-off.",
+    "expected_type": "failed_settlement",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "funding confirmation"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX015\",\n  \"exception_type\": \"failed_settlement\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 1015 failed\",\n    \"Cash funding was not available at cut-off\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [],\n  \"recommended_next_action\": \"Investigate cash funding availability and reschedule settlement\",\n  \"escalation_required\": false,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "TX015",
+    "exception_type": "failed_settlement",
+    "severity": "high",
+    "known_facts": [
+      "Trade 1015 failed",
+      "Cash funding was not available at cut-off"
+    ],
+    "missing_information": [],
+    "evidence": [],
+    "recommended_next_action": "Investigate cash funding availability and reschedule settlement",
+    "escalation_required": false,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:43.705064+00:00"
+}

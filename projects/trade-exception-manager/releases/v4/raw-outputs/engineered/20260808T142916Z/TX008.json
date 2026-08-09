@@ -1,0 +1,31 @@
+{
+  "case_id": "TX008",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Counterparty name in the narrative differs from the supplied trade record.",
+    "expected_type": "counterparty_issue",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "confirmed counterparty name"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX008\",\n  \"exception_type\": \"counterparty_issue\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"Counterparty name in the narrative differs from the supplied trade record.\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [],\n  \"recommended_next_action\": \"Verify the correct counterparty name and update the trade record accordingly.\",\n  \"escalation_required\": false,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "TX008",
+    "exception_type": "counterparty_issue",
+    "severity": "medium",
+    "known_facts": [
+      "Counterparty name in the narrative differs from the supplied trade record."
+    ],
+    "missing_information": [],
+    "evidence": [],
+    "recommended_next_action": "Verify the correct counterparty name and update the trade record accordingly.",
+    "escalation_required": false,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:30.245719+00:00"
+}

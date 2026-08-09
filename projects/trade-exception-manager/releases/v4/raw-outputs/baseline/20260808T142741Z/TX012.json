@@ -1,0 +1,12 @@
+{
+  "case_id": "TX012",
+  "prompt_variant": "baseline",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1012 failed settlement; SSI BIC does not match the standing instruction file.",
+    "expected_type": "instruction_issue"
+  },
+  "output_text": "### Analysis of Settlement Exception\n\n**Case ID:** TX012  \n**Exception Narrative:** Trade 1012 failed settlement; SSI BIC does not match the standing instruction file.\n\n#### What Happened\nThe settlement exception indicates that a trade (Trade 1012) could not be settled due to a mismatch between the Bank Identifier Code (BIC) in the Standing Settlement Instruction (SSI) and the BIC recorded in the standing instruction file. This suggests that there may be an error in the data entry or an update that has not been reflected in the relevant files.\n\n#### What Should Be Done\n1. **Investigate the Mismatch:**\n   - Review the BIC associated with Trade 1012 and compare it with the BIC in the standing instruction file.\n   - Identify if the BIC in the trade was entered incorrectly or if the standing instruction file is outdated.\n\n2. **Update Records:**\n   - If the trade BIC is correct, update the standing instruction file to reflect the correct BIC.\n   - If the standing instruction file is correct, correct the BIC in the trade record.\n\n3. **Validation Process:**\n   - Implement a validation process to ensure that BICs in trades match those in the standing instruction file before settlement attempts.\n   - Consider adding automated checks to flag discrepancies before they lead to settlement failures.\n\n4. **Documentation and Training:**\n   - Document the findings and the steps taken to resolve the issue.\n   - Provide training to relevant staff on the importance of accurate data entry and the implications of mismatches in settlement instructions.\n\n5. **Escalation:**\n   - If the issue persists or if there are systemic problems identified, escalate the matter to the relevant department for further investigation and resolution.\n\n### Conclusion\nThe failure of Trade 1012's settlement due to a BIC mismatch highlights the need for accurate data management and validation processes. By addressing the immediate issue and implementing preventive measures, future settlement exceptions can be minimized.",
+  "created_at": "2026-08-08T14:28:40.086127+00:00"
+}

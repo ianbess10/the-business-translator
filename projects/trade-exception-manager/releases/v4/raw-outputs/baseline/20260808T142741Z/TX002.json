@@ -1,0 +1,12 @@
+{
+  "case_id": "TX002",
+  "prompt_variant": "baseline",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1002 failed because the receiving account is invalid.",
+    "expected_type": "instruction_issue"
+  },
+  "output_text": "### Analysis of Settlement Exception\n\n**Case ID:** TX002  \n**Exception Narrative:** Trade 1002 failed because the receiving account is invalid.\n\n#### What Happened\nIn this case, a trade identified as Trade 1002 could not be completed due to an issue with the receiving account. Specifically, the account designated to receive the trade is deemed invalid, which could imply several potential issues such as:\n- The account number is incorrect or improperly formatted.\n- The account does not exist or has been closed.\n- The account is not authorized to receive the type of trade being executed.\n\n#### Recommended Actions\nTo address this settlement exception, the following steps should be taken:\n\n1. **Verify Account Details:**\n   - Check the account number associated with the receiving account for accuracy.\n   - Confirm that the account is active and in good standing.\n\n2. **Consult Account Management:**\n   - If the account appears to be invalid, reach out to the account management team or the client to clarify the status of the account.\n   - Ensure that the account is authorized to receive the specific type of trade.\n\n3. **Error Classification:**\n   - Classify the error based on the nature of the invalid account (e.g., formatting error, non-existent account, authorization issue) to facilitate future analysis and reporting.\n\n4. **Documentation:**\n   - Document the findings and actions taken to resolve the issue for future reference and compliance purposes.\n\n5. **Escalation:**\n   - If the issue cannot be resolved promptly, escalate the matter to a supervisor or a specialized team for further investigation.\n\n6. **Preventive Measures:**\n   - Review and enhance the validation processes for account details during trade execution to minimize the occurrence of similar exceptions in the future.\n\n### Conclusion\nThe exception indicates a critical issue with the receiving account that needs immediate attention. By following the recommended actions, the team can resolve the issue effectively and implement measures to prevent recurrence.",
+  "created_at": "2026-08-08T14:27:52.866196+00:00"
+}

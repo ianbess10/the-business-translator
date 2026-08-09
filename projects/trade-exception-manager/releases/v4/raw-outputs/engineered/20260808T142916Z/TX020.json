@@ -1,0 +1,35 @@
+{
+  "case_id": "TX020",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1020 narrative only says 'see previous email' with no attached facts.",
+    "expected_type": "insufficient_information",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "exception facts",
+      "previous email content"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX020\",\n  \"exception_type\": \"insufficient_information\",\n  \"severity\": \"high\",\n  \"known_facts\": [],\n  \"missing_information\": [\n    \"Details of trade 1020\",\n    \"Context of the previous email\"\n  ],\n  \"evidence\": [\n    \"Trade 1020 narrative only says 'see previous email' with no attached facts.\"\n  ],\n  \"recommended_next_action\": \"Request additional information regarding trade 1020.\",\n  \"escalation_required\": false,\n  \"confidence\": 0.7\n}",
+  "output_json": {
+    "case_id": "TX020",
+    "exception_type": "insufficient_information",
+    "severity": "high",
+    "known_facts": [],
+    "missing_information": [
+      "Details of trade 1020",
+      "Context of the previous email"
+    ],
+    "evidence": [
+      "Trade 1020 narrative only says 'see previous email' with no attached facts."
+    ],
+    "recommended_next_action": "Request additional information regarding trade 1020.",
+    "escalation_required": false,
+    "confidence": 0.7
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:52.450884+00:00"
+}

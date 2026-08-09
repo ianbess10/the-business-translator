@@ -1,0 +1,12 @@
+{
+  "case_id": "TX015",
+  "prompt_variant": "baseline",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1015 failed because cash funding was not available at cut-off.",
+    "expected_type": "failed_settlement"
+  },
+  "output_text": "### Analysis of Settlement Exception\n\n**Case ID:** TX015  \n**Exception Narrative:** Trade 1015 failed because cash funding was not available at cut-off.\n\n#### What Happened:\nThe settlement exception indicates that a trade (Trade 1015) could not be completed due to a lack of available cash funding at the designated cut-off time. This suggests that the necessary funds to settle the trade were not present in the account or were not transferred in time to meet the settlement requirements.\n\n#### What Should Be Done:\n1. **Investigate the Cause:**\n   - Review the account balance and funding history leading up to the cut-off time to determine why cash funding was insufficient.\n   - Check for any delays in fund transfers or issues with the funding source.\n\n2. **Communication:**\n   - Notify relevant stakeholders (e.g., traders, finance team) about the failed trade and the reasons behind it.\n   - If applicable, inform the counterparty of the settlement failure and discuss potential next steps.\n\n3. **Remediation:**\n   - Ensure that the necessary funds are available for future trades to prevent similar issues.\n   - Consider implementing automated alerts for low cash balances before cut-off times.\n\n4. **Policy Review:**\n   - Review and update internal policies regarding cash management and funding requirements for trade settlements.\n   - Establish clear guidelines for cut-off times and funding procedures.\n\n5. **Documentation:**\n   - Document the incident, including the cause, impact, and steps taken to resolve the issue, for future reference and analysis.\n\n6. **Preventive Measures:**\n   - Explore options for improving cash flow management, such as better forecasting of funding needs or establishing credit lines for urgent funding requirements.\n   - Consider implementing a more robust monitoring system to track cash availability in real-time.\n\n### Conclusion\nThe failure of Trade 1015 due to insufficient cash funding highlights the need for improved cash management practices and communication protocols. By investigating the cause, notifying stakeholders, and implementing preventive measures, the organization can mitigate the risk of similar settlement exceptions in the future.",
+  "created_at": "2026-08-08T14:28:53.341220+00:00"
+}

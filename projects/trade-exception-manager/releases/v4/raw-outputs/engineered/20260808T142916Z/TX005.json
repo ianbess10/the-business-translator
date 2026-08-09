@@ -1,0 +1,31 @@
+{
+  "case_id": "TX005",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1005 missed market settlement deadline.",
+    "expected_type": "market_deadline",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "deadline timestamp"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX005\",\n  \"exception_type\": \"market_deadline\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 1005 missed market settlement deadline.\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [],\n  \"recommended_next_action\": \"Investigate reasons for missing the market settlement deadline and take corrective actions.\",\n  \"escalation_required\": false,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "TX005",
+    "exception_type": "market_deadline",
+    "severity": "high",
+    "known_facts": [
+      "Trade 1005 missed market settlement deadline."
+    ],
+    "missing_information": [],
+    "evidence": [],
+    "recommended_next_action": "Investigate reasons for missing the market settlement deadline and take corrective actions.",
+    "escalation_required": false,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:25.330340+00:00"
+}

@@ -1,0 +1,717 @@
+{
+  "evaluation_id": "20260808T142952Z",
+  "created_at": "2026-08-08T14:29:52.779804+00:00",
+  "test_set": "test-set.jsonl",
+  "data_policy": "synthetic examples only",
+  "disclaimer": "These metrics were generated from a local evaluation run. Do not substitute illustrative portfolio figures for this report.",
+  "variants": {
+    "engineered": {
+      "prompt_variant": "engineered",
+      "run_dir": "/Users/ianbess/Library/CloudStorage/GoogleDrive-ian@thebusinesstranslator.com/My Drive/Saved from Chrome/the-business-translator/projects/trade-exception-manager/results/engineered/20260808T142916Z",
+      "run_meta": {
+        "run_id": "20260808T142916Z",
+        "prompt_variant": "engineered",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "case_count": 20,
+        "schema": "engineered_output.schema.json",
+        "test_set": "test-set.jsonl",
+        "schema_valid_count": 20,
+        "created_at": "2026-08-08T14:29:52.451709+00:00",
+        "notes": "Synthetic test data only. Metrics require evaluate.py."
+      },
+      "summary": {
+        "case_count": 20,
+        "classification_accuracy": 0.65,
+        "json_schema_compliance": 1.0,
+        "missing_information_detection": 0.375,
+        "escalation_accuracy": 0.7,
+        "unsupported_claim_flags_total": 0,
+        "unsupported_claim_rate": 0.0
+      },
+      "cases": [
+        {
+          "case_id": "TX001",
+          "classification_correct": false,
+          "predicted_type": "failed_settlement",
+          "expected_type": "data_quality",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "settlement date"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "settlement date"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX002",
+          "classification_correct": false,
+          "predicted_type": "failed_settlement",
+          "expected_type": "instruction_issue",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "valid receiving account"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX003",
+          "classification_correct": true,
+          "predicted_type": "unmatched_trade",
+          "expected_type": "unmatched_trade",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "counterparty confirmation"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX004",
+          "classification_correct": true,
+          "predicted_type": "partial_settlement",
+          "expected_type": "partial_settlement",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [],
+            "unmatched_expected": [],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX005",
+          "classification_correct": true,
+          "predicted_type": "market_deadline",
+          "expected_type": "market_deadline",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "deadline timestamp"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": false,
+          "predicted_escalation": false,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX006",
+          "classification_correct": true,
+          "predicted_type": "failed_settlement",
+          "expected_type": "failed_settlement",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [],
+            "unmatched_expected": [],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX007",
+          "classification_correct": false,
+          "predicted_type": "market_deadline",
+          "expected_type": "data_quality",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "deadline"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "Deadline for settlement"
+            ]
+          },
+          "escalation_correct": false,
+          "predicted_escalation": false,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX008",
+          "classification_correct": true,
+          "predicted_type": "counterparty_issue",
+          "expected_type": "counterparty_issue",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "confirmed counterparty name"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": false,
+          "predicted_escalation": false,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX009",
+          "classification_correct": true,
+          "predicted_type": "data_quality",
+          "expected_type": "data_quality",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "valid message reference"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX010",
+          "classification_correct": true,
+          "predicted_type": "instruction_issue",
+          "expected_type": "instruction_issue",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "authoritative settlement account"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX011",
+          "classification_correct": false,
+          "predicted_type": "data_quality",
+          "expected_type": "insufficient_information",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "ISIN",
+              "quantity",
+              "settlement date"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "ISIN",
+              "quantity",
+              "settlement date"
+            ]
+          },
+          "escalation_correct": false,
+          "predicted_escalation": false,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX012",
+          "classification_correct": false,
+          "predicted_type": "failed_settlement",
+          "expected_type": "instruction_issue",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "correct SSI BIC"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX013",
+          "classification_correct": true,
+          "predicted_type": "unmatched_trade",
+          "expected_type": "unmatched_trade",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "affirming broker response"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX014",
+          "classification_correct": true,
+          "predicted_type": "partial_settlement",
+          "expected_type": "partial_settlement",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "Reason for partial settlement beyond reason code PEND"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX015",
+          "classification_correct": true,
+          "predicted_type": "failed_settlement",
+          "expected_type": "failed_settlement",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "funding confirmation"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX016",
+          "classification_correct": false,
+          "predicted_type": "other",
+          "expected_type": "insufficient_information",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "trade identifier",
+              "exception details"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX017",
+          "classification_correct": true,
+          "predicted_type": "counterparty_issue",
+          "expected_type": "counterparty_issue",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "authoritative LEI"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX018",
+          "classification_correct": false,
+          "predicted_type": "failed_settlement",
+          "expected_type": "market_deadline",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "new intended settlement date"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "New intended settlement date"
+            ]
+          },
+          "escalation_correct": false,
+          "predicted_escalation": false,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX019",
+          "classification_correct": true,
+          "predicted_type": "instruction_issue",
+          "expected_type": "instruction_issue",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "authoritative settlement method"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "TX020",
+          "classification_correct": true,
+          "predicted_type": "insufficient_information",
+          "expected_type": "insufficient_information",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.5,
+          "missing_information_detail": {
+            "score": 0.5,
+            "matched_expected": [
+              "previous email content"
+            ],
+            "unmatched_expected": [
+              "exception facts"
+            ],
+            "extra_predicted": [
+              "Details of trade 1020",
+              "Context of the previous email"
+            ]
+          },
+          "escalation_correct": false,
+          "predicted_escalation": false,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        }
+      ]
+    },
+    "baseline": {
+      "prompt_variant": "baseline",
+      "run_dir": "/Users/ianbess/Library/CloudStorage/GoogleDrive-ian@thebusinesstranslator.com/My Drive/Saved from Chrome/the-business-translator/projects/trade-exception-manager/results/baseline/20260808T142741Z",
+      "run_meta": {
+        "run_id": "20260808T142741Z",
+        "prompt_variant": "baseline",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "case_count": 20,
+        "test_set": "test-set.jsonl",
+        "created_at": "2026-08-08T14:29:15.636205+00:00",
+        "notes": "Synthetic test data only. Metrics require evaluate.py."
+      },
+      "summary": {
+        "case_count": 20,
+        "classification_accuracy": null,
+        "json_schema_compliance": 0.0,
+        "missing_information_detection": null,
+        "escalation_accuracy": null,
+        "unsupported_claim_flags_total": 1,
+        "unsupported_claim_rate": 0.05
+      },
+      "cases": [
+        {
+          "case_id": "TX001",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX002",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX003",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX004",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX005",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX006",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX007",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX008",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX009",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX010",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX011",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX012",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX013",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX014",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX015",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX016",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX017",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [
+            "lei consistency"
+          ],
+          "unsupported_claim_count": 1,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX018",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX019",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        },
+        {
+          "case_id": "TX020",
+          "schema_valid": false,
+          "classification_correct": null,
+          "missing_information_score": null,
+          "escalation_correct": null,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0,
+          "notes": "Baseline is free text; structured metrics apply to engineered runs."
+        }
+      ]
+    }
+  }
+}

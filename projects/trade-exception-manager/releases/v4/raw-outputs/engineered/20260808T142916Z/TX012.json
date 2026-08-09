@@ -1,0 +1,35 @@
+{
+  "case_id": "TX012",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1012 failed settlement; SSI BIC does not match the standing instruction file.",
+    "expected_type": "instruction_issue",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "correct SSI BIC"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX012\",\n  \"exception_type\": \"failed_settlement\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 1012 failed settlement\",\n    \"SSI BIC does not match the standing instruction file\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [\n    \"Trade 1012\",\n    \"SSI BIC mismatch\"\n  ],\n  \"recommended_next_action\": \"Review and correct the SSI BIC in the standing instruction file\",\n  \"escalation_required\": false,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "TX012",
+    "exception_type": "failed_settlement",
+    "severity": "high",
+    "known_facts": [
+      "Trade 1012 failed settlement",
+      "SSI BIC does not match the standing instruction file"
+    ],
+    "missing_information": [],
+    "evidence": [
+      "Trade 1012",
+      "SSI BIC mismatch"
+    ],
+    "recommended_next_action": "Review and correct the SSI BIC in the standing instruction file",
+    "escalation_required": false,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:38.122976+00:00"
+}

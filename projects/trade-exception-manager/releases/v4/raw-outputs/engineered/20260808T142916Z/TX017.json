@@ -1,0 +1,33 @@
+{
+  "case_id": "TX017",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1017 counterparty LEI in the email does not match the trade blotter LEI.",
+    "expected_type": "counterparty_issue",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "authoritative LEI"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX017\",\n  \"exception_type\": \"counterparty_issue\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 1017 counterparty LEI in the email does not match the trade blotter LEI.\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [\n    \"Counterparty LEI mismatch between email and trade blotter.\"\n  ],\n  \"recommended_next_action\": \"Investigate the discrepancy in counterparty LEIs.\",\n  \"escalation_required\": true,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "TX017",
+    "exception_type": "counterparty_issue",
+    "severity": "high",
+    "known_facts": [
+      "Trade 1017 counterparty LEI in the email does not match the trade blotter LEI."
+    ],
+    "missing_information": [],
+    "evidence": [
+      "Counterparty LEI mismatch between email and trade blotter."
+    ],
+    "recommended_next_action": "Investigate the discrepancy in counterparty LEIs.",
+    "escalation_required": true,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:46.808598+00:00"
+}

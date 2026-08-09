@@ -1,0 +1,12 @@
+{
+  "case_id": "TX007",
+  "prompt_variant": "baseline",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Narrative says settlement is urgent but gives no deadline.",
+    "expected_type": "data_quality"
+  },
+  "output_text": "### Analysis of Settlement Exception\n\n**Case ID:** TX007  \n**Exception Narrative:** The narrative indicates that the settlement is urgent but fails to specify a deadline.\n\n#### What Happened\nIn this case, the settlement process has been flagged as urgent, which typically implies that there is a pressing need to resolve the matter quickly. However, the lack of a specified deadline creates ambiguity regarding the urgency. Without a clear timeframe, it is difficult to prioritize actions, allocate resources effectively, or manage stakeholder expectations.\n\n#### Recommended Actions\n\n1. **Clarify the Deadline:**\n   - Reach out to the relevant parties (e.g., the individual or team responsible for the settlement) to obtain a specific deadline for the settlement. This will help in understanding the urgency and planning accordingly.\n\n2. **Document the Clarification:**\n   - Once a deadline is established, document it clearly in the case file to ensure that all stakeholders are aware of the timeline and can act accordingly.\n\n3. **Prioritize the Case:**\n   - If the settlement is indeed urgent, prioritize it within the workflow to ensure that it receives the necessary attention and resources.\n\n4. **Establish Communication Protocols:**\n   - Set up regular check-ins or updates regarding the settlement process to ensure that all parties are aligned and informed about progress and any potential issues.\n\n5. **Review and Update Policies:**\n   - Consider reviewing the policies or procedures related to settlement exceptions to ensure that future narratives include clear deadlines and other critical information to avoid similar issues.\n\n6. **Create a Template for Future Exceptions:**\n   - Develop a standardized template for documenting settlement exceptions that includes fields for urgency, deadlines, and other relevant details to improve clarity and consistency in future cases.\n\nBy taking these steps, the ambiguity surrounding the urgency of the settlement can be resolved, leading to a more efficient and effective resolution process.",
+  "created_at": "2026-08-08T14:28:15.591462+00:00"
+}

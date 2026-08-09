@@ -1,0 +1,31 @@
+{
+  "case_id": "TX009",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Message reference is malformed and cannot be verified.",
+    "expected_type": "data_quality",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "valid message reference"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX009\",\n  \"exception_type\": \"data_quality\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Message reference is malformed and cannot be verified.\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [],\n  \"recommended_next_action\": \"Investigate the malformed message reference and correct it.\",\n  \"escalation_required\": true,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "TX009",
+    "exception_type": "data_quality",
+    "severity": "high",
+    "known_facts": [
+      "Message reference is malformed and cannot be verified."
+    ],
+    "missing_information": [],
+    "evidence": [],
+    "recommended_next_action": "Investigate the malformed message reference and correct it.",
+    "escalation_required": true,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:32.106761+00:00"
+}

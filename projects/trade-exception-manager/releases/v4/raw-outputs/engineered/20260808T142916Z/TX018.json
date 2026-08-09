@@ -1,0 +1,35 @@
+{
+  "case_id": "TX018",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1018 settlement postponed after market holiday; new intended settlement date not provided.",
+    "expected_type": "market_deadline",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "new intended settlement date"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"TX018\",\n  \"exception_type\": \"failed_settlement\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"Trade 1018 settlement postponed after market holiday\"\n  ],\n  \"missing_information\": [\n    \"New intended settlement date\"\n  ],\n  \"evidence\": [\n    \"Postponement of settlement due to market holiday\"\n  ],\n  \"recommended_next_action\": \"Obtain new intended settlement date from relevant parties\",\n  \"escalation_required\": false,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "TX018",
+    "exception_type": "failed_settlement",
+    "severity": "medium",
+    "known_facts": [
+      "Trade 1018 settlement postponed after market holiday"
+    ],
+    "missing_information": [
+      "New intended settlement date"
+    ],
+    "evidence": [
+      "Postponement of settlement due to market holiday"
+    ],
+    "recommended_next_action": "Obtain new intended settlement date from relevant parties",
+    "escalation_required": false,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-08T14:29:48.726873+00:00"
+}

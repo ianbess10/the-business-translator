@@ -1,0 +1,216 @@
+{
+  "reference_id": "v4-engineered-on-trade-exception-test-set-v1.0",
+  "prompt_version": "v4",
+  "prompt_file": "prompts/engineered-v4.md",
+  "test_set_id": "trade-exception-test-set-v1.0",
+  "test_set_version": "1.0",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "temperature": 0,
+  "source_evaluation_id": "20260808T142952Z",
+  "source_engineered_run_id": "20260808T142916Z",
+  "case_count": 20,
+  "metrics": {
+    "classification_accuracy": 0.65,
+    "json_schema_compliance": 1.0,
+    "missing_information_detection": 0.375,
+    "escalation_accuracy": 0.7,
+    "unsupported_claim_flags_total": 0,
+    "unsupported_claim_rate": 0.0
+  },
+  "headline": {
+    "classification": "65%",
+    "missing_information": "37.5%",
+    "escalation": "70%"
+  },
+  "protocol": [
+    "Freeze cases as trade-exception-test-set-v1.0",
+    "Measure prompt version on exactly those 20 cases",
+    "Failure analysis",
+    "Revise prompt to next version",
+    "Re-run on the same 20 cases",
+    "Measure difference vs prior version"
+  ],
+  "failure_index": {
+    "classification": [
+      {
+        "case_id": "TX001",
+        "predicted": "failed_settlement",
+        "expected": "data_quality"
+      },
+      {
+        "case_id": "TX002",
+        "predicted": "failed_settlement",
+        "expected": "instruction_issue"
+      },
+      {
+        "case_id": "TX007",
+        "predicted": "market_deadline",
+        "expected": "data_quality"
+      },
+      {
+        "case_id": "TX011",
+        "predicted": "data_quality",
+        "expected": "insufficient_information"
+      },
+      {
+        "case_id": "TX012",
+        "predicted": "failed_settlement",
+        "expected": "instruction_issue"
+      },
+      {
+        "case_id": "TX016",
+        "predicted": "other",
+        "expected": "insufficient_information"
+      },
+      {
+        "case_id": "TX018",
+        "predicted": "failed_settlement",
+        "expected": "market_deadline"
+      }
+    ],
+    "missing_information": [
+      {
+        "case_id": "TX002",
+        "score": 0.0,
+        "unmatched_expected": [
+          "valid receiving account"
+        ],
+        "predicted": []
+      },
+      {
+        "case_id": "TX003",
+        "score": 0.0,
+        "unmatched_expected": [
+          "counterparty confirmation"
+        ],
+        "predicted": []
+      },
+      {
+        "case_id": "TX005",
+        "score": 0.0,
+        "unmatched_expected": [
+          "deadline timestamp"
+        ],
+        "predicted": []
+      },
+      {
+        "case_id": "TX008",
+        "score": 0.0,
+        "unmatched_expected": [
+          "confirmed counterparty name"
+        ],
+        "predicted": []
+      },
+      {
+        "case_id": "TX009",
+        "score": 0.0,
+        "unmatched_expected": [
+          "valid message reference"
+        ],
+        "predicted": []
+      },
+      {
+        "case_id": "TX010",
+        "score": 0.0,
+        "unmatched_expected": [
+          "authoritative settlement account"
+        ],
+        "predicted": []
+      },
+      {
+        "case_id": "TX012",
+        "score": 0.0,
+        "unmatched_expected": [
+          "correct SSI BIC"
+        ],
+        "predicted": []
+      },
+      {
+        "case_id": "TX013",
+        "score": 0.0,
+        "unmatched_expected": [
+          "affirming broker response"
+        ],
+        "predicted": []
+      },
+      {
+        "case_id": "TX015",
+        "score": 0.0,
+        "unmatched_expected": [
+          "funding confirmation"
+        ],
+        "predicted": []
+      },
+      {
+        "case_id": "TX016",
+        "score": 0.0,
+        "unmatched_expected": [
+          "trade identifier",
+          "exception details"
+        ],
+        "predicted": []
+      },
+      {
+        "case_id": "TX017",
+        "score": 0.0,
+        "unmatched_expected": [
+          "authoritative LEI"
+        ],
+        "predicted": []
+      },
+      {
+        "case_id": "TX019",
+        "score": 0.0,
+        "unmatched_expected": [
+          "authoritative settlement method"
+        ],
+        "predicted": []
+      },
+      {
+        "case_id": "TX020",
+        "score": 0.5,
+        "unmatched_expected": [
+          "exception facts"
+        ],
+        "predicted": [
+          "Details of trade 1020",
+          "Context of the previous email"
+        ]
+      }
+    ],
+    "escalation": [
+      {
+        "case_id": "TX005",
+        "predicted": false,
+        "expected": true
+      },
+      {
+        "case_id": "TX007",
+        "predicted": false,
+        "expected": true
+      },
+      {
+        "case_id": "TX008",
+        "predicted": false,
+        "expected": true
+      },
+      {
+        "case_id": "TX011",
+        "predicted": false,
+        "expected": true
+      },
+      {
+        "case_id": "TX018",
+        "predicted": false,
+        "expected": true
+      },
+      {
+        "case_id": "TX020",
+        "predicted": false,
+        "expected": true
+      }
+    ]
+  },
+  "disclaimer": "Measured from an actual OpenAI gpt-4o-mini run. Comparable only when future versions use the same frozen test set, model settings, and evaluate.py metrics."
+}

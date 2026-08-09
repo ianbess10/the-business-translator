@@ -1,0 +1,12 @@
+{
+  "case_id": "TX008",
+  "prompt_variant": "baseline",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Counterparty name in the narrative differs from the supplied trade record.",
+    "expected_type": "counterparty_issue"
+  },
+  "output_text": "### Analysis of Settlement Exception\n\n**Case ID:** TX008  \n**Exception Narrative:** Counterparty name in the narrative differs from the supplied trade record.\n\n#### What Happened\nIn this case, there is a discrepancy between the counterparty name mentioned in the narrative of the settlement exception and the counterparty name recorded in the trade record. This inconsistency could arise from various reasons, such as:\n\n- A typographical error in either the narrative or the trade record.\n- A change in the counterparty's name that was not updated in the trade record.\n- A potential issue with the data entry process, leading to mismatched information.\n\n#### Recommended Actions\nTo address this settlement exception, the following steps should be taken:\n\n1. **Verification of Information:**\n   - Cross-check the counterparty name in the narrative against the official trade record.\n   - Confirm the correct counterparty name by consulting relevant documentation or databases.\n\n2. **Clarification:**\n   - If the discrepancy is due to a name change, ensure that all relevant records are updated to reflect the new name.\n   - If it is a typographical error, correct the error in the appropriate system.\n\n3. **Documentation:**\n   - Document the findings and the steps taken to resolve the discrepancy for future reference.\n   - Maintain a log of similar exceptions to identify patterns or recurring issues.\n\n4. **Escalation:**\n   - If the discrepancy cannot be resolved through verification and clarification, escalate the issue to a supervisor or a designated team for further investigation.\n\n5. **Preventive Measures:**\n   - Review and improve data entry processes to minimize the risk of similar discrepancies in the future.\n   - Consider implementing validation checks in the system to flag inconsistencies automatically.\n\n### Conclusion\nThe exception indicates a critical need for accurate data management and verification processes. By following the recommended actions, the organization can resolve the current discrepancy and reduce the likelihood of similar issues arising in the future.",
+  "created_at": "2026-08-08T14:28:20.492765+00:00"
+}

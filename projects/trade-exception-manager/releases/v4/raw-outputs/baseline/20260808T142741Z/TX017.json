@@ -1,0 +1,12 @@
+{
+  "case_id": "TX017",
+  "prompt_variant": "baseline",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 1017 counterparty LEI in the email does not match the trade blotter LEI.",
+    "expected_type": "counterparty_issue"
+  },
+  "output_text": "### Analysis of Settlement Exception\n\n**Case ID:** TX017  \n**Exception Narrative:** Trade 1017 counterparty LEI in the email does not match the trade blotter LEI.\n\n#### What Happened\nIn this case, there is a discrepancy between the Legal Entity Identifier (LEI) of the counterparty mentioned in the email and the LEI recorded in the trade blotter for Trade 1017. This inconsistency could indicate a potential error in the documentation or a miscommunication regarding the identity of the counterparty involved in the trade.\n\n#### Implications\n1. **Regulatory Compliance Risk:** LEIs are crucial for regulatory reporting and compliance. A mismatch could lead to issues with regulatory authorities.\n2. **Operational Risk:** This discrepancy may cause delays in settlement processes, as the correct counterparty must be verified before proceeding.\n3. **Financial Risk:** If the trade is executed with the wrong counterparty, it could lead to financial losses or disputes.\n\n### Recommended Actions\n\n1. **Verification of LEIs:**\n   - Cross-check the LEIs in the email and the trade blotter against a reliable LEI database to confirm which one is correct.\n\n2. **Communication with Counterparty:**\n   - Reach out to the counterparty to clarify the correct LEI and resolve any discrepancies.\n\n3. **Documentation Review:**\n   - Review the documentation associated with Trade 1017 to ensure that all details are accurate and consistent.\n\n4. **Update Trade Blotter:**\n   - If the LEI in the email is confirmed to be correct, update the trade blotter accordingly to reflect the accurate information.\n\n5. **Implement Controls:**\n   - Establish a process to prevent similar discrepancies in the future, such as automated checks for LEI consistency during trade entry.\n\n6. **Escalation:**\n   - If the issue cannot be resolved promptly, escalate the matter to the compliance or risk management team for further investigation.\n\n### Conclusion\nThe mismatch of LEIs in Trade 1017 needs immediate attention to ensure compliance and mitigate risks. Following the recommended actions will help resolve the issue and prevent future occurrences.",
+  "created_at": "2026-08-08T14:29:01.690992+00:00"
+}
