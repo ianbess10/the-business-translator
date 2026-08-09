@@ -1,0 +1,1633 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/the-business-translator/control-evidence-assessment.schema.json",
+  "title": "Control and Evidence Assessment Record",
+  "description": "Connects one approved obligation to profile controls, evidence, assurance gaps, remediation routing and accountable human decisions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "assurance_record_id",
+    "record_type",
+    "lifecycle_status",
+    "obligation_reference",
+    "institution_profile",
+    "assessment_scope",
+    "mapping",
+    "control_mappings",
+    "assurance_assessment",
+    "assurance_gaps",
+    "remediation_actions",
+    "routing",
+    "human_review",
+    "closure",
+    "generation",
+    "audit"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "assurance_record_id": {
+      "type": "string",
+      "pattern": "^ACE-[A-Z0-9-]{4,64}$"
+    },
+    "record_type": {
+      "const": "obligation_control_evidence_assessment"
+    },
+    "lifecycle_status": {
+      "enum": [
+        "generated_assessment",
+        "human_reviewed",
+        "approved_assessment",
+        "closed",
+        "superseded"
+      ]
+    },
+    "obligation_reference": {
+      "$ref": "#/$defs/obligation_reference"
+    },
+    "institution_profile": {
+      "$ref": "#/$defs/institution_profile"
+    },
+    "assessment_scope": {
+      "$ref": "#/$defs/assessment_scope"
+    },
+    "mapping": {
+      "$ref": "#/$defs/mapping_summary"
+    },
+    "control_mappings": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/control_mapping"
+      }
+    },
+    "assurance_assessment": {
+      "$ref": "#/$defs/assurance_assessment"
+    },
+    "assurance_gaps": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/assurance_gap"
+      }
+    },
+    "remediation_actions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/remediation_action"
+      }
+    },
+    "routing": {
+      "$ref": "#/$defs/routing"
+    },
+    "human_review": {
+      "$ref": "#/$defs/human_review"
+    },
+    "closure": {
+      "$ref": "#/$defs/closure"
+    },
+    "generation": {
+      "$ref": "#/$defs/generation"
+    },
+    "audit": {
+      "$ref": "#/$defs/audit"
+    }
+  },
+  "$defs": {
+    "non_empty_string": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nullable_string": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "nullable_sha256": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/sha256"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "role": {
+      "enum": [
+        "AML Compliance Officer",
+        "AML Operations Manager",
+        "Board or delegated governance committee",
+        "Business or Control Owner",
+        "Complaints Manager",
+        "Compliance Monitoring Lead",
+        "Conduct Risk Officer",
+        "Head of Advice",
+        "Head of Client Onboarding",
+        "Head of Compliance",
+        "Head of Investment Operations",
+        "Head of Operations",
+        "Head of Product",
+        "Independent Assurance",
+        "Legal Counsel",
+        "Regulatory Change Lead"
+      ]
+    },
+    "obligation_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "obligation_schema_version",
+        "obligation_id",
+        "obligation_record_sha256",
+        "lifecycle_status",
+        "source_id",
+        "atomic_summary",
+        "approved_applicability",
+        "approved_by_role",
+        "approved_by_id",
+        "approval_rationale",
+        "approved_at"
+      ],
+      "properties": {
+        "obligation_schema_version": {
+          "const": "1.0"
+        },
+        "obligation_id": {
+          "type": "string",
+          "pattern": "^OBL-[A-Z0-9-]{4,64}$"
+        },
+        "obligation_record_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "lifecycle_status": {
+          "const": "approved"
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^SA-[A-Z0-9-]+$"
+        },
+        "atomic_summary": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "approved_applicability": {
+          "enum": [
+            "applicable",
+            "applicable_with_conditions"
+          ]
+        },
+        "approved_by_role": {
+          "$ref": "#/$defs/role"
+        },
+        "approved_by_id": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "approval_rationale": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "approved_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "institution_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile_id",
+        "profile_version",
+        "profile_sha256"
+      ],
+      "properties": {
+        "profile_id": {
+          "const": "SA-IWM-SYN-001"
+        },
+        "profile_version": {
+          "const": "1.0"
+        },
+        "profile_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "assessment_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assessment_type",
+        "as_of_date",
+        "period_start",
+        "period_end",
+        "in_scope_process_ids",
+        "scope_limitations"
+      ],
+      "properties": {
+        "assessment_type": {
+          "enum": [
+            "design_and_operating_evidence",
+            "design_only",
+            "operating_evidence_only",
+            "mapping_only",
+            "remediation_follow_up"
+          ]
+        },
+        "as_of_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "period_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "period_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "in_scope_process_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^P-[A-Z]+-[0-9]{3}$"
+          }
+        },
+        "scope_limitations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/non_empty_string"
+          }
+        }
+      }
+    },
+    "mapping_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "coverage_rationale",
+        "unmapped_obligation_elements"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "mapped",
+            "partially_mapped",
+            "no_suitable_control_identified"
+          ]
+        },
+        "coverage_rationale": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "unmapped_obligation_elements": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/non_empty_string"
+          }
+        }
+      }
+    },
+    "evidence_requirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_requirement_id",
+        "evidence_type",
+        "assurance_purpose",
+        "description",
+        "acceptance_criteria",
+        "mandatory",
+        "period_or_trigger",
+        "owner_role"
+      ],
+      "properties": {
+        "evidence_requirement_id": {
+          "type": "string",
+          "pattern": "^ER-[A-Z0-9-]{3,64}$"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/evidence_type"
+        },
+        "assurance_purpose": {
+          "enum": [
+            "design",
+            "operation",
+            "oversight",
+            "independent_testing",
+            "remediation_closure"
+          ]
+        },
+        "description": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "acceptance_criteria": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/non_empty_string"
+          }
+        },
+        "mandatory": {
+          "type": "boolean"
+        },
+        "period_or_trigger": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "owner_role": {
+          "$ref": "#/$defs/role"
+        }
+      }
+    },
+    "evidence_type": {
+      "enum": [
+        "policy_or_framework",
+        "procedure",
+        "system_configuration",
+        "completed_control_record",
+        "case_or_transaction_sample",
+        "exception_or_escalation_record",
+        "management_information",
+        "governance_minutes",
+        "training_record",
+        "independent_test_result",
+        "remediation_evidence",
+        "third_party_assurance"
+      ]
+    },
+    "supplied_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_ref_id",
+        "evidence_requirement_id",
+        "evidence_type",
+        "title",
+        "status",
+        "location_or_reference",
+        "document_sha256",
+        "period_covered",
+        "provided_by_role",
+        "collected_at",
+        "limitations"
+      ],
+      "properties": {
+        "evidence_ref_id": {
+          "type": "string",
+          "pattern": "^EV-[A-Z0-9-]{3,64}$"
+        },
+        "evidence_requirement_id": {
+          "type": "string",
+          "pattern": "^ER-[A-Z0-9-]{3,64}$"
+        },
+        "evidence_type": {
+          "$ref": "#/$defs/evidence_type"
+        },
+        "title": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "status": {
+          "enum": [
+            "supplied",
+            "missing",
+            "unavailable",
+            "not_requested"
+          ]
+        },
+        "location_or_reference": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "document_sha256": {
+          "$ref": "#/$defs/nullable_sha256"
+        },
+        "period_covered": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "provided_by_role": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/role"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "collected_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/non_empty_string"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "supplied"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "location_or_reference": {
+                "type": "string",
+                "minLength": 1
+              },
+              "document_sha256": {
+                "$ref": "#/$defs/sha256"
+              },
+              "provided_by_role": {
+                "$ref": "#/$defs/role"
+              },
+              "collected_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "missing",
+                  "unavailable",
+                  "not_requested"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "document_sha256": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "control_mapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mapping_id",
+        "control_id",
+        "control_name",
+        "catalog_owner_role",
+        "control_type",
+        "coverage",
+        "mapping_rationale",
+        "control_objective",
+        "control_description",
+        "operator_role",
+        "execution_type",
+        "frequency_or_trigger",
+        "design_status",
+        "expected_evidence",
+        "supplied_evidence",
+        "evidence_assessment"
+      ],
+      "properties": {
+        "mapping_id": {
+          "type": "string",
+          "pattern": "^MAP-[A-Z0-9-]{3,64}$"
+        },
+        "control_id": {
+          "type": "string",
+          "pattern": "^C-[A-Z]+-[0-9]{3}$"
+        },
+        "control_name": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "catalog_owner_role": {
+          "$ref": "#/$defs/role"
+        },
+        "control_type": {
+          "enum": [
+            "preventive",
+            "detective",
+            "corrective",
+            "preventive_and_detective",
+            "detective_and_corrective"
+          ]
+        },
+        "coverage": {
+          "enum": [
+            "full",
+            "partial",
+            "supporting"
+          ]
+        },
+        "mapping_rationale": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "control_objective": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "control_description": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "operator_role": {
+          "$ref": "#/$defs/role"
+        },
+        "execution_type": {
+          "enum": [
+            "manual",
+            "automated",
+            "hybrid"
+          ]
+        },
+        "frequency_or_trigger": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "design_status": {
+          "enum": [
+            "documented",
+            "partially_documented",
+            "not_documented"
+          ]
+        },
+        "expected_evidence": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/evidence_requirement"
+          }
+        },
+        "supplied_evidence": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/supplied_evidence"
+          }
+        },
+        "evidence_assessment": {
+          "$ref": "#/$defs/evidence_assessment"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "evidence_assessment": {
+                "properties": {
+                  "status": {
+                    "const": "sufficient"
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "supplied_evidence": {
+                "minItems": 1,
+                "contains": {
+                  "properties": {
+                    "status": {
+                      "const": "supplied"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "evidence_assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "design_evidence",
+        "operating_evidence",
+        "testing_evidence",
+        "rationale",
+        "limitations"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "sufficient",
+            "insufficient",
+            "not_assessed"
+          ]
+        },
+        "design_evidence": {
+          "$ref": "#/$defs/evidence_dimension_status"
+        },
+        "operating_evidence": {
+          "$ref": "#/$defs/evidence_dimension_status"
+        },
+        "testing_evidence": {
+          "$ref": "#/$defs/evidence_dimension_status"
+        },
+        "rationale": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/non_empty_string"
+          }
+        }
+      }
+    },
+    "evidence_dimension_status": {
+      "enum": [
+        "sufficient",
+        "partial",
+        "missing",
+        "not_required",
+        "not_assessed"
+      ]
+    },
+    "assurance_assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "outcome",
+        "decision_status",
+        "confidence",
+        "rationale",
+        "limitations",
+        "compliance_conclusion"
+      ],
+      "properties": {
+        "outcome": {
+          "enum": [
+            "mapped_and_evidenced",
+            "insufficient_evidence",
+            "potential_control_gap"
+          ]
+        },
+        "decision_status": {
+          "enum": [
+            "proposed",
+            "approved"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "rationale": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/non_empty_string"
+          }
+        },
+        "compliance_conclusion": {
+          "const": "not_determined"
+        }
+      }
+    },
+    "assurance_gap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gap_id",
+        "gap_type",
+        "status",
+        "affected_control_ids",
+        "affected_obligation_elements",
+        "statement",
+        "evidence_basis",
+        "severity",
+        "materiality_rationale",
+        "compliance_conclusion"
+      ],
+      "properties": {
+        "gap_id": {
+          "type": "string",
+          "pattern": "^GAP-[A-Z0-9-]{3,64}$"
+        },
+        "gap_type": {
+          "enum": [
+            "no_control",
+            "partial_coverage",
+            "control_design",
+            "operating_evidence_missing",
+            "operating_exception",
+            "ownership",
+            "evidence_integrity",
+            "independent_testing"
+          ]
+        },
+        "status": {
+          "enum": [
+            "potential",
+            "confirmed",
+            "dismissed"
+          ]
+        },
+        "affected_control_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^C-[A-Z]+-[0-9]{3}$"
+          }
+        },
+        "affected_obligation_elements": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/non_empty_string"
+          }
+        },
+        "statement": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "evidence_basis": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/non_empty_string"
+          }
+        },
+        "severity": {
+          "enum": [
+            "unassessed",
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        "materiality_rationale": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "compliance_conclusion": {
+          "const": "not_determined"
+        }
+      }
+    },
+    "remediation_action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "action_id",
+        "linked_gap_ids",
+        "action_type",
+        "action",
+        "accountable_owner_role",
+        "supporting_roles",
+        "target_date",
+        "priority",
+        "status",
+        "escalation",
+        "closure_evidence_refs"
+      ],
+      "properties": {
+        "action_id": {
+          "type": "string",
+          "pattern": "^ACT-[A-Z0-9-]{3,64}$"
+        },
+        "linked_gap_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^GAP-[A-Z0-9-]{3,64}$"
+          }
+        },
+        "action_type": {
+          "enum": [
+            "evidence_request",
+            "mapping_review",
+            "control_design_change",
+            "operating_remediation",
+            "ownership_confirmation",
+            "independent_testing"
+          ]
+        },
+        "action": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "accountable_owner_role": {
+          "$ref": "#/$defs/role"
+        },
+        "supporting_roles": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/role"
+          }
+        },
+        "target_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "priority": {
+          "enum": [
+            "routine",
+            "elevated",
+            "urgent"
+          ]
+        },
+        "status": {
+          "enum": [
+            "proposed",
+            "accepted",
+            "in_progress",
+            "closed",
+            "rejected"
+          ]
+        },
+        "escalation": {
+          "$ref": "#/$defs/escalation"
+        },
+        "closure_evidence_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^EV-[A-Z0-9-]{3,64}$"
+          }
+        }
+      }
+    },
+    "escalation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required",
+        "route_to_role",
+        "reason"
+      ],
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "route_to_role": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/role"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "$ref": "#/$defs/nullable_string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "required": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "route_to_role": {
+                "$ref": "#/$defs/role"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "route_to_role": {
+                "type": "null"
+              },
+              "reason": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "routing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assessment_owner_role",
+        "required_reviewer_roles",
+        "routing_rationale"
+      ],
+      "properties": {
+        "assessment_owner_role": {
+          "$ref": "#/$defs/role"
+        },
+        "required_reviewer_roles": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/role"
+          }
+        },
+        "routing_rationale": {
+          "$ref": "#/$defs/non_empty_string"
+        }
+      }
+    },
+    "human_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required",
+        "status",
+        "reviewer_role",
+        "reviewer_id",
+        "decision_rationale",
+        "reviewed_at"
+      ],
+      "properties": {
+        "required": {
+          "const": true
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "accepted",
+            "amended",
+            "changes_requested",
+            "rejected"
+          ]
+        },
+        "reviewer_role": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/role"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reviewer_id": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "decision_rationale": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "reviewed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "closure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "closure_authority_role",
+        "closure_authority_id",
+        "closure_rationale",
+        "closure_evidence_refs",
+        "closed_at"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "not_ready",
+            "pending",
+            "closed"
+          ]
+        },
+        "closure_authority_role": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/role"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "closure_authority_id": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "closure_rationale": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "closure_evidence_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^EV-[A-Z0-9-]{3,64}$"
+          }
+        },
+        "closed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "generation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "workflow_version",
+        "model_id",
+        "prompt_version",
+        "generated_at",
+        "run_id"
+      ],
+      "properties": {
+        "workflow_version": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "model_id": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "prompt_version": {
+          "$ref": "#/$defs/non_empty_string"
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "run_id": {
+          "$ref": "#/$defs/non_empty_string"
+        }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "created_at",
+        "updated_at",
+        "created_by",
+        "change_log"
+      ],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "created_by": {
+          "enum": [
+            "ai_assisted",
+            "human"
+          ]
+        },
+        "change_log": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "timestamp",
+              "actor",
+              "change"
+            ],
+            "properties": {
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "actor": {
+                "$ref": "#/$defs/non_empty_string"
+              },
+              "change": {
+                "$ref": "#/$defs/non_empty_string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mapping": {
+            "properties": {
+              "status": {
+                "const": "mapped"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "control_mappings": {
+            "minItems": 1
+          },
+          "mapping": {
+            "properties": {
+              "unmapped_obligation_elements": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mapping": {
+            "properties": {
+              "status": {
+                "const": "partially_mapped"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "control_mappings": {
+            "minItems": 1
+          },
+          "mapping": {
+            "properties": {
+              "unmapped_obligation_elements": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mapping": {
+            "properties": {
+              "status": {
+                "const": "no_suitable_control_identified"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "control_mappings": {
+            "maxItems": 0
+          },
+          "mapping": {
+            "properties": {
+              "unmapped_obligation_elements": {
+                "minItems": 1
+              }
+            }
+          },
+          "assurance_assessment": {
+            "properties": {
+              "outcome": {
+                "const": "potential_control_gap"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "assurance_assessment": {
+            "properties": {
+              "outcome": {
+                "const": "mapped_and_evidenced"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "mapping": {
+            "properties": {
+              "status": {
+                "const": "mapped"
+              }
+            }
+          },
+          "control_mappings": {
+            "minItems": 1,
+            "items": {
+              "properties": {
+                "evidence_assessment": {
+                  "properties": {
+                    "status": {
+                      "const": "sufficient"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "assurance_gaps": {
+            "maxItems": 0
+          },
+          "remediation_actions": {
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "assurance_assessment": {
+            "properties": {
+              "outcome": {
+                "const": "insufficient_evidence"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "control_mappings": {
+            "minItems": 1,
+            "contains": {
+              "properties": {
+                "evidence_assessment": {
+                  "properties": {
+                    "status": {
+                      "const": "insufficient"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "assurance_gaps": {
+            "minItems": 1,
+            "contains": {
+              "properties": {
+                "gap_type": {
+                  "enum": [
+                    "operating_evidence_missing",
+                    "evidence_integrity",
+                    "independent_testing"
+                  ]
+                }
+              }
+            }
+          },
+          "remediation_actions": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "assurance_assessment": {
+            "properties": {
+              "outcome": {
+                "const": "potential_control_gap"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "assurance_gaps": {
+            "minItems": 1,
+            "contains": {
+              "properties": {
+                "status": {
+                  "enum": [
+                    "potential",
+                    "confirmed"
+                  ]
+                }
+              }
+            }
+          },
+          "remediation_actions": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "lifecycle_status": {
+            "const": "generated_assessment"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "assurance_assessment": {
+            "properties": {
+              "decision_status": {
+                "const": "proposed"
+              }
+            }
+          },
+          "assurance_gaps": {
+            "items": {
+              "properties": {
+                "status": {
+                  "const": "potential"
+                }
+              }
+            }
+          },
+          "remediation_actions": {
+            "items": {
+              "properties": {
+                "status": {
+                  "const": "proposed"
+                },
+                "closure_evidence_refs": {
+                  "maxItems": 0
+                }
+              }
+            }
+          },
+          "human_review": {
+            "properties": {
+              "status": {
+                "const": "pending"
+              },
+              "reviewer_role": {
+                "type": "null"
+              },
+              "reviewer_id": {
+                "type": "null"
+              },
+              "decision_rationale": {
+                "type": "null"
+              },
+              "reviewed_at": {
+                "type": "null"
+              }
+            }
+          },
+          "closure": {
+            "properties": {
+              "status": {
+                "const": "not_ready"
+              },
+              "closure_authority_role": {
+                "type": "null"
+              },
+              "closure_authority_id": {
+                "type": "null"
+              },
+              "closure_rationale": {
+                "type": "null"
+              },
+              "closure_evidence_refs": {
+                "maxItems": 0
+              },
+              "closed_at": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "lifecycle_status": {
+            "const": "human_reviewed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "assurance_assessment": {
+            "properties": {
+              "decision_status": {
+                "const": "proposed"
+              }
+            }
+          },
+          "human_review": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "changes_requested",
+                  "rejected"
+                ]
+              },
+              "reviewer_role": {
+                "$ref": "#/$defs/role"
+              },
+              "reviewer_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "decision_rationale": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reviewed_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "lifecycle_status": {
+            "enum": [
+              "approved_assessment",
+              "closed"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "assurance_assessment": {
+            "properties": {
+              "decision_status": {
+                "const": "approved"
+              }
+            }
+          },
+          "human_review": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "accepted",
+                  "amended"
+                ]
+              },
+              "reviewer_role": {
+                "$ref": "#/$defs/role"
+              },
+              "reviewer_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "decision_rationale": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reviewed_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "assurance_gaps": {
+            "contains": {
+              "properties": {
+                "status": {
+                  "enum": [
+                    "potential",
+                    "confirmed"
+                  ]
+                },
+                "severity": {
+                  "enum": [
+                    "high",
+                    "critical"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "remediation_actions": {
+            "contains": {
+              "properties": {
+                "escalation": {
+                  "properties": {
+                    "required": {
+                      "const": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "lifecycle_status": {
+            "const": "closed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "remediation_actions": {
+            "items": {
+              "properties": {
+                "status": {
+                  "enum": [
+                    "closed",
+                    "rejected"
+                  ]
+                }
+              }
+            }
+          },
+          "closure": {
+            "properties": {
+              "status": {
+                "const": "closed"
+              },
+              "closure_authority_role": {
+                "$ref": "#/$defs/role"
+              },
+              "closure_authority_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "closure_rationale": {
+                "type": "string",
+                "minLength": 1
+              },
+              "closure_evidence_refs": {
+                "minItems": 1
+              },
+              "closed_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "assurance_record_id": "ACE-CONDUCT-0001",
+  "record_type": "obligation_control_evidence_assessment",
+  "lifecycle_status": "approved_assessment",
+  "obligation_reference": {
+    "obligation_schema_version": "1.0",
+    "obligation_id": "OBL-CONDUCT-0001",
+    "obligation_record_sha256": "55e9026bdd168a7e5f4c5571c3aa2eaa8db4ff6217e2264831257086b56bb2ce",
+    "lifecycle_status": "approved",
+    "source_id": "SA-CONDUCT-SP-003",
+    "atomic_summary": "An authorised provider must establish and maintain an adequate complaints management framework.",
+    "approved_applicability": "applicable_with_conditions",
+    "approved_by_role": "Head of Compliance",
+    "approved_by_id": "SYN-HC-001",
+    "approval_rationale": "Accepted for synthetic assurance design subject to the fictional licensing assumption.",
+    "approved_at": "2026-08-09T20:00:00+02:00"
+  },
+  "institution_profile": {
+    "profile_id": "SA-IWM-SYN-001",
+    "profile_version": "1.0",
+    "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4"
+  },
+  "assessment_scope": {
+    "assessment_type": "design_and_operating_evidence",
+    "as_of_date": "2026-08-09",
+    "period_start": "2026-04-01",
+    "period_end": "2026-07-31",
+    "in_scope_process_ids": [
+      "P-CON-005",
+      "P-CON-006"
+    ],
+    "scope_limitations": [
+      "Synthetic evidence proves schema behaviour, not real control effectiveness.",
+      "No customer-level data is included."
+    ]
+  },
+  "mapping": {
+    "status": "mapped",
+    "coverage_rationale": "Complaint handling and customer-outcomes oversight jointly address establishment, operation and maintenance of the synthetic complaints framework.",
+    "unmapped_obligation_elements": []
+  },
+  "control_mappings": [
+    {
+      "mapping_id": "MAP-CON-006-001",
+      "control_id": "C-CON-006",
+      "control_name": "Complaint classification, escalation and remediation",
+      "catalog_owner_role": "Complaints Manager",
+      "control_type": "detective_and_corrective",
+      "coverage": "full",
+      "mapping_rationale": "This control operates the core complaint identification, escalation, resolution and remediation elements of the approved obligation.",
+      "control_objective": "Complaints are consistently identified, recorded, investigated, escalated and remediated under the approved framework.",
+      "control_description": "The Complaints Manager maintains the framework and register, reviews case classification and ageing, and records escalation and customer remediation decisions.",
+      "operator_role": "Complaints Manager",
+      "execution_type": "hybrid",
+      "frequency_or_trigger": "For every complaint, with monthly register review",
+      "design_status": "documented",
+      "expected_evidence": [
+        {
+          "evidence_requirement_id": "ER-CON-006-DESIGN",
+          "evidence_type": "policy_or_framework",
+          "assurance_purpose": "design",
+          "description": "Current approved complaints management framework",
+          "acceptance_criteria": [
+            "identifies accountable roles and escalation paths",
+            "covers classification, investigation, remediation and oversight",
+            "shows approval and review date"
+          ],
+          "mandatory": true,
+          "period_or_trigger": "Current at the assessment date",
+          "owner_role": "Conduct Risk Officer"
+        },
+        {
+          "evidence_requirement_id": "ER-CON-006-OPERATE",
+          "evidence_type": "completed_control_record",
+          "assurance_purpose": "operation",
+          "description": "Complaint register with classification, escalation, resolution and remediation fields",
+          "acceptance_criteria": [
+            "covers the assessment period",
+            "contains completed case-control fields",
+            "permits overdue and exception identification"
+          ],
+          "mandatory": true,
+          "period_or_trigger": "Assessment period",
+          "owner_role": "Complaints Manager"
+        }
+      ],
+      "supplied_evidence": [
+        {
+          "evidence_ref_id": "EV-CON-001",
+          "evidence_requirement_id": "ER-CON-006-DESIGN",
+          "evidence_type": "policy_or_framework",
+          "title": "Synthetic Complaints Management Framework v1.0",
+          "status": "supplied",
+          "location_or_reference": "fixtures/evidence/complaints-framework-v1.0.json",
+          "document_sha256": "d91bf2a7cd4606c6376de5bcd290013e82c63a6437f61b2c3913f570580e8356",
+          "period_covered": "Current from 2026-07-01",
+          "provided_by_role": "Conduct Risk Officer",
+          "collected_at": "2026-08-09T20:05:00+02:00",
+          "limitations": [
+            "Synthetic framework summary only."
+          ]
+        },
+        {
+          "evidence_ref_id": "EV-CON-002",
+          "evidence_requirement_id": "ER-CON-006-OPERATE",
+          "evidence_type": "completed_control_record",
+          "title": "Synthetic Complaints Register Extract - 2026 Q2",
+          "status": "supplied",
+          "location_or_reference": "fixtures/evidence/complaints-register-q2-2026.json",
+          "document_sha256": "ce339e385bc4acc6fa10ef0af84084031bea3bc1c51746b413d4e8d4e2cbc250",
+          "period_covered": "2026-04-01 to 2026-06-30",
+          "provided_by_role": "Complaints Manager",
+          "collected_at": "2026-08-09T20:10:00+02:00",
+          "limitations": [
+            "Aggregate synthetic extract; individual case files were not assessed."
+          ]
+        }
+      ],
+      "evidence_assessment": {
+        "status": "sufficient",
+        "design_evidence": "sufficient",
+        "operating_evidence": "sufficient",
+        "testing_evidence": "not_required",
+        "rationale": "The supplied synthetic framework and period register meet the defined acceptance criteria for this schema example.",
+        "limitations": [
+          "This conclusion is limited to the supplied synthetic artefacts and is not a real effectiveness opinion."
+        ]
+      }
+    },
+    {
+      "mapping_id": "MAP-CON-007-001",
+      "control_id": "C-CON-007",
+      "control_name": "Customer-outcomes management-information review",
+      "catalog_owner_role": "Conduct Risk Officer",
+      "control_type": "detective",
+      "coverage": "supporting",
+      "mapping_rationale": "Management-information review provides oversight that the complaints framework remains active and responsive to root causes and remediation trends.",
+      "control_objective": "Complaint trends, root causes and remediation outcomes receive accountable management oversight.",
+      "control_description": "The Conduct Risk Officer reviews monthly customer-outcomes information and records governance challenge and follow-up actions.",
+      "operator_role": "Conduct Risk Officer",
+      "execution_type": "manual",
+      "frequency_or_trigger": "Monthly",
+      "design_status": "documented",
+      "expected_evidence": [
+        {
+          "evidence_requirement_id": "ER-CON-007-OVERSIGHT",
+          "evidence_type": "management_information",
+          "assurance_purpose": "oversight",
+          "description": "Customer-outcomes report covering complaint volumes, root causes and remediation trends",
+          "acceptance_criteria": [
+            "covers the current reporting period",
+            "includes complaint root causes and remediation trends",
+            "records accountable review"
+          ],
+          "mandatory": true,
+          "period_or_trigger": "Monthly",
+          "owner_role": "Conduct Risk Officer"
+        }
+      ],
+      "supplied_evidence": [
+        {
+          "evidence_ref_id": "EV-CON-003",
+          "evidence_requirement_id": "ER-CON-007-OVERSIGHT",
+          "evidence_type": "management_information",
+          "title": "Synthetic Customer Outcomes Management Information - July 2026",
+          "status": "supplied",
+          "location_or_reference": "fixtures/evidence/customer-outcomes-mi-july-2026.json",
+          "document_sha256": "0fcadf8e4b20af70f664f856715d023fb5a9c121e8231bbfcf445f933254a0f7",
+          "period_covered": "2026-07",
+          "provided_by_role": "Conduct Risk Officer",
+          "collected_at": "2026-08-09T20:15:00+02:00",
+          "limitations": [
+            "Synthetic monthly summary only."
+          ]
+        }
+      ],
+      "evidence_assessment": {
+        "status": "sufficient",
+        "design_evidence": "not_required",
+        "operating_evidence": "sufficient",
+        "testing_evidence": "not_required",
+        "rationale": "The supplied synthetic report covers the required oversight fields and records review.",
+        "limitations": [
+          "Underlying case-level source data was not assessed."
+        ]
+      }
+    }
+  ],
+  "assurance_assessment": {
+    "outcome": "mapped_and_evidenced",
+    "decision_status": "approved",
+    "confidence": 0.9,
+    "rationale": "The approved obligation is mapped to the complaint operation and customer-outcomes oversight controls, with the required synthetic design and operating evidence supplied.",
+    "limitations": [
+      "The assessment is a synthetic schema example, not production assurance.",
+      "No legal, compliance or enterprise-wide effectiveness conclusion is made."
+    ],
+    "compliance_conclusion": "not_determined"
+  },
+  "assurance_gaps": [],
+  "remediation_actions": [],
+  "routing": {
+    "assessment_owner_role": "Conduct Risk Officer",
+    "required_reviewer_roles": [
+      "Head of Compliance",
+      "Business or Control Owner"
+    ],
+    "routing_rationale": "Conduct Risk owns the outcome assessment; Compliance and the operating control owner approve the mapping and evidence conclusion."
+  },
+  "human_review": {
+    "required": true,
+    "status": "accepted",
+    "reviewer_role": "Head of Compliance",
+    "reviewer_id": "SYN-HC-001",
+    "decision_rationale": "Accepted as a synthetic mapped-and-evidenced example after reviewing the control catalogue alignment and referenced artefacts.",
+    "reviewed_at": "2026-08-09T21:00:00+02:00"
+  },
+  "closure": {
+    "status": "pending",
+    "closure_authority_role": null,
+    "closure_authority_id": null,
+    "closure_rationale": null,
+    "closure_evidence_refs": [],
+    "closed_at": null
+  },
+  "generation": {
+    "workflow_version": "obligation-assurance-v1.0",
+    "model_id": "synthetic-example",
+    "prompt_version": "not-yet-baselined",
+    "generated_at": "2026-08-09T20:30:00+02:00",
+    "run_id": "schema-example-assurance-001"
+  },
+  "audit": {
+    "created_at": "2026-08-09T20:30:00+02:00",
+    "updated_at": "2026-08-09T21:00:00+02:00",
+    "created_by": "ai_assisted",
+    "change_log": [
+      {
+        "timestamp": "2026-08-09T20:30:00+02:00",
+        "actor": "schema-example-builder",
+        "change": "Created the synthetic mapped-and-evidenced assessment."
+      },
+      {
+        "timestamp": "2026-08-09T21:00:00+02:00",
+        "actor": "SYN-HC-001",
+        "change": "Approved the synthetic mapping and evidence assessment."
+      }
+    ]
+  }
+}

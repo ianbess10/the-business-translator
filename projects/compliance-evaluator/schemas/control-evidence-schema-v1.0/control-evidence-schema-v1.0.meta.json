@@ -1,0 +1,19 @@
+{
+  "schema_id": "control-evidence-assessment",
+  "version": "1.0",
+  "status": "frozen_for_baseline_dataset_design",
+  "schema_filename": "control-evidence-assessment.schema.json",
+  "schema_sha256": "a11ca9e16720984b8a0653e6cf19a32ce3ad46676af5c680d54b597ec3ddc58d",
+  "frozen_at": "2026-08-09",
+  "obligation_schema_version": "1.0",
+  "approved_obligation_fixture_sha256": "55e9026bdd168a7e5f4c5571c3aa2eaa8db4ff6217e2264831257086b56bb2ce",
+  "institution_profile_id": "SA-IWM-SYN-001",
+  "institution_profile_version": "1.0",
+  "institution_profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+  "valid_example_count": 3,
+  "synthetic_evidence_fixture_count": 4,
+  "prohibited_state_test_count": 13,
+  "legal_reliance": false,
+  "production_assurance": false,
+  "notes": "Do not edit the frozen v1.0 schema in place. Create a new version when fields, controlled vocabularies, mapping rules, evidence rules, routing or decision controls change."
+}

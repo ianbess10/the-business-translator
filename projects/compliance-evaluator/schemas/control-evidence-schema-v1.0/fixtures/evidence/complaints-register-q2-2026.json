@@ -1,0 +1,11 @@
+{
+  "fixture_id": "SYN-EV-CON-002",
+  "title": "Synthetic Complaints Register Extract",
+  "period": "2026-Q2",
+  "total_cases": 42,
+  "classification_complete": 42,
+  "escalations_recorded": 5,
+  "remediation_records_complete": 42,
+  "open_overdue_cases": 0,
+  "synthetic": true
+}

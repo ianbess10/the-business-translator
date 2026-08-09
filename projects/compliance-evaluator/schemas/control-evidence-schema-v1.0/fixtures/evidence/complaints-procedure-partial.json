@@ -1,0 +1,15 @@
+{
+  "fixture_id": "SYN-EV-CON-004",
+  "title": "Synthetic Complaint Handling Procedure - Partial Design Case",
+  "version": "0.4-draft",
+  "steps": [
+    "capture complaint",
+    "classify complaint",
+    "assign investigator",
+    "record customer outcome"
+  ],
+  "approval_record": null,
+  "review_cycle": null,
+  "framework_maintenance_owner": null,
+  "synthetic": true
+}

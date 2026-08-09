@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0",
+  "assurance_record_id": "ACE-CONDUCT-0002",
+  "record_type": "obligation_control_evidence_assessment",
+  "lifecycle_status": "generated_assessment",
+  "obligation_reference": {
+    "obligation_schema_version": "1.0",
+    "obligation_id": "OBL-CONDUCT-0001",
+    "obligation_record_sha256": "55e9026bdd168a7e5f4c5571c3aa2eaa8db4ff6217e2264831257086b56bb2ce",
+    "lifecycle_status": "approved",
+    "source_id": "SA-CONDUCT-SP-003",
+    "atomic_summary": "An authorised provider must establish and maintain an adequate complaints management framework.",
+    "approved_applicability": "applicable_with_conditions",
+    "approved_by_role": "Head of Compliance",
+    "approved_by_id": "SYN-HC-001",
+    "approval_rationale": "Accepted for synthetic assurance design subject to the fictional licensing assumption.",
+    "approved_at": "2026-08-09T20:00:00+02:00"
+  },
+  "institution_profile": {
+    "profile_id": "SA-IWM-SYN-001",
+    "profile_version": "1.0",
+    "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4"
+  },
+  "assessment_scope": {
+    "assessment_type": "design_and_operating_evidence",
+    "as_of_date": "2026-08-09",
+    "period_start": "2026-04-01",
+    "period_end": "2026-07-31",
+    "in_scope_process_ids": [
+      "P-CON-005"
+    ],
+    "scope_limitations": [
+      "No complaint register or completed case records were supplied."
+    ]
+  },
+  "mapping": {
+    "status": "mapped",
+    "coverage_rationale": "The catalogue control is logically aligned to complaint classification, escalation and remediation, but operating evidence has not been supplied.",
+    "unmapped_obligation_elements": []
+  },
+  "control_mappings": [
+    {
+      "mapping_id": "MAP-CON-006-002",
+      "control_id": "C-CON-006",
+      "control_name": "Complaint classification, escalation and remediation",
+      "catalog_owner_role": "Complaints Manager",
+      "control_type": "detective_and_corrective",
+      "coverage": "full",
+      "mapping_rationale": "The catalogue description aligns to operation of the approved complaints framework.",
+      "control_objective": "Complaints are consistently identified, recorded, investigated, escalated and remediated under the approved framework.",
+      "control_description": "The Complaints Manager maintains the framework and register, reviews case classification and ageing, and records escalation and customer remediation decisions.",
+      "operator_role": "Complaints Manager",
+      "execution_type": "hybrid",
+      "frequency_or_trigger": "For every complaint, with monthly register review",
+      "design_status": "documented",
+      "expected_evidence": [
+        {
+          "evidence_requirement_id": "ER-CON-006-DESIGN",
+          "evidence_type": "policy_or_framework",
+          "assurance_purpose": "design",
+          "description": "Current approved complaints management framework",
+          "acceptance_criteria": [
+            "identifies accountable roles and escalation paths",
+            "covers classification, investigation, remediation and oversight",
+            "shows approval and review date"
+          ],
+          "mandatory": true,
+          "period_or_trigger": "Current at the assessment date",
+          "owner_role": "Conduct Risk Officer"
+        },
+        {
+          "evidence_requirement_id": "ER-CON-006-OPERATE",
+          "evidence_type": "completed_control_record",
+          "assurance_purpose": "operation",
+          "description": "Complaint register with classification, escalation, resolution and remediation fields",
+          "acceptance_criteria": [
+            "covers the assessment period",
+            "contains completed case-control fields",
+            "permits overdue and exception identification"
+          ],
+          "mandatory": true,
+          "period_or_trigger": "Assessment period",
+          "owner_role": "Complaints Manager"
+        }
+      ],
+      "supplied_evidence": [
+        {
+          "evidence_ref_id": "EV-CON-001",
+          "evidence_requirement_id": "ER-CON-006-DESIGN",
+          "evidence_type": "policy_or_framework",
+          "title": "Synthetic Complaints Management Framework v1.0",
+          "status": "supplied",
+          "location_or_reference": "fixtures/evidence/complaints-framework-v1.0.json",
+          "document_sha256": "d91bf2a7cd4606c6376de5bcd290013e82c63a6437f61b2c3913f570580e8356",
+          "period_covered": "Current from 2026-07-01",
+          "provided_by_role": "Conduct Risk Officer",
+          "collected_at": "2026-08-09T20:05:00+02:00",
+          "limitations": [
+            "Synthetic framework summary only."
+          ]
+        },
+        {
+          "evidence_ref_id": "EV-CON-005",
+          "evidence_requirement_id": "ER-CON-006-OPERATE",
+          "evidence_type": "completed_control_record",
+          "title": "Complaint register for the assessment period",
+          "status": "missing",
+          "location_or_reference": null,
+          "document_sha256": null,
+          "period_covered": "2026-04-01 to 2026-07-31",
+          "provided_by_role": null,
+          "collected_at": null,
+          "limitations": [
+            "The evidence request remains outstanding."
+          ]
+        }
+      ],
+      "evidence_assessment": {
+        "status": "insufficient",
+        "design_evidence": "sufficient",
+        "operating_evidence": "missing",
+        "testing_evidence": "not_assessed",
+        "rationale": "A documented design is available, but the control's operation cannot be assessed without completed records for the period.",
+        "limitations": [
+          "Missing evidence is not evidence that the control failed."
+        ]
+      }
+    }
+  ],
+  "assurance_assessment": {
+    "outcome": "insufficient_evidence",
+    "decision_status": "proposed",
+    "confidence": 0.97,
+    "rationale": "The control mapping is plausible and design evidence is present, but mandatory operating evidence is missing.",
+    "limitations": [
+      "No operating-effectiveness or compliance conclusion can be made."
+    ],
+    "compliance_conclusion": "not_determined"
+  },
+  "assurance_gaps": [
+    {
+      "gap_id": "GAP-EVIDENCE-001",
+      "gap_type": "operating_evidence_missing",
+      "status": "potential",
+      "affected_control_ids": [
+        "C-CON-006"
+      ],
+      "affected_obligation_elements": [
+        "maintain an adequate complaints management framework"
+      ],
+      "statement": "Operating records for the assessment period were not supplied, so the control's operation cannot be assessed.",
+      "evidence_basis": [
+        "EV-CON-005 is recorded as missing"
+      ],
+      "severity": "unassessed",
+      "materiality_rationale": "Materiality cannot be calibrated until the requested records are received or their unavailability is confirmed.",
+      "compliance_conclusion": "not_determined"
+    }
+  ],
+  "remediation_actions": [
+    {
+      "action_id": "ACT-EVIDENCE-001",
+      "linked_gap_ids": [
+        "GAP-EVIDENCE-001"
+      ],
+      "action_type": "evidence_request",
+      "action": "Provide the complaints register and completed escalation and remediation records for the assessment period.",
+      "accountable_owner_role": "Complaints Manager",
+      "supporting_roles": [
+        "Conduct Risk Officer"
+      ],
+      "target_date": "2026-08-17",
+      "priority": "routine",
+      "status": "proposed",
+      "escalation": {
+        "required": false,
+        "route_to_role": null,
+        "reason": null
+      },
+      "closure_evidence_refs": []
+    }
+  ],
+  "routing": {
+    "assessment_owner_role": "Conduct Risk Officer",
+    "required_reviewer_roles": [
+      "Complaints Manager",
+      "Head of Compliance"
+    ],
+    "routing_rationale": "The Complaints Manager supplies operating records; Conduct Risk assesses them; Compliance approves the final assurance disposition."
+  },
+  "human_review": {
+    "required": true,
+    "status": "pending",
+    "reviewer_role": null,
+    "reviewer_id": null,
+    "decision_rationale": null,
+    "reviewed_at": null
+  },
+  "closure": {
+    "status": "not_ready",
+    "closure_authority_role": null,
+    "closure_authority_id": null,
+    "closure_rationale": null,
+    "closure_evidence_refs": [],
+    "closed_at": null
+  },
+  "generation": {
+    "workflow_version": "obligation-assurance-v1.0",
+    "model_id": "synthetic-example",
+    "prompt_version": "not-yet-baselined",
+    "generated_at": "2026-08-09T20:40:00+02:00",
+    "run_id": "schema-example-assurance-002"
+  },
+  "audit": {
+    "created_at": "2026-08-09T20:40:00+02:00",
+    "updated_at": "2026-08-09T20:40:00+02:00",
+    "created_by": "ai_assisted",
+    "change_log": [
+      {
+        "timestamp": "2026-08-09T20:40:00+02:00",
+        "actor": "schema-example-builder",
+        "change": "Created the synthetic insufficient-evidence assessment and evidence request."
+      }
+    ]
+  }
+}

@@ -110,6 +110,8 @@ For every mapping, assess the supplied evidence:
 
 Control: a control description without operating evidence cannot automatically be treated as evidenced.
 
+Implementation: [Control and Evidence Schema v1.0](schemas/control-evidence-schema-v1.0/README.md) connects approved obligations to frozen profile controls, accountable owners, explicit evidence requirements, supplied artefact hashes, potential gaps, remediation actions, escalation and authorised closure.
+
 ## Stage 7: finding and routing
 
 Use the project taxonomy:

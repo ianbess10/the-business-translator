@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — South African scope, synthetic institution profile, source pack and obligation schema frozen; control-and-evidence schema next.**
+**Project 2 — South African scope, synthetic institution profile, source pack, obligation schema and connected control-and-evidence schema frozen; labelled baseline dataset next.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -122,7 +122,7 @@ Every source must be classified before its content is used:
 
 See the [official source register](source-register.md) and frozen [South African Regulatory Source Pack v1.0](source-packs/source-pack-v1.0/README.md), verified on 9 August 2026.
 
-## Decision record to be built
+## Controlled decision records
 
 For every candidate obligation, the capability should prepare:
 
@@ -140,6 +140,8 @@ For every candidate obligation, the capability should prepare:
 - reviewer decision, rationale and timestamp.
 
 The frozen [Obligation Schema v1.0](schemas/obligation-schema-v1.0/README.md) now enforces this source-to-obligation decision record. It rejects draft-as-binding, guidance-as-law, superseded-as-current, unsupported-obligation and approval-without-review states before they reach control mapping.
+
+The frozen [Control and Evidence Schema v1.0](schemas/control-evidence-schema-v1.0/README.md) now connects each approved obligation to profile controls, owners, expected and supplied evidence, assurance gaps, remediation routing, escalation and human closure. It keeps insufficient evidence separate from a potential control gap and prevents an approved obligation from being mistaken for an effective control.
 
 ## Assessment taxonomy
 
@@ -196,7 +198,7 @@ The immediate build sequence is:
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
 2. ~~freeze a small approved-source pack with explicit status metadata;~~ **complete**
 3. ~~define the obligation schema;~~ **complete**
-4. define the control and evidence schema;
+4. ~~define the control and evidence schema;~~ **complete**
 5. create a labelled baseline set spanning AML/CFT and market conduct;
 6. run an intentionally simple baseline;
 7. analyse obligation, mapping, evidence, ownership and escalation failures;
