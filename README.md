@@ -2,7 +2,7 @@
 
 ## Financial Services Transformation Translator
 
-### From operational complexity to usable AI.
+### From operational complexity to measurable operating outcomes.
 
 I combine more than 30 years of experience across financial markets, payment infrastructure, fintech, operational transformation and education with practical AI development.
 
@@ -10,7 +10,9 @@ My focus is not AI theatre.
 
 My focus is preparing **people, operating models and governance for AI-enabled financial services**.
 
-I translate complex business processes into AI workflows that are measurable, explainable, reproducible, operationally useful and appropriately governed.
+I translate complex business processes into AI-enabled operating capabilities that are measurable, explainable, reproducible, operationally useful and appropriately governed.
+
+> **AI is the enabler. The operating outcome is the product.**
 
 ---
 
@@ -46,17 +48,17 @@ My work sits at that intersection.
 
 | Project | Business problem | AI capability | Primary control |
 |---|---|---|---|
-| [Trade Exception Intelligence](projects/trade-exception-manager/README.md) | Unstructured post-trade exceptions | Extraction, classification, structured output | Operations review |
+| [Trade Exception Intelligence](projects/trade-exception-manager/README.md) | Manual interpretation, routing and escalation of settlement exceptions | Faster diagnosis, decision-ready information and consistent workflow routing | Accountable operations review |
 | [Regulatory Compliance Evaluator](projects/compliance-evaluator/README.md) | Procedure/control comparison | Source-grounded analysis | Compliance approval |
 | [Financial Markets Curriculum Architect](projects/curriculum-design-workflow/README.md) | Complex content-to-learning design | Curriculum generation and evaluation | Educator review |
 
 ---
 
-# My Prompt Engineering Method
+# My AI-Enabled Operations Transformation Method
 
 **Understand → Baseline → Design → Test → Evaluate → Improve → Govern → Operationalise**
 
-Every case study documents the progression from an intentionally weak baseline to an engineered workflow.
+Every case study starts with an operating problem and the decision or activity that must improve. It then documents the progression from an intentionally weak baseline to a tested, controlled workflow.
 
 The portfolio distinguishes between:
 - model capability;
@@ -64,6 +66,18 @@ The portfolio distinguishes between:
 - evaluation performance;
 - business usefulness; and
 - readiness for controlled operational use.
+
+Prompt design is one implementation tool within this method. It is not the proposition. The proposition is a better operating outcome with explicit measures, controls and human accountability.
+
+## Flagship case study: Trade Exception Intelligence
+
+When a settlement exception leaves straight-through processing, operations teams must diagnose the break, identify its root cause, obtain missing evidence, route it correctly and decide whether escalation is required.
+
+[Trade Exception Intelligence](projects/trade-exception-manager/README.md) demonstrates an AI-assisted capability that turns unstructured exception traffic into a structured, reviewable next action. It is designed to reduce manual interpretation, improve first-time routing and support faster resolution without transferring accountability from the operations professional.
+
+The project is framed around tangible measures: time to diagnose, touches per exception, correct first-time routing, time to resolution, unnecessary and missed escalation rates, STP/exception rate and cost per exception. Its V4/V5 results are retained as **synthetic benchmark evidence**, not presented as production performance.
+
+[Read the executive summary](projects/trade-exception-manager/executive-summary.md).
 
 ---
 
