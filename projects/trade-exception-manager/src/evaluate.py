@@ -117,6 +117,10 @@ def evaluate_engineered_run(
     schema_hits = 0
     missing_score_total = 0.0
     escalation_hits = 0
+    escalation_true_positives = 0
+    escalation_false_positives = 0
+    escalation_true_negatives = 0
+    escalation_false_negatives = 0
     unsupported_total = 0
 
     for record in records:
@@ -158,6 +162,17 @@ def evaluate_engineered_run(
         )
         if escalation_correct:
             escalation_hits += 1
+        if isinstance(predicted_escalation, bool) and isinstance(
+            expected_escalation, bool
+        ):
+            if predicted_escalation and expected_escalation:
+                escalation_true_positives += 1
+            elif predicted_escalation and not expected_escalation:
+                escalation_false_positives += 1
+            elif not predicted_escalation and not expected_escalation:
+                escalation_true_negatives += 1
+            else:
+                escalation_false_negatives += 1
 
         source = " ".join(
             [
@@ -197,12 +212,32 @@ def evaluate_engineered_run(
         )
 
     n = len(case_scores) or 1
+    escalation_precision_denominator = (
+        escalation_true_positives + escalation_false_positives
+    )
+    escalation_recall_denominator = (
+        escalation_true_positives + escalation_false_negatives
+    )
     summary = {
         "case_count": len(case_scores),
         "classification_accuracy": classification_hits / n if case_scores else 0.0,
         "json_schema_compliance": schema_hits / n if case_scores else 0.0,
         "missing_information_detection": missing_score_total / n if case_scores else 0.0,
         "escalation_accuracy": escalation_hits / n if case_scores else 0.0,
+        "escalation_precision": (
+            escalation_true_positives / escalation_precision_denominator
+            if escalation_precision_denominator
+            else None
+        ),
+        "escalation_recall": (
+            escalation_true_positives / escalation_recall_denominator
+            if escalation_recall_denominator
+            else None
+        ),
+        "escalation_true_positives": escalation_true_positives,
+        "escalation_false_positives": escalation_false_positives,
+        "escalation_true_negatives": escalation_true_negatives,
+        "escalation_false_negatives": escalation_false_negatives,
         "unsupported_claim_flags_total": unsupported_total,
         "unsupported_claim_rate": unsupported_total / n if case_scores else 0.0,
     }
@@ -262,6 +297,12 @@ def evaluate_baseline_run(
             "json_schema_compliance": 0.0,
             "missing_information_detection": None,
             "escalation_accuracy": None,
+            "escalation_precision": None,
+            "escalation_recall": None,
+            "escalation_true_positives": None,
+            "escalation_false_positives": None,
+            "escalation_true_negatives": None,
+            "escalation_false_negatives": None,
             "unsupported_claim_flags_total": unsupported_total,
             "unsupported_claim_rate": unsupported_total / n if case_scores else 0.0,
         },
@@ -362,6 +403,12 @@ def main(argv: list[str] | None = None) -> int:
             "json_schema_compliance",
             "missing_information_detection",
             "escalation_accuracy",
+            "escalation_precision",
+            "escalation_recall",
+            "escalation_true_positives",
+            "escalation_false_positives",
+            "escalation_true_negatives",
+            "escalation_false_negatives",
             "unsupported_claim_flags_total",
             "unsupported_claim_rate",
         ):

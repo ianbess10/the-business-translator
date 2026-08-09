@@ -178,6 +178,10 @@ V5 materially improved classification and missing-information detection. Escalat
 
 See the [V5 evaluation analysis](results/analysis/v5-evaluation-analysis.md), [V4 failure analysis](failure-analysis/v4-on-test-set-v1.0.md) and [controlled evaluation protocol](evaluation.md).
 
+## Independent validation status
+
+A separate [30-case synthetic holdout](datasets/trade-exception-holdout-v1.0.jsonl) and [one-time operational validation protocol](validation/holdout-v1.0-protocol.md) have been prepared and frozen for V5. The holdout has not yet been run against the specified OpenAI model. Its current status is **prepared, not evaluated**; offline workflow checks are not performance evidence.
+
 ## Development and evaluation progression
 
 - V0: open-ended analysis

@@ -1,0 +1,18 @@
+{
+  "id": "trade-exception-holdout-v1.0",
+  "version": "1.0",
+  "status": "frozen",
+  "case_count": 30,
+  "case_ids": [
+    "HO001", "HO002", "HO003", "HO004", "HO005", "HO006", "HO007", "HO008", "HO009", "HO010",
+    "HO011", "HO012", "HO013", "HO014", "HO015", "HO016", "HO017", "HO018", "HO019", "HO020",
+    "HO021", "HO022", "HO023", "HO024", "HO025", "HO026", "HO027", "HO028", "HO029", "HO030"
+  ],
+  "data_policy": "synthetic examples only",
+  "filename": "trade-exception-holdout-v1.0.jsonl",
+  "sha256": "d158010cea68c5a9e09a262edf926134fa6ac2567afe49ad9cb3bbb1e976a610",
+  "frozen_at": "2026-08-09",
+  "purpose": "Independent one-time operational validation of frozen V5. Not for prompt tuning.",
+  "model_protocol": "OpenAI gpt-4o-mini, temperature 0, one run only",
+  "notes": "Labels are withheld from the model request by the runner and used only by the evaluator. Results are synthetic benchmark evidence, not production performance."
+}

@@ -54,9 +54,17 @@ python compare_evals.py \
 - JSON schema compliance (`schema/engineered_output.schema.json`)
 - missing-information detection (coverage of `expected_missing_information`)
 - escalation accuracy (`escalation_required` vs `expected_escalation`)
+- escalation precision and recall
+- escalation true positives, false positives, true negatives and false negatives
 - unsupported-claim flags (identifiers/dates/accounts not present in the case input)
 
 Baseline free-text runs contribute unsupported-claim statistics only; structured metrics apply to engineered outputs.
+
+## Independent V5 holdout
+
+The 30-case `trade-exception-holdout-v1.0` dataset is frozen separately from the original regression set for a one-time operational validation of V5. It must not be used for prompt tuning before that run.
+
+See `validation/holdout-v1.0-protocol.md`. Until a complete OpenAI `gpt-4o-mini` run is recorded, the holdout status is **prepared, not evaluated**. Offline mock-provider results verify wiring only and are not V5 performance evidence.
 
 ## Scoring
 
