@@ -1,133 +1,210 @@
-# Regulatory Change & Control Intelligence
+# Regulatory Change & Obligation-to-Control Intelligence
 
-> **AI is the enabler. Faster, evidence-backed and accountable regulatory impact assessment is the product.**
+## AI-enabled regulatory change management and obligation-to-control assurance
+
+> **AI is the enabler. Faster, traceable and accountable regulatory implementation is the product.**
 
 ## Project status
 
-**Next portfolio project — charter established.**
+**Project 2 — South African scope established; baseline design next.**
 
-This project will test an AI-assisted capability for translating supplied regulatory or control requirements into a structured view of impacted procedures, controls, evidence gaps, accountable owners and review priorities.
+This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
-It will not determine whether an organisation is legally or regulatorily compliant. Qualified compliance, legal, risk and business professionals remain accountable for interpretation, materiality, approval and action.
+1. South African AML/CFT requirements administered by the Financial Intelligence Centre (FIC); and
+2. Financial Sector Conduct Authority (FSCA) market-conduct requirements.
 
-## The operational problem
+The capability will help teams identify a regulatory change, structure its obligations, map them to affected policies, processes and controls, identify missing evidence, assign accountable review and track the decision through to closure.
 
-Regulatory and control requirements must be interpreted, mapped to the operating model and supported by evidence. In practice, this work is often distributed across policy teams, compliance specialists, control owners and operations managers.
+It will not decide whether an institution is legally or regulatorily compliant. Qualified compliance, legal, risk, control and business professionals remain accountable for applicability, interpretation, materiality, control adequacy, approval and implementation.
 
-The challenge is not simply finding relevant text. Teams must determine:
+## The operating problem
 
-- what the requirement actually requires;
-- which process, procedure, system or control may be affected;
-- whether the current procedure contains sufficient evidence of alignment;
-- where evidence is missing, contradictory or outdated;
-- who should own the review or remediation; and
-- which findings require escalation.
+Regulatory change often arrives as legislation, amendments, standards, directives, guidance, interpretation rulings, regulatory plans or consultation material. These sources do not arrive as an implementation-ready control plan.
 
-Manual comparison can be slow and inconsistent. Poor traceability can create duplicated analysis, delayed implementation, unclear ownership and difficulty demonstrating how a requirement was translated into an operating response.
+A regulated institution must determine:
 
-## The capability to be built
+- what changed and when;
+- whether the source is binding, interpretive, planned or still draft;
+- which legal entity, licence, product, customer, channel or activity may be affected;
+- which obligations are new, amended, clarified, superseded or unchanged;
+- which policy, process, system, data field, control, training or management information is impacted;
+- whether current control evidence supports the obligation;
+- who owns the decision and implementation; and
+- which uncertainty or potential gap requires escalation.
 
-The prototype will compare an approved source requirement with supplied procedure and control material, then prepare a review record containing:
+This work is fragmented across regulatory change, compliance advisory, legal, policy, operations, technology, risk and control owners. Weak traceability creates duplicated interpretation, delayed implementation, uncertain ownership and difficulty demonstrating how an external requirement became an internal operating response.
 
-1. the requirement and its source reference;
-2. the potentially affected operating activity or control;
-3. the relevant procedure evidence;
-4. an assessment of alignment, potential gap, insufficient evidence or source conflict;
-5. the evidence or authoritative information still required;
-6. a proposed owner and next review action;
-7. an escalation recommendation; and
-8. a complete evidence trail for qualified human review.
+## Two connected capabilities
+
+### 1. Regulatory change management
+
+Convert a new or changed approved source into a structured impact assessment:
 
 ```text
-Approved requirement
-        +
-Procedure and control evidence
+Authoritative source change
         ↓
-Requirement and impact mapping
+Status, effective date and applicability questions
         ↓
-Evidence-backed alignment assessment
+Atomic obligations and source locators
         ↓
-Gap, uncertainty or source conflict
+Impacted business activities and controls
         ↓
-Owner, next action and escalation treatment
+Owners, actions, priorities and escalation
         ↓
-Qualified compliance and business review
+Human-approved implementation plan
 ```
 
-## Operating outcome
+### 2. Obligation-to-control assurance
 
-The intended outcome is not an AI-generated compliance verdict. It is a faster and more consistent path from a supplied requirement to an accountable, evidence-backed operating decision.
+Test whether each approved obligation has an accountable, evidenced operating response:
 
-Potential benefits to test include:
+```text
+Approved obligation
+        ↓
+Mapped policy, process and control
+        ↓
+Control design and operating evidence
+        ↓
+Aligned, potential gap, insufficient evidence or source conflict
+        ↓
+Qualified assurance decision and remediation tracking
+```
 
-- shorter time to complete an initial impact assessment;
-- clearer linkage from requirement to procedure, control and owner;
-- fewer repeated evidence requests and hand-offs;
-- better first-time assignment of review actions;
-- earlier identification of missing or conflicting evidence; and
-- a more auditable trail from regulatory source to operating response.
+The second capability closes the loop. Regulatory change is not complete merely because an obligation was recorded; the organisation must be able to show how it is implemented and evidenced.
+
+## Initial South African scope
+
+### AML/CFT
+
+The first workstream will use approved material from the FIC and the official South African legislation portal. Candidate operating domains include:
+
+- enterprise and customer money-laundering, terrorist-financing and proliferation-financing risk assessment;
+- risk management and compliance programme governance;
+- customer due diligence and beneficial-ownership information;
+- ongoing monitoring and enhanced measures;
+- record keeping;
+- regulatory reporting;
+- targeted financial sanctions controls;
+- training, oversight and evidence; and
+- regulatory returns and supervisory requests.
+
+These are candidate mapping domains, not pre-decided legal obligations. Exact obligation wording, status, commencement and applicability must come from the approved source corpus and human review.
+
+### FSCA market conduct
+
+The second workstream will begin with the FSCA’s statutory market-conduct mandate and the applicable conduct standards, guidance notices, interpretation rulings and financial-sector laws selected for the synthetic institution profile.
+
+Candidate operating domains include:
+
+- product and service governance;
+- customer information and disclosure;
+- advice, distribution and intermediary controls;
+- fair customer outcomes;
+- complaints and remediation;
+- vulnerable-customer considerations;
+- market integrity and conduct controls; and
+- management information, oversight and assurance.
+
+The first release will not attempt to create a universal FSCA obligation library. Applicability varies by legal entity, licence, product and sector. The synthetic institution profile and approved instrument list must be fixed before evaluation.
+
+## Source hierarchy and status control
+
+Every source must be classified before its content is used:
+
+| Status | Permitted use |
+|---|---|
+| Enacted legislation or in-force regulatory instrument | Candidate binding obligation, subject to applicability and human interpretation |
+| Official guidance or interpretation | Interpretive context; never silently promoted to legislation |
+| Regulatory strategy or plan | Change horizon and prioritisation; not a binding obligation by itself |
+| Consultation or draft | Watchlist and readiness assessment only |
+| Superseded or withdrawn | Historical trace only; excluded from current obligation conclusions |
+| Unverified or secondary source | Discovery aid only; excluded from assessment evidence |
+
+See the [official source register](source-register.md), verified on 9 August 2026.
+
+## Decision record to be built
+
+For every candidate obligation, the capability should prepare:
+
+- source authority, title, version and status;
+- effective or relevant date;
+- source locator and supported obligation statement;
+- applicability conditions and unresolved applicability questions;
+- change type: new, amended, clarified, superseded or unchanged;
+- impacted entity, product, process, policy, system, data and control;
+- mapped control owner and evidence;
+- assurance status;
+- missing evidence or source conflict;
+- proposed action, priority and escalation;
+- model confidence and limitations; and
+- reviewer decision, rationale and timestamp.
+
+## Assessment taxonomy
+
+Use operationally explicit outcomes:
+
+- `mapped_and_evidenced` — a supported mapping and sufficient supplied evidence exist;
+- `potential_control_gap` — the supplied material indicates a potentially missing or inadequate operating response;
+- `insufficient_evidence` — a decision cannot be supported from the supplied evidence;
+- `source_conflict` — approved sources or versions conflict;
+- `applicability_uncertain` — the requirement may depend on entity, licence, product or activity facts not supplied;
+- `draft_or_watchlist` — the source is not an in-force obligation source;
+- `superseded` — the source is not current; and
+- `out_of_scope` — the source or requirement is outside the approved corpus or institution profile.
+
+No `compliant` or `non_compliant` outcome is permitted.
 
 ## Tangible business measures
 
 | Measure | What it reveals |
 |---|---|
-| Time to initial impact assessment | Speed from approved source receipt to a reviewable operating view |
-| Requirements mapped per review cycle | Analyst capacity and throughput |
+| Time from source publication to triage | Regulatory horizon-scanning responsiveness |
+| Time to initial impact assessment | Speed from approved source to reviewable operating view |
+| Obligations mapped per review cycle | Analyst capacity and throughput |
 | Correct first-time owner assignment | Avoidable reassignment and hand-offs |
+| Obligation-to-control mapping completeness | Traceability across the operating model |
 | Evidence completeness | Whether findings are decision-ready |
-| False-positive potential-gap rate | Unnecessary investigation and remediation effort |
-| Missed-gap rate | Material weaknesses not surfaced for review |
+| False-positive gap rate | Unnecessary investigation and remediation effort |
+| Missed material-obligation or gap rate | Control risk not surfaced for review |
 | Time to agreed disposition | Speed from finding to accepted action or documented closure |
-| Overdue remediation actions | Effectiveness of ownership and follow-through |
-| Cost per assessed requirement | End-to-end analysis and review effort |
+| Overdue implementation actions | Ownership and execution effectiveness |
+| Cost per assessed source or obligation | End-to-end analysis and review effort |
 
 No benefit will be claimed until measured against a defined operating baseline.
-
-## First validation question
-
-Can the capability distinguish among:
-
-- genuine procedure/control alignment;
-- a potential control gap;
-- insufficient evidence;
-- conflicting approved sources; and
-- a requirement outside the supplied approved corpus?
-
-The evaluation must test evidence quality and operating consequence, not merely whether the output looks well structured.
-
-## Initial test scenarios
-
-- clearly aligned procedure and control;
-- obvious missing control step;
-- ambiguous procedure wording;
-- outdated or superseded source;
-- conflicting requirements;
-- missing supporting evidence;
-- plausible false positive;
-- unsupported inference beyond the approved corpus;
-- correct requirement but wrong operating owner; and
-- material issue incorrectly treated as routine.
 
 ## Human accountability
 
 The capability may prepare analysis and recommendations. It must not:
 
-- declare the organisation compliant or non-compliant;
-- invent regulatory obligations;
+- determine legal applicability without reviewed institution facts;
+- declare compliance or non-compliance;
+- invent or extend an obligation beyond the approved source;
+- treat a draft or plan as an in-force obligation;
 - determine legal interpretation or materiality;
-- approve a control or remediation plan; or
-- close a finding without authorised human review.
+- approve control adequacy or a remediation plan;
+- assign final accountability without owner acceptance; or
+- close an obligation or finding without authorised human review.
 
-## Delivery sequence
+## First release
 
-1. Define the operating decision and approved-source boundary.
-2. Establish the assessment taxonomy and human authority model.
-3. Create a small synthetic baseline set with explicit operational labels.
-4. Run an intentionally simple baseline.
-5. Analyse evidence, routing and escalation failures.
-6. Introduce one controlled workflow design.
-7. Retest on the frozen regression set.
-8. Validate once on a separate holdout.
-9. Package results as synthetic evidence, with production claims reserved for a controlled pilot.
+The first release will use a synthetic South African regulated-financial-institution profile and controlled source excerpts. It will test both workflows without exposing real customer, transaction, employee or institution data.
 
-The existing [engineered prompt](engineered-prompt.md) is an early technical artefact. It will remain subordinate to this operating charter and must not be treated as a validated capability.
+The immediate build sequence is:
+
+1. freeze the synthetic institution and applicability profile;
+2. freeze a small approved-source pack with explicit status metadata;
+3. define the obligation, control and evidence schemas;
+4. create a labelled baseline set spanning AML/CFT and market conduct;
+5. run an intentionally simple baseline;
+6. analyse obligation, mapping, evidence, ownership and escalation failures;
+7. introduce one controlled workflow design;
+8. retest on the frozen regression set; and
+9. validate once against a separate holdout.
+
+See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
+
+The existing [engineered prompt](engineered-prompt.md) is an early technical artefact. It remains subordinate to this operating charter and is not a validated capability.
+
+## Evidence boundary
+
+This repository is an educational portfolio prototype. Source links and statuses must be re-verified before every evaluation run. Nothing in this project is legal advice, a compliance opinion or a representation of an institution’s regulatory position.

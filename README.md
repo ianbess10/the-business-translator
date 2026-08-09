@@ -49,7 +49,7 @@ My work sits at that intersection.
 | Project | Business problem | AI capability | Primary control |
 |---|---|---|---|
 | [Trade Exception Intelligence](projects/trade-exception-manager/README.md) | Manual interpretation, routing and escalation of settlement exceptions | Faster diagnosis, decision-ready information and consistent workflow routing | Accountable operations review |
-| [Regulatory Change & Control Intelligence](projects/compliance-evaluator/README.md) | Slow, fragmented requirement-to-control impact assessment | Evidence-backed mapping, gap triage and accountable action routing | Qualified compliance and business review |
+| [Regulatory Change & Obligation-to-Control Intelligence](projects/compliance-evaluator/README.md) | Fragmented regulatory change and weak obligation-to-control traceability | Evidence-backed change impact, control mapping and assurance triage | Qualified compliance, legal and business review |
 | [Financial Markets Curriculum Architect](projects/curriculum-design-workflow/README.md) | Complex content-to-learning design | Curriculum generation and evaluation | Educator review |
 
 ---
