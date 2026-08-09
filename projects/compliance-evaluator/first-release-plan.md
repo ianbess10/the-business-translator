@@ -6,7 +6,7 @@ Demonstrate, with synthetic evidence, whether an AI-assisted workflow can turn a
 
 ## Synthetic institution profile
 
-Before building cases, freeze a fictional institution profile covering:
+The fictional institution profile is now frozen as `SA-IWM-SYN-001 v1.0`. It covers:
 
 - legal-entity type;
 - FIC accountable-institution category assumptions;
@@ -17,6 +17,8 @@ Before building cases, freeze a fictional institution profile covering:
 - key AML/CFT and market-conduct processes;
 - control-owner roles; and
 - explicit exclusions.
+
+See [`profiles/synthetic-investment-wealth-institution-v1.0.md`](profiles/synthetic-investment-wealth-institution-v1.0.md) and the [machine-readable profile](profiles/synthetic-investment-wealth-institution-v1.0.json).
 
 This profile exists only for evaluation. It does not represent a real institution or establish real-world applicability.
 
@@ -116,7 +118,7 @@ Production or pilot readiness is outside Release 1.
 
 ## Immediate next artefacts
 
-1. `synthetic-institution-profile.md`
+1. ~~synthetic institution profile~~ — complete
 2. `source-pack-v1.0` metadata
 3. obligation schema
 4. control and evidence schema

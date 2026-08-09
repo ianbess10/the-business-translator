@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — South African scope established; baseline design next.**
+**Project 2 — South African scope and synthetic institution profile frozen; source-pack design next.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -187,11 +187,11 @@ The capability may prepare analysis and recommendations. It must not:
 
 ## First release
 
-The first release will use a synthetic South African regulated-financial-institution profile and controlled source excerpts. It will test both workflows without exposing real customer, transaction, employee or institution data.
+The first release will use the frozen [Synthetic South African Investment & Wealth Institution](profiles/synthetic-investment-wealth-institution-v1.0.md) and controlled source excerpts. It will test both workflows without exposing real customer, transaction, employee or institution data.
 
 The immediate build sequence is:
 
-1. freeze the synthetic institution and applicability profile;
+1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
 2. freeze a small approved-source pack with explicit status metadata;
 3. define the obligation, control and evidence schemas;
 4. create a labelled baseline set spanning AML/CFT and market conduct;
