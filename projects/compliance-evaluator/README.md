@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — South African scope, synthetic institution profile and source pack frozen; decision-schema design next.**
+**Project 2 — South African scope, synthetic institution profile, source pack and obligation schema frozen; control-and-evidence schema next.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -139,6 +139,8 @@ For every candidate obligation, the capability should prepare:
 - model confidence and limitations; and
 - reviewer decision, rationale and timestamp.
 
+The frozen [Obligation Schema v1.0](schemas/obligation-schema-v1.0/README.md) now enforces this source-to-obligation decision record. It rejects draft-as-binding, guidance-as-law, superseded-as-current, unsupported-obligation and approval-without-review states before they reach control mapping.
+
 ## Assessment taxonomy
 
 Use operationally explicit outcomes:
@@ -193,13 +195,14 @@ The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
 2. ~~freeze a small approved-source pack with explicit status metadata;~~ **complete**
-3. define the obligation, control and evidence schemas;
-4. create a labelled baseline set spanning AML/CFT and market conduct;
-5. run an intentionally simple baseline;
-6. analyse obligation, mapping, evidence, ownership and escalation failures;
-7. introduce one controlled workflow design;
-8. retest on the frozen regression set; and
-9. validate once against a separate holdout.
+3. ~~define the obligation schema;~~ **complete**
+4. define the control and evidence schema;
+5. create a labelled baseline set spanning AML/CFT and market conduct;
+6. run an intentionally simple baseline;
+7. analyse obligation, mapping, evidence, ownership and escalation failures;
+8. introduce one controlled workflow design;
+9. retest on the frozen regression set; and
+10. validate once against a separate holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
 

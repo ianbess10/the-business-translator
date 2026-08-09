@@ -61,6 +61,8 @@ Convert source text into reviewable candidate obligations:
 
 Control: every obligation statement must be traceable to supplied source text. Unsupported extensions fail evaluation.
 
+Implementation: [Obligation Schema v1.0](schemas/obligation-schema-v1.0/README.md) freezes the required source, classification, atomic-obligation, applicability, impact, routing, assessment and human-review fields.
+
 ## Stage 4: applicability assessment
 
 Identify the institution facts required to decide applicability:

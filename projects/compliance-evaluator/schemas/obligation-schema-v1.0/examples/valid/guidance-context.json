@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "obligation_id": "OBL-AML-0001",
+  "record_type": "candidate_obligation",
+  "lifecycle_status": "generated_candidate",
+  "source": {
+    "source_pack_id": "SA-REG-SOURCE-PACK-001",
+    "source_pack_version": "1.0",
+    "source_id": "SA-AML-SP-003",
+    "source_title": "Guidance Note 7B on the implementation of various aspects of the Financial Intelligence Centre Act",
+    "source_status": "current_official_guidance",
+    "instrument_type": "guidance_note",
+    "document_sha256": "9e1d3a5c693c1b30f5bf5222b9061132e3857a3c5d56ad8caf77d243d49793e4",
+    "hash_verified": true,
+    "status_verified_at": "2026-08-09",
+    "locator": {
+      "locator_text": "Preface, disclaimer and version statement, page 3 of 77",
+      "page_label": "Page 3 of 77",
+      "section": "Preface - Disclaimer and Version",
+      "clause": null,
+      "paragraph": "v-vi",
+      "quote": "This guidance does not provide legal advice and is not intended to replace the FIC Act."
+    }
+  },
+  "source_gate": {
+    "manifest_candidate_statement_extraction": "allowed_as_guidance_only",
+    "manifest_binding_obligation_extraction": "blocked",
+    "record_use": "guidance_only",
+    "gate_passed": true,
+    "gate_reason": "The source pack allows current Guidance Note 7B to provide labelled interpretive context but blocks binding-obligation extraction."
+  },
+  "classification": {
+    "normative_strength": "official_guidance",
+    "legal_effect": "not_binding_guidance",
+    "source_use_disposition": "guidance_context",
+    "effective_from": "2026-08-03",
+    "transition_end": null,
+    "classification_rationale": "The FIC issued the document as guidance under its statutory guidance function and the document expressly says it does not replace the Act."
+  },
+  "obligation": {
+    "atomic": true,
+    "actor": "user of the guidance",
+    "modality": "should",
+    "action": "retain responsibility for legal interpretation",
+    "object_or_outcome": "use Guidance Note 7B as interpretive context rather than a replacement for the FIC Act",
+    "trigger_conditions": [
+      "Guidance Note 7B is used in an AML/CFT assessment"
+    ],
+    "timing": {
+      "type": "event_driven",
+      "value": "when the guidance is relied on",
+      "source_supported": true
+    },
+    "exceptions_and_dependencies": [
+      "binding obligations must be supported by an admitted authoritative instrument"
+    ],
+    "evidence_or_reporting_requirements": [
+      "record the guidance classification and the binding source used for any obligation"
+    ],
+    "atomic_summary": "Use Guidance Note 7B as labelled interpretive context and preserve responsibility for legal interpretation.",
+    "interpretation_notes": [
+      "This is a guidance-context record, not a binding obligation record.",
+      "The schema uses obligation-shaped fields so the downstream workflow can test whether source status is preserved."
+    ],
+    "support_status": "fully_supported",
+    "unsupported_extension_detected": false
+  },
+  "applicability": {
+    "profile_id": "SA-IWM-SYN-001",
+    "profile_version": "1.0",
+    "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+    "status": "not_assessed",
+    "facts_used": [],
+    "missing_facts": [],
+    "assumptions": [],
+    "rationale": "This record controls how the source may be used and does not decide institution-level applicability.",
+    "human_confirmation_required": true
+  },
+  "change": {
+    "change_type": "superseded",
+    "previous_source_id": "SA-AML-SP-004",
+    "previous_obligation_id": null,
+    "change_summary": "Guidance Note 7B replaced Revised Guidance Note 7A and the earlier listed guidance versions on publication."
+  },
+  "operating_impact": {
+    "impact_status": "candidate",
+    "affected_process_ids": [
+      "P-REG-001",
+      "P-REG-002"
+    ],
+    "affected_control_ids": [
+      "C-REG-001",
+      "C-REG-002"
+    ],
+    "affected_roles": [
+      "Regulatory Change Lead",
+      "Head of Compliance"
+    ],
+    "affected_artifacts": [
+      "policy",
+      "RMCP",
+      "training"
+    ],
+    "rationale": "The guidance version change may affect interpretation, RMCP review and staff guidance after human assessment."
+  },
+  "routing": {
+    "proposed_owner_role": "Regulatory Change Lead",
+    "required_reviewer_roles": [
+      "Head of Compliance",
+      "AML Compliance Officer"
+    ],
+    "escalation_required": false,
+    "escalation_reason": null
+  },
+  "assessment": {
+    "outcome": "guidance_context",
+    "confidence": 0.98,
+    "limitations": [
+      "The record does not extract or approve a binding statutory obligation.",
+      "Operational impact remains a review proposal."
+    ],
+    "next_action": "Confirm which existing interpretations, RMCP sections and training material require review because of the guidance update."
+  },
+  "generation": {
+    "workflow_version": "regulatory-change-v1.0",
+    "model_id": "synthetic-example",
+    "prompt_version": "not-yet-baselined",
+    "generated_at": "2026-08-09T19:31:00+02:00",
+    "run_id": "schema-example-guidance-001"
+  },
+  "human_review": {
+    "required": true,
+    "status": "pending",
+    "reviewer_role": null,
+    "reviewer_id": null,
+    "decision_rationale": null,
+    "reviewed_at": null
+  },
+  "audit": {
+    "created_at": "2026-08-09T19:31:00+02:00",
+    "updated_at": "2026-08-09T19:31:00+02:00",
+    "created_by": "ai_assisted",
+    "change_log": [
+      {
+        "timestamp": "2026-08-09T19:31:00+02:00",
+        "actor": "schema-example-builder",
+        "change": "Created synthetic guidance-context example."
+      }
+    ]
+  }
+}
