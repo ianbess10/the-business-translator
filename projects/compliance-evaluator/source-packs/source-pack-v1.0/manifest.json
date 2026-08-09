@@ -1,0 +1,355 @@
+{
+  "pack_id": "SA-REG-SOURCE-PACK-001",
+  "version": "1.0",
+  "status": "frozen_for_schema_and_synthetic_baseline_design",
+  "jurisdiction": "South Africa",
+  "verified_at": "2026-08-09",
+  "scope": [
+    "AML/CFT administered by the Financial Intelligence Centre",
+    "FSCA market conduct for a synthetic investment and wealth-management institution"
+  ],
+  "institution_profile": {
+    "profile_id": "SA-IWM-SYN-001",
+    "version": "1.0",
+    "sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4"
+  },
+  "source_count": 10,
+  "legal_reliance": false,
+  "production_use": false,
+  "content_policy": "Metadata and official source pointers only. External source PDFs are not redistributed in the repository.",
+  "run_admission_rules": [
+    "Retrieve each source from its recorded official URL.",
+    "Verify the retrieved document SHA-256 against this manifest.",
+    "Reconfirm legal status, version, effective date and supersession before each run.",
+    "Apply the permitted-use and extraction gates recorded for the source.",
+    "Require a precise source locator for every extracted statement.",
+    "Route unresolved status, date, version, source or applicability conflicts to a qualified human reviewer."
+  ],
+  "sources": [
+    {
+      "source_id": "SA-AML-SP-001",
+      "domain": "AML_CFT",
+      "issuing_authority": "Parliament of the Republic of South Africa",
+      "official_publisher": "Government of South Africa",
+      "title": "Financial Intelligence Centre Act 38 of 2001",
+      "instrument_type": "legislation",
+      "status": "in_force_with_amendments",
+      "publication_date": "2001-12-03",
+      "effective_date": null,
+      "effective_date_note": "The official landing page records multiple commencement dates by provision.",
+      "version_position": "The linked PDF is the Act as enacted. The official landing page records later amendments and points to a third-party consolidated text.",
+      "landing_page_url": "https://www.gov.za/documents/financial-intelligence-centre-act",
+      "document_url": "https://www.gov.za/sites/default/files/gcis_document/201409/a38-010.pdf",
+      "document_sha256": "6713af8ef5ff07a46a9e46f1f6ff9e4faa304cff25b88f98ed43e0d27949b175",
+      "page_count": 28,
+      "applicability_to_profile": "Potential statutory anchor because the synthetic profile assumes an applicable Schedule 1 accountable-institution category; exact item and provision applicability remain human-reviewed assumptions.",
+      "candidate_statement_extraction": "blocked",
+      "binding_obligation_extraction": "blocked",
+      "permitted_use": [
+        "statutory authority anchor",
+        "commencement and amendment-control test",
+        "source-lineage reference"
+      ],
+      "prohibited_use": [
+        "claiming a current obligation from the as-enacted PDF",
+        "claiming exact Schedule 1 applicability without reviewed facts"
+      ],
+      "unresolved_issues": [
+        "Approve a current amended legislative text or complete amendment chain before obligation extraction."
+      ]
+    },
+    {
+      "source_id": "SA-AML-SP-002",
+      "domain": "AML_CFT",
+      "issuing_authority": "Financial Intelligence Centre",
+      "official_publisher": "Financial Intelligence Centre",
+      "title": "Anti-Money Laundering and Counter-Terrorism Financing Legislation - 2024 Edition",
+      "instrument_type": "official_reference_compilation",
+      "status": "official_unofficial_compilation",
+      "publication_date": null,
+      "effective_date": null,
+      "effective_date_note": "Edition year 2024; no exact publication date recorded in the source document.",
+      "version_position": "The source expressly states that it is an unofficial text of the FIC Act and regulations.",
+      "landing_page_url": "https://www.fic.gov.za/document/the-fic-act-booklet-2024/",
+      "document_url": "https://www.fic.gov.za/wp-content/uploads/2024/05/2024.3-GN-FIC-Act-booklet.pdf",
+      "document_sha256": "1d352b77c7eedfaf5b1b66bb0f14cf4224d389f59122f1115b168f2338afc93c",
+      "page_count": 312,
+      "applicability_to_profile": "Reference compilation for the assumed accountable-institution scenario only.",
+      "candidate_statement_extraction": "locator_discovery_only",
+      "binding_obligation_extraction": "blocked",
+      "permitted_use": [
+        "locator discovery",
+        "cross-checking section structure",
+        "testing whether unofficial status is preserved"
+      ],
+      "prohibited_use": [
+        "treating the booklet as the authoritative consolidated Act",
+        "using it as the sole legal basis for an obligation"
+      ],
+      "unresolved_issues": []
+    },
+    {
+      "source_id": "SA-AML-SP-003",
+      "domain": "AML_CFT",
+      "issuing_authority": "Financial Intelligence Centre",
+      "official_publisher": "Financial Intelligence Centre",
+      "title": "Guidance Note 7B on the implementation of various aspects of the Financial Intelligence Centre Act",
+      "instrument_type": "guidance_note",
+      "status": "current_official_guidance",
+      "publication_date": "2026-08-03",
+      "effective_date": "2026-08-03",
+      "effective_date_note": "The version statement replaces prior listed guidance from the date of publication.",
+      "version_position": "Replaces Revised Guidance Note 7A, Guidance Note 7A and Guidance Note 7.",
+      "landing_page_url": "https://www.fic.gov.za/2026/08/03/web-notice-guidance-note-7b-on-the-implementation-of-various-aspects-of-the-fic-act/",
+      "document_url": "https://www.fic.gov.za/wp-content/uploads/2026/08/Guidance-Note-7B-%E2%80%93-Implementation-of-various-aspects-of-the-FIC-Act.pdf",
+      "document_sha256": "9e1d3a5c693c1b30f5bf5222b9061132e3857a3c5d56ad8caf77d243d49793e4",
+      "page_count": 77,
+      "approved_status_locator": "Preface, page 3 of 77, Disclaimer and Version",
+      "applicability_to_profile": "Potential interpretive context for the assumed accountable institution, subject to exact provision and risk-context review.",
+      "candidate_statement_extraction": "allowed_as_guidance_only",
+      "binding_obligation_extraction": "blocked",
+      "permitted_use": [
+        "interpretive context labelled as guidance",
+        "risk-based approach and RMCP scenario design",
+        "supersession testing"
+      ],
+      "prohibited_use": [
+        "silently promoting guidance to legislation",
+        "presenting guidance as legal advice",
+        "using superseded predecessor guidance as current"
+      ],
+      "unresolved_issues": []
+    },
+    {
+      "source_id": "SA-AML-SP-004",
+      "domain": "AML_CFT",
+      "issuing_authority": "Financial Intelligence Centre",
+      "official_publisher": "Financial Intelligence Centre",
+      "title": "Revised Guidance Note 7A on the implementation of various aspects of the Financial Intelligence Centre Act",
+      "instrument_type": "guidance_note",
+      "status": "superseded",
+      "publication_date": "2025-09-01",
+      "effective_date": null,
+      "effective_date_note": "Superseded on publication of Guidance Note 7B on 3 August 2026.",
+      "version_position": "Historical predecessor expressly replaced by Guidance Note 7B.",
+      "landing_page_url": "https://www.fic.gov.za/document/revised-guidance-note-7a/",
+      "document_url": "https://www.fic.gov.za/wp-content/uploads/2025/09/Revised-Guidance-Note-7A-%E2%80%93-Implementation-of-various-aspects-of-the-FIC-Act.pdf",
+      "document_sha256": "e24c96566c2638c5665932f3075a7050304998360703563910ab1cfe7891fe66",
+      "page_count": 76,
+      "approved_status_locator": "Preface, page 3 of 76, Version; supersession confirmed by Guidance Note 7B page 3 of 77",
+      "applicability_to_profile": "Historical evidence only.",
+      "candidate_statement_extraction": "historical_only",
+      "binding_obligation_extraction": "blocked",
+      "permitted_use": [
+        "supersession test",
+        "historical comparison"
+      ],
+      "prohibited_use": [
+        "current interpretive use",
+        "binding-obligation extraction"
+      ],
+      "unresolved_issues": []
+    },
+    {
+      "source_id": "SA-AML-SP-005",
+      "domain": "AML_CFT",
+      "issuing_authority": "Financial Intelligence Centre",
+      "official_publisher": "Financial Intelligence Centre",
+      "title": "Directive 10 of 2026 on information pertaining to geographic locations",
+      "instrument_type": "directive",
+      "status": "final_issued_commencement_unverified",
+      "publication_date": "2026-07-31",
+      "effective_date": null,
+      "effective_date_note": "Clause 7 makes commencement dependent on publication in the Government Gazette. That Gazette event was not independently verified at pack freeze.",
+      "version_position": "Final instrument following Draft Directive 10 consultation.",
+      "landing_page_url": "https://www.fic.gov.za/2026/07/31/web-notice-directive-10-geographic-locations/",
+      "document_url": "https://www.fic.gov.za/wp-content/uploads/2026/07/Directive-10-On-information-pertaining-to-geographic-locations.pdf",
+      "document_sha256": "b32af30f57cfe875d9ca09a4ff22ced3328c5018115a8010cebbe65e3a01dc41",
+      "page_count": 5,
+      "approved_status_locator": "Clause 7, page 5 of 5, Commencement",
+      "applicability_to_profile": "Potentially applicable only if the synthetic institution's assumed Schedule 1 item is among the listed items and commencement is verified.",
+      "candidate_statement_extraction": "allowed_as_final_change_event_with_commencement_uncertainty",
+      "binding_obligation_extraction": "blocked_pending_gazette_verification",
+      "permitted_use": [
+        "final-issued change event",
+        "commencement-control test",
+        "applicability-question generation"
+      ],
+      "prohibited_use": [
+        "classifying the directive as in force",
+        "assigning implementation due dates before Gazette verification"
+      ],
+      "unresolved_issues": [
+        "Verify Government Gazette publication and date.",
+        "Resolve the synthetic institution's exact Schedule 1 item before applicability approval."
+      ]
+    },
+    {
+      "source_id": "SA-AML-SP-W01",
+      "domain": "AML_CFT",
+      "issuing_authority": "Financial Intelligence Centre",
+      "official_publisher": "Financial Intelligence Centre",
+      "title": "Draft Directive 12 on the submission of risk management and compliance programmes",
+      "instrument_type": "draft_directive",
+      "status": "draft_consultation",
+      "publication_date": "2026-07-31",
+      "effective_date": null,
+      "effective_date_note": "Proposed dates in a draft do not create an in-force requirement.",
+      "consultation_deadline_text": "Monday, 21 August 2026",
+      "consultation_deadline_date": "2026-08-21",
+      "date_consistency": "weekday_date_conflict",
+      "version_position": "Consultation draft; no final instrument recorded in this pack.",
+      "landing_page_url": "https://www.fic.gov.za/2026/07/31/web-notice-draft-directive-12-rmcp/",
+      "document_url": "https://www.fic.gov.za/wp-content/uploads/2026/07/Draft-Directive-12-On-the-submission-of-risk-management-and-compliance-programmes.pdf",
+      "document_sha256": "844cbdabb47b3c02d8337d06a22ce069a7d7971774ed722fbd9e53241153f13a",
+      "page_count": 2,
+      "approved_status_locator": "Page 1 of 2, header 'FOR CONSULTATION PURPOSES ONLY'; web notice page 2 for deadline",
+      "applicability_to_profile": "Readiness scenario only; exact Schedule 1 item would still require review if a final directive is issued.",
+      "candidate_statement_extraction": "allowed_as_proposed_requirement_only",
+      "binding_obligation_extraction": "blocked",
+      "permitted_use": [
+        "watchlist event",
+        "draft-versus-final classification test",
+        "readiness impact scenario",
+        "source-date conflict test"
+      ],
+      "prohibited_use": [
+        "in-force obligation conclusion",
+        "mandatory implementation action",
+        "silently correcting the source's weekday/date conflict"
+      ],
+      "unresolved_issues": [
+        "Qualified human reviewer must resolve the stated weekday/date conflict before relying on the consultation deadline.",
+        "Monitor for finalisation, withdrawal or replacement."
+      ]
+    },
+    {
+      "source_id": "SA-CONDUCT-SP-001",
+      "domain": "FSCA_MARKET_CONDUCT",
+      "issuing_authority": "Parliament of the Republic of South Africa",
+      "official_publisher": "Government of South Africa",
+      "title": "Financial Advisory and Intermediary Services Act 37 of 2002",
+      "instrument_type": "legislation",
+      "status": "in_force_with_amendments",
+      "publication_date": "2002-11-15",
+      "effective_date": null,
+      "effective_date_note": "The official landing page records multiple commencement dates by provision.",
+      "version_position": "The linked PDF is the Act as enacted. The official landing page records later amendments.",
+      "landing_page_url": "https://www.gov.za/documents/financial-advisory-and-intermediary-services-act",
+      "document_url": "https://www.gov.za/sites/default/files/gcis_document/201409/a37-020.pdf",
+      "document_sha256": "0672e12fc6235e8462e17dd5adf86d15410c5ec8a162ac59a080371278afe08e",
+      "page_count": 37,
+      "applicability_to_profile": "Potential statutory anchor because the synthetic profile assumes relevant FSCA authorisations; actual licence category and activity permissions require human confirmation.",
+      "candidate_statement_extraction": "blocked",
+      "binding_obligation_extraction": "blocked",
+      "permitted_use": [
+        "statutory authority anchor",
+        "source-lineage and amendment-control test"
+      ],
+      "prohibited_use": [
+        "claiming a current obligation from the as-enacted PDF",
+        "inferring an actual licence or permission"
+      ],
+      "unresolved_issues": [
+        "Approve a current amended legislative text or complete amendment chain before obligation extraction."
+      ]
+    },
+    {
+      "source_id": "SA-CONDUCT-SP-002",
+      "domain": "FSCA_MARKET_CONDUCT",
+      "issuing_authority": "Financial Services Board",
+      "official_publisher": "Government of South Africa",
+      "title": "General Code of Conduct for Authorised Financial Services Providers and Representatives, 2003",
+      "instrument_type": "subordinate_code",
+      "status": "in_force_as_amended",
+      "publication_date": "2003-08-08",
+      "effective_date": null,
+      "effective_date_note": "The original notice makes commencement dependent on a date determined under section 7(1) of the FAIS Act; that determination is not included in this pack.",
+      "version_position": "Original Board Notice 80 of 2003; later amendments include Government Notice 706 of 2020.",
+      "landing_page_url": "https://www.gov.za/documents/notices/financial-advisory-and-intermediary-services-act-general-code-conduct-authorised",
+      "document_url": "https://www.gov.za/sites/default/files/gcis_document/201409/25299b.pdf",
+      "document_sha256": "f4ea33887711b1f79b6a8a4b9c504c40f5f7c89e3cf96654d3342c1208a5ed3a",
+      "page_count": 26,
+      "approved_status_locator": "Notice 80 of 2003, first page; section 22, Short title and commencement",
+      "applicability_to_profile": "Potentially relevant to the assumed advice and intermediary activities; licence category, activity and client context require review.",
+      "candidate_statement_extraction": "blocked_until_amendment_chain_applied",
+      "binding_obligation_extraction": "blocked_as_standalone_source",
+      "permitted_use": [
+        "base-instrument lineage",
+        "amendment-chain test",
+        "historical clause comparison"
+      ],
+      "prohibited_use": [
+        "treating the original PDF as the current consolidated Code",
+        "extracting a current obligation without applicable amendments"
+      ],
+      "unresolved_issues": [
+        "Confirm the complete amendment chain and an approved current consolidated text."
+      ]
+    },
+    {
+      "source_id": "SA-CONDUCT-SP-003",
+      "domain": "FSCA_MARKET_CONDUCT",
+      "issuing_authority": "Financial Sector Conduct Authority",
+      "official_publisher": "Government of South Africa",
+      "title": "Amendment of the General Code of Conduct for Authorised FSPs and Representatives, 2020",
+      "instrument_type": "amendment_notice",
+      "status": "in_force_with_staged_commencement",
+      "publication_date": "2020-06-26",
+      "effective_date": "2020-06-26",
+      "effective_date_note": "The notice operates on Gazette publication, with specified provisions taking effect 6, 8 or 12 months later according to the commencement table.",
+      "version_position": "Government Notice 706 of 2020 amending Board Notice 80 of 2003 as previously amended.",
+      "landing_page_url": "https://www.gov.za/documents/notices/financial-sector-regulation-act-financial-advisory-and-intermediary-services-act",
+      "document_url": "https://www.gov.za/sites/default/files/gcis_document/202006/43474gon706.pdf",
+      "document_sha256": "0ba264a18f2e4659c1af10ddaebfba1433c82d26ec13554bc3f92c6cd51f8d1d",
+      "page_count": 31,
+      "approved_status_locator": "Schedule A and pages 29-30 of 31, Short title and Commencement table",
+      "applicability_to_profile": "Potentially relevant to the assumed advice and intermediary activities, subject to provision-level activity and client applicability.",
+      "candidate_statement_extraction": "allowed_from_amendment_text_with_commencement_locator",
+      "binding_obligation_extraction": "allowed_with_human_review_and_staged_date_control",
+      "permitted_use": [
+        "amendment-specific candidate obligation extraction",
+        "customer communication, suitability and complaints scenario design",
+        "staged-commencement test"
+      ],
+      "prohibited_use": [
+        "claiming the complete current Code is contained in this notice",
+        "ignoring the staged commencement table",
+        "assuming profile applicability without licence and activity review"
+      ],
+      "unresolved_issues": [
+        "A human reviewer must verify provision-level commencement when approving an obligation record."
+      ]
+    },
+    {
+      "source_id": "SA-CONDUCT-SP-004",
+      "domain": "FSCA_MARKET_CONDUCT",
+      "issuing_authority": "Financial Sector Conduct Authority",
+      "official_publisher": "Financial Sector Conduct Authority",
+      "title": "FSCA Regulatory Strategy 2025-2028",
+      "instrument_type": "regulatory_strategy",
+      "status": "strategy_not_binding_instrument",
+      "publication_date": null,
+      "effective_date": null,
+      "effective_date_note": "Strategy period 2025-2028; not an instrument commencement date.",
+      "version_position": "Current strategy period recorded at pack freeze.",
+      "landing_page_url": "https://www.fsca.co.za/",
+      "document_url": "https://www2.fsca.co.za/Documents/FSCA%20Regulatory%20Strategy%202025-2028.pdf",
+      "document_sha256": "4b684e5e42a920d440cc508e095aa4d93de87198c956e622570823789335e14e",
+      "page_count": 49,
+      "applicability_to_profile": "Supervisory and strategic context only.",
+      "candidate_statement_extraction": "allowed_as_strategy_context_only",
+      "binding_obligation_extraction": "blocked",
+      "permitted_use": [
+        "regulatory horizon context",
+        "supervisory-priority scenario design",
+        "strategy-versus-obligation classification test"
+      ],
+      "prohibited_use": [
+        "binding-obligation extraction",
+        "using strategic direction as evidence of institution non-compliance"
+      ],
+      "unresolved_issues": []
+    }
+  ]
+}

@@ -119,7 +119,7 @@ Production or pilot readiness is outside Release 1.
 ## Immediate next artefacts
 
 1. ~~synthetic institution profile~~ — complete
-2. `source-pack-v1.0` metadata
+2. ~~`source-pack-v1.0` metadata~~ — complete
 3. obligation schema
 4. control and evidence schema
 5. 24-case labelled baseline dataset

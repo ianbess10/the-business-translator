@@ -1,0 +1,13 @@
+{
+  "pack_id": "SA-REG-SOURCE-PACK-001",
+  "version": "1.0",
+  "status": "frozen_for_schema_and_synthetic_baseline_design",
+  "manifest_filename": "manifest.json",
+  "manifest_sha256": "758ecc8ce34522307bcf5d3b9f8a11f8bb528d58a0a3701feed36cd9b51e9107",
+  "frozen_at": "2026-08-09",
+  "source_count": 10,
+  "institution_profile_id": "SA-IWM-SYN-001",
+  "institution_profile_version": "1.0",
+  "legal_reliance": false,
+  "notes": "Do not edit the frozen v1.0 manifest in place. Create a new source-pack version when a source, status, date, hash, applicability assumption or review decision changes."
+}

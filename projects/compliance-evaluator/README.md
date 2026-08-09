@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — South African scope and synthetic institution profile frozen; source-pack design next.**
+**Project 2 — South African scope, synthetic institution profile and source pack frozen; decision-schema design next.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -120,7 +120,7 @@ Every source must be classified before its content is used:
 | Superseded or withdrawn | Historical trace only; excluded from current obligation conclusions |
 | Unverified or secondary source | Discovery aid only; excluded from assessment evidence |
 
-See the [official source register](source-register.md), verified on 9 August 2026.
+See the [official source register](source-register.md) and frozen [South African Regulatory Source Pack v1.0](source-packs/source-pack-v1.0/README.md), verified on 9 August 2026.
 
 ## Decision record to be built
 
@@ -192,7 +192,7 @@ The first release will use the frozen [Synthetic South African Investment & Weal
 The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
-2. freeze a small approved-source pack with explicit status metadata;
+2. ~~freeze a small approved-source pack with explicit status metadata;~~ **complete**
 3. define the obligation, control and evidence schemas;
 4. create a labelled baseline set spanning AML/CFT and market conduct;
 5. run an intentionally simple baseline;
