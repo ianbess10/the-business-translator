@@ -1,0 +1,33 @@
+{
+  "case_id": "HO022",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2122 failed settlement because securities were unavailable. The note also says the office coffee machine is broken.",
+    "expected_type": "failed_settlement",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "securities availability confirmation"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO022\",\n  \"exception_type\": \"failed_settlement\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 2122 failed settlement because securities were unavailable.\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [\n    \"Trade 2122 failed settlement because securities were unavailable.\"\n  ],\n  \"recommended_next_action\": \"Investigate the availability of securities for Trade 2122.\",\n  \"escalation_required\": true,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "HO022",
+    "exception_type": "failed_settlement",
+    "severity": "high",
+    "known_facts": [
+      "Trade 2122 failed settlement because securities were unavailable."
+    ],
+    "missing_information": [],
+    "evidence": [
+      "Trade 2122 failed settlement because securities were unavailable."
+    ],
+    "recommended_next_action": "Investigate the availability of securities for Trade 2122.",
+    "escalation_required": true,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:43.454331+00:00"
+}

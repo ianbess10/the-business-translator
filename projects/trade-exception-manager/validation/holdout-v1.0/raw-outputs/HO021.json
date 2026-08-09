@@ -1,0 +1,35 @@
+{
+  "case_id": "HO021",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "A matched trade settled short by 500 shares, but the operations note omits the trade identifier.",
+    "expected_type": "partial_settlement",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "trade identifier"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO021\",\n  \"exception_type\": \"partial_settlement\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"A matched trade settled short by 500 shares.\"\n  ],\n  \"missing_information\": [\n    \"trade identifier\"\n  ],\n  \"evidence\": [\n    \"A matched trade settled short by 500 shares, but the operations note omits the trade identifier.\"\n  ],\n  \"recommended_next_action\": \"Obtain the trade identifier to resolve the settlement shortfall.\",\n  \"escalation_required\": true,\n  \"confidence\": 0.7\n}",
+  "output_json": {
+    "case_id": "HO021",
+    "exception_type": "partial_settlement",
+    "severity": "medium",
+    "known_facts": [
+      "A matched trade settled short by 500 shares."
+    ],
+    "missing_information": [
+      "trade identifier"
+    ],
+    "evidence": [
+      "A matched trade settled short by 500 shares, but the operations note omits the trade identifier."
+    ],
+    "recommended_next_action": "Obtain the trade identifier to resolve the settlement shortfall.",
+    "escalation_required": true,
+    "confidence": 0.7
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:41.863838+00:00"
+}

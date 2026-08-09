@@ -79,4 +79,4 @@ Whatever the result, do not tune V5 on this holdout and then claim the revised v
 
 ## Current status
 
-**Prepared and frozen; genuine model run pending.** The offline mock-provider wiring check completed successfully but is not validation evidence and its scores must not be published as V5 performance.
+**Complete.** The genuine one-time run produced 30 outputs and a recorded evaluation without changing the prompt, holdout or schema. See [`holdout-v1.0/README.md`](holdout-v1.0/README.md). The earlier offline mock-provider wiring check remains excluded from performance evidence.

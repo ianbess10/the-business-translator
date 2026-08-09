@@ -1,0 +1,35 @@
+{
+  "case_id": "HO025",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trades 2125A and 2125B appear to represent the same economic transaction, but the note does not confirm whether one is a duplicate.",
+    "expected_type": "other",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "duplicate trade confirmation"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO025\",\n  \"exception_type\": \"insufficient_information\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"Trades 2125A and 2125B appear to represent the same economic transaction.\"\n  ],\n  \"missing_information\": [\n    \"confirmation on whether one is a duplicate\"\n  ],\n  \"evidence\": [\n    \"Trades 2125A and 2125B appear to represent the same economic transaction, but the note does not confirm whether one is a duplicate.\"\n  ],\n  \"recommended_next_action\": \"obtain confirmation on whether one trade is a duplicate of the other.\",\n  \"escalation_required\": true,\n  \"confidence\": 0.7\n}",
+  "output_json": {
+    "case_id": "HO025",
+    "exception_type": "insufficient_information",
+    "severity": "medium",
+    "known_facts": [
+      "Trades 2125A and 2125B appear to represent the same economic transaction."
+    ],
+    "missing_information": [
+      "confirmation on whether one is a duplicate"
+    ],
+    "evidence": [
+      "Trades 2125A and 2125B appear to represent the same economic transaction, but the note does not confirm whether one is a duplicate."
+    ],
+    "recommended_next_action": "obtain confirmation on whether one trade is a duplicate of the other.",
+    "escalation_required": true,
+    "confidence": 0.7
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:49.314578+00:00"
+}

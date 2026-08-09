@@ -1,0 +1,33 @@
+{
+  "case_id": "HO008",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2108 partially settled for 18,000 of 25,000 bonds; 7,000 remain pending due to limited inventory.",
+    "expected_type": "partial_settlement",
+    "expected_escalation": false,
+    "expected_missing_information": []
+  },
+  "output_text": "{\n  \"case_id\": \"HO008\",\n  \"exception_type\": \"partial_settlement\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"Trade 2108 partially settled for 18,000 of 25,000 bonds\",\n    \"7,000 remain pending due to limited inventory\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [\n    \"Trade 2108 partially settled for 18,000 of 25,000 bonds\",\n    \"7,000 remain pending due to limited inventory\"\n  ],\n  \"recommended_next_action\": \"Investigate inventory availability to fulfill the remaining 7,000 bonds\",\n  \"escalation_required\": false,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "HO008",
+    "exception_type": "partial_settlement",
+    "severity": "medium",
+    "known_facts": [
+      "Trade 2108 partially settled for 18,000 of 25,000 bonds",
+      "7,000 remain pending due to limited inventory"
+    ],
+    "missing_information": [],
+    "evidence": [
+      "Trade 2108 partially settled for 18,000 of 25,000 bonds",
+      "7,000 remain pending due to limited inventory"
+    ],
+    "recommended_next_action": "Investigate inventory availability to fulfill the remaining 7,000 bonds",
+    "escalation_required": false,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:13.108572+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "case_id": "HO027",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2127 was instructed after the market had closed and therefore missed the settlement cut-off; the next eligible settlement date is not stated.",
+    "expected_type": "market_deadline",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "next eligible settlement date"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO027\",\n  \"exception_type\": \"market_deadline\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 2127 was instructed after the market had closed\",\n    \"Trade 2127 missed the settlement cut-off\"\n  ],\n  \"missing_information\": [\n    \"next eligible settlement date\"\n  ],\n  \"evidence\": [\n    \"Trade 2127 was instructed after the market had closed and therefore missed the settlement cut-off\"\n  ],\n  \"recommended_next_action\": \"Determine the next eligible settlement date for Trade 2127\",\n  \"escalation_required\": true,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "HO027",
+    "exception_type": "market_deadline",
+    "severity": "high",
+    "known_facts": [
+      "Trade 2127 was instructed after the market had closed",
+      "Trade 2127 missed the settlement cut-off"
+    ],
+    "missing_information": [
+      "next eligible settlement date"
+    ],
+    "evidence": [
+      "Trade 2127 was instructed after the market had closed and therefore missed the settlement cut-off"
+    ],
+    "recommended_next_action": "Determine the next eligible settlement date for Trade 2127",
+    "escalation_required": true,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:53.228891+00:00"
+}

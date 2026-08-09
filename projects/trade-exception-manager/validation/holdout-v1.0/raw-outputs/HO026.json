@@ -1,0 +1,37 @@
+{
+  "case_id": "HO026",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2126 is blocked by a possible corporate-action restriction, but the note does not identify the restriction or its source.",
+    "expected_type": "other",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "corporate-action restriction details",
+      "authoritative source"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO026\",\n  \"exception_type\": \"insufficient_information\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 2126 is blocked by a possible corporate-action restriction\"\n  ],\n  \"missing_information\": [\n    \"details of the corporate-action restriction\",\n    \"source of the corporate-action restriction\"\n  ],\n  \"evidence\": [\n    \"Trade 2126 is blocked by a possible corporate-action restriction, but the note does not identify the restriction or its source.\"\n  ],\n  \"recommended_next_action\": \"obtain details and source of the corporate-action restriction\",\n  \"escalation_required\": true,\n  \"confidence\": 0.7\n}",
+  "output_json": {
+    "case_id": "HO026",
+    "exception_type": "insufficient_information",
+    "severity": "high",
+    "known_facts": [
+      "Trade 2126 is blocked by a possible corporate-action restriction"
+    ],
+    "missing_information": [
+      "details of the corporate-action restriction",
+      "source of the corporate-action restriction"
+    ],
+    "evidence": [
+      "Trade 2126 is blocked by a possible corporate-action restriction, but the note does not identify the restriction or its source."
+    ],
+    "recommended_next_action": "obtain details and source of the corporate-action restriction",
+    "escalation_required": true,
+    "confidence": 0.7
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:51.338926+00:00"
+}

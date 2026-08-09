@@ -1,0 +1,35 @@
+{
+  "case_id": "HO017",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2117 was postponed because the local market was closed for a holiday, and no revised settlement date was supplied.",
+    "expected_type": "market_deadline",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "revised settlement date"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO017\",\n  \"exception_type\": \"market_deadline\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"Trade 2117 was postponed because the local market was closed for a holiday.\"\n  ],\n  \"missing_information\": [\n    \"revised settlement date\"\n  ],\n  \"evidence\": [\n    \"Trade 2117 was postponed because the local market was closed for a holiday, and no revised settlement date was supplied.\"\n  ],\n  \"recommended_next_action\": \"provide revised settlement date\",\n  \"escalation_required\": true,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "HO017",
+    "exception_type": "market_deadline",
+    "severity": "medium",
+    "known_facts": [
+      "Trade 2117 was postponed because the local market was closed for a holiday."
+    ],
+    "missing_information": [
+      "revised settlement date"
+    ],
+    "evidence": [
+      "Trade 2117 was postponed because the local market was closed for a holiday, and no revised settlement date was supplied."
+    ],
+    "recommended_next_action": "provide revised settlement date",
+    "escalation_required": true,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:34.253500+00:00"
+}

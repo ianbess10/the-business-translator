@@ -178,9 +178,25 @@ V5 materially improved classification and missing-information detection. Escalat
 
 See the [V5 evaluation analysis](results/analysis/v5-evaluation-analysis.md), [V4 failure analysis](failure-analysis/v4-on-test-set-v1.0.md) and [controlled evaluation protocol](evaluation.md).
 
-## Independent validation status
+## Independent validation result
 
-A separate [30-case synthetic holdout](datasets/trade-exception-holdout-v1.0.jsonl) and [one-time operational validation protocol](validation/holdout-v1.0-protocol.md) have been prepared and frozen for V5. The holdout has not yet been run against the specified OpenAI model. Its current status is **prepared, not evaluated**; offline workflow checks are not performance evidence.
+V5 was run once against a separately frozen 30-case synthetic holdout using the specified OpenAI model and settings.
+
+| Measure | Holdout result |
+|---|---:|
+| Classification accuracy | 73.3% |
+| Missing-information detection | 68.3% |
+| Escalation accuracy | 80.0% |
+| Escalation precision | 72.7% |
+| Escalation recall | 100.0% |
+| JSON schema compliance | 100.0% |
+| Unsupported-claim flags | 0 |
+
+The result confirmed strong control-oriented behaviour: no required escalation was missed, no unsupported claim was detected and every output met the schema. It also exposed an efficiency and routing weakness: six routine cases were unnecessarily escalated and several data-quality cases were assigned to more specialised queues.
+
+**Decision:** retain V5 unchanged as the completed portfolio prototype, with its limitations visible. It is not presented as production-ready or ready for an operational pilot. Any future V6 should address escalation thresholds, data-quality boundaries and structured missing-information consistency, then be evaluated on a new frozen holdout.
+
+See the [completed holdout result](validation/holdout-v1.0/README.md), [case-level operational analysis](results/analysis/v5-holdout-analysis.md) and [raw evidence package](validation/holdout-v1.0/).
 
 ## Development and evaluation progression
 
@@ -200,7 +216,11 @@ V5 decision-control intervention
       ↓
 Same frozen 20 synthetic cases
       ↓
-Measured comparison and residual-risk analysis
+Measured comparison
+      ↓
+30 new frozen synthetic cases
+      ↓
+Independent operational validation and decision
 ```
 
 The frozen V4 bundle is in [`releases/v4/`](releases/v4/). The V4-to-V5 intervention map is in [`methodology/v4-to-v5-interventions.md`](methodology/v4-to-v5-interventions.md).

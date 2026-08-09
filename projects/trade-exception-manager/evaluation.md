@@ -64,7 +64,7 @@ Baseline free-text runs contribute unsupported-claim statistics only; structured
 
 The 30-case `trade-exception-holdout-v1.0` dataset is frozen separately from the original regression set for a one-time operational validation of V5. It must not be used for prompt tuning before that run.
 
-See `validation/holdout-v1.0-protocol.md`. Until a complete OpenAI `gpt-4o-mini` run is recorded, the holdout status is **prepared, not evaluated**. Offline mock-provider results verify wiring only and are not V5 performance evidence.
+See `validation/holdout-v1.0/README.md` for the completed result and case-level analysis. Offline mock-provider results verify wiring only and are not V5 performance evidence.
 
 ## Scoring
 

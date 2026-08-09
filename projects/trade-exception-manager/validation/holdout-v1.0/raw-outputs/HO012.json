@@ -1,0 +1,34 @@
+{
+  "case_id": "HO012",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2112 is unmatched because the counterparty has not acknowledged the trade details sent this morning.",
+    "expected_type": "unmatched_trade",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "counterparty acknowledgement"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO012\",\n  \"exception_type\": \"unmatched_trade\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"Trade 2112 is unmatched\",\n    \"Counterparty has not acknowledged the trade details sent this morning\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [\n    \"Trade 2112 is unmatched because the counterparty has not acknowledged the trade details sent this morning\"\n  ],\n  \"recommended_next_action\": \"Obtain acknowledgment of the trade details from the counterparty\",\n  \"escalation_required\": false,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "HO012",
+    "exception_type": "unmatched_trade",
+    "severity": "medium",
+    "known_facts": [
+      "Trade 2112 is unmatched",
+      "Counterparty has not acknowledged the trade details sent this morning"
+    ],
+    "missing_information": [],
+    "evidence": [
+      "Trade 2112 is unmatched because the counterparty has not acknowledged the trade details sent this morning"
+    ],
+    "recommended_next_action": "Obtain acknowledgment of the trade details from the counterparty",
+    "escalation_required": false,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:23.459559+00:00"
+}

@@ -49,7 +49,7 @@ My work sits at that intersection.
 | Project | Business problem | AI capability | Primary control |
 |---|---|---|---|
 | [Trade Exception Intelligence](projects/trade-exception-manager/README.md) | Manual interpretation, routing and escalation of settlement exceptions | Faster diagnosis, decision-ready information and consistent workflow routing | Accountable operations review |
-| [Regulatory Compliance Evaluator](projects/compliance-evaluator/README.md) | Procedure/control comparison | Source-grounded analysis | Compliance approval |
+| [Regulatory Change & Control Intelligence](projects/compliance-evaluator/README.md) | Slow, fragmented requirement-to-control impact assessment | Evidence-backed mapping, gap triage and accountable action routing | Qualified compliance and business review |
 | [Financial Markets Curriculum Architect](projects/curriculum-design-workflow/README.md) | Complex content-to-learning design | Curriculum generation and evaluation | Educator review |
 
 ---
@@ -75,7 +75,7 @@ When a settlement exception leaves straight-through processing, operations teams
 
 [Trade Exception Intelligence](projects/trade-exception-manager/README.md) demonstrates an AI-assisted capability that turns unstructured exception traffic into a structured, reviewable next action. It is designed to reduce manual interpretation, improve first-time routing and support faster resolution without transferring accountability from the operations professional.
 
-The project is framed around tangible measures: time to diagnose, touches per exception, correct first-time routing, time to resolution, unnecessary and missed escalation rates, STP/exception rate and cost per exception. Its V4/V5 results are retained as **synthetic benchmark evidence**, not presented as production performance.
+The project is framed around tangible measures: time to diagnose, touches per exception, correct first-time routing, time to resolution, unnecessary and missed escalation rates, STP/exception rate and cost per exception. Its V4/V5 results and completed 30-case independent holdout are retained as **synthetic benchmark evidence**, not presented as production performance.
 
 [Read the executive summary](projects/trade-exception-manager/executive-summary.md).
 

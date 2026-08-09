@@ -1,0 +1,35 @@
+{
+  "case_id": "HO016",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2116 missed the 15:00 CSD settlement cut-off today; the next intended settlement date is not recorded.",
+    "expected_type": "market_deadline",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "new intended settlement date"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO016\",\n  \"exception_type\": \"market_deadline\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 2116 missed the 15:00 CSD settlement cut-off today.\"\n  ],\n  \"missing_information\": [\n    \"next intended settlement date\"\n  ],\n  \"evidence\": [\n    \"Trade 2116 missed the 15:00 CSD settlement cut-off today.\"\n  ],\n  \"recommended_next_action\": \"Determine the next intended settlement date.\",\n  \"escalation_required\": true,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "HO016",
+    "exception_type": "market_deadline",
+    "severity": "high",
+    "known_facts": [
+      "Trade 2116 missed the 15:00 CSD settlement cut-off today."
+    ],
+    "missing_information": [
+      "next intended settlement date"
+    ],
+    "evidence": [
+      "Trade 2116 missed the 15:00 CSD settlement cut-off today."
+    ],
+    "recommended_next_action": "Determine the next intended settlement date.",
+    "escalation_required": true,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:32.274543+00:00"
+}

@@ -1,0 +1,35 @@
+{
+  "case_id": "HO002",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2102 has message reference MT54-??, which is truncated and cannot be verified.",
+    "expected_type": "data_quality",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "valid message reference"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO002\",\n  \"exception_type\": \"data_quality\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"Trade 2102 has message reference MT54-??, which is truncated and cannot be verified.\"\n  ],\n  \"missing_information\": [\n    \"valid message reference\"\n  ],\n  \"evidence\": [\n    \"Trade 2102 has message reference MT54-??, which is truncated and cannot be verified.\"\n  ],\n  \"recommended_next_action\": \"Provide a valid message reference for Trade 2102.\",\n  \"escalation_required\": false,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "HO002",
+    "exception_type": "data_quality",
+    "severity": "medium",
+    "known_facts": [
+      "Trade 2102 has message reference MT54-??, which is truncated and cannot be verified."
+    ],
+    "missing_information": [
+      "valid message reference"
+    ],
+    "evidence": [
+      "Trade 2102 has message reference MT54-??, which is truncated and cannot be verified."
+    ],
+    "recommended_next_action": "Provide a valid message reference for Trade 2102.",
+    "escalation_required": false,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:48:56.122861+00:00"
+}

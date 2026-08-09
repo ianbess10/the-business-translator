@@ -1,0 +1,35 @@
+{
+  "case_id": "HO030",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2130 is matched on economics and counterparty, but its settlement date is missing.",
+    "expected_type": "data_quality",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "settlement date"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO030\",\n  \"exception_type\": \"data_quality\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"Trade 2130 is matched on economics and counterparty\"\n  ],\n  \"missing_information\": [\n    \"settlement date\"\n  ],\n  \"evidence\": [\n    \"Trade 2130 is matched on economics and counterparty, but its settlement date is missing.\"\n  ],\n  \"recommended_next_action\": \"Provide the missing settlement date for Trade 2130.\",\n  \"escalation_required\": false,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "HO030",
+    "exception_type": "data_quality",
+    "severity": "medium",
+    "known_facts": [
+      "Trade 2130 is matched on economics and counterparty"
+    ],
+    "missing_information": [
+      "settlement date"
+    ],
+    "evidence": [
+      "Trade 2130 is matched on economics and counterparty, but its settlement date is missing."
+    ],
+    "recommended_next_action": "Provide the missing settlement date for Trade 2130.",
+    "escalation_required": false,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:59.086894+00:00"
+}

@@ -1,0 +1,35 @@
+{
+  "case_id": "HO004",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "For trade 2104, the email SSI names agent BIC ABCDZAJJ while the approved standing instruction names agent BIC EFGHZAJJ.",
+    "expected_type": "instruction_issue",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "authoritative agent BIC"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO004\",\n  \"exception_type\": \"instruction_issue\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"For trade 2104, the email SSI names agent BIC ABCDZAJJ while the approved standing instruction names agent BIC EFGHZAJJ.\"\n  ],\n  \"missing_information\": [\n    \"authoritative settlement method\"\n  ],\n  \"evidence\": [\n    \"the email SSI names agent BIC ABCDZAJJ while the approved standing instruction names agent BIC EFGHZAJJ\"\n  ],\n  \"recommended_next_action\": \"resolve the BIC discrepancy by confirming the correct agent BIC\",\n  \"escalation_required\": true,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "HO004",
+    "exception_type": "instruction_issue",
+    "severity": "high",
+    "known_facts": [
+      "For trade 2104, the email SSI names agent BIC ABCDZAJJ while the approved standing instruction names agent BIC EFGHZAJJ."
+    ],
+    "missing_information": [
+      "authoritative settlement method"
+    ],
+    "evidence": [
+      "the email SSI names agent BIC ABCDZAJJ while the approved standing instruction names agent BIC EFGHZAJJ"
+    ],
+    "recommended_next_action": "resolve the BIC discrepancy by confirming the correct agent BIC",
+    "escalation_required": true,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:01.234788+00:00"
+}

@@ -1,0 +1,37 @@
+{
+  "case_id": "HO028",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "For trade 2128, the custodian status says matched while the internal status says unmatched. No authoritative match status is provided.",
+    "expected_type": "data_quality",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "authoritative match status"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO028\",\n  \"exception_type\": \"unmatched_trade\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"For trade 2128, the custodian status says matched.\",\n    \"The internal status says unmatched.\"\n  ],\n  \"missing_information\": [\n    \"authoritative match status\"\n  ],\n  \"evidence\": [\n    \"custodian status says matched while the internal status says unmatched.\",\n    \"No authoritative match status is provided.\"\n  ],\n  \"recommended_next_action\": \"Obtain authoritative match status to resolve the discrepancy.\",\n  \"escalation_required\": true,\n  \"confidence\": 0.7\n}",
+  "output_json": {
+    "case_id": "HO028",
+    "exception_type": "unmatched_trade",
+    "severity": "medium",
+    "known_facts": [
+      "For trade 2128, the custodian status says matched.",
+      "The internal status says unmatched."
+    ],
+    "missing_information": [
+      "authoritative match status"
+    ],
+    "evidence": [
+      "custodian status says matched while the internal status says unmatched.",
+      "No authoritative match status is provided."
+    ],
+    "recommended_next_action": "Obtain authoritative match status to resolve the discrepancy.",
+    "escalation_required": true,
+    "confidence": 0.7
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:55.164110+00:00"
+}

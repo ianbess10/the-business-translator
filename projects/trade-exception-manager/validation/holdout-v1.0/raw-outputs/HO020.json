@@ -1,0 +1,37 @@
+{
+  "case_id": "HO020",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2120: see the SWIFT message below for the exception. No SWIFT message or exception description is attached.",
+    "expected_type": "insufficient_information",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "SWIFT message content",
+      "exception facts"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO020\",\n  \"exception_type\": \"insufficient_information\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 2120 is referenced in the exception narrative.\"\n  ],\n  \"missing_information\": [\n    \"SWIFT message\",\n    \"exception description\"\n  ],\n  \"evidence\": [\n    \"Trade 2120: see the SWIFT message below for the exception.\"\n  ],\n  \"recommended_next_action\": \"Obtain the missing SWIFT message and exception description for Trade 2120.\",\n  \"escalation_required\": true,\n  \"confidence\": 0.5\n}",
+  "output_json": {
+    "case_id": "HO020",
+    "exception_type": "insufficient_information",
+    "severity": "high",
+    "known_facts": [
+      "Trade 2120 is referenced in the exception narrative."
+    ],
+    "missing_information": [
+      "SWIFT message",
+      "exception description"
+    ],
+    "evidence": [
+      "Trade 2120: see the SWIFT message below for the exception."
+    ],
+    "recommended_next_action": "Obtain the missing SWIFT message and exception description for Trade 2120.",
+    "escalation_required": true,
+    "confidence": 0.5
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:40.112165+00:00"
+}

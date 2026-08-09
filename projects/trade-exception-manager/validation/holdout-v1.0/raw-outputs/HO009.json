@@ -1,0 +1,35 @@
+{
+  "case_id": "HO009",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2109 partially settled, but the operations note does not state the remaining quantity.",
+    "expected_type": "partial_settlement",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "remaining quantity"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO009\",\n  \"exception_type\": \"partial_settlement\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"Trade 2109 partially settled\"\n  ],\n  \"missing_information\": [\n    \"remaining quantity\"\n  ],\n  \"evidence\": [\n    \"Trade 2109 partially settled, but the operations note does not state the remaining quantity.\"\n  ],\n  \"recommended_next_action\": \"Provide the remaining quantity for Trade 2109.\",\n  \"escalation_required\": false,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "HO009",
+    "exception_type": "partial_settlement",
+    "severity": "medium",
+    "known_facts": [
+      "Trade 2109 partially settled"
+    ],
+    "missing_information": [
+      "remaining quantity"
+    ],
+    "evidence": [
+      "Trade 2109 partially settled, but the operations note does not state the remaining quantity."
+    ],
+    "recommended_next_action": "Provide the remaining quantity for Trade 2109.",
+    "escalation_required": false,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:15.033284+00:00"
+}

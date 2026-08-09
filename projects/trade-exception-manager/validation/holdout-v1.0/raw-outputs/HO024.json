@@ -1,0 +1,36 @@
+{
+  "case_id": "HO024",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2124 is matched, but the counterparty address is incomplete and cannot be used for the required confirmation notice.",
+    "expected_type": "data_quality",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "complete counterparty address"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO024\",\n  \"exception_type\": \"counterparty_issue\",\n  \"severity\": \"medium\",\n  \"known_facts\": [\n    \"Trade 2124 is matched\",\n    \"Counterparty address is incomplete\"\n  ],\n  \"missing_information\": [\n    \"complete counterparty address\"\n  ],\n  \"evidence\": [\n    \"Trade 2124 is matched, but the counterparty address is incomplete\"\n  ],\n  \"recommended_next_action\": \"obtain complete counterparty address for confirmation notice\",\n  \"escalation_required\": true,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "HO024",
+    "exception_type": "counterparty_issue",
+    "severity": "medium",
+    "known_facts": [
+      "Trade 2124 is matched",
+      "Counterparty address is incomplete"
+    ],
+    "missing_information": [
+      "complete counterparty address"
+    ],
+    "evidence": [
+      "Trade 2124 is matched, but the counterparty address is incomplete"
+    ],
+    "recommended_next_action": "obtain complete counterparty address for confirmation notice",
+    "escalation_required": true,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:47.204762+00:00"
+}

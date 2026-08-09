@@ -1,0 +1,35 @@
+{
+  "case_id": "HO011",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2111 is still unmatched and the market matching cut-off is 30 minutes away; broker confirmation has not arrived.",
+    "expected_type": "market_deadline",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "broker confirmation"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO011\",\n  \"exception_type\": \"unmatched_trade\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 2111 is still unmatched\",\n    \"Broker confirmation has not arrived\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [\n    \"Trade 2111 is still unmatched\",\n    \"Broker confirmation has not arrived\"\n  ],\n  \"recommended_next_action\": \"Obtain broker confirmation for Trade 2111\",\n  \"escalation_required\": true,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "HO011",
+    "exception_type": "unmatched_trade",
+    "severity": "high",
+    "known_facts": [
+      "Trade 2111 is still unmatched",
+      "Broker confirmation has not arrived"
+    ],
+    "missing_information": [],
+    "evidence": [
+      "Trade 2111 is still unmatched",
+      "Broker confirmation has not arrived"
+    ],
+    "recommended_next_action": "Obtain broker confirmation for Trade 2111",
+    "escalation_required": true,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:19.012927+00:00"
+}

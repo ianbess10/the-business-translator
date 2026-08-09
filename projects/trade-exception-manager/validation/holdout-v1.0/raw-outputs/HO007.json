@@ -1,0 +1,33 @@
+{
+  "case_id": "HO007",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2107 failed because the cash account was not funded; no market cut-off has been missed.",
+    "expected_type": "failed_settlement",
+    "expected_escalation": false,
+    "expected_missing_information": [
+      "funding confirmation"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO007\",\n  \"exception_type\": \"failed_settlement\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 2107 failed because the cash account was not funded\"\n  ],\n  \"missing_information\": [],\n  \"evidence\": [\n    \"Trade 2107 failed because the cash account was not funded\"\n  ],\n  \"recommended_next_action\": \"Ensure the cash account is funded to proceed with the settlement\",\n  \"escalation_required\": false,\n  \"confidence\": 0.9\n}",
+  "output_json": {
+    "case_id": "HO007",
+    "exception_type": "failed_settlement",
+    "severity": "high",
+    "known_facts": [
+      "Trade 2107 failed because the cash account was not funded"
+    ],
+    "missing_information": [],
+    "evidence": [
+      "Trade 2107 failed because the cash account was not funded"
+    ],
+    "recommended_next_action": "Ensure the cash account is funded to proceed with the settlement",
+    "escalation_required": false,
+    "confidence": 0.9
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:10.325296+00:00"
+}

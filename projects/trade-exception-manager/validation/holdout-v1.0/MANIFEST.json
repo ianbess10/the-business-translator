@@ -1,0 +1,33 @@
+{
+  "validation_id": "trade-exception-holdout-v1.0",
+  "status": "complete",
+  "completed_at": "2026-08-09",
+  "prompt": {
+    "path": "../../engineered-prompt-v5.md",
+    "sha256": "b09dd331458639ecae180e9174f76ed9bec9faece909fb6b9327cf440dfa9854"
+  },
+  "dataset": {
+    "path": "../../datasets/trade-exception-holdout-v1.0.jsonl",
+    "sha256": "d158010cea68c5a9e09a262edf926134fa6ac2567afe49ad9cb3bbb1e976a610",
+    "case_count": 30
+  },
+  "schema": {
+    "path": "../../schema/engineered_output.schema.json",
+    "sha256": "b95916dab2cd91e1d0ebb79c67381fd2716d9630caff0fd40d3f2bdcc2a30a1d"
+  },
+  "run": {
+    "id": "20260809T174850Z_holdout-v1",
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "temperature": 0,
+    "meta_path": "raw-outputs/meta.json",
+    "meta_sha256": "928306774fab777c43a05d224dc718db5697b84771129eed6cb1070d285fd3d7"
+  },
+  "evaluation": {
+    "id": "20260809T175010Z_holdout-v1",
+    "path": "evaluation/holdout-v1.0-evaluation.json",
+    "sha256": "d27af29ae3e10265083b11195eca498074a488f4eb731730846ae8407eeccbe3"
+  },
+  "data_policy": "synthetic examples only",
+  "disclaimer": "Synthetic benchmark evidence, not production performance."
+}

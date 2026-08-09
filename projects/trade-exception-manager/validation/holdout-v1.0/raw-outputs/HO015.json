@@ -1,0 +1,37 @@
+{
+  "case_id": "HO015",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2115 shows LEI 549300A1B2C3D4E5F607 in the confirmation and LEI 213800Z9Y8X7W6V5U403 in the trade record.",
+    "expected_type": "counterparty_issue",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "authoritative LEI"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO015\",\n  \"exception_type\": \"counterparty_issue\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 2115 shows LEI 549300A1B2C3D4E5F607 in the confirmation\",\n    \"LEI 213800Z9Y8X7W6V5U403 in the trade record\"\n  ],\n  \"missing_information\": [\n    \"authoritative LEI\"\n  ],\n  \"evidence\": [\n    \"Trade 2115 shows LEI 549300A1B2C3D4E5F607 in the confirmation\",\n    \"LEI 213800Z9Y8X7W6V5U403 in the trade record\"\n  ],\n  \"recommended_next_action\": \"Confirm the correct LEI for Trade 2115\",\n  \"escalation_required\": true,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "HO015",
+    "exception_type": "counterparty_issue",
+    "severity": "high",
+    "known_facts": [
+      "Trade 2115 shows LEI 549300A1B2C3D4E5F607 in the confirmation",
+      "LEI 213800Z9Y8X7W6V5U403 in the trade record"
+    ],
+    "missing_information": [
+      "authoritative LEI"
+    ],
+    "evidence": [
+      "Trade 2115 shows LEI 549300A1B2C3D4E5F607 in the confirmation",
+      "LEI 213800Z9Y8X7W6V5U403 in the trade record"
+    ],
+    "recommended_next_action": "Confirm the correct LEI for Trade 2115",
+    "escalation_required": true,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:30.005990+00:00"
+}

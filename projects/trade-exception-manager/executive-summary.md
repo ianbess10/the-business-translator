@@ -47,9 +47,18 @@ These measures should be accompanied by control indicators such as human overrid
 
 ## Evidence boundary
 
-The current V4 and V5 results come from a frozen benchmark of 20 synthetic cases. They demonstrate that targeted decision-control changes improved prototype behaviour and also revealed a residual over-escalation risk. They are not production performance or evidence of realised business benefit.
+V5 was tested once against a separately frozen set of 30 synthetic cases after development on the original 20-case regression set. The independent holdout produced:
 
-The next step toward operational adoption would be a controlled pilot using representative cases, expert review, clear authority boundaries and comparison against current operating performance.
+- 73.3% classification accuracy;
+- 68.3% decision-critical missing-information detection;
+- 80.0% escalation accuracy;
+- 100.0% escalation recall, with no missed escalation;
+- 100.0% structured-output compliance; and
+- no detected unsupported claims.
+
+The result also produced six unnecessary escalations and several incorrect routing classifications. V5 is therefore retained as the completed portfolio prototype, not presented as production-ready or ready for an operational pilot.
+
+These figures are synthetic benchmark evidence, not production performance or evidence of realised business benefit. Any move toward operational adoption would require a targeted calibration intervention, a new independent validation set and then representative-case testing with expert review and clear authority boundaries.
 
 ## What this case study demonstrates
 

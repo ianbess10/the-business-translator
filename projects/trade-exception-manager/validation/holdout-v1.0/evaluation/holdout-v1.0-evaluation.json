@@ -1,0 +1,765 @@
+{
+  "evaluation_id": "20260809T175010Z_holdout-v1",
+  "created_at": "2026-08-09T17:50:10.810018+00:00",
+  "test_set": "trade-exception-holdout-v1.0.jsonl",
+  "test_set_id": "trade-exception-holdout-v1.0",
+  "test_set_version": "1.0",
+  "prompt_version": "v5",
+  "data_policy": "synthetic examples only",
+  "disclaimer": "These metrics were generated from a local evaluation run. Do not substitute illustrative portfolio figures for this report.",
+  "variants": {
+    "engineered": {
+      "prompt_variant": "engineered",
+      "run_dir": "/Users/ianbess/.codex/.chatgpt-projects/g-p-6a77165297308191909ee05ebf518f92/the-business-translator/projects/trade-exception-manager/results/engineered/20260809T174850Z_holdout-v1",
+      "run_meta": {
+        "run_id": "20260809T174850Z_holdout-v1",
+        "prompt_variant": "engineered",
+        "prompt_version": "v5",
+        "prompt_file": "engineered-prompt-v5.md",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "case_count": 30,
+        "schema": "engineered_output.schema.json",
+        "test_set": "trade-exception-holdout-v1.0.jsonl",
+        "test_set_id": "trade-exception-holdout-v1.0",
+        "test_set_version": "1.0",
+        "schema_valid_count": 30,
+        "created_at": "2026-08-09T17:49:59.087874+00:00",
+        "notes": "Synthetic test data only. Metrics require evaluate.py."
+      },
+      "summary": {
+        "case_count": 30,
+        "classification_accuracy": 0.7333333333333333,
+        "json_schema_compliance": 1.0,
+        "missing_information_detection": 0.6833333333333333,
+        "escalation_accuracy": 0.8,
+        "escalation_precision": 0.7272727272727273,
+        "escalation_recall": 1.0,
+        "escalation_true_positives": 16,
+        "escalation_false_positives": 6,
+        "escalation_true_negatives": 8,
+        "escalation_false_negatives": 0,
+        "unsupported_claim_flags_total": 0,
+        "unsupported_claim_rate": 0.0
+      },
+      "cases": [
+        {
+          "case_id": "HO001",
+          "classification_correct": true,
+          "predicted_type": "data_quality",
+          "expected_type": "data_quality",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "ISIN"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "valid ISIN"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO002",
+          "classification_correct": true,
+          "predicted_type": "data_quality",
+          "expected_type": "data_quality",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "valid message reference"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "valid message reference"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO003",
+          "classification_correct": true,
+          "predicted_type": "instruction_issue",
+          "expected_type": "instruction_issue",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "valid safekeeping account"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "valid safekeeping account"
+            ]
+          },
+          "escalation_correct": false,
+          "predicted_escalation": true,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO004",
+          "classification_correct": true,
+          "predicted_type": "instruction_issue",
+          "expected_type": "instruction_issue",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "authoritative agent BIC"
+            ],
+            "extra_predicted": [
+              "authoritative settlement method"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO005",
+          "classification_correct": true,
+          "predicted_type": "instruction_issue",
+          "expected_type": "instruction_issue",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "authoritative settlement method"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "authoritative settlement instruction"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO006",
+          "classification_correct": true,
+          "predicted_type": "failed_settlement",
+          "expected_type": "failed_settlement",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "securities availability confirmation"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO007",
+          "classification_correct": true,
+          "predicted_type": "failed_settlement",
+          "expected_type": "failed_settlement",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "funding confirmation"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO008",
+          "classification_correct": true,
+          "predicted_type": "partial_settlement",
+          "expected_type": "partial_settlement",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [],
+            "unmatched_expected": [],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO009",
+          "classification_correct": true,
+          "predicted_type": "partial_settlement",
+          "expected_type": "partial_settlement",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "remaining quantity"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "remaining quantity"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO010",
+          "classification_correct": true,
+          "predicted_type": "unmatched_trade",
+          "expected_type": "unmatched_trade",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "executing broker confirmation"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": false,
+          "predicted_escalation": true,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO011",
+          "classification_correct": false,
+          "predicted_type": "unmatched_trade",
+          "expected_type": "market_deadline",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "broker confirmation"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO012",
+          "classification_correct": true,
+          "predicted_type": "unmatched_trade",
+          "expected_type": "unmatched_trade",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "counterparty acknowledgement"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO013",
+          "classification_correct": true,
+          "predicted_type": "counterparty_issue",
+          "expected_type": "counterparty_issue",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "confirmed counterparty name"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "confirmed counterparty name"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO014",
+          "classification_correct": false,
+          "predicted_type": "counterparty_issue",
+          "expected_type": "data_quality",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "counterparty LEI"
+            ],
+            "extra_predicted": [
+              "authoritative LEI"
+            ]
+          },
+          "escalation_correct": false,
+          "predicted_escalation": true,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO015",
+          "classification_correct": true,
+          "predicted_type": "counterparty_issue",
+          "expected_type": "counterparty_issue",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "authoritative LEI"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "authoritative LEI"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO016",
+          "classification_correct": true,
+          "predicted_type": "market_deadline",
+          "expected_type": "market_deadline",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "new intended settlement date"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "next intended settlement date"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO017",
+          "classification_correct": true,
+          "predicted_type": "market_deadline",
+          "expected_type": "market_deadline",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "revised settlement date"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "revised settlement date"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO018",
+          "classification_correct": false,
+          "predicted_type": "market_deadline",
+          "expected_type": "data_quality",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.5,
+          "missing_information_detail": {
+            "score": 0.5,
+            "matched_expected": [
+              "deadline source"
+            ],
+            "unmatched_expected": [
+              "deadline timestamp"
+            ],
+            "extra_predicted": [
+              "cut-off time or deadline source"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO019",
+          "classification_correct": true,
+          "predicted_type": "insufficient_information",
+          "expected_type": "insufficient_information",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "ISIN",
+              "quantity",
+              "settlement date"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "ISIN",
+              "quantity",
+              "settlement date"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO020",
+          "classification_correct": true,
+          "predicted_type": "insufficient_information",
+          "expected_type": "insufficient_information",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.5,
+          "missing_information_detail": {
+            "score": 0.5,
+            "matched_expected": [
+              "SWIFT message content"
+            ],
+            "unmatched_expected": [
+              "exception facts"
+            ],
+            "extra_predicted": [
+              "SWIFT message",
+              "exception description"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO021",
+          "classification_correct": true,
+          "predicted_type": "partial_settlement",
+          "expected_type": "partial_settlement",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "trade identifier"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "trade identifier"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO022",
+          "classification_correct": true,
+          "predicted_type": "failed_settlement",
+          "expected_type": "failed_settlement",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.0,
+          "missing_information_detail": {
+            "score": 0.0,
+            "matched_expected": [],
+            "unmatched_expected": [
+              "securities availability confirmation"
+            ],
+            "extra_predicted": []
+          },
+          "escalation_correct": false,
+          "predicted_escalation": true,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO023",
+          "classification_correct": true,
+          "predicted_type": "instruction_issue",
+          "expected_type": "instruction_issue",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "valid beneficiary BIC"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "authoritative beneficiary BIC"
+            ]
+          },
+          "escalation_correct": false,
+          "predicted_escalation": true,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO024",
+          "classification_correct": false,
+          "predicted_type": "counterparty_issue",
+          "expected_type": "data_quality",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "complete counterparty address"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "complete counterparty address"
+            ]
+          },
+          "escalation_correct": false,
+          "predicted_escalation": true,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO025",
+          "classification_correct": false,
+          "predicted_type": "insufficient_information",
+          "expected_type": "other",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "duplicate trade confirmation"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "confirmation on whether one is a duplicate"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO026",
+          "classification_correct": false,
+          "predicted_type": "insufficient_information",
+          "expected_type": "other",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 0.5,
+          "missing_information_detail": {
+            "score": 0.5,
+            "matched_expected": [
+              "corporate-action restriction details"
+            ],
+            "unmatched_expected": [
+              "authoritative source"
+            ],
+            "extra_predicted": [
+              "details of the corporate-action restriction",
+              "source of the corporate-action restriction"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO027",
+          "classification_correct": true,
+          "predicted_type": "market_deadline",
+          "expected_type": "market_deadline",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "next eligible settlement date"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "next eligible settlement date"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO028",
+          "classification_correct": false,
+          "predicted_type": "unmatched_trade",
+          "expected_type": "data_quality",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "authoritative match status"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "authoritative match status"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO029",
+          "classification_correct": false,
+          "predicted_type": "instruction_issue",
+          "expected_type": "data_quality",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "authoritative settlement date"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "authoritative settlement date"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": true,
+          "expected_escalation": true,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        },
+        {
+          "case_id": "HO030",
+          "classification_correct": true,
+          "predicted_type": "data_quality",
+          "expected_type": "data_quality",
+          "schema_valid": true,
+          "schema_errors": [],
+          "missing_information_score": 1.0,
+          "missing_information_detail": {
+            "score": 1.0,
+            "matched_expected": [
+              "settlement date"
+            ],
+            "unmatched_expected": [],
+            "extra_predicted": [
+              "settlement date"
+            ]
+          },
+          "escalation_correct": true,
+          "predicted_escalation": false,
+          "expected_escalation": false,
+          "unsupported_claim_flags": [],
+          "unsupported_claim_count": 0
+        }
+      ]
+    }
+  }
+}

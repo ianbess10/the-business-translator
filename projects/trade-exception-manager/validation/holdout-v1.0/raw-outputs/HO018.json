@@ -1,0 +1,36 @@
+{
+  "case_id": "HO018",
+  "prompt_variant": "engineered",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "input": {
+    "message": "Trade 2118 must settle urgently today, but the note gives no cut-off time or deadline source.",
+    "expected_type": "data_quality",
+    "expected_escalation": true,
+    "expected_missing_information": [
+      "deadline timestamp",
+      "deadline source"
+    ]
+  },
+  "output_text": "{\n  \"case_id\": \"HO018\",\n  \"exception_type\": \"market_deadline\",\n  \"severity\": \"high\",\n  \"known_facts\": [\n    \"Trade 2118 must settle urgently today\"\n  ],\n  \"missing_information\": [\n    \"cut-off time or deadline source\"\n  ],\n  \"evidence\": [\n    \"Trade 2118 must settle urgently today, but the note gives no cut-off time or deadline source.\"\n  ],\n  \"recommended_next_action\": \"Obtain the cut-off time or deadline source for the settlement of Trade 2118.\",\n  \"escalation_required\": true,\n  \"confidence\": 0.8\n}",
+  "output_json": {
+    "case_id": "HO018",
+    "exception_type": "market_deadline",
+    "severity": "high",
+    "known_facts": [
+      "Trade 2118 must settle urgently today"
+    ],
+    "missing_information": [
+      "cut-off time or deadline source"
+    ],
+    "evidence": [
+      "Trade 2118 must settle urgently today, but the note gives no cut-off time or deadline source."
+    ],
+    "recommended_next_action": "Obtain the cut-off time or deadline source for the settlement of Trade 2118.",
+    "escalation_required": true,
+    "confidence": 0.8
+  },
+  "schema_valid": true,
+  "schema_errors": [],
+  "created_at": "2026-08-09T17:49:36.242528+00:00"
+}
