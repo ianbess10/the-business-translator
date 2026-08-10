@@ -127,10 +127,13 @@ Production or pilot readiness is outside Release 1.
 7. ~~executable runner and deterministic evaluator~~ — complete
 8. ~~single frozen 24-case baseline run~~ — complete
 9. ~~operational failure analysis~~ — complete
-10. Evidence-Gated Decision Pipeline v1.0 implementation — next
+10. ~~Evidence-Gated Decision Pipeline v1.0 implementation and pre-regression freeze~~ — complete
+11. single frozen evidence-gated regression run — next
 
 The frozen simple baseline produced structurally valid outputs for all 24 synthetic cases but only one end-to-end exact operational disposition. It preserved the assurance gate and human accountability boundaries, while exposing material weaknesses in source and obligation classification, owner routing and especially escalation calibration. See the [preserved baseline evidence](results/baseline-v1.0/README.md).
 
 The [operational failure analysis](analysis/baseline-v1.0/README.md) now identifies proposal anchoring, assurance-stage leakage, source/obligation instability, owner-routing errors and escalation failure as the priority operating risks. It selects one [Evidence-Gated Decision Pipeline](analysis/baseline-v1.0/intervention-design.md) for the next controlled build.
 
-The existing engineered prompt remains an early artefact. It must not be treated as an evaluated improvement. The selected pipeline must be implemented separately, frozen before regression execution and reported independently from the simple baseline.
+The selected [Evidence-Gated Decision Pipeline v1.0](workflows/evidence-gated-v1.0/README.md) is now implemented separately and frozen before regression execution. Its two stage schemas, two stage prompts, three policy tables, catalogue owner resolver, cross-field validator, label-isolated runner and baseline-comparison evaluator pass offline validation. No regression result exists yet.
+
+The existing engineered prompt remains an early artefact and is not the frozen intervention. The next authorised evidence step is one v1.0 regression run, followed by evaluation without tuning or rerunning.

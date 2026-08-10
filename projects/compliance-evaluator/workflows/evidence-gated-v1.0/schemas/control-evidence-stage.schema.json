@@ -1,0 +1,61 @@
+{
+  "name": "control_evidence_stage_v1",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "case_id",
+      "proposal_disposition",
+      "mapping_completeness",
+      "supported_control_ids",
+      "evidence_assessment",
+      "adverse_indicator_present",
+      "severity_recommendation",
+      "rationale"
+    ],
+    "properties": {
+      "case_id": {
+        "type": "string",
+        "pattern": "^(AML|CON)-[0-9]{3}$"
+      },
+      "proposal_disposition": {
+        "type": "string",
+        "enum": ["accept", "amend", "reject"]
+      },
+      "mapping_completeness": {
+        "type": "string",
+        "enum": ["complete", "partial", "no_suitable_control"]
+      },
+      "supported_control_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^C-[A-Z]+-[0-9]{3}$"
+        }
+      },
+      "evidence_assessment": {
+        "type": "string",
+        "enum": [
+          "sufficient",
+          "missing_operating_evidence",
+          "design_deficiency",
+          "adverse_operating_evidence",
+          "no_control",
+          "insufficient_to_assess"
+        ]
+      },
+      "adverse_indicator_present": {
+        "type": "boolean"
+      },
+      "severity_recommendation": {
+        "type": "string",
+        "enum": ["not_applicable", "unassessed", "low", "medium", "high", "critical"]
+      },
+      "rationale": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

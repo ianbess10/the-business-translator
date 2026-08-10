@@ -1,0 +1,61 @@
+{
+  "policy_id": "SA-REG-EVIDENCE-DECISION-001",
+  "version": "1.0",
+  "mapping_status": {
+    "complete": "mapped",
+    "partial": "partially_mapped",
+    "no_suitable_control": "no_suitable_control_identified"
+  },
+  "evidence_assessments": {
+    "sufficient": {
+      "rule_id": "EVD-001",
+      "assurance_outcome": "mapped_and_evidenced",
+      "gap_types": [],
+      "gap_severity": "not_applicable",
+      "remediation_action_types": []
+    },
+    "missing_operating_evidence": {
+      "rule_id": "EVD-002",
+      "assurance_outcome": "insufficient_evidence",
+      "gap_types": ["operating_evidence_missing"],
+      "gap_severity": "unassessed",
+      "remediation_action_types": ["evidence_request"]
+    },
+    "design_deficiency": {
+      "rule_id": "EVD-003",
+      "assurance_outcome": "potential_control_gap",
+      "gap_types": ["control_design"],
+      "gap_severity": "high",
+      "remediation_action_types": ["mapping_review"]
+    },
+    "adverse_operating_evidence": {
+      "rule_id": "EVD-004",
+      "assurance_outcome": "potential_control_gap",
+      "gap_types": ["operating_exception"],
+      "gap_severity": "high",
+      "remediation_action_types": ["operating_remediation"]
+    },
+    "no_control": {
+      "rule_id": "EVD-005",
+      "assurance_outcome": "potential_control_gap",
+      "gap_types": ["no_control"],
+      "gap_severity": "high",
+      "remediation_action_types": ["control_design_change"]
+    },
+    "insufficient_to_assess": {
+      "rule_id": "EVD-006",
+      "assurance_outcome": "insufficient_evidence",
+      "gap_types": ["operating_evidence_missing"],
+      "gap_severity": "unassessed",
+      "remediation_action_types": ["evidence_request"]
+    }
+  },
+  "partial_mapping_override": {
+    "rule_id": "EVD-007",
+    "applies_when_evidence_assessment": "sufficient",
+    "assurance_outcome": "potential_control_gap",
+    "gap_types": ["partial_coverage"],
+    "gap_severity": "medium",
+    "remediation_action_types": ["mapping_review"]
+  }
+}

@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — South African scope, synthetic institution profile, source pack, both connected schemas, 24-case dataset, simple baseline and operational failure analysis complete; Evidence-Gated Decision Pipeline implementation next.**
+**Project 2 — South African scope, synthetic institution profile, source pack, both connected schemas, 24-case dataset, simple baseline and operational failure analysis complete; Evidence-Gated Decision Pipeline v1.0 implemented and frozen before regression.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -214,6 +214,8 @@ These are [synthetic benchmark results](results/baseline-v1.0/README.md), not pr
 
 The completed [operational failure analysis](analysis/baseline-v1.0/README.md) found that the model reproduced at least one proposed answer in 21 of 24 cases, leaked assurance activity past the closed gate in 14 of 16 cases and repeated all eight deliberately wrong escalation proposals. The selected next intervention is an [Evidence-Gated Decision Pipeline v1.0](analysis/baseline-v1.0/intervention-design.md): one stage-gated workflow that treats proposals as untrusted claims, enforces source and approval transitions, resolves catalogue owners and derives escalation from explicit policy triggers.
 
+The [implemented workflow](workflows/evidence-gated-v1.0/README.md) is now frozen before execution. It uses two bounded AI stages and deterministic source, approval, ownership, evidence and escalation controls. Its input-only runner is configured for 24 source/obligation calls plus eight approved-obligation assurance calls. Offline policy tests, evaluator self-tests and the 32-call preflight pass; no regression API call has been made.
+
 The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
@@ -223,8 +225,8 @@ The immediate build sequence is:
 5. ~~create a labelled baseline set spanning AML/CFT and market conduct;~~ **complete**
 6. ~~define and run an intentionally simple baseline;~~ **complete**
 7. ~~analyse obligation, mapping, evidence, ownership and escalation failures;~~ **complete**
-8. **implement the Evidence-Gated Decision Pipeline v1.0;** **next**
-9. retest on the frozen regression set; and
+8. ~~implement and freeze the Evidence-Gated Decision Pipeline v1.0;~~ **complete**
+9. **run v1.0 once on the frozen regression set without tuning;** **next**
 10. validate once against a separate holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
