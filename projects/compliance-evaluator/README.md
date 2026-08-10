@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — Evidence-Gated Decision Pipeline v1.2 implemented, tested offline and frozen before regression execution. No v1.2 API call or result exists.**
+**Project 2 — Evidence-Gated Decision Pipeline v1.2 frozen and executed once. The provider rejected the frozen source-stage schema before producing predictions, so no scoring was possible and no rerun occurred.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -226,6 +226,8 @@ The completed [v1.1 case-level failure analysis](analysis/evidence-gated-v1.1/RE
 
 The separate [Evidence-Gated Decision Pipeline v1.2](workflows/evidence-gated-v1.2/README.md) now implements that decision. It distinguishes source-backed wording from legal readiness, prevents evidence status and escalation proposals from entering mapping assessment, prevents the evidence stage from changing current-control membership, and replaces substring-based generality measurement with exact identity and runtime-isolation checks. Offline validation covers 20 decision-boundary scenarios, all 24 frozen input paths, 32 structured-output examples, isolated payloads for all eight assurance cases and a 14-gate evaluator self-test. The workflow and dependencies are hash-frozen for one future 32-call regression run; no API execution occurred during implementation or freeze.
 
+The [sole v1.2 regression execution](results/evidence-gated-v1.2/README.md) was then started against the 24 frozen cases. The provider rejected the first source-stage request because the frozen Structured Outputs schema used `allOf`, which was not permitted in that response-format context. No prediction was generated, so the evaluator was not invoked and no score is claimed. The failure is preserved exactly as an execution-contract outcome: v1.2 remains unchanged, was not tuned or rerun and cannot proceed to holdout validation.
+
 The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
@@ -244,8 +246,9 @@ The immediate build sequence is:
 14. ~~complete the v1.1 case-level failure analysis;~~ **complete**
 15. ~~make a separately versioned v1.2 architecture decision;~~ **complete**
 16. ~~implement, test and freeze v1.2 without changing or rerunning v1.1;~~ **complete**
-17. **run and score v1.2 once as regression evidence;** **next**
-18. if every release gate passes, author and freeze a separate unseen holdout.
+17. **v1.2 execution attempted once; provider schema rejection preserved; no predictions existed to score;** **closed without rerun**
+18. **complete the v1.2 execution-contract failure analysis and make a separately versioned next-workflow decision;** **next**
+19. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
 
