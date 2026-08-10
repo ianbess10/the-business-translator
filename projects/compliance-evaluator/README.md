@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — Evidence-Gated Decision Pipeline v1.1 executed and scored once; case-level failure analysis complete and v1.2 architecture selected but not implemented.**
+**Project 2 — Evidence-Gated Decision Pipeline v1.2 implemented, tested offline and frozen before regression execution. No v1.2 API call or result exists.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -222,7 +222,9 @@ The separate [Evidence-Gated Decision Pipeline v1.1](workflows/evidence-gated-v1
 
 v1.1 was then executed exactly once and scored exactly once. It improved end-to-end exactness to **20/24**, made source disposition and applicability exact, and produced a perfect escalation confusion matrix: six true positives, zero false positives, 18 true negatives and zero false negatives. It nevertheless failed the release decision because only eight of 14 reported gates passed. These are [synthetic regression results](results/evidence-gated-v1.1/README.md), not independent validation or production performance.
 
-The completed [v1.1 case-level failure analysis](analysis/evidence-gated-v1.1/README.md) separates four decision-error cases from one evaluator measurement defect. It identifies three substantive causes: source support was conflated with legal readiness in one case, missing evidence was conflated with control coverage in two, and a proposed mapping was silently expanded in one. The evaluator also mistook the legitimate rule identifier `SRC-CON-002` for a case-specific override because it used substring matching. The separately versioned [v1.2 decision](analysis/evidence-gated-v1.1/v1.2-decision.md) selects stronger stage and identity boundaries without implementing or tuning v1.2 in this analysis stage.
+The completed [v1.1 case-level failure analysis](analysis/evidence-gated-v1.1/README.md) separates four decision-error cases from one evaluator measurement defect. It identifies three substantive causes: source support was conflated with legal readiness in one case, missing evidence was conflated with control coverage in two, and a proposed mapping was silently expanded in one. The evaluator also mistook the legitimate rule identifier `SRC-CON-002` for a case-specific override because it used substring matching. The separately versioned [v1.2 decision](analysis/evidence-gated-v1.1/v1.2-decision.md) selected stronger stage and identity boundaries without tuning v1.1.
+
+The separate [Evidence-Gated Decision Pipeline v1.2](workflows/evidence-gated-v1.2/README.md) now implements that decision. It distinguishes source-backed wording from legal readiness, prevents evidence status and escalation proposals from entering mapping assessment, prevents the evidence stage from changing current-control membership, and replaces substring-based generality measurement with exact identity and runtime-isolation checks. Offline validation covers 20 decision-boundary scenarios, all 24 frozen input paths, 32 structured-output examples, isolated payloads for all eight assurance cases and a 14-gate evaluator self-test. The workflow and dependencies are hash-frozen for one future 32-call regression run; no API execution occurred during implementation or freeze.
 
 The immediate build sequence is:
 
@@ -241,8 +243,8 @@ The immediate build sequence is:
 13. ~~run and score v1.1 once as regression evidence;~~ **complete**
 14. ~~complete the v1.1 case-level failure analysis;~~ **complete**
 15. ~~make a separately versioned v1.2 architecture decision;~~ **complete**
-16. **implement, test and freeze v1.2 without changing or rerunning v1.1;** **next**
-17. run and score v1.2 once as regression evidence;
+16. ~~implement, test and freeze v1.2 without changing or rerunning v1.1;~~ **complete**
+17. **run and score v1.2 once as regression evidence;** **next**
 18. if every release gate passes, author and freeze a separate unseen holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).

@@ -1,0 +1,76 @@
+{
+  "policy_id": "SA-REG-SOURCE-TRANSITION-001",
+  "version": "1.2",
+  "source_pack_id": "SA-REG-SOURCE-PACK-001",
+  "source_pack_version": "1.0",
+  "multi_source_conflict_rule": {
+    "rule_id": "SRC-RULE-MULTI-SOURCE-CONFLICT",
+    "minimum_source_count": 2,
+    "missing_fact_terms": ["amendment chain", "source chain", "provision-level reconciliation"],
+    "source_use_disposition": "blocked",
+    "obligation_outcome": "source_conflict",
+    "applicability_mode": "fixed_not_assessed"
+  },
+  "sources": {
+    "SA-AML-SP-001": {
+      "rule_id": "SRC-RULE-AML-GAZETTE-DEPENDENCY",
+      "source_use_disposition": "blocked",
+      "obligation_outcome": "blocked_source",
+      "applicability_mode": "fixed_not_assessed"
+    },
+    "SA-AML-SP-002": {
+      "rule_id": "SRC-RULE-AML-CONSOLIDATION-BLOCK",
+      "source_use_disposition": "blocked",
+      "obligation_outcome": "blocked_source",
+      "applicability_mode": "fixed_not_assessed"
+    },
+    "SA-AML-SP-003": {
+      "rule_id": "SRC-RULE-AML-GUIDANCE-CONTEXT",
+      "source_use_disposition": "guidance_only",
+      "obligation_outcome": "guidance_context",
+      "applicability_mode": "model_assessed"
+    },
+    "SA-AML-SP-004": {
+      "rule_id": "SRC-RULE-AML-HISTORICAL-SOURCE",
+      "source_use_disposition": "historical_only",
+      "obligation_outcome": "superseded",
+      "applicability_mode": "fixed_not_assessed"
+    },
+    "SA-AML-SP-005": {
+      "rule_id": "SRC-RULE-AML-FINAL-PENDING-COMMENCEMENT",
+      "source_use_disposition": "final_change_event",
+      "obligation_outcome": "final_change_pending_commencement",
+      "applicability_mode": "fixed_uncertain"
+    },
+    "SA-AML-SP-W01": {
+      "rule_id": "SRC-RULE-AML-DRAFT-WATCHLIST",
+      "source_use_disposition": "draft_watchlist",
+      "obligation_outcome": "draft_or_watchlist",
+      "applicability_mode": "fixed_not_assessed"
+    },
+    "SA-CONDUCT-SP-001": {
+      "rule_id": "SRC-RULE-CONDUCT-AUTHORITY-OVERVIEW-BLOCK",
+      "source_use_disposition": "blocked",
+      "obligation_outcome": "blocked_source",
+      "applicability_mode": "fixed_not_assessed"
+    },
+    "SA-CONDUCT-SP-002": {
+      "rule_id": "SRC-RULE-CONDUCT-BASE-CODE-BLOCK",
+      "source_use_disposition": "blocked",
+      "obligation_outcome": "blocked_source",
+      "applicability_mode": "fixed_not_assessed"
+    },
+    "SA-CONDUCT-SP-003": {
+      "rule_id": "SRC-RULE-CONDUCT-AMENDMENT-CANDIDATE",
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_mode": "model_assessed"
+    },
+    "SA-CONDUCT-SP-004": {
+      "rule_id": "SRC-RULE-CONDUCT-STRATEGY-CONTEXT",
+      "source_use_disposition": "strategy_context",
+      "obligation_outcome": "strategy_context",
+      "applicability_mode": "fixed_not_assessed"
+    }
+  }
+}
