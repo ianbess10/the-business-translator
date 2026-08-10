@@ -1,0 +1,14 @@
+{
+  "run_id": "baseline-v1.0-329f365a-0b6d-45a3-aae0-14e6da5b7913",
+  "status": "completed",
+  "started_at": "2026-08-10T08:39:51.570831Z",
+  "completed_at": "2026-08-10T08:41:32.241529Z",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "case_count": 24,
+  "completed_case_count": 24,
+  "tuning_after_observation": false,
+  "error": null
+}

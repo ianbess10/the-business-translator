@@ -123,7 +123,11 @@ Production or pilot readiness is outside Release 1.
 3. ~~obligation schema~~ — complete
 4. ~~control and evidence schema~~ — complete
 5. ~~24-case labelled baseline dataset~~ — complete
-6. baseline prompt
-7. executable evaluator
+6. ~~intentionally simple baseline prompt~~ — complete
+7. ~~executable runner and deterministic evaluator~~ — complete
+8. ~~single frozen 24-case baseline run~~ — complete
+9. operational failure analysis — next
 
-The existing prompt is not the baseline for these two connected capabilities until it is aligned with the frozen source and institution profiles.
+The frozen simple baseline produced structurally valid outputs for all 24 synthetic cases but only one end-to-end exact operational disposition. It preserved the assurance gate and human accountability boundaries, while exposing material weaknesses in source and obligation classification, owner routing and especially escalation calibration. See the [preserved baseline evidence](results/baseline-v1.0/README.md).
+
+The existing engineered prompt remains an early artefact. It must not be treated as an evaluated improvement or tuned against the frozen baseline labels before the failure analysis identifies and documents one controlled workflow intervention.

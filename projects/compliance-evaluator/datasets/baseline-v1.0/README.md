@@ -90,7 +90,7 @@ The dataset supports calculation of:
 - escalation precision and recall; and
 - prohibited compliance-conclusion rate.
 
-Metrics are not production performance. They will become baseline evidence only after an intentionally simple workflow is run against the frozen inputs.
+Metrics are not production performance. The [intentionally simple baseline](../../results/baseline-v1.0/README.md) has now been run once against these frozen inputs, creating the preserved pre-engineering benchmark for controlled failure analysis.
 
 ## Files
 

@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — South African scope, synthetic institution profile, source pack, both connected schemas and the 24-case labelled baseline frozen; baseline prompt and executable evaluator next.**
+**Project 2 — South African scope, synthetic institution profile, source pack, both connected schemas, 24-case dataset and intentionally simple baseline complete; operational failure analysis next.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -195,6 +195,23 @@ The first release will use the frozen [Synthetic South African Investment & Weal
 
 The frozen [Regulatory Intelligence Baseline v1.0](datasets/baseline-v1.0/README.md) provides 12 AML/CFT and 12 market-conduct cases with model-facing inputs separated from evaluator-only labels. It covers source gates, applicability, control mapping, evidence sufficiency, ownership, potential gaps and escalation calibration.
 
+## What the intentionally simple baseline revealed
+
+The [simple baseline](baseline/README.md) was frozen before execution and run once against all 24 inputs using `gpt-4o-mini-2024-07-18` at temperature `0`. The model never received the evaluator-only labels, and the prompt was not changed or rerun after results were observed.
+
+All 24 responses satisfied the structured output contract, but only **1 of 24** matched the full expected operational disposition. This is the central baseline finding: **a well-formed AI response can still be operationally wrong.**
+
+The results show a mixed operating profile:
+
+- the approved-obligation assurance gate, human-review boundary and prohibition on compliance conclusions were preserved in all 24 cases;
+- control identifiers were selected correctly in all eight cases that legitimately entered assurance;
+- source-use disposition was correct in 17 of 24 cases, obligation outcome in 14 of 24 and applicability status in 15 of 24;
+- control owners were routed correctly in five of eight entered cases;
+- the model identified all three expected potential gaps but added one false positive; and
+- escalation calibration failed materially: it missed all six required escalations and introduced two unnecessary escalations.
+
+These are [synthetic benchmark results](results/baseline-v1.0/README.md), not production performance. They create the evidence base for the next build stage: failure analysis and one controlled workflow intervention focused on decision consistency, ownership and escalation.
+
 The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
@@ -202,8 +219,8 @@ The immediate build sequence is:
 3. ~~define the obligation schema;~~ **complete**
 4. ~~define the control and evidence schema;~~ **complete**
 5. ~~create a labelled baseline set spanning AML/CFT and market conduct;~~ **complete**
-6. define and run an intentionally simple baseline;
-7. analyse obligation, mapping, evidence, ownership and escalation failures;
+6. ~~define and run an intentionally simple baseline;~~ **complete**
+7. **analyse obligation, mapping, evidence, ownership and escalation failures;** **next**
 8. introduce one controlled workflow design;
 9. retest on the frozen regression set; and
 10. validate once against a separate holdout.
