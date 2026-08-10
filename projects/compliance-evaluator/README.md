@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — South African scope, synthetic institution profile, source pack, both connected schemas, 24-case dataset and intentionally simple baseline complete; operational failure analysis next.**
+**Project 2 — South African scope, synthetic institution profile, source pack, both connected schemas, 24-case dataset, simple baseline and operational failure analysis complete; Evidence-Gated Decision Pipeline implementation next.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -210,7 +210,9 @@ The results show a mixed operating profile:
 - the model identified all three expected potential gaps but added one false positive; and
 - escalation calibration failed materially: it missed all six required escalations and introduced two unnecessary escalations.
 
-These are [synthetic benchmark results](results/baseline-v1.0/README.md), not production performance. They create the evidence base for the next build stage: failure analysis and one controlled workflow intervention focused on decision consistency, ownership and escalation.
+These are [synthetic benchmark results](results/baseline-v1.0/README.md), not production performance. They created the evidence base for the completed failure analysis and the selected controlled workflow intervention focused on decision consistency, ownership and escalation.
+
+The completed [operational failure analysis](analysis/baseline-v1.0/README.md) found that the model reproduced at least one proposed answer in 21 of 24 cases, leaked assurance activity past the closed gate in 14 of 16 cases and repeated all eight deliberately wrong escalation proposals. The selected next intervention is an [Evidence-Gated Decision Pipeline v1.0](analysis/baseline-v1.0/intervention-design.md): one stage-gated workflow that treats proposals as untrusted claims, enforces source and approval transitions, resolves catalogue owners and derives escalation from explicit policy triggers.
 
 The immediate build sequence is:
 
@@ -220,8 +222,8 @@ The immediate build sequence is:
 4. ~~define the control and evidence schema;~~ **complete**
 5. ~~create a labelled baseline set spanning AML/CFT and market conduct;~~ **complete**
 6. ~~define and run an intentionally simple baseline;~~ **complete**
-7. **analyse obligation, mapping, evidence, ownership and escalation failures;** **next**
-8. introduce one controlled workflow design;
+7. ~~analyse obligation, mapping, evidence, ownership and escalation failures;~~ **complete**
+8. **implement the Evidence-Gated Decision Pipeline v1.0;** **next**
 9. retest on the frozen regression set; and
 10. validate once against a separate holdout.
 

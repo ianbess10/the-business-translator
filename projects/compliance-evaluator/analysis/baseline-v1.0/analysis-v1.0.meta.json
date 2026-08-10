@@ -1,0 +1,21 @@
+{
+  "analysis_id": "SA-REG-BASELINE-FAILURE-ANALYSIS-001",
+  "version": "1.0",
+  "status": "complete",
+  "completed_at": "2026-08-10",
+  "baseline_run_id": "baseline-v1.0-329f365a-0b6d-45a3-aae0-14e6da5b7913",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "baseline_prompt_modified": false,
+  "baseline_rerun": false,
+  "selected_intervention": "Evidence-Gated Decision Pipeline v1.0",
+  "analyser_sha256": "74cba02202bcbb2fbee082d695bc6bc9dab22d39012d7240b263520964318c6b",
+  "failure_analysis_sha256": "26f2676b70ad34b36caa33f93044c2d351cd3782ffeac7539f28e8da39cb85f9",
+  "analysis_readme_sha256": "cb7182528a43dbd14a0a4748eddca1bc6015e9fbebd24ca2c04fbd1718b41f45",
+  "intervention_design_sha256": "ea0eab5c5950cc3e215e973b952865d90be346a806f6007351fd3176a99a1cb5",
+  "predictions_sha256": "d2f171da42f6f266b390a6ecfb9b3e441e68a789aa83b7f368a6e6f7259cf1ad",
+  "evaluation_sha256": "f03643efca84f74b88682e2c771d4b18baffce4e81041534b2ecc0d90e07b78c",
+  "synthetic_benchmark_evidence": true,
+  "production_performance": false,
+  "notes": "Post-run analysis only. The preserved baseline prompt, inputs, labels, predictions and evaluation were not modified or rerun."
+}

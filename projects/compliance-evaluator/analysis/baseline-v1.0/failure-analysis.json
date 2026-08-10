@@ -1,0 +1,1559 @@
+{
+  "analysis_id": "SA-REG-BASELINE-FAILURE-ANALYSIS-001",
+  "version": "1.0",
+  "analysis_type": "post_baseline_operational_failure_analysis",
+  "run_id": "baseline-v1.0-329f365a-0b6d-45a3-aae0-14e6da5b7913",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "synthetic_benchmark_evidence": true,
+  "production_performance": false,
+  "baseline_prompt_modified": false,
+  "baseline_rerun": false,
+  "source_evidence_hashes": {
+    "predictions_sha256": "d2f171da42f6f266b390a6ecfb9b3e441e68a789aa83b7f368a6e6f7259cf1ad",
+    "evaluation_sha256": "f03643efca84f74b88682e2c771d4b18baffce4e81041534b2ecc0d90e07b78c",
+    "aml_cft_inputs_sha256": "759e16f1ee60fc18e9aa567635cd0e4b592484a24692147a34fe84f5abc66977",
+    "market_conduct_inputs_sha256": "be1c36a5793cee96d6a5f2c08a135389fc89461afd8d6e6d5c1b4a6ee1adc3f2",
+    "aml_cft_labels_sha256": "e606784ebc604af92140dc2c4f4a10e8dfe2bd21859197ebde85703456c0f716",
+    "market_conduct_labels_sha256": "8cf778b67911269c7fe735e8ffd2a0f27e0e05da5886c2b88bb8b26fd459f2b3"
+  },
+  "headline": {
+    "case_count": 24,
+    "end_to_end_exact_count": 1,
+    "failed_case_count": 23,
+    "not_entered_case_count": 16,
+    "entered_case_count": 8,
+    "not_entered_cases_with_stage_leakage": 14,
+    "escalation_challenge_case_count": 8,
+    "escalation_proposal_anchor_count": 8
+  },
+  "failure_category_case_counts": {
+    "applicability_decision_error": 9,
+    "assurance_stage_gate_leakage": 14,
+    "escalation_decision_error": 8,
+    "evidence_gap_or_severity_error": 6,
+    "owner_routing_error": 3,
+    "proposal_anchoring": 21,
+    "source_or_obligation_decision_error": 10
+  },
+  "proposal_anchoring": {
+    "field_challenge_counts": {
+      "applicability_status": 10,
+      "assurance_outcome": 5,
+      "escalation_required": 8,
+      "obligation_outcome": 9,
+      "source_use_disposition": 9
+    },
+    "field_anchor_counts": {
+      "applicability_status": 5,
+      "assurance_outcome": 2,
+      "escalation_required": 8,
+      "obligation_outcome": 6,
+      "source_use_disposition": 6
+    },
+    "owner_challenge_count": 17,
+    "owner_anchor_count": 16,
+    "escalation_challenge_case_ids": [
+      "AML-003",
+      "AML-008",
+      "AML-012",
+      "CON-004",
+      "CON-008",
+      "CON-009",
+      "CON-011",
+      "CON-012"
+    ],
+    "escalation_anchor_case_ids": [
+      "AML-003",
+      "AML-008",
+      "AML-012",
+      "CON-004",
+      "CON-008",
+      "CON-009",
+      "CON-011",
+      "CON-012"
+    ]
+  },
+  "case_register": [
+    {
+      "case_id": "AML-001",
+      "workstream": "aml_cft",
+      "case_stage": "source_classification",
+      "end_to_end_exact": true,
+      "mismatched_fields": [],
+      "failure_flags": [],
+      "proposal_anchor_fields": [],
+      "proposed_owner_anchor": false,
+      "expected": {
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "Guidance Note 7B is classified as current official guidance and is intended for interpretive context, not as a binding obligation. There are no upstream obligations applicable, and the source is to be used as guidance only."
+    },
+    {
+      "case_id": "AML-002",
+      "workstream": "aml_cft",
+      "case_stage": "source_classification",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "source_use_disposition",
+        "obligation_outcome",
+        "applicability_status"
+      ],
+      "failure_flags": [
+        "source_or_obligation_decision_error",
+        "applicability_decision_error",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "source_use_disposition",
+        "obligation_outcome",
+        "applicability_status"
+      ],
+      "proposed_owner_anchor": false,
+      "expected": {
+        "source_use_disposition": "historical_only",
+        "obligation_outcome": "superseded",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The case identifies that Guidance Note 7A has been superseded by Guidance Note 7B, indicating that Guidance Note 7A should not be treated as current guidance. The upstream obligation is not applicable, and there are no proposed controls or evidence presented."
+    },
+    {
+      "case_id": "AML-003",
+      "workstream": "aml_cft",
+      "case_stage": "obligation_assessment",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "source_use_disposition",
+        "obligation_outcome",
+        "applicability_status",
+        "mapping_status",
+        "gap_severity",
+        "escalation_required",
+        "control_ids",
+        "control_mappings_with_owner",
+        "gap_types",
+        "remediation_action_types",
+        "escalation_roles"
+      ],
+      "failure_flags": [
+        "source_or_obligation_decision_error",
+        "applicability_decision_error",
+        "assurance_stage_gate_leakage",
+        "escalation_decision_error",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "source_use_disposition",
+        "obligation_outcome",
+        "applicability_status",
+        "escalation_required"
+      ],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "final_change_event",
+        "obligation_outcome": "final_change_pending_commencement",
+        "applicability_status": "applicability_uncertain",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": true,
+        "escalation_roles": [
+          "AML Compliance Officer",
+          "Legal Counsel"
+        ]
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-AML-002",
+            "owner_role": "Head of Client Onboarding"
+          },
+          {
+            "control_id": "C-AML-003",
+            "owner_role": "Head of Client Onboarding"
+          }
+        ],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The directive's commencement is unverified, which prevents the implementation deadline from being approved. There is a lack of operating evidence to confirm compliance with the directive."
+    },
+    {
+      "case_id": "AML-004",
+      "workstream": "aml_cft",
+      "case_stage": "source_classification",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "obligation_outcome",
+        "applicability_status",
+        "mapping_status",
+        "control_ids",
+        "control_mappings_with_owner"
+      ],
+      "failure_flags": [
+        "source_or_obligation_decision_error",
+        "applicability_decision_error",
+        "assurance_stage_gate_leakage",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "draft_watchlist",
+        "obligation_outcome": "draft_or_watchlist",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "draft_watchlist",
+        "obligation_outcome": "out_of_scope",
+        "applicability_status": "not_applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-AML-001",
+            "owner_role": "AML Compliance Officer"
+          }
+        ],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The source is a draft directive and not an enforceable obligation, thus it is treated as a draft watchlist item and is out of scope for binding obligations."
+    },
+    {
+      "case_id": "AML-005",
+      "workstream": "aml_cft",
+      "case_stage": "source_classification",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "source_use_disposition",
+        "obligation_outcome",
+        "applicability_status",
+        "mapping_status",
+        "gap_severity",
+        "control_ids",
+        "control_mappings_with_owner",
+        "gap_types",
+        "remediation_action_types"
+      ],
+      "failure_flags": [
+        "source_or_obligation_decision_error",
+        "applicability_decision_error",
+        "assurance_stage_gate_leakage",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "source_use_disposition",
+        "obligation_outcome",
+        "applicability_status"
+      ],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "blocked",
+        "obligation_outcome": "blocked_source",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-AML-002",
+            "owner_role": "Head of Client Onboarding"
+          }
+        ],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The original FIC Act source is admitted for authority but candidate and binding extraction are blocked, indicating a potential gap in operating evidence for the binding obligation."
+    },
+    {
+      "case_id": "AML-006",
+      "workstream": "aml_cft",
+      "case_stage": "source_classification",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "obligation_outcome",
+        "applicability_status",
+        "mapping_status",
+        "control_ids",
+        "control_mappings_with_owner"
+      ],
+      "failure_flags": [
+        "source_or_obligation_decision_error",
+        "applicability_decision_error",
+        "assurance_stage_gate_leakage",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "blocked",
+        "obligation_outcome": "blocked_source",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "blocked",
+        "obligation_outcome": "unsupported_obligation",
+        "applicability_status": "not_applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-AML-008",
+            "owner_role": "Head of Operations"
+          }
+        ],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The 2024 compilation is expressly unofficial and blocked for binding extraction, which means it cannot serve as a binding record-retention obligation."
+    },
+    {
+      "case_id": "AML-007",
+      "workstream": "aml_cft",
+      "case_stage": "obligation_assessment",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "source_use_disposition",
+        "obligation_outcome",
+        "mapping_status",
+        "gap_severity",
+        "control_ids",
+        "control_mappings_with_owner",
+        "gap_types",
+        "remediation_action_types"
+      ],
+      "failure_flags": [
+        "source_or_obligation_decision_error",
+        "assurance_stage_gate_leakage",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "source_use_disposition",
+        "obligation_outcome"
+      ],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-AML-006",
+            "owner_role": "AML Operations Manager"
+          }
+        ],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The candidate statement proposes a mandatory obligation that requires customer file refresh every twelve months. While the institution performs ongoing customer review, there is no presented evidence to support the legal strength of this obligation. The proposed mapping is in place, but the absence of operating evidence indicates a potential control gap."
+    },
+    {
+      "case_id": "AML-008",
+      "workstream": "aml_cft",
+      "case_stage": "obligation_assessment",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "mapping_status",
+        "gap_severity",
+        "escalation_required",
+        "control_ids",
+        "control_mappings_with_owner",
+        "gap_types",
+        "remediation_action_types",
+        "escalation_roles"
+      ],
+      "failure_flags": [
+        "assurance_stage_gate_leakage",
+        "escalation_decision_error",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "escalation_required"
+      ],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "final_change_event",
+        "obligation_outcome": "final_change_pending_commencement",
+        "applicability_status": "applicability_uncertain",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": true,
+        "escalation_roles": [
+          "AML Compliance Officer",
+          "Legal Counsel"
+        ]
+      },
+      "predicted": {
+        "source_use_disposition": "final_change_event",
+        "obligation_outcome": "final_change_pending_commencement",
+        "applicability_status": "applicability_uncertain",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-AML-002",
+            "owner_role": "Head of Client Onboarding"
+          },
+          {
+            "control_id": "C-AML-003",
+            "owner_role": "Head of Client Onboarding"
+          }
+        ],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [
+          "operating_evidence_missing",
+          "ownership"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "evidence_request",
+          "ownership_confirmation"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The applicability of the directive is uncertain due to missing facts regarding the institution's exact Schedule 1 item and verified commencement, which are necessary to confirm the directive's relevance to the institution's processes."
+    },
+    {
+      "case_id": "AML-009",
+      "workstream": "aml_cft",
+      "case_stage": "obligation_assessment",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "obligation_outcome",
+        "applicability_status",
+        "mapping_status",
+        "control_ids",
+        "control_mappings_with_owner"
+      ],
+      "failure_flags": [
+        "source_or_obligation_decision_error",
+        "applicability_decision_error",
+        "assurance_stage_gate_leakage",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "out_of_scope",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "out_of_scope",
+        "applicability_status": "not_applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-AML-005",
+            "owner_role": "AML Compliance Officer"
+          }
+        ],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The virtual-asset products and services are explicitly excluded from the institution's assessment, making the proposed obligation not applicable."
+    },
+    {
+      "case_id": "AML-010",
+      "workstream": "aml_cft",
+      "case_stage": "obligation_assessment",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "mapping_status",
+        "control_ids",
+        "control_mappings_with_owner"
+      ],
+      "failure_flags": [
+        "assurance_stage_gate_leakage",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-AML-004",
+            "owner_role": "AML Operations Manager"
+          }
+        ],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The proposed daily rescreening frequency for every customer is not supported by the supplied guidance, which discusses risk-based controls without specifying such a frequency. Therefore, the candidate statement cannot be retained as a supported source statement."
+    },
+    {
+      "case_id": "AML-011",
+      "workstream": "aml_cft",
+      "case_stage": "control_assurance",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "mapping_status",
+        "assurance_outcome",
+        "control_ids",
+        "control_mappings_with_owner"
+      ],
+      "failure_flags": [
+        "assurance_stage_gate_leakage",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "assurance_outcome"
+      ],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-AML-004",
+            "owner_role": "AML Operations Manager"
+          }
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The guidance-context statement has not been approved as a binding obligation, which prevents the control assurance from starting on this guidance statement."
+    },
+    {
+      "case_id": "AML-012",
+      "workstream": "aml_cft",
+      "case_stage": "end_to_end",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "gap_severity",
+        "escalation_required",
+        "gap_types",
+        "remediation_action_types",
+        "escalation_roles"
+      ],
+      "failure_flags": [
+        "assurance_stage_gate_leakage",
+        "escalation_decision_error",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "escalation_required"
+      ],
+      "proposed_owner_anchor": false,
+      "expected": {
+        "source_use_disposition": "final_change_event",
+        "obligation_outcome": "final_change_pending_commencement",
+        "applicability_status": "applicability_uncertain",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": true,
+        "escalation_roles": [
+          "AML Compliance Officer",
+          "Legal Counsel"
+        ]
+      },
+      "predicted": {
+        "source_use_disposition": "final_change_event",
+        "obligation_outcome": "final_change_pending_commencement",
+        "applicability_status": "applicability_uncertain",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The directive is final-issued but lacks verified Gazette commencement and the institution's exact Schedule 1 item, leading to uncertainty in applicability and necessitating human review."
+    },
+    {
+      "case_id": "CON-001",
+      "workstream": "market_conduct",
+      "case_stage": "obligation_assessment",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "mapping_status",
+        "control_ids",
+        "control_mappings_with_owner"
+      ],
+      "failure_flags": [
+        "assurance_stage_gate_leakage",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Conduct Risk Officer"
+          },
+          {
+            "control_id": "C-CON-007",
+            "owner_role": "Conduct Risk Officer"
+          }
+        ],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The case presents a binding amendment candidate that requires human approval. The obligation is pending, and while controls are mapped, no evidence is presented to support assurance. Therefore, control assurance cannot commence until the obligation record is approved."
+    },
+    {
+      "case_id": "CON-002",
+      "workstream": "market_conduct",
+      "case_stage": "source_classification",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "source_use_disposition",
+        "obligation_outcome",
+        "applicability_status",
+        "mapping_status",
+        "control_ids",
+        "control_mappings_with_owner"
+      ],
+      "failure_flags": [
+        "source_or_obligation_decision_error",
+        "applicability_decision_error",
+        "assurance_stage_gate_leakage",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "source_use_disposition",
+        "obligation_outcome",
+        "applicability_status"
+      ],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "blocked",
+        "obligation_outcome": "blocked_source",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The standalone 2003 General Code is currently blocked as a binding source, and while it is proposed as a complete current obligation, the upstream obligation is pending and not supplied. Therefore, further review is necessary to determine if it can support a complete current obligation."
+    },
+    {
+      "case_id": "CON-003",
+      "workstream": "market_conduct",
+      "case_stage": "source_classification",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "source_use_disposition",
+        "obligation_outcome",
+        "applicability_status",
+        "mapping_status",
+        "control_ids",
+        "control_mappings_with_owner"
+      ],
+      "failure_flags": [
+        "source_or_obligation_decision_error",
+        "applicability_decision_error",
+        "assurance_stage_gate_leakage",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "strategy_context",
+        "obligation_outcome": "strategy_context",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "out_of_scope",
+        "applicability_status": "not_applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-REG-002",
+            "owner_role": "Head of Compliance"
+          }
+        ],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The FSCA Regulatory Strategy 2025-2028 is described as not a binding instrument, indicating it should be treated as guidance rather than an enforceable obligation."
+    },
+    {
+      "case_id": "CON-004",
+      "workstream": "market_conduct",
+      "case_stage": "obligation_assessment",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "source_use_disposition",
+        "obligation_outcome",
+        "applicability_status",
+        "mapping_status",
+        "gap_severity",
+        "escalation_required",
+        "control_ids",
+        "control_mappings_with_owner",
+        "gap_types",
+        "remediation_action_types",
+        "escalation_roles"
+      ],
+      "failure_flags": [
+        "source_or_obligation_decision_error",
+        "applicability_decision_error",
+        "assurance_stage_gate_leakage",
+        "escalation_decision_error",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "source_use_disposition",
+        "obligation_outcome",
+        "applicability_status",
+        "escalation_required"
+      ],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "blocked",
+        "obligation_outcome": "source_conflict",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Head of Compliance",
+          "Legal Counsel"
+        ]
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The case presents a conflict between the base Code and the 2020 amendment without a consolidated amendment chain or provision-level reconciliation. The upstream obligation is pending and not supplied, which raises uncertainty about the approval of a current obligation without resolving the source chain."
+    },
+    {
+      "case_id": "CON-005",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "control_mappings_with_owner"
+      ],
+      "failure_flags": [
+        "owner_routing_error",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          },
+          {
+            "control_id": "C-CON-007",
+            "owner_role": "Conduct Risk Officer"
+          }
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Conduct Risk Officer"
+          },
+          {
+            "control_id": "C-CON-007",
+            "owner_role": "Conduct Risk Officer"
+          }
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The approved complaints-framework obligation is correctly mapped to controls C-CON-006 and C-CON-007, with sufficient evidence provided to support the mapping."
+    },
+    {
+      "case_id": "CON-006",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "control_mappings_with_owner"
+      ],
+      "failure_flags": [
+        "owner_routing_error",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Conduct Risk Officer"
+          }
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The case indicates that C-CON-006 is correctly mapped but assigned to the wrong owner, which is the Conduct Risk Officer instead of the Complaints Manager. The upstream obligation is approved and applicable, and the evidence provided supports the mapping and ownership assessment."
+    },
+    {
+      "case_id": "CON-007",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "gap_severity"
+      ],
+      "failure_flags": [
+        "evidence_gap_or_severity_error"
+      ],
+      "proposal_anchor_fields": [],
+      "proposed_owner_anchor": false,
+      "expected": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "insufficient_evidence",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "unassessed",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "insufficient_evidence",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The control description is documented, but there is a lack of operating evidence, specifically the complaint register, which is necessary to conclude that the control operated effectively."
+    },
+    {
+      "case_id": "CON-008",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "mapping_status",
+        "gap_severity",
+        "escalation_required",
+        "gap_types",
+        "remediation_action_types",
+        "escalation_roles"
+      ],
+      "failure_flags": [
+        "evidence_gap_or_severity_error",
+        "escalation_decision_error",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "escalation_required"
+      ],
+      "proposed_owner_anchor": false,
+      "expected": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "partially_mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "control_design"
+        ],
+        "gap_severity": "high",
+        "remediation_action_types": [
+          "mapping_review"
+        ],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Head of Compliance"
+        ]
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "ownership",
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "ownership_confirmation",
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The complaint procedure lacks an approval record, framework owner, and review cycle, indicating potential gaps in ownership and operating evidence despite the mapping to an existing control."
+    },
+    {
+      "case_id": "CON-009",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "assurance_outcome",
+        "gap_severity",
+        "escalation_required",
+        "control_mappings_with_owner",
+        "gap_types",
+        "remediation_action_types",
+        "escalation_roles"
+      ],
+      "failure_flags": [
+        "owner_routing_error",
+        "evidence_gap_or_severity_error",
+        "escalation_decision_error",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "assurance_outcome",
+        "escalation_required"
+      ],
+      "proposed_owner_anchor": true,
+      "expected": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          },
+          {
+            "control_id": "C-CON-007",
+            "owner_role": "Conduct Risk Officer"
+          }
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Conduct Risk Officer"
+          },
+          {
+            "control_id": "C-CON-007",
+            "owner_role": "Conduct Risk Officer"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "control_design"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "mapping_review",
+          "control_design_change"
+        ],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Conduct Risk Officer"
+        ]
+      },
+      "model_rationale": "The evidence provided meets the acceptance criteria, but the proposal claims a control-design gap based on the need for escalation of complaints obligations, which requires further review."
+    },
+    {
+      "case_id": "CON-010",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "gap_types"
+      ],
+      "failure_flags": [
+        "evidence_gap_or_severity_error"
+      ],
+      "proposal_anchor_fields": [],
+      "proposed_owner_anchor": false,
+      "expected": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "partially_mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "partial_coverage"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "mapping_review"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "partially_mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "mapping_review"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The proposed mapping includes only C-CON-006, which does not fully cover the obligation as C-CON-007 is also necessary for customer-outcomes oversight. This indicates a potential control gap in the mapping."
+    },
+    {
+      "case_id": "CON-011",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "gap_severity",
+        "escalation_required",
+        "gap_types",
+        "remediation_action_types",
+        "escalation_roles"
+      ],
+      "failure_flags": [
+        "evidence_gap_or_severity_error",
+        "escalation_decision_error",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "escalation_required"
+      ],
+      "proposed_owner_anchor": false,
+      "expected": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "operating_exception"
+        ],
+        "gap_severity": "high",
+        "remediation_action_types": [
+          "operating_remediation"
+        ],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Conduct Risk Officer",
+          "Head of Compliance"
+        ]
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "evidence_request",
+          "operating_remediation"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "model_rationale": "The case presents evidence of overdue high-impact complaints and incomplete remediation, indicating a potential control gap in the mapped complaint escalation and remediation control. The obligation is approved and applicable, warranting further review and potential remediation actions."
+    },
+    {
+      "case_id": "CON-012",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "end_to_end_exact": false,
+      "mismatched_fields": [
+        "gap_severity",
+        "escalation_required",
+        "escalation_roles"
+      ],
+      "failure_flags": [
+        "evidence_gap_or_severity_error",
+        "escalation_decision_error",
+        "proposal_anchoring"
+      ],
+      "proposal_anchor_fields": [
+        "escalation_required"
+      ],
+      "proposed_owner_anchor": false,
+      "expected": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-007",
+            "owner_role": "Conduct Risk Officer"
+          }
+        ],
+        "assurance_outcome": "insufficient_evidence",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "unassessed",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "predicted": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-007",
+            "owner_role": "Conduct Risk Officer"
+          }
+        ],
+        "assurance_outcome": "insufficient_evidence",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Conduct Risk Officer"
+        ]
+      },
+      "model_rationale": "The latest monthly customer-outcomes report is missing, which is required under the approved upstream obligation. Although there is no adverse exception alleged, the absence of this evidence necessitates escalation to ensure compliance with the obligation."
+    }
+  ]
+}

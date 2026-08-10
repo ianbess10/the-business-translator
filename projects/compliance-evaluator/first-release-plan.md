@@ -126,8 +126,11 @@ Production or pilot readiness is outside Release 1.
 6. ~~intentionally simple baseline prompt~~ — complete
 7. ~~executable runner and deterministic evaluator~~ — complete
 8. ~~single frozen 24-case baseline run~~ — complete
-9. operational failure analysis — next
+9. ~~operational failure analysis~~ — complete
+10. Evidence-Gated Decision Pipeline v1.0 implementation — next
 
 The frozen simple baseline produced structurally valid outputs for all 24 synthetic cases but only one end-to-end exact operational disposition. It preserved the assurance gate and human accountability boundaries, while exposing material weaknesses in source and obligation classification, owner routing and especially escalation calibration. See the [preserved baseline evidence](results/baseline-v1.0/README.md).
 
-The existing engineered prompt remains an early artefact. It must not be treated as an evaluated improvement or tuned against the frozen baseline labels before the failure analysis identifies and documents one controlled workflow intervention.
+The [operational failure analysis](analysis/baseline-v1.0/README.md) now identifies proposal anchoring, assurance-stage leakage, source/obligation instability, owner-routing errors and escalation failure as the priority operating risks. It selects one [Evidence-Gated Decision Pipeline](analysis/baseline-v1.0/intervention-design.md) for the next controlled build.
+
+The existing engineered prompt remains an early artefact. It must not be treated as an evaluated improvement. The selected pipeline must be implemented separately, frozen before regression execution and reported independently from the simple baseline.
