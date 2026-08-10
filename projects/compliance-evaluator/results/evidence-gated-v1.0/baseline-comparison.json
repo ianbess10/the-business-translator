@@ -1,0 +1,176 @@
+{
+  "comparison_id": "evidence-gated-v1.0-f9e573a2-ca62-44b0-a6f5-89a9fd70c8fa-baseline-comparison",
+  "evidence_boundary": "frozen_regression_comparison_not_independent_validation",
+  "simple_baseline_run_id": "baseline-v1.0-329f365a-0b6d-45a3-aae0-14e6da5b7913",
+  "evidence_gated_run_id": "evidence-gated-v1.0-f9e573a2-ca62-44b0-a6f5-89a9fd70c8fa",
+  "end_to_end_exact": {
+    "simple_baseline": {
+      "correct": 1,
+      "total": 24,
+      "accuracy": 0.0417
+    },
+    "evidence_gated": {
+      "correct": 15,
+      "total": 24,
+      "accuracy": 0.625
+    },
+    "accuracy_delta": 0.5833
+  },
+  "field_metrics": {
+    "source_use_disposition": {
+      "simple_baseline_accuracy": 0.7083,
+      "evidence_gated_accuracy": 1.0,
+      "delta": 0.2917
+    },
+    "obligation_outcome": {
+      "simple_baseline_accuracy": 0.5833,
+      "evidence_gated_accuracy": 1.0,
+      "delta": 0.4167
+    },
+    "applicability_status": {
+      "simple_baseline_accuracy": 0.625,
+      "evidence_gated_accuracy": 0.625,
+      "delta": 0.0
+    },
+    "assurance_gate": {
+      "simple_baseline_accuracy": 1.0,
+      "evidence_gated_accuracy": 1.0,
+      "delta": 0.0
+    },
+    "mapping_status": {
+      "simple_baseline_accuracy": 0.4167,
+      "evidence_gated_accuracy": 0.7917,
+      "delta": 0.375
+    },
+    "control_ids": {
+      "simple_baseline_accuracy": 0.4583,
+      "evidence_gated_accuracy": 1.0,
+      "delta": 0.5417
+    },
+    "control_mappings_with_owner": {
+      "simple_baseline_accuracy": 0.3333,
+      "evidence_gated_accuracy": 1.0,
+      "delta": 0.6667
+    },
+    "assurance_outcome": {
+      "simple_baseline_accuracy": 0.9167,
+      "evidence_gated_accuracy": 0.9167,
+      "delta": 0.0
+    },
+    "gap_types": {
+      "simple_baseline_accuracy": 0.5833,
+      "evidence_gated_accuracy": 0.875,
+      "delta": 0.2917
+    },
+    "gap_severity": {
+      "simple_baseline_accuracy": 0.5417,
+      "evidence_gated_accuracy": 0.875,
+      "delta": 0.3333
+    },
+    "remediation_action_types": {
+      "simple_baseline_accuracy": 0.625,
+      "evidence_gated_accuracy": 0.9167,
+      "delta": 0.2917
+    },
+    "escalation_required": {
+      "simple_baseline_accuracy": 0.6667,
+      "evidence_gated_accuracy": 0.9583,
+      "delta": 0.2916
+    }
+  },
+  "binary_metrics": {
+    "potential_control_gap": {
+      "precision": {
+        "simple_baseline": 0.75,
+        "evidence_gated": 0.6,
+        "delta": -0.15
+      },
+      "recall": {
+        "simple_baseline": 1.0,
+        "evidence_gated": 1.0,
+        "delta": 0.0
+      },
+      "accuracy": {
+        "simple_baseline": 0.9583,
+        "evidence_gated": 0.9167,
+        "delta": -0.0416
+      }
+    },
+    "insufficient_evidence": {
+      "precision": {
+        "simple_baseline": 1.0,
+        "evidence_gated": 1.0,
+        "delta": 0.0
+      },
+      "recall": {
+        "simple_baseline": 1.0,
+        "evidence_gated": 1.0,
+        "delta": 0.0
+      },
+      "accuracy": {
+        "simple_baseline": 1.0,
+        "evidence_gated": 1.0,
+        "delta": 0.0
+      }
+    },
+    "escalation_required": {
+      "precision": {
+        "simple_baseline": 0.0,
+        "evidence_gated": 0.8571,
+        "delta": 0.8571
+      },
+      "recall": {
+        "simple_baseline": 0.0,
+        "evidence_gated": 1.0,
+        "delta": 1.0
+      },
+      "accuracy": {
+        "simple_baseline": 0.6667,
+        "evidence_gated": 0.9583,
+        "delta": 0.2916
+      }
+    }
+  },
+  "acceptance_gates": {
+    "zero_assurance_stage_leakage": {
+      "passed": true,
+      "expected_case_count": 16,
+      "failure_case_ids": []
+    },
+    "zero_prohibited_compliance_conclusions": {
+      "passed": true,
+      "count": 0
+    },
+    "exact_source_boundary_treatment": {
+      "passed": true,
+      "expected_case_count": 7,
+      "failure_case_ids": []
+    },
+    "exact_catalogue_owner_routing": {
+      "passed": true,
+      "expected_case_count": 8,
+      "failure_case_ids": []
+    },
+    "all_mandatory_escalations_detected": {
+      "passed": true,
+      "true_positive": 6,
+      "false_negative": 0
+    },
+    "zero_unnecessary_escalations": {
+      "passed": false,
+      "true_negative": 17,
+      "false_positive": 1
+    },
+    "routine_missing_evidence_kept_distinct": {
+      "passed": true,
+      "expected_case_count": 2,
+      "failure_case_ids": []
+    },
+    "cross_field_reconciliation_without_manual_correction": {
+      "passed": true,
+      "expected_case_count": 24,
+      "failure_case_ids": []
+    }
+  },
+  "all_acceptance_gates_passed": false
+}
