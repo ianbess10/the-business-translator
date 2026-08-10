@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — Evidence-Gated Decision Pipeline v1.0 executed and scored once; case-level failure analysis complete and a targeted v1.1 intervention selected for separate implementation.**
+**Project 2 — Evidence-Gated Decision Pipeline v1.1 implemented, tested and frozen before regression; no v1.1 API execution or result exists.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -218,6 +218,8 @@ The frozen [Evidence-Gated Decision Pipeline v1.0](workflows/evidence-gated-v1.0
 
 The completed [v1.0 case-level failure analysis](analysis/evidence-gated-v1.0/README.md) reduces 26 field mismatches across nine cases to three concentrated decision-boundary causes: applicability was conflated with source or obligation reasoning in nine cases, mapping completeness was conflated with evidence or performance in five, and partial coverage was misclassified as a design deficiency in one. The separately versioned [v1.1 decision](analysis/evidence-gated-v1.0/v1.1-decision.md) selects a narrow intervention while retaining the source, approval, owner, escalation and reconciliation controls that passed.
 
+The separate [Evidence-Gated Decision Pipeline v1.1](workflows/evidence-gated-v1.1/README.md) now implements that decision. Reviewed approved obligations bypass source reinterpretation and retain their accepted applicability; mapping completeness is derived independently from evidence sufficiency and operating performance; and partial coverage takes precedence unless explicit evidence supports a design deficiency. Offline tests cover 16 decision-boundary scenarios, all 24 regression input paths, 20 structured-output schema states and a 14-gate evaluator self-test. Frozen preflight confirms 16 source assessments plus eight approved assurance assessments—24 future API calls—and makes no API request.
+
 The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
@@ -231,8 +233,8 @@ The immediate build sequence is:
 9. ~~run and score v1.0 once on the frozen regression set without tuning;~~ **complete**
 10. ~~complete the v1.0 case-level failure analysis;~~ **complete**
 11. ~~make a separately versioned v1.1 intervention decision;~~ **complete**
-12. **implement, test and freeze v1.1 without changing v1.0;** **next**
-13. run and score v1.1 once as regression evidence; and
+12. ~~implement, test and freeze v1.1 without changing v1.0;~~ **complete**
+13. **run and score v1.1 once as regression evidence;** **next**
 14. if every release gate passes, author and freeze a separate unseen holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).

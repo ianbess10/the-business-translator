@@ -1,0 +1,72 @@
+{
+  "name": "control_evidence_stage_v1_1",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "case_id",
+      "proposal_disposition",
+      "mapping_completeness",
+      "supported_control_ids",
+      "coverage_gap_present",
+      "evidence_assessment",
+      "design_deficiency_evidence_present",
+      "adverse_indicator_present",
+      "severity_recommendation",
+      "rationale"
+    ],
+    "properties": {
+      "case_id": {
+        "type": "string",
+        "pattern": "^(AML|CON)-[0-9]{3}$"
+      },
+      "proposal_disposition": {
+        "type": "string",
+        "enum": ["accept", "amend", "reject"]
+      },
+      "mapping_completeness": {
+        "type": "string",
+        "description": "Control coverage only; evidence sufficiency and operating performance must not change this dimension.",
+        "enum": ["complete", "partial", "no_suitable_control"]
+      },
+      "supported_control_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^C-[A-Z]+-[0-9]{3}$"
+        }
+      },
+      "coverage_gap_present": {
+        "type": "boolean",
+        "description": "True only when an obligation element is not covered by the supported controls."
+      },
+      "evidence_assessment": {
+        "type": "string",
+        "enum": [
+          "sufficient",
+          "missing_operating_evidence",
+          "design_deficiency",
+          "adverse_operating_evidence",
+          "no_control",
+          "insufficient_to_assess"
+        ]
+      },
+      "design_deficiency_evidence_present": {
+        "type": "boolean",
+        "description": "True only when supplied evidence supports an inadequate control design, not merely partial coverage."
+      },
+      "adverse_indicator_present": {
+        "type": "boolean"
+      },
+      "severity_recommendation": {
+        "type": "string",
+        "enum": ["not_applicable", "unassessed", "low", "medium", "high", "critical"]
+      },
+      "rationale": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}
