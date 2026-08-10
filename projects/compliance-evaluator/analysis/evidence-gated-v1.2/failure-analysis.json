@@ -1,0 +1,100 @@
+{
+  "analysis_id": "SA-REG-EVIDENCE-GATED-V1.2-EXECUTION-CONTRACT-FAILURE-ANALYSIS-001",
+  "version": "1.2",
+  "analysis_type": "post_execution_contract_failure_analysis",
+  "run_id": "evidence-gated-v1.2-a9972172-5cb7-4d7f-89ad-0011586d37db",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "workflow_id": "SA-REG-EVIDENCE-GATED-001",
+  "workflow_version": "1.2",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "synthetic_regression_evidence": true,
+  "model_inference_reached": false,
+  "model_decision_evidence_available": false,
+  "independent_validation": false,
+  "production_performance": false,
+  "workflow_v1_2_modified": false,
+  "workflow_v1_2_rerun": false,
+  "workflow_v1_2_scored": false,
+  "post_observation_tuning": false,
+  "headline": {
+    "run_status": "failed",
+    "case_count": 24,
+    "expected_api_call_count": 32,
+    "successfully_completed_api_call_count": 0,
+    "completed_case_count": 0,
+    "prediction_count": 0,
+    "evaluation_available": false,
+    "release_decision": "failed_no_score_no_holdout_permitted"
+  },
+  "failure": {
+    "classification": "pre_inference_provider_response_schema_rejection",
+    "provider_status_code": 400,
+    "response_format_name": "source_support_stage_v1_2",
+    "rejected_keyword": "allOf",
+    "provider_message": "Invalid schema for response_format 'source_support_stage_v1_2': In context=(), 'allOf' is not permitted.",
+    "first_failed_stage": "source_support",
+    "first_failed_case_id": "AML-001",
+    "root_cause": "general_json_schema_validity_was_treated_as_provider_structured_outputs_compatibility",
+    "preflight_control_gap": "no_provider_subset_audit_or_pre_freeze_endpoint_contract_certification"
+  },
+  "schema_exposure_register": [
+    {
+      "schema": "source-support-stage.schema.json",
+      "submitted_to_provider": true,
+      "observed_result": "rejected",
+      "confirmed_unsupported_keywords_present": ["allOf", "if", "then"],
+      "additional_keywords_requiring_subset_review": ["const", "uniqueItems", "minLength", "minItems", "maxItems"]
+    },
+    {
+      "schema": "mapping-stage.schema.json",
+      "submitted_to_provider": false,
+      "observed_result": "not_observed",
+      "confirmed_unsupported_keywords_present": ["allOf", "if", "then"],
+      "additional_keywords_requiring_subset_review": ["const", "uniqueItems", "minLength", "minItems", "maxItems"]
+    },
+    {
+      "schema": "evidence-stage.schema.json",
+      "submitted_to_provider": false,
+      "observed_result": "not_observed",
+      "confirmed_unsupported_keywords_present": [],
+      "additional_keywords_requiring_subset_review": ["minLength"]
+    }
+  ],
+  "causal_chain": [
+    "business_cross_field_invariants_encoded_in_transport_schema",
+    "draft_2020_12_offline_validation_passed",
+    "provider_subset_compatibility_not_checked",
+    "frozen_regression_attempt_started",
+    "provider_rejected_first_schema_before_inference",
+    "no_predictions_existed_for_scoring"
+  ],
+  "controls_that_worked": [
+    "frozen_hash_verification",
+    "one_attempt_run_marker",
+    "exact_error_preservation",
+    "no_mock_or_json_mode_fallback",
+    "no_model_substitution",
+    "no_fabricated_predictions_or_score",
+    "no_schema_tuning_or_rerun",
+    "runner_label_isolation",
+    "holdout_release_block"
+  ],
+  "v1_3_decision": {
+    "decision_id": "SA-REG-EVIDENCE-GATED-V1.3-DECISION-001",
+    "status": "selected_for_later_implementation",
+    "selected_changes": [
+      "provider_subset_transport_schemas",
+      "deterministic_cross_field_semantic_validation",
+      "static_structured_outputs_keyword_audit",
+      "pre_freeze_non_benchmark_provider_contract_certification",
+      "certification_hash_gate_before_regression"
+    ],
+    "v1_3_implemented": false,
+    "v1_3_tested": false,
+    "v1_3_provider_certified": false,
+    "v1_3_frozen": false,
+    "v1_3_regression_executed": false
+  }
+}
