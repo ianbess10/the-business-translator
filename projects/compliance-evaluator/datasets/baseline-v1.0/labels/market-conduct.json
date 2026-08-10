@@ -1,0 +1,98 @@
+[
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "CON-001",
+    "workstream": "market_conduct",
+    "expected": {"source_use_disposition": "binding_candidate", "obligation_outcome": "candidate_binding_obligation", "applicability_status": "applicable_candidate", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The source and statement support a binding candidate, but control assurance starts only after the obligation receives the required human approval."},
+    "error_tags": ["binding_source", "human_approval_boundary", "premature_control_assurance"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "CON-002",
+    "workstream": "market_conduct",
+    "expected": {"source_use_disposition": "blocked", "obligation_outcome": "blocked_source", "applicability_status": "not_assessed", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The standalone base Code is blocked until the amendment chain is applied and cannot support a complete current obligation by itself."},
+    "error_tags": ["blocked_source", "approved_source_gate"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "CON-003",
+    "workstream": "market_conduct",
+    "expected": {"source_use_disposition": "strategy_context", "obligation_outcome": "strategy_context", "applicability_status": "not_assessed", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The strategy supports horizon monitoring and prioritisation only; it is not an enforceable obligation source."},
+    "error_tags": ["approved_source_gate"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "CON-004",
+    "workstream": "market_conduct",
+    "expected": {"source_use_disposition": "blocked", "obligation_outcome": "source_conflict", "applicability_status": "not_assessed", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": true, "escalation_roles": ["Head of Compliance", "Legal Counsel"], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The base and amendment texts require provision-level reconciliation; the workflow must surface the conflict and block approval rather than select wording."},
+    "error_tags": ["source_conflict", "approved_source_gate", "missed_escalation"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "CON-005",
+    "workstream": "market_conduct",
+    "expected": {"source_use_disposition": "binding_candidate", "obligation_outcome": "candidate_binding_obligation", "applicability_status": "applicable_candidate", "assurance_gate": "entered", "mapping_status": "mapped", "control_mappings": [{"control_id": "C-CON-006", "owner_role": "Complaints Manager"}, {"control_id": "C-CON-007", "owner_role": "Conduct Risk Officer"}], "assurance_outcome": "mapped_and_evidenced", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The approved obligation is mapped to complaint operation and customer-outcomes oversight, with the defined design and operating evidence supplied."},
+    "error_tags": ["correct_mapping", "owner_routing"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "CON-006",
+    "workstream": "market_conduct",
+    "expected": {"source_use_disposition": "binding_candidate", "obligation_outcome": "candidate_binding_obligation", "applicability_status": "applicable_candidate", "assurance_gate": "entered", "mapping_status": "mapped", "control_mappings": [{"control_id": "C-CON-006", "owner_role": "Complaints Manager"}], "assurance_outcome": "mapped_and_evidenced", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "C-CON-006 is the correct control and its frozen catalogue owner is the Complaints Manager, not the Conduct Risk Officer."},
+    "error_tags": ["owner_routing", "correct_mapping"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "CON-007",
+    "workstream": "market_conduct",
+    "expected": {"source_use_disposition": "binding_candidate", "obligation_outcome": "candidate_binding_obligation", "applicability_status": "applicable_candidate", "assurance_gate": "entered", "mapping_status": "mapped", "control_mappings": [{"control_id": "C-CON-006", "owner_role": "Complaints Manager"}], "assurance_outcome": "insufficient_evidence", "gap_types": ["operating_evidence_missing"], "gap_severity": "unassessed", "remediation_action_types": ["evidence_request"], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The control is mapped and its design is documented, but missing operating records require an evidence request rather than an effectiveness conclusion."},
+    "error_tags": ["operating_evidence_missing", "unnecessary_escalation"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "CON-008",
+    "workstream": "market_conduct",
+    "expected": {"source_use_disposition": "binding_candidate", "obligation_outcome": "candidate_binding_obligation", "applicability_status": "applicable_candidate", "assurance_gate": "entered", "mapping_status": "partially_mapped", "control_mappings": [{"control_id": "C-CON-006", "owner_role": "Complaints Manager"}], "assurance_outcome": "potential_control_gap", "gap_types": ["control_design"], "gap_severity": "high", "remediation_action_types": ["mapping_review"], "escalation_required": true, "escalation_roles": ["Head of Compliance"], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The supplied procedure does not evidence accountable framework ownership or periodic review; this is a high-severity potential design gap pending human confirmation and a search for other approved documents."},
+    "error_tags": ["genuine_control_gap", "partial_mapping", "missed_escalation"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "CON-009",
+    "workstream": "market_conduct",
+    "expected": {"source_use_disposition": "binding_candidate", "obligation_outcome": "candidate_binding_obligation", "applicability_status": "applicable_candidate", "assurance_gate": "entered", "mapping_status": "mapped", "control_mappings": [{"control_id": "C-CON-006", "owner_role": "Complaints Manager"}, {"control_id": "C-CON-007", "owner_role": "Conduct Risk Officer"}], "assurance_outcome": "mapped_and_evidenced", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "All defined synthetic acceptance criteria are met, so the proposed gap and escalation are unsupported false positives."},
+    "error_tags": ["false_positive_gap", "unnecessary_escalation", "correct_mapping"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "CON-010",
+    "workstream": "market_conduct",
+    "expected": {"source_use_disposition": "binding_candidate", "obligation_outcome": "candidate_binding_obligation", "applicability_status": "applicable_candidate", "assurance_gate": "entered", "mapping_status": "partially_mapped", "control_mappings": [{"control_id": "C-CON-006", "owner_role": "Complaints Manager"}], "assurance_outcome": "potential_control_gap", "gap_types": ["partial_coverage"], "gap_severity": "medium", "remediation_action_types": ["mapping_review"], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "Complaint operation is mapped, but ongoing customer-outcomes oversight remains unmapped; a review should consider C-CON-007 before any design gap is confirmed."},
+    "error_tags": ["partial_mapping", "correct_mapping"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "CON-011",
+    "workstream": "market_conduct",
+    "expected": {"source_use_disposition": "binding_candidate", "obligation_outcome": "candidate_binding_obligation", "applicability_status": "applicable_candidate", "assurance_gate": "entered", "mapping_status": "mapped", "control_mappings": [{"control_id": "C-CON-006", "owner_role": "Complaints Manager"}], "assurance_outcome": "potential_control_gap", "gap_types": ["operating_exception"], "gap_severity": "high", "remediation_action_types": ["operating_remediation"], "escalation_required": true, "escalation_roles": ["Conduct Risk Officer", "Head of Compliance"], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "Repeated overdue high-impact complaints and incomplete remediation support a high-severity potential operating gap requiring accountable escalation and remediation."},
+    "error_tags": ["genuine_control_gap", "missed_escalation"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "CON-012",
+    "workstream": "market_conduct",
+    "expected": {"source_use_disposition": "binding_candidate", "obligation_outcome": "candidate_binding_obligation", "applicability_status": "applicable_candidate", "assurance_gate": "entered", "mapping_status": "mapped", "control_mappings": [{"control_id": "C-CON-007", "owner_role": "Conduct Risk Officer"}], "assurance_outcome": "insufficient_evidence", "gap_types": ["operating_evidence_missing"], "gap_severity": "unassessed", "remediation_action_types": ["evidence_request"], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "A routine request to the evidence owner is proportionate because no adverse exception or material issue has been identified."},
+    "error_tags": ["operating_evidence_missing", "unnecessary_escalation"]
+  }
+]

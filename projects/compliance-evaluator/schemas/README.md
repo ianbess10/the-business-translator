@@ -18,4 +18,4 @@ Schemas in this folder define the controlled records passed between the regulato
 - remediation ownership and escalation; and
 - separate human approval and closure authority.
 
-The next artefact is the 24-case labelled baseline dataset using both frozen schemas.
+The connected schemas now serve as immutable decision contracts for the frozen [24-case labelled baseline dataset](../datasets/baseline-v1.0/README.md). The next artefacts are the intentionally simple baseline prompt and executable evaluator.

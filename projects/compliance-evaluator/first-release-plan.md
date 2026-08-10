@@ -122,7 +122,7 @@ Production or pilot readiness is outside Release 1.
 2. ~~`source-pack-v1.0` metadata~~ — complete
 3. ~~obligation schema~~ — complete
 4. ~~control and evidence schema~~ — complete
-5. 24-case labelled baseline dataset
+5. ~~24-case labelled baseline dataset~~ — complete
 6. baseline prompt
 7. executable evaluator
 

@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — South African scope, synthetic institution profile, source pack, obligation schema and connected control-and-evidence schema frozen; labelled baseline dataset next.**
+**Project 2 — South African scope, synthetic institution profile, source pack, both connected schemas and the 24-case labelled baseline frozen; baseline prompt and executable evaluator next.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -193,14 +193,16 @@ The capability may prepare analysis and recommendations. It must not:
 
 The first release will use the frozen [Synthetic South African Investment & Wealth Institution](profiles/synthetic-investment-wealth-institution-v1.0.md) and controlled source excerpts. It will test both workflows without exposing real customer, transaction, employee or institution data.
 
+The frozen [Regulatory Intelligence Baseline v1.0](datasets/baseline-v1.0/README.md) provides 12 AML/CFT and 12 market-conduct cases with model-facing inputs separated from evaluator-only labels. It covers source gates, applicability, control mapping, evidence sufficiency, ownership, potential gaps and escalation calibration.
+
 The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
 2. ~~freeze a small approved-source pack with explicit status metadata;~~ **complete**
 3. ~~define the obligation schema;~~ **complete**
 4. ~~define the control and evidence schema;~~ **complete**
-5. create a labelled baseline set spanning AML/CFT and market conduct;
-6. run an intentionally simple baseline;
+5. ~~create a labelled baseline set spanning AML/CFT and market conduct;~~ **complete**
+6. define and run an intentionally simple baseline;
 7. analyse obligation, mapping, evidence, ownership and escalation failures;
 8. introduce one controlled workflow design;
 9. retest on the frozen regression set; and
