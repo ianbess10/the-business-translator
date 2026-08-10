@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — Evidence-Gated Decision Pipeline v1.1 implemented, tested and frozen before regression; no v1.1 API execution or result exists.**
+**Project 2 — Evidence-Gated Decision Pipeline v1.1 executed and scored once; case-level failure analysis complete and v1.2 architecture selected but not implemented.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -218,7 +218,11 @@ The frozen [Evidence-Gated Decision Pipeline v1.0](workflows/evidence-gated-v1.0
 
 The completed [v1.0 case-level failure analysis](analysis/evidence-gated-v1.0/README.md) reduces 26 field mismatches across nine cases to three concentrated decision-boundary causes: applicability was conflated with source or obligation reasoning in nine cases, mapping completeness was conflated with evidence or performance in five, and partial coverage was misclassified as a design deficiency in one. The separately versioned [v1.1 decision](analysis/evidence-gated-v1.0/v1.1-decision.md) selects a narrow intervention while retaining the source, approval, owner, escalation and reconciliation controls that passed.
 
-The separate [Evidence-Gated Decision Pipeline v1.1](workflows/evidence-gated-v1.1/README.md) now implements that decision. Reviewed approved obligations bypass source reinterpretation and retain their accepted applicability; mapping completeness is derived independently from evidence sufficiency and operating performance; and partial coverage takes precedence unless explicit evidence supports a design deficiency. Offline tests cover 16 decision-boundary scenarios, all 24 regression input paths, 20 structured-output schema states and a 14-gate evaluator self-test. Frozen preflight confirms 16 source assessments plus eight approved assurance assessments—24 future API calls—and makes no API request.
+The separate [Evidence-Gated Decision Pipeline v1.1](workflows/evidence-gated-v1.1/README.md) implemented that decision. Reviewed approved obligations bypassed source reinterpretation and retained their accepted applicability; mapping completeness was derived independently from evidence sufficiency and operating performance; and partial coverage took precedence unless explicit evidence supported a design deficiency. Offline tests covered 16 decision-boundary scenarios, all 24 regression input paths, 20 structured-output schema states and a 14-gate evaluator self-test.
+
+v1.1 was then executed exactly once and scored exactly once. It improved end-to-end exactness to **20/24**, made source disposition and applicability exact, and produced a perfect escalation confusion matrix: six true positives, zero false positives, 18 true negatives and zero false negatives. It nevertheless failed the release decision because only eight of 14 reported gates passed. These are [synthetic regression results](results/evidence-gated-v1.1/README.md), not independent validation or production performance.
+
+The completed [v1.1 case-level failure analysis](analysis/evidence-gated-v1.1/README.md) separates four decision-error cases from one evaluator measurement defect. It identifies three substantive causes: source support was conflated with legal readiness in one case, missing evidence was conflated with control coverage in two, and a proposed mapping was silently expanded in one. The evaluator also mistook the legitimate rule identifier `SRC-CON-002` for a case-specific override because it used substring matching. The separately versioned [v1.2 decision](analysis/evidence-gated-v1.1/v1.2-decision.md) selects stronger stage and identity boundaries without implementing or tuning v1.2 in this analysis stage.
 
 The immediate build sequence is:
 
@@ -234,8 +238,12 @@ The immediate build sequence is:
 10. ~~complete the v1.0 case-level failure analysis;~~ **complete**
 11. ~~make a separately versioned v1.1 intervention decision;~~ **complete**
 12. ~~implement, test and freeze v1.1 without changing v1.0;~~ **complete**
-13. **run and score v1.1 once as regression evidence;** **next**
-14. if every release gate passes, author and freeze a separate unseen holdout.
+13. ~~run and score v1.1 once as regression evidence;~~ **complete**
+14. ~~complete the v1.1 case-level failure analysis;~~ **complete**
+15. ~~make a separately versioned v1.2 architecture decision;~~ **complete**
+16. **implement, test and freeze v1.2 without changing or rerunning v1.1;** **next**
+17. run and score v1.2 once as regression evidence;
+18. if every release gate passes, author and freeze a separate unseen holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
 

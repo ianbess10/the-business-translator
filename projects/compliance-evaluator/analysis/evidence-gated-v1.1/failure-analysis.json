@@ -1,0 +1,407 @@
+{
+  "analysis_id": "SA-REG-EVIDENCE-GATED-V1.1-FAILURE-ANALYSIS-001",
+  "version": "1.1",
+  "analysis_type": "post_regression_case_level_failure_analysis",
+  "run_id": "evidence-gated-v1.1-dcdc3a54-3b79-46e4-af73-d9a5c646ea62",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "workflow_id": "SA-REG-EVIDENCE-GATED-001",
+  "workflow_version": "1.1",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "synthetic_regression_evidence": true,
+  "independent_validation": false,
+  "production_performance": false,
+  "workflow_v1_1_modified": false,
+  "workflow_v1_1_rerun": false,
+  "workflow_v1_1_rescored": false,
+  "post_observation_tuning": false,
+  "source_evidence_hashes": {
+    "run_state_sha256": "9d7b2faf028bf4db75f08e44f7954128e43bd06c7d5b18d1f5e2e6b4de8290c8",
+    "predictions_sha256": "11aeee02d96b80e4001ff27c403b134ce25873e31a5cd12c6185e225618def72",
+    "evaluation_sha256": "d0da606fa995e959375ae4c67d0a0cb8750d706b28d2396b67fe3005104f08e5",
+    "regression_comparison_sha256": "fb753e8e7fd9dfa4eb0c79eae9561c664bec6d09d7f7da67936827efee4629de",
+    "workflow_meta_sha256": "25c7fbd427c55fef75e506e137dd35c087c6c0d4bc0bf35b6b92732ad05f445e",
+    "market_conduct_inputs_sha256": "be1c36a5793cee96d6a5f2c08a135389fc89461afd8d6e6d5c1b4a6ee1adc3f2",
+    "market_conduct_labels_sha256": "8cf778b67911269c7fe735e8ffd2a0f27e0e05da5886c2b88bb8b26fd459f2b3"
+  },
+  "headline": {
+    "case_count": 24,
+    "end_to_end_exact_count": 20,
+    "end_to_end_exact_accuracy": 0.8333,
+    "decision_error_case_count": 4,
+    "decision_error_case_ids": [
+      "CON-001",
+      "CON-007",
+      "CON-010",
+      "CON-012"
+    ],
+    "decision_mismatch_field_count": 10,
+    "reported_failed_release_gate_count": 6,
+    "substantive_failed_release_gate_count": 5,
+    "measurement_defect_gate_count": 1,
+    "measurement_defect_case_ids": [
+      "CON-002"
+    ],
+    "release_decision": "failed_no_holdout_permitted"
+  },
+  "reported_failed_release_gates": [
+    {
+      "gate": "exact_catalogue_owner_routing",
+      "classification": "substantive_mapping_membership_failure",
+      "failure_case_ids": [
+        "CON-010"
+      ]
+    },
+    {
+      "gate": "exact_mapping_status_for_entered_assurance",
+      "classification": "substantive_workflow_failure",
+      "failure_case_ids": [
+        "CON-007",
+        "CON-010",
+        "CON-012"
+      ]
+    },
+    {
+      "gate": "exact_entered_assurance_decisions",
+      "classification": "substantive_workflow_failure",
+      "failure_case_ids": [
+        "CON-010"
+      ]
+    },
+    {
+      "gate": "partial_coverage_not_promoted_to_design_escalation",
+      "classification": "substantive_workflow_failure",
+      "failure_case_ids": [
+        "CON-010"
+      ]
+    },
+    {
+      "gate": "evidence_condition_does_not_demote_mapping",
+      "classification": "substantive_workflow_failure",
+      "failure_case_ids": [
+        "CON-007",
+        "CON-012"
+      ]
+    },
+    {
+      "gate": "general_policy_rules_without_case_overrides",
+      "classification": "evaluator_measurement_defect",
+      "failure_case_ids": [
+        "CON-002"
+      ],
+      "cause": "The evaluator used substring matching between the case ID and applied rule identifiers. The legitimate general rule SRC-CON-002 contains CON-002 even though case_specific_override was false."
+    }
+  ],
+  "root_cause_case_counts": {
+    "source_support_legal_readiness_conflation": 1,
+    "evidence_requirement_coverage_conflation": 2,
+    "proposed_mapping_scope_expansion": 1
+  },
+  "measurement_defect_case_counts": {
+    "evaluator_rule_identifier_collision": 1
+  },
+  "mismatch_field_case_counts": {
+    "assurance_outcome": 1,
+    "control_ids": 1,
+    "control_mappings_with_owner": 1,
+    "gap_severity": 1,
+    "gap_types": 1,
+    "mapping_status": 3,
+    "obligation_outcome": 1,
+    "remediation_action_types": 1
+  },
+  "preserved_strengths": {
+    "source_use_disposition_correct": 24,
+    "applicability_status_correct": 24,
+    "assurance_gate_correct": 24,
+    "human_review_required_correct": 24,
+    "compliance_conclusion_correct": 24,
+    "mandatory_escalations_detected": 6,
+    "mandatory_escalations_missed": 0,
+    "unnecessary_escalations": 0,
+    "routine_missing_evidence_correct": 2,
+    "reconciliation_without_manual_correction": 24,
+    "prohibited_compliance_conclusions": 0
+  },
+  "decision_error_case_register": [
+    {
+      "case_id": "CON-001",
+      "workstream": "market_conduct",
+      "case_stage": "obligation_assessment",
+      "mismatched_fields": [
+        "obligation_outcome"
+      ],
+      "root_cause": "source_support_legal_readiness_conflation",
+      "root_field": "obligation_outcome",
+      "cascade_fields": [],
+      "expected": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered"
+      },
+      "observed": {
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "unsupported_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered"
+      },
+      "causal_stage_output": {
+        "source_classification": "final_change_event",
+        "obligation_support": "unsupported_extension",
+        "applicability_assessment": "applicable",
+        "proposal_disposition": "reject"
+      },
+      "causal_policy_path": [
+        "SRC-CON-003",
+        "APP-002",
+        "ESC-DEFAULT"
+      ],
+      "causal_evidence": "The candidate statement reproduces the supplied requirement, but the model rationale treated staged commencement and the need for provision verification as evidence of an unsupported extension. The pipeline then converted the model support label to unsupported_obligation.",
+      "operational_consequence": "A valid candidate obligation can be rejected before human approval even though source authority and applicability are correct.",
+      "protected_controls": [
+        "authoritative_source_disposition",
+        "fact_based_applicability",
+        "closed_assurance_gate",
+        "human_review_boundary"
+      ]
+    },
+    {
+      "case_id": "CON-007",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "mismatched_fields": [
+        "mapping_status"
+      ],
+      "root_cause": "evidence_requirement_coverage_conflation",
+      "root_field": "mapping_status",
+      "cascade_fields": [],
+      "expected": {
+        "mapping_status": "mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "insufficient_evidence",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "unassessed",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false
+      },
+      "observed": {
+        "mapping_status": "partially_mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "insufficient_evidence",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "unassessed",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false
+      },
+      "causal_stage_output": {
+        "mapping_completeness": "partial",
+        "supported_control_ids": [
+          "C-CON-006"
+        ],
+        "coverage_gap_present": true,
+        "evidence_assessment": "missing_operating_evidence",
+        "design_deficiency_evidence_present": false
+      },
+      "causal_policy_path": [
+        "APP-001",
+        "MAP-002",
+        "EVD-002",
+        "ESC-DEFAULT"
+      ],
+      "causal_evidence": "The rationale called the missing complaint register both an operating-evidence deficiency and a coverage gap. The deterministic policy correctly followed coverage_gap_present and therefore demoted the mapping.",
+      "operational_consequence": "The accountable control relationship is understated even though the evidence request and escalation treatment are correct.",
+      "protected_controls": [
+        "approved_obligation_authority",
+        "catalogue_owner_resolution",
+        "missing_evidence_taxonomy",
+        "proportionate_no_escalation"
+      ]
+    },
+    {
+      "case_id": "CON-010",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "mismatched_fields": [
+        "mapping_status",
+        "assurance_outcome",
+        "gap_severity",
+        "control_ids",
+        "control_mappings_with_owner",
+        "gap_types",
+        "remediation_action_types"
+      ],
+      "root_cause": "proposed_mapping_scope_expansion",
+      "root_field": "control_ids",
+      "cascade_fields": [
+        "mapping_status",
+        "assurance_outcome",
+        "gap_severity",
+        "control_mappings_with_owner",
+        "gap_types",
+        "remediation_action_types"
+      ],
+      "expected": {
+        "mapping_status": "partially_mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "partial_coverage"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "mapping_review"
+        ],
+        "escalation_required": false
+      },
+      "observed": {
+        "mapping_status": "mapped",
+        "control_ids": [
+          "C-CON-006",
+          "C-CON-007"
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false
+      },
+      "causal_stage_output": {
+        "mapping_completeness": "complete",
+        "supported_control_ids": [
+          "C-CON-006",
+          "C-CON-007"
+        ],
+        "coverage_gap_present": false,
+        "evidence_assessment": "sufficient",
+        "design_deficiency_evidence_present": false
+      },
+      "causal_policy_path": [
+        "APP-001",
+        "MAP-003",
+        "EVD-001",
+        "ESC-DEFAULT"
+      ],
+      "causal_evidence": "The submitted current mapping contained only C-CON-006. The model imported C-CON-007 from the wider catalogue into supported_control_ids, then assessed the expanded mapping as complete rather than identifying C-CON-007 as a remediation candidate.",
+      "operational_consequence": "The workflow repairs a submitted mapping silently, obscuring the existing coverage gap and bypassing owner acceptance of the proposed change.",
+      "protected_controls": [
+        "approved_obligation_authority",
+        "catalogue_owner_resolution_for_emitted_controls",
+        "no_design_gap_invention",
+        "proportionate_no_escalation"
+      ]
+    },
+    {
+      "case_id": "CON-012",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "mismatched_fields": [
+        "mapping_status"
+      ],
+      "root_cause": "evidence_requirement_coverage_conflation",
+      "root_field": "mapping_status",
+      "cascade_fields": [],
+      "expected": {
+        "mapping_status": "mapped",
+        "control_ids": [
+          "C-CON-007"
+        ],
+        "assurance_outcome": "insufficient_evidence",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "unassessed",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false
+      },
+      "observed": {
+        "mapping_status": "partially_mapped",
+        "control_ids": [
+          "C-CON-007"
+        ],
+        "assurance_outcome": "insufficient_evidence",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "unassessed",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false
+      },
+      "causal_stage_output": {
+        "mapping_completeness": "partial",
+        "supported_control_ids": [
+          "C-CON-007"
+        ],
+        "coverage_gap_present": true,
+        "evidence_assessment": "missing_operating_evidence",
+        "design_deficiency_evidence_present": false
+      },
+      "causal_policy_path": [
+        "APP-001",
+        "MAP-002",
+        "EVD-002",
+        "ESC-DEFAULT"
+      ],
+      "causal_evidence": "The rationale treated the absent monthly customer-outcomes report as both missing evidence and incomplete control coverage. The deterministic policy correctly preserved the evidence request and rejected the proposed Board escalation, but trusted the incorrect coverage flag.",
+      "operational_consequence": "Routine evidence collection is handled proportionately, but the current mapping is understated and can create avoidable mapping-review work.",
+      "protected_controls": [
+        "approved_obligation_authority",
+        "catalogue_owner_resolution",
+        "missing_evidence_taxonomy",
+        "rejection_of_unnecessary_escalation"
+      ]
+    }
+  ],
+  "measurement_defect_register": [
+    {
+      "case_id": "CON-002",
+      "decision_exact": true,
+      "failed_gate": "general_policy_rules_without_case_overrides",
+      "defect": "evaluator_rule_identifier_collision",
+      "observed_trace": {
+        "applied_policy_rules": [
+          "SRC-CON-002",
+          "APP-003",
+          "ESC-DEFAULT"
+        ],
+        "case_specific_override": false
+      },
+      "defective_check": "case_id in str(rule)",
+      "causal_evidence": "The case ID CON-002 is a substring of the legitimate source-policy rule ID SRC-CON-002. No case override occurred and every predicted operational field matched the label.",
+      "treatment": "Preserve the frozen v1.1 score and report. Correct the identity check only in a separately versioned evaluator and do not claim the correction as model improvement."
+    }
+  ],
+  "v1_2_decision": {
+    "decision_id": "SA-REG-EVIDENCE-GATED-V1.2-DECISION-001",
+    "status": "selected_for_later_implementation",
+    "selected_changes": [
+      "separate_source_support_from_legal_readiness",
+      "isolate_mapping_and_evidence_model_stages",
+      "separate_current_mapping_from_candidate_additional_controls",
+      "use_identity_safe_generality_measurement"
+    ],
+    "v1_2_implemented": false,
+    "v1_2_tuned": false,
+    "v1_2_frozen": false,
+    "v1_2_executed": false
+  }
+}
