@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 — South African scope, synthetic institution profile, source pack, both connected schemas, 24-case dataset, simple baseline and operational failure analysis complete; Evidence-Gated Decision Pipeline v1.0 implemented and frozen before regression.**
+**Project 2 — Evidence-Gated Decision Pipeline v1.0 executed and scored once; case-level failure analysis complete and a targeted v1.1 intervention selected for separate implementation.**
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -214,7 +214,9 @@ These are [synthetic benchmark results](results/baseline-v1.0/README.md), not pr
 
 The completed [operational failure analysis](analysis/baseline-v1.0/README.md) found that the model reproduced at least one proposed answer in 21 of 24 cases, leaked assurance activity past the closed gate in 14 of 16 cases and repeated all eight deliberately wrong escalation proposals. The selected next intervention is an [Evidence-Gated Decision Pipeline v1.0](analysis/baseline-v1.0/intervention-design.md): one stage-gated workflow that treats proposals as untrusted claims, enforces source and approval transitions, resolves catalogue owners and derives escalation from explicit policy triggers.
 
-The [implemented workflow](workflows/evidence-gated-v1.0/README.md) is now frozen before execution. It uses two bounded AI stages and deterministic source, approval, ownership, evidence and escalation controls. Its input-only runner is configured for 24 source/obligation calls plus eight approved-obligation assurance calls. Offline policy tests, evaluator self-tests and the 32-call preflight pass; no regression API call has been made.
+The frozen [Evidence-Gated Decision Pipeline v1.0](workflows/evidence-gated-v1.0/README.md) was executed once across the 24 regression cases and scored once without tuning or rerunning. It improved end-to-end exactness from **1/24 to 15/24**, detected all six mandatory escalations and passed seven of eight hard release gates. One partial mapping was misclassified as a high design deficiency, producing the sole unnecessary escalation. These are [synthetic regression results](results/evidence-gated-v1.0/README.md), not independent validation or production performance.
+
+The completed [v1.0 case-level failure analysis](analysis/evidence-gated-v1.0/README.md) reduces 26 field mismatches across nine cases to three concentrated decision-boundary causes: applicability was conflated with source or obligation reasoning in nine cases, mapping completeness was conflated with evidence or performance in five, and partial coverage was misclassified as a design deficiency in one. The separately versioned [v1.1 decision](analysis/evidence-gated-v1.0/v1.1-decision.md) selects a narrow intervention while retaining the source, approval, owner, escalation and reconciliation controls that passed.
 
 The immediate build sequence is:
 
@@ -226,8 +228,12 @@ The immediate build sequence is:
 6. ~~define and run an intentionally simple baseline;~~ **complete**
 7. ~~analyse obligation, mapping, evidence, ownership and escalation failures;~~ **complete**
 8. ~~implement and freeze the Evidence-Gated Decision Pipeline v1.0;~~ **complete**
-9. **run v1.0 once on the frozen regression set without tuning;** **next**
-10. validate once against a separate holdout.
+9. ~~run and score v1.0 once on the frozen regression set without tuning;~~ **complete**
+10. ~~complete the v1.0 case-level failure analysis;~~ **complete**
+11. ~~make a separately versioned v1.1 intervention decision;~~ **complete**
+12. **implement, test and freeze v1.1 without changing v1.0;** **next**
+13. run and score v1.1 once as regression evidence; and
+14. if every release gate passes, author and freeze a separate unseen holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
 
