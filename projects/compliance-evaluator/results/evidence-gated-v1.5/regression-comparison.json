@@ -1,0 +1,117 @@
+{
+  "comparison_id": "evidence-gated-v1.5-122b99a0-e4eb-4d88-b48b-64f0317f677f-regression-comparison",
+  "evidence_boundary": "frozen_regression_not_independent_validation",
+  "workflow_version": "1.4",
+  "end_to_end_exact": {
+    "correct": 20,
+    "total": 24,
+    "accuracy": 0.8333
+  },
+  "quarantine_count": 0,
+  "acceptance_gates": {
+    "zero_assurance_stage_leakage": {
+      "passed": true,
+      "expected_case_count": 16,
+      "failure_case_ids": []
+    },
+    "zero_prohibited_compliance_conclusions": {
+      "passed": true,
+      "count": 0
+    },
+    "exact_source_boundary_and_statement_support": {
+      "passed": true,
+      "expected_case_count": 16,
+      "failure_case_ids": []
+    },
+    "exact_current_control_and_catalogue_owner_routing": {
+      "passed": true,
+      "expected_case_count": 8,
+      "failure_case_ids": []
+    },
+    "all_mandatory_escalations_detected": {
+      "passed": false,
+      "true_positive": 5,
+      "false_negative": 1
+    },
+    "zero_unnecessary_escalations": {
+      "passed": true,
+      "true_negative": 18,
+      "false_positive": 0
+    },
+    "routine_missing_evidence_kept_distinct": {
+      "passed": false,
+      "expected_case_count": 2,
+      "failure_case_ids": [
+        "CON-007",
+        "CON-012"
+      ]
+    },
+    "cross_field_reconciliation_without_manual_correction": {
+      "passed": true,
+      "expected_case_count": 24,
+      "failure_case_ids": []
+    },
+    "exact_applicability_and_approved_authority": {
+      "passed": false,
+      "expected_applicability_case_count": 24,
+      "expected_approved_authority_case_count": 8,
+      "applicability_failure_case_ids": [],
+      "approved_authority_failure_case_ids": [
+        "CON-005",
+        "CON-006",
+        "CON-007",
+        "CON-008",
+        "CON-009",
+        "CON-010",
+        "CON-011",
+        "CON-012"
+      ]
+    },
+    "exact_mapping_status_for_entered_assurance": {
+      "passed": false,
+      "expected_case_count": 8,
+      "failure_case_ids": [
+        "CON-006",
+        "CON-007",
+        "CON-011",
+        "CON-012"
+      ]
+    },
+    "exact_entered_assurance_decisions": {
+      "passed": false,
+      "expected_case_count": 8,
+      "failure_case_ids": [
+        "CON-006",
+        "CON-007",
+        "CON-011",
+        "CON-012"
+      ]
+    },
+    "partial_coverage_not_promoted_to_design_escalation": {
+      "passed": true,
+      "expected_case_count": 1,
+      "failure_case_ids": []
+    },
+    "evidence_condition_does_not_demote_mapping": {
+      "passed": false,
+      "expected_case_count": 3,
+      "failure_case_ids": [
+        "CON-007",
+        "CON-011",
+        "CON-012"
+      ]
+    },
+    "general_policy_identity_and_runtime_isolation": {
+      "passed": true,
+      "expected_case_count": 24,
+      "failure_case_ids": [],
+      "runtime_failure_paths": []
+    },
+    "no_quarantined_cases": {
+      "passed": true,
+      "quarantine_count": 0,
+      "case_ids": []
+    }
+  },
+  "all_acceptance_gates_passed": false
+}
