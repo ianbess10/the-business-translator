@@ -1,0 +1,37 @@
+{
+  "rulebook_id": "SA-REG-COVERAGE-EVIDENCE-001",
+  "version": "1.0",
+  "status": "approved",
+  "effective_from": "2026-08-11",
+  "approved_obligation_id": "OBL-CONDUCT-0001",
+  "source_basis": {
+    "source_id": "SA-CONDUCT-SP-003",
+    "source_locator": "Schedule A, paragraph 12, inserted section 17(1)",
+    "atomic_obligation": "An authorised provider must establish and maintain an adequate complaints management framework."
+  },
+  "obligation_elements": [
+    {"element_id": "OEL-CON-ESTABLISH-001", "statement": "Establish and operate complaint classification, escalation and remediation arrangements.", "element_type": "establishment_and_operation", "mandatory": true},
+    {"element_id": "OEL-CON-MAINTAIN-001", "statement": "Maintain the framework through customer-outcomes oversight and periodic management-information review.", "element_type": "maintenance_and_oversight", "mandatory": true}
+  ],
+  "control_coverage_assertions": [
+    {"control_id": "C-CON-006", "element_id": "OEL-CON-ESTABLISH-001", "coverage_state": "covers", "rationale": "The control operates complaint classification, escalation and remediation."},
+    {"control_id": "C-CON-006", "element_id": "OEL-CON-MAINTAIN-001", "coverage_state": "does_not_cover", "rationale": "The control does not provide the separate customer-outcomes oversight review."},
+    {"control_id": "C-CON-007", "element_id": "OEL-CON-ESTABLISH-001", "coverage_state": "does_not_cover", "rationale": "Management-information review does not itself operate complaint handling."},
+    {"control_id": "C-CON-007", "element_id": "OEL-CON-MAINTAIN-001", "coverage_state": "covers", "rationale": "The control provides ongoing customer-outcomes oversight and review."}
+  ],
+  "evidence_requirements": [
+    {"requirement_id": "ER-CON-DESIGN-001", "element_id": "OEL-CON-ESTABLISH-001", "control_ids": ["C-CON-006"], "requirement_class": "design_attribute", "accepted_evidence_types": ["policy_or_framework", "procedure"], "expected": "Approved framework or procedure identifying governance, ownership and review arrangements.", "failure_classification": "design_deficiency", "evidence_owner_role": "Complaints Manager"},
+    {"requirement_id": "ER-CON-OPERATE-001", "element_id": "OEL-CON-ESTABLISH-001", "control_ids": ["C-CON-006"], "requirement_class": "operating_record", "accepted_evidence_types": ["completed_control_record"], "expected": "Completed complaint register or case records for the assessment period.", "failure_classification": "missing_operating_evidence", "evidence_owner_role": "Complaints Manager"},
+    {"requirement_id": "ER-CON-ADVERSE-001", "element_id": "OEL-CON-ESTABLISH-001", "control_ids": ["C-CON-006"], "requirement_class": "adverse_indicator", "accepted_evidence_types": ["completed_control_record"], "expected": "Complaint records contain no unresolved repeated high-impact operating exceptions.", "failure_classification": "adverse_operating_evidence", "evidence_owner_role": "Complaints Manager"},
+    {"requirement_id": "ER-CON-MAINTAIN-001", "element_id": "OEL-CON-MAINTAIN-001", "control_ids": ["C-CON-007"], "requirement_class": "operating_record", "accepted_evidence_types": ["management_information"], "expected": "Periodic customer-outcomes management information with review evidence.", "failure_classification": "missing_operating_evidence", "evidence_owner_role": "Conduct Risk Officer"}
+  ],
+  "human_review": {
+    "required": true,
+    "status": "accepted",
+    "reviewer_role": "Head of Compliance",
+    "reviewer_id": "SYN-HC-002",
+    "reviewed_at": "2026-08-11T16:00:00+02:00",
+    "decision_rationale": "Approved as a synthetic operating rulebook derived from the approved obligation, source locator and frozen control design descriptions. It is not a legal interpretation or production control assessment."
+  },
+  "generality_controls": {"benchmark_case_ids_permitted": false, "benchmark_evidence_ids_permitted": false, "evaluator_labels_used": false, "case_specific_exceptions_permitted": false}
+}

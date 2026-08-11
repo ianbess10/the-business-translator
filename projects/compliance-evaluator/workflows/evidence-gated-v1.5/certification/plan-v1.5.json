@@ -1,0 +1,13 @@
+{
+  "purpose": "provider_contract_certification_not_model_quality_evaluation",
+  "planned_call_count": 1,
+  "benchmark_cases_used": false,
+  "evaluator_labels_used": false,
+  "stage": "evidence",
+  "case_id": "CERT-EVIDENCE-V15-001",
+  "expected_output": {
+    "case_id": "CERT-EVIDENCE-V15-001",
+    "observations": [{"evidence_id": "CERT-EV-001", "requirement_id": "CERT-REQ-001", "observed_state": "present_complete", "rationale": "Generic certification observation."}],
+    "rationale": "Generic non-benchmark provider contract certification."
+  }
+}
