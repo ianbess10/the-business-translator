@@ -1,0 +1,95 @@
+{
+  "analysis_id": "SA-REG-EVIDENCE-GATED-V1.3-EXECUTION-FAILURE-ANALYSIS-001",
+  "version": "1.3",
+  "analysis_type": "post_inference_semantic_contract_failure_analysis",
+  "run_id": "evidence-gated-v1.3-9c733a59-356c-4786-b966-955416ac8a2f",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "workflow_id": "SA-REG-EVIDENCE-GATED-001",
+  "workflow_version": "1.3",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "synthetic_regression_evidence": true,
+  "model_inference_reached": true,
+  "complete_model_decision_evidence_available": false,
+  "evaluation_available": false,
+  "independent_validation": false,
+  "production_performance": false,
+  "workflow_v1_3_modified": false,
+  "workflow_v1_3_rerun": false,
+  "workflow_v1_3_scored": false,
+  "post_observation_tuning": false,
+  "headline": {
+    "run_status": "failed",
+    "case_count": 24,
+    "expected_api_call_count": 32,
+    "successfully_validated_api_call_count": 21,
+    "completed_case_count": 18,
+    "prediction_file_available": false,
+    "release_decision": "failed_no_score_no_holdout_permitted"
+  },
+  "failure": {
+    "classification": "post_inference_deterministic_semantic_contract_rejection",
+    "failed_case_id": "CON-007",
+    "failed_case_identification_basis": "deterministic_reconstruction_from_frozen_input_order_runner_branching_and_run_counters",
+    "failed_execution_position": 19,
+    "failed_stage": "evidence",
+    "validated_call_count_before_failure": 21,
+    "error": "ValueError: Design-deficiency assessment and evidence flag must agree",
+    "transport_schema_accepted": true,
+    "transport_output_valid": true,
+    "semantic_output_valid": false,
+    "policy_composition_reached_for_failed_case": false,
+    "raw_failed_response_preserved": false,
+    "conflicting_field_values_known": false
+  },
+  "case_context": {
+    "title": "Control description without operating evidence",
+    "objective": "Prevent design documentation from being treated as evidence that the control operated.",
+    "current_control_ids": ["C-CON-006"],
+    "supplied_evidence_types": ["policy_or_framework"],
+    "missing_evidence_types": ["completed_control_record"],
+    "decision_boundary": "documented_control_design_does_not_prove_operating_effectiveness"
+  },
+  "root_causes": [
+    "one_evidence_decision_was_model_authored_in_redundant_correlated_fields",
+    "provider_transport_subset_could_not_enforce_cross_field_equivalence",
+    "contract_certification_proved_acceptance_of_one_valid_fixture_not_semantic_consistency_across_cases",
+    "stage_responses_were_not_checkpointed_before_semantic_validation",
+    "single_case_semantic_failure_aborted_the_remaining_batch"
+  ],
+  "controls_that_worked": [
+    "provider_subset_audit",
+    "pre_freeze_exact_schema_certification",
+    "transport_validation_before_semantic_validation",
+    "deterministic_semantic_fail_closed_gate",
+    "no_retry_or_automatic_repair",
+    "no_mock_json_mode_model_or_endpoint_fallback",
+    "one_attempt_run_marker",
+    "no_partial_or_fabricated_score",
+    "workflow_freeze_preserved"
+  ],
+  "evidence_limitations": [
+    "raw_failed_stage_response_not_persisted",
+    "failed_provider_response_id_not_persisted",
+    "failed_case_id_inferred_not_recorded_in_run_state",
+    "no_case_level_predictions_persisted_before_batch_completion",
+    "no_substantive_correctness_claim_possible_for_failed_response"
+  ],
+  "v1_4_decision": {
+    "decision_id": "SA-REG-EVIDENCE-GATED-V1.4-DECISION-001",
+    "status": "selected_for_later_implementation",
+    "selected_changes": [
+      "canonical_single_field_evidence_classification",
+      "deterministic_derivation_of_redundant_business_fields",
+      "stage_level_append_only_execution_evidence",
+      "case_level_semantic_quarantine_without_retry",
+      "explicit_quarantine_aware_evaluation_and_release_failure"
+    ],
+    "v1_4_implemented": false,
+    "v1_4_tested": false,
+    "v1_4_provider_certified": false,
+    "v1_4_frozen": false,
+    "v1_4_regression_executed": false
+  }
+}
