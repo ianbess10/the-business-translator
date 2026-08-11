@@ -230,7 +230,9 @@ The [sole v1.2 regression execution](results/evidence-gated-v1.2/README.md) was 
 
 The completed [v1.2 execution-contract failure analysis](analysis/evidence-gated-v1.2/README.md) establishes that the workflow confused general JSON Schema validity with the provider's supported Structured Outputs subset. Offline tests proved the authored Draft 2020-12 rules but did not certify provider compatibility. The separately versioned [v1.3 decision](analysis/evidence-gated-v1.2/v1.3-decision.md) therefore selects provider-compatible transport schemas, deterministic cross-field semantic validation, a static provider-subset audit and three non-benchmark provider contract-certification calls before freeze. It does not implement or execute v1.3.
 
-The separate [Evidence-Gated Decision Pipeline v1.3](workflows/evidence-gated-v1.3/README.md) now implements that decision without changing v1.2. All three exact provider-compatible schemas passed the offline subset audit and one non-benchmark provider contract-certification request each. Deterministic semantic tests reject cross-field states that the transport schema intentionally cannot express, all 24 frozen paths compose offline, payload isolation remains intact, and the retained evaluator passes its 24/24 and 14/14 self-test. The exact certified workflow is hash-frozen before regression; no v1.3 benchmark execution or score exists.
+The separate [Evidence-Gated Decision Pipeline v1.3](workflows/evidence-gated-v1.3/README.md) implemented that decision without changing v1.2. All three exact provider-compatible schemas passed the offline subset audit and one non-benchmark provider contract-certification request each. Deterministic semantic tests rejected cross-field states that the transport schema intentionally could not express, all 24 frozen paths composed offline, payload isolation remained intact, and the retained evaluator passed its 24/24 and 14/14 self-test.
+
+The [sole v1.3 regression execution](results/evidence-gated-v1.3/README.md) then stopped during case 19 after 18 completed cases and 21 validated model calls. A transport-valid evidence response failed the deterministic semantic gate because its design-deficiency assessment disagreed with its evidence flag. No completed predictions file exists, so the evaluator was not invoked and no score is claimed. v1.3 remains frozen and will not be tuned, rerun or scored.
 
 The immediate build sequence is:
 
@@ -253,8 +255,9 @@ The immediate build sequence is:
 17. **v1.2 execution attempted once; provider schema rejection preserved; no predictions existed to score;** **closed without rerun**
 18. ~~complete the v1.2 execution-contract failure analysis and make a separately versioned v1.3 decision;~~ **complete**
 19. ~~implement, test and provider-certify v1.3 separately before freeze;~~ **complete**
-20. **execute and score frozen v1.3 once as regression evidence;** **next**
-21. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
+20. **v1.3 executed once; semantic-gate failure preserved; no complete predictions existed to score;** **closed without rerun**
+21. **complete the v1.3 execution failure analysis and make a separately versioned next-workflow decision;** **next**
+22. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
 
