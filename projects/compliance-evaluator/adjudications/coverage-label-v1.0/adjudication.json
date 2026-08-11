@@ -1,0 +1,100 @@
+{
+  "adjudication_id": "SA-REG-COVERAGE-LABEL-ADJUDICATION-001",
+  "version": "1.0",
+  "status": "approved_synthetic",
+  "decided_at": "2026-08-11T22:30:00+02:00",
+  "decision_scope": ["CON-006", "CON-007", "CON-011", "CON-012"],
+  "based_on_analysis_id": "SA-REG-EVIDENCE-GATED-V1.5-CASE-FAILURE-ANALYSIS-001",
+  "reviewer": {
+    "reviewer_id": "SYN-CML-001",
+    "reviewer_role": "Compliance Monitoring Lead",
+    "synthetic_identity": true,
+    "independent_of_workflow_coding": true,
+    "independent_of_original_label_authoring": true,
+    "independent_of_control_ownership": true,
+    "independent_of_rulebook_approval": true
+  },
+  "authority_hierarchy": [
+    "source_supported_atomic_obligation",
+    "approved_obligation_elements",
+    "frozen_control_design_descriptions",
+    "approved_coverage_assertions",
+    "benchmark_label_rationale"
+  ],
+  "source_authority": {
+    "obligation_id": "OBL-CONDUCT-0001",
+    "atomic_obligation": "An authorised provider must establish and maintain an adequate complaints management framework.",
+    "rulebook_id": "SA-REG-COVERAGE-EVIDENCE-001",
+    "rulebook_version": "1.0",
+    "rulebook_status": "approved",
+    "required_element_ids": ["OEL-CON-ESTABLISH-001", "OEL-CON-MAINTAIN-001"]
+  },
+  "determinations": [
+    {
+      "case_id": "CON-006",
+      "submitted_control_ids": ["C-CON-006"],
+      "coverage_state": "partial",
+      "covered_element_ids": ["OEL-CON-ESTABLISH-001"],
+      "uncovered_element_ids": ["OEL-CON-MAINTAIN-001"],
+      "evidence_condition": "sufficient",
+      "remediation_action_types": ["mapping_review"],
+      "escalation_required": false,
+      "escalation_roles": [],
+      "original_mapping_label_upheld": false
+    },
+    {
+      "case_id": "CON-007",
+      "submitted_control_ids": ["C-CON-006"],
+      "coverage_state": "partial",
+      "covered_element_ids": ["OEL-CON-ESTABLISH-001"],
+      "uncovered_element_ids": ["OEL-CON-MAINTAIN-001"],
+      "evidence_condition": "missing_operating_evidence",
+      "remediation_action_types": ["mapping_review", "evidence_request"],
+      "escalation_required": false,
+      "escalation_roles": [],
+      "original_mapping_label_upheld": false
+    },
+    {
+      "case_id": "CON-011",
+      "submitted_control_ids": ["C-CON-006"],
+      "coverage_state": "partial",
+      "covered_element_ids": ["OEL-CON-ESTABLISH-001"],
+      "uncovered_element_ids": ["OEL-CON-MAINTAIN-001"],
+      "evidence_condition": "adverse_operating_evidence",
+      "gap_severity": "high",
+      "remediation_action_types": ["mapping_review", "operating_remediation"],
+      "escalation_required": true,
+      "escalation_roles": ["Conduct Risk Officer", "Head of Compliance"],
+      "original_mapping_label_upheld": false
+    },
+    {
+      "case_id": "CON-012",
+      "submitted_control_ids": ["C-CON-007"],
+      "coverage_state": "partial",
+      "covered_element_ids": ["OEL-CON-MAINTAIN-001"],
+      "uncovered_element_ids": ["OEL-CON-ESTABLISH-001"],
+      "evidence_condition": "missing_operating_evidence",
+      "remediation_action_types": ["mapping_review", "evidence_request"],
+      "escalation_required": false,
+      "escalation_roles": [],
+      "original_mapping_label_upheld": false
+    }
+  ],
+  "publication": {
+    "original_dataset_id": "SA-REG-BASELINE-001",
+    "original_dataset_version": "1.0",
+    "original_dataset_modified": false,
+    "new_authority_dataset_id": "SA-REG-BASELINE-001",
+    "new_authority_dataset_version": "1.1",
+    "publication_mode": "immutable_base_plus_versioned_label_authority_overlay",
+    "retrospective_v1_5_scoring_permitted": false
+  },
+  "limitations": [
+    "Synthetic governance evidence only; not legal advice, a compliance opinion or production assurance.",
+    "The reviewer identity is fictional and demonstrates separation of duties within the portfolio prototype.",
+    "General adverse-severity and escalation policy authority must be separately approved before v1.6 freeze."
+  ],
+  "v1_6_implemented": false,
+  "v1_6_executed": false,
+  "v1_6_scored": false
+}

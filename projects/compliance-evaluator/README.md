@@ -248,6 +248,8 @@ The [sole v1.5 regression](results/evidence-gated-v1.5/README.md) completed all 
 
 The completed [v1.5 case-level failure analysis](analysis/evidence-gated-v1.5/README.md) separates benchmark authority drift from a genuine policy defect. All four mapping mismatches arise because the frozen labels treat one complaint control as complete while the later approved rulebook requires both establishment/operation and maintenance/oversight coverage. `CON-011` separately proves that partial-coverage precedence can suppress a correctly observed high adverse operating exception and its mandatory escalation. The separately versioned [v1.6 decision](analysis/evidence-gated-v1.5/v1.6-decision.md) therefore requires independent rulebook-versus-label adjudication, immutable original labels, dual-axis coverage and evidence state, concurrent remediation routing, an adverse-evidence escalation floor and corrected evaluator identity controls. It does not implement, execute or score v1.6.
 
+The independent synthetic [coverage-versus-label adjudication](adjudications/coverage-label-v1.0/README.md) applied a documented authority hierarchy under a fictional Compliance Monitoring Lead role separated from workflow coding, original label authoring, control ownership and rulebook approval. It upheld the approved rulebook in all four disputes: each single-control mapping is partial. Evidence condition remains separate, and `CON-011` retains high adverse-operating remediation and escalation. Dataset v1.0 remains immutable; the determinations are published as [benchmark authority v1.1](datasets/baseline-v1.1/README.md) for future v1.6 evaluation only. No retrospective v1.5 score is permitted, and v1.6 remains unimplemented.
+
 The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
@@ -277,8 +279,10 @@ The immediate build sequence is:
 25. ~~author and approve the v1.5 Coverage and Evidence Rulebook, then implement, test, certify and freeze v1.5 separately;~~ **complete**
 26. ~~execute frozen v1.5 once and evaluate its complete terminal-case record once;~~ **complete**
 27. ~~complete the v1.5 case-level failure analysis and make a separately versioned next-workflow decision;~~ **complete**
-28. **complete independent rulebook-versus-label adjudication before implementing v1.6;** **next**
-29. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
+28. ~~complete independent rulebook-versus-label adjudication before implementing v1.6;~~ **complete**
+29. **author and approve general v1.6 assurance-composition, severity and escalation policy authority;** **next**
+30. implement, test, certify where required and freeze v1.6 separately before regression.
+31. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
 

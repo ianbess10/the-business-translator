@@ -1,0 +1,26 @@
+{
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.1",
+  "status": "approved_synthetic_label_authority",
+  "published_at": "2026-08-11",
+  "base_dataset_version": "1.0",
+  "publication_mode": "immutable_base_plus_versioned_label_authority_overlay",
+  "input_case_count": 24,
+  "inherited_input_case_count": 24,
+  "adjudicated_label_case_count": 4,
+  "adjudicated_case_ids": ["CON-006", "CON-007", "CON-011", "CON-012"],
+  "adjudication_id": "SA-REG-COVERAGE-LABEL-ADJUDICATION-001",
+  "original_dataset_modified": false,
+  "retrospective_scoring_permitted": false,
+  "permitted_future_workflow_versions": ["1.6"],
+  "v1_6_implemented": false,
+  "v1_6_executed": false,
+  "v1_6_scored": false,
+  "artefact_sha256": {
+    "README.md": "fd6c68753e10db6c1866d93a47c8979b07524fb777259ccbcbac7ab4d2ca44a4",
+    "label-authority-overlay.json": "81b4e533afb92e234ae6a3e6121b62dc7ecabc99c1951121cb176319d81340fe",
+    "label-authority-overlay.schema.json": "d9832cfe0e4669ce5add29abf365bd2a3b53a924558556ac9fea89577ec91315",
+    "adjudication.json": "6a4720ba063651150bbb7e69a350464a4a1a712b2e6361008a2fa3f01b8d62cf"
+  },
+  "notes": "Future evaluation authority only. It does not change or retrospectively rescore the frozen v1.5 regression."
+}

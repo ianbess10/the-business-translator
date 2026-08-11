@@ -1,0 +1,36 @@
+{
+  "adjudication_id": "SA-REG-COVERAGE-LABEL-ADJUDICATION-001",
+  "version": "1.0",
+  "status": "approved_synthetic",
+  "completed_at": "2026-08-11",
+  "based_on_analysis_id": "SA-REG-EVIDENCE-GATED-V1.5-CASE-FAILURE-ANALYSIS-001",
+  "reviewer_id": "SYN-CML-001",
+  "reviewer_role": "Compliance Monitoring Lead",
+  "synthetic_identity": true,
+  "case_count": 4,
+  "case_ids": ["CON-006", "CON-007", "CON-011", "CON-012"],
+  "rulebook_authority_upheld_count": 4,
+  "original_complete_mapping_label_upheld_count": 0,
+  "original_dataset_modified": false,
+  "retrospective_v1_5_scoring_permitted": false,
+  "benchmark_authority_version_published": "1.1",
+  "v1_6_implemented": false,
+  "v1_6_executed": false,
+  "v1_6_scored": false,
+  "artefact_sha256": {
+    "README.md": "1c66caf0603663ead8e22c5a7502597728fcc7aa5d6dc0618c883f5771a2c7e0",
+    "adjudication.json": "6a4720ba063651150bbb7e69a350464a4a1a712b2e6361008a2fa3f01b8d62cf",
+    "benchmark-authority-v1.1-README.md": "fd6c68753e10db6c1866d93a47c8979b07524fb777259ccbcbac7ab4d2ca44a4",
+    "label-authority-overlay.json": "81b4e533afb92e234ae6a3e6121b62dc7ecabc99c1951121cb176319d81340fe",
+    "label-authority-overlay.schema.json": "d9832cfe0e4669ce5add29abf365bd2a3b53a924558556ac9fea89577ec91315"
+  },
+  "source_authority_sha256": {
+    "coverage-evidence-rulebook-v1.0.json": "62210904b7e6f85bf5f0693e2901dfcb024a290026d93f4eb0a2822d275630d9",
+    "market-conduct-labels-v1.0.json": "8cf778b67911269c7fe735e8ffd2a0f27e0e05da5886c2b88bb8b26fd459f2b3",
+    "institution-profile-v1.0.json": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+    "approved-obligation.json": "55e9026bdd168a7e5f4c5571c3aa2eaa8db4ff6217e2264831257086b56bb2ce",
+    "failure-analysis-v1.5.json": "6629db326ce63838878be589ef8c8c220b81e5d51b302a8c218d4f1231b47b4b",
+    "v1.6-decision.md": "c9602b4eaabf5c66682512e7c1e76500a6b3b91d63820816598954f196289053"
+  },
+  "notes": "Synthetic independent adjudication and future benchmark authority only. Frozen v1.5 and dataset v1.0 were not modified, rerun or rescored."
+}
