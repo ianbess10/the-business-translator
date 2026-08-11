@@ -1,0 +1,90 @@
+{
+  "certification_id": "evidence-gated-v1.3-contract-241c35ce-7afa-4024-add9-b856a8d8f58e",
+  "status": "completed",
+  "started_at": "2026-08-11T13:06:29.864547Z",
+  "completed_at": "2026-08-11T13:06:36.784962Z",
+  "purpose": "provider_contract_certification_not_model_quality_evaluation",
+  "plan_sha256": "a7b4ec8f74a621c148055743bcba5e595f96e378b23fcdc55d115ae38c3828ac",
+  "provider": "openai",
+  "endpoint": "chat_completions",
+  "endpoint_host": "api.openai.com",
+  "model_requested": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "planned_call_count": 3,
+  "completed_call_count": 3,
+  "benchmark_cases_used": false,
+  "evaluator_labels_used": false,
+  "model_quality_scored": false,
+  "records": [
+    {
+      "stage": "source_support",
+      "case_id": "CERT-SOURCE-001",
+      "benchmark_case": false,
+      "response_format_name": "source_support_stage_v1_3",
+      "schema_sha256": "c9db66d1e5731ab048731e4fd2ebc6dd9a049ae9d574d45f2dacb1e6404c6198",
+      "prompt_sha256": "2fde7e07a4e359576b68135db894e7de89f1b193ff1370d90dbf3a5958bc682f",
+      "request_payload_sha256": "7187dea3cf0d406467a629975276f1d44b1428b6d766194a09eabb9a15325e7c",
+      "response_id": "chatcmpl-EBgTXaLLuxXPIwWVc6jNH6USugiWg",
+      "response_model": "gpt-4o-mini-2024-07-18",
+      "finish_reason": "stop",
+      "provider_schema_accepted": true,
+      "transport_output_valid": true,
+      "semantic_output_valid": true,
+      "output_sha256": "b4a9eb32ad5f022c881f3df048e845f2a25f5840e16a8dfa5be24defe2debb38",
+      "usage": {
+        "prompt_tokens": 721,
+        "completion_tokens": 75,
+        "total_tokens": 796
+      },
+      "latency_ms": 3240,
+      "certified_at": "2026-08-11T13:06:33.105245Z"
+    },
+    {
+      "stage": "mapping",
+      "case_id": "CERT-MAPPING-001",
+      "benchmark_case": false,
+      "response_format_name": "mapping_stage_v1_3",
+      "schema_sha256": "1fc1675f42997b7af170824aba96a8285fe6a7b172268097797bef8fba1325cf",
+      "prompt_sha256": "6eed0ebfd29b49f20a17188040011af4a755e183773bd6ae726cb19cca8c1b12",
+      "request_payload_sha256": "ba0c6775498af4ee736c4cb217509ada77f3820709a49565184358b7559fbb6f",
+      "response_id": "chatcmpl-EBgTZ3XGgG9L3FufdERmy3H2mcFGy",
+      "response_model": "gpt-4o-mini-2024-07-18",
+      "finish_reason": "stop",
+      "provider_schema_accepted": true,
+      "transport_output_valid": true,
+      "semantic_output_valid": true,
+      "output_sha256": "7a2f3510121ee7049616c8c4e553b834218295ad875110ec4a106ca9c4ee13be",
+      "usage": {
+        "prompt_tokens": 547,
+        "completion_tokens": 61,
+        "total_tokens": 608
+      },
+      "latency_ms": 1521,
+      "certified_at": "2026-08-11T13:06:34.628393Z"
+    },
+    {
+      "stage": "evidence",
+      "case_id": "CERT-EVIDENCE-001",
+      "benchmark_case": false,
+      "response_format_name": "evidence_stage_v1_3",
+      "schema_sha256": "f77cf6e484de559ecd2bf2f4499cc9ab2da722115e41628e1e8b5e0f9e2c0b90",
+      "prompt_sha256": "a063a34eb1e87690efa06b31c32940d38c86ab39a7259e42a2f45638a47c5418",
+      "request_payload_sha256": "d7016ac68861975afc5c83f81de6244fbd4f13b74535bed1fc435fbe05b97436",
+      "response_id": "chatcmpl-EBgTbcov189ICSduWHnX6RYyAU7hN",
+      "response_model": "gpt-4o-mini-2024-07-18",
+      "finish_reason": "stop",
+      "provider_schema_accepted": true,
+      "transport_output_valid": true,
+      "semantic_output_valid": true,
+      "output_sha256": "7635b2cd28587f42c7126c6c773fc3d2358e4ebaa12077e46c96c0866655bf1e",
+      "usage": {
+        "prompt_tokens": 572,
+        "completion_tokens": 56,
+        "total_tokens": 628
+      },
+      "latency_ms": 2153,
+      "certified_at": "2026-08-11T13:06:36.783165Z"
+    }
+  ],
+  "error": null
+}
