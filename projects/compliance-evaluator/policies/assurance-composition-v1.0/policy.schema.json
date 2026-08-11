@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/compliance-evaluator/assurance-composition-policy-v1.0.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "policy_id",
+    "version",
+    "status",
+    "effective_from",
+    "purpose",
+    "coverage_rules",
+    "evidence_rules",
+    "composition",
+    "routing",
+    "escalation",
+    "authority_controls",
+    "approval",
+    "generality_controls"
+  ],
+  "properties": {
+    "policy_id": {"const": "SA-REG-ASSURANCE-COMPOSITION-001"},
+    "version": {"const": "1.0"},
+    "status": {"const": "approved_synthetic"},
+    "effective_from": {"type": "string", "format": "date"},
+    "purpose": {"type": "string", "minLength": 1},
+    "coverage_rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["complete", "partial", "absent", "not_assessable"],
+      "properties": {
+        "complete": {"$ref": "#/$defs/decision_rule"},
+        "partial": {"$ref": "#/$defs/decision_rule"},
+        "absent": {"$ref": "#/$defs/decision_rule"},
+        "not_assessable": {"$ref": "#/$defs/quarantine_rule"}
+      }
+    },
+    "evidence_rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sufficient", "missing_operating_evidence", "design_deficiency", "adverse_operating_evidence", "not_assessable"],
+      "properties": {
+        "sufficient": {"$ref": "#/$defs/decision_rule"},
+        "missing_operating_evidence": {"$ref": "#/$defs/decision_rule"},
+        "design_deficiency": {"$ref": "#/$defs/decision_rule"},
+        "adverse_operating_evidence": {"$ref": "#/$defs/decision_rule"},
+        "not_assessable": {"$ref": "#/$defs/quarantine_rule"}
+      }
+    },
+    "composition": {"type": "object", "minProperties": 1},
+    "routing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mapping_review", "control_design_change", "evidence_request", "operating_remediation"],
+      "properties": {
+        "mapping_review": {"$ref": "#/$defs/role_array"},
+        "control_design_change": {"$ref": "#/$defs/role_array"},
+        "evidence_request": {"$ref": "#/$defs/role_array"},
+        "operating_remediation": {"$ref": "#/$defs/role_array"}
+      }
+    },
+    "escalation": {"type": "object", "required": ["default", "triggers"]},
+    "authority_controls": {"type": "object", "minProperties": 1},
+    "approval": {
+      "type": "object",
+      "required": ["author_role", "author_id", "challenge_reviewer_role", "challenge_reviewer_id", "challenge_status", "approver_role", "approver_id", "approval_status", "approved_at", "synthetic_identities", "decision_rationale"],
+      "properties": {
+        "challenge_status": {"const": "accepted"},
+        "approval_status": {"const": "accepted"},
+        "synthetic_identities": {"const": true}
+      }
+    },
+    "generality_controls": {
+      "type": "object",
+      "required": ["benchmark_case_ids_permitted", "benchmark_evidence_ids_permitted", "benchmark_labels_used_as_policy_authority", "case_specific_exceptions_permitted"],
+      "properties": {
+        "benchmark_case_ids_permitted": {"const": false},
+        "benchmark_evidence_ids_permitted": {"const": false},
+        "benchmark_labels_used_as_policy_authority": {"const": false},
+        "case_specific_exceptions_permitted": {"const": false}
+      }
+    }
+  },
+  "$defs": {
+    "string_array": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "role_array": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "decision_rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rule_id", "gap_types", "severity_floor", "action_types"],
+      "properties": {
+        "rule_id": {"type": "string", "minLength": 1},
+        "gap_types": {"$ref": "#/$defs/string_array"},
+        "severity_floor": {"enum": ["not_applicable", "unassessed", "low", "medium", "high", "critical"]},
+        "action_types": {"$ref": "#/$defs/string_array"},
+        "escalation_trigger": {"type": "string", "minLength": 1}
+      }
+    },
+    "quarantine_rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rule_id", "terminal_disposition"],
+      "properties": {
+        "rule_id": {"type": "string", "minLength": 1},
+        "terminal_disposition": {"const": "quarantine_without_policy_conclusion"}
+      }
+    }
+  }
+}

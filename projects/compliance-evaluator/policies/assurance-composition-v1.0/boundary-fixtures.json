@@ -1,0 +1,70 @@
+{
+  "fixture_set_id": "SA-REG-ASSURANCE-COMPOSITION-BOUNDARIES-001",
+  "version": "1.0",
+  "benchmark_cases": false,
+  "fixtures": [
+    {
+      "fixture_id": "ACP-BND-001",
+      "workstream": "market_conduct",
+      "coverage_state": "complete",
+      "evidence_condition": "sufficient",
+      "expected": {"headline": "mapped_and_evidenced", "gap_types": [], "severity": "not_applicable", "action_types": [], "escalation_required": false, "escalation_roles": []}
+    },
+    {
+      "fixture_id": "ACP-BND-002",
+      "workstream": "market_conduct",
+      "coverage_state": "complete",
+      "evidence_condition": "missing_operating_evidence",
+      "expected": {"headline": "insufficient_evidence", "gap_types": ["operating_evidence_missing"], "severity": "unassessed", "action_types": ["evidence_request"], "escalation_required": false, "escalation_roles": []}
+    },
+    {
+      "fixture_id": "ACP-BND-003",
+      "workstream": "market_conduct",
+      "coverage_state": "partial",
+      "evidence_condition": "missing_operating_evidence",
+      "expected": {"headline": "potential_control_gap", "gap_types": ["operating_evidence_missing", "partial_coverage"], "severity": "medium", "action_types": ["evidence_request", "mapping_review"], "escalation_required": false, "escalation_roles": []}
+    },
+    {
+      "fixture_id": "ACP-BND-004",
+      "workstream": "market_conduct",
+      "coverage_state": "partial",
+      "evidence_condition": "adverse_operating_evidence",
+      "expected": {"headline": "potential_control_gap", "gap_types": ["operating_exception", "partial_coverage"], "severity": "high", "action_types": ["mapping_review", "operating_remediation"], "escalation_required": true, "escalation_roles": ["Conduct Risk Officer", "Head of Compliance"]}
+    },
+    {
+      "fixture_id": "ACP-BND-005",
+      "workstream": "aml_cft",
+      "coverage_state": "partial",
+      "evidence_condition": "design_deficiency",
+      "expected": {"headline": "potential_control_gap", "gap_types": ["control_design", "partial_coverage"], "severity": "high", "action_types": ["control_design_change", "mapping_review"], "escalation_required": true, "escalation_roles": ["AML Compliance Officer"]}
+    },
+    {
+      "fixture_id": "ACP-BND-006",
+      "workstream": "aml_cft",
+      "coverage_state": "absent",
+      "evidence_condition": "sufficient",
+      "expected": {"headline": "potential_control_gap", "gap_types": ["no_control"], "severity": "high", "action_types": ["control_design_change"], "escalation_required": true, "escalation_roles": ["AML Compliance Officer"]}
+    },
+    {
+      "fixture_id": "ACP-BND-007",
+      "workstream": "aml_cft",
+      "coverage_state": "complete",
+      "evidence_condition": "adverse_operating_evidence",
+      "expected": {"headline": "potential_control_gap", "gap_types": ["operating_exception"], "severity": "high", "action_types": ["operating_remediation"], "escalation_required": true, "escalation_roles": ["AML Compliance Officer", "Head of Compliance"]}
+    },
+    {
+      "fixture_id": "ACP-BND-008",
+      "workstream": "market_conduct",
+      "coverage_state": "not_assessable",
+      "evidence_condition": "sufficient",
+      "expected": {"terminal_disposition": "quarantine_without_policy_conclusion"}
+    },
+    {
+      "fixture_id": "ACP-BND-009",
+      "workstream": "market_conduct",
+      "coverage_state": "complete",
+      "evidence_condition": "not_assessable",
+      "expected": {"terminal_disposition": "quarantine_without_policy_conclusion"}
+    }
+  ]
+}

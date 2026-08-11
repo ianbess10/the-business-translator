@@ -250,6 +250,8 @@ The completed [v1.5 case-level failure analysis](analysis/evidence-gated-v1.5/RE
 
 The independent synthetic [coverage-versus-label adjudication](adjudications/coverage-label-v1.0/README.md) applied a documented authority hierarchy under a fictional Compliance Monitoring Lead role separated from workflow coding, original label authoring, control ownership and rulebook approval. It upheld the approved rulebook in all four disputes: each single-control mapping is partial. Evidence condition remains separate, and `CON-011` retains high adverse-operating remediation and escalation. Dataset v1.0 remains immutable; the determinations are published as [benchmark authority v1.1](datasets/baseline-v1.1/README.md) for future v1.6 evaluation only. No retrospective v1.5 score is permitted, and v1.6 remains unimplemented.
 
+The approved synthetic [Assurance Composition, Severity and Escalation Policy v1.0](policies/assurance-composition-v1.0/README.md) now supplies the general decision authority required before v1.6 implementation. Coverage and evidence remain independent; gaps, remediation actions and escalation roles are unioned; high design and adverse-operating conditions establish escalation floors; routine missing evidence remains unassessed and non-escalated; and missing authority quarantines without a conclusion. The policy contains no benchmark identities or case exceptions and passes nine generic offline composition boundaries. Its fictional author, challenge reviewer and approver demonstrate separation of duties. No workflow code, provider contract, regression execution or score was created.
+
 The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
@@ -280,8 +282,8 @@ The immediate build sequence is:
 26. ~~execute frozen v1.5 once and evaluate its complete terminal-case record once;~~ **complete**
 27. ~~complete the v1.5 case-level failure analysis and make a separately versioned next-workflow decision;~~ **complete**
 28. ~~complete independent rulebook-versus-label adjudication before implementing v1.6;~~ **complete**
-29. **author and approve general v1.6 assurance-composition, severity and escalation policy authority;** **next**
-30. implement, test, certify where required and freeze v1.6 separately before regression.
+29. ~~author and approve general v1.6 assurance-composition, severity and escalation policy authority;~~ **complete**
+30. **implement, test, certify where required and freeze v1.6 separately before regression;** **next**
 31. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
