@@ -240,6 +240,8 @@ The separate [Evidence-Gated Decision Pipeline v1.4](workflows/evidence-gated-v1
 
 The [sole v1.4 regression](results/evidence-gated-v1.4/README.md) then completed all 24 terminal cases with 32/32 transport- and semantic-valid calls, zero quarantine and zero retry. It was evaluated exactly once and achieved **21/24 end-to-end exact**, with nine of 15 release gates passing. Source, applicability, current-control ownership and unnecessary-escalation controls were exact, but three entered market-conduct cases retained mapping and assurance errors, including one missed mandatory escalation. v1.4 therefore fails release, remains frozen and will not be tuned, rerun or rescored.
 
+The completed [v1.4 case-level failure analysis](analysis/evidence-gated-v1.4/README.md) finds that all three errors begin with model-authored mapping completeness based on thin control descriptions rather than approved obligation-element coverage. `C-CON-006` was overstated twice and `C-CON-007` understated once. `CON-008` also exposed the absence of typed design and operating-evidence requirements. The separately versioned [v1.5 decision](analysis/evidence-gated-v1.4/v1.5-decision.md) therefore selects a human-approved Coverage and Evidence Rulebook, deterministic mapping completeness and bounded model extraction of evidence observations. It is a business-data and decision-authority intervention, not prompt tuning, and does not implement or execute v1.5.
+
 The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
@@ -265,8 +267,9 @@ The immediate build sequence is:
 21. ~~complete the v1.3 execution failure analysis and make a separately versioned v1.4 decision;~~ **complete**
 22. ~~implement, test, certify and freeze v1.4 separately without modifying v1.3;~~ **complete**
 23. ~~execute frozen v1.4 once and evaluate its complete terminal-case record once;~~ **complete — 21/24 exact, 9/15 gates, release failed**
-24. **complete the v1.4 case-level failure analysis and make a separately versioned next-workflow decision;** **next**
-25. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
+24. ~~complete the v1.4 case-level failure analysis and make a separately versioned v1.5 decision;~~ **complete**
+25. **author and approve the v1.5 Coverage and Evidence Rulebook, then implement, test, certify and freeze v1.5 separately;** **next**
+26. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
 

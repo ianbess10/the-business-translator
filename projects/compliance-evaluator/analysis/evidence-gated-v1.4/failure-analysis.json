@@ -1,0 +1,115 @@
+{
+  "analysis_id": "SA-REG-EVIDENCE-GATED-V1.4-CASE-FAILURE-ANALYSIS-001",
+  "version": "1.4",
+  "analysis_type": "post_regression_case_level_failure_analysis",
+  "run_id": "evidence-gated-v1.4-8a6f6958-776b-49aa-9eaf-21dbb8013233",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "workflow_id": "SA-REG-EVIDENCE-GATED-001",
+  "workflow_version": "1.4",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "workflow_v1_4_modified": false,
+  "workflow_v1_4_rerun": false,
+  "workflow_v1_4_rescored": false,
+  "post_observation_tuning": false,
+  "headline": {
+    "case_count": 24,
+    "end_to_end_exact_count": 21,
+    "end_to_end_accuracy": 0.875,
+    "release_gate_pass_count": 9,
+    "release_gate_count": 15,
+    "completed_terminal_case_count": 24,
+    "quarantine_count": 0,
+    "requested_api_call_count": 32,
+    "semantically_valid_api_call_count": 32,
+    "retry_count": 0,
+    "release_decision": "failed_no_holdout_permitted"
+  },
+  "failed_cases": [
+    {
+      "case_id": "CON-008",
+      "primary_failure": "current_mapping_completeness_overstated",
+      "secondary_failure": "design_deficiency_misclassified_as_missing_operating_evidence",
+      "expected_mapping_completeness": "partial",
+      "observed_mapping_completeness": "complete",
+      "expected_evidence_assessment": "design_deficiency",
+      "observed_evidence_assessment": "missing_operating_evidence",
+      "expected_escalation": true,
+      "observed_escalation": false,
+      "operational_consequence": "high_design_gap_and_mandatory_escalation_missed"
+    },
+    {
+      "case_id": "CON-010",
+      "primary_failure": "current_mapping_completeness_overstated",
+      "secondary_failure": null,
+      "expected_mapping_completeness": "partial",
+      "observed_mapping_completeness": "complete",
+      "expected_evidence_assessment": "sufficient",
+      "observed_evidence_assessment": "sufficient",
+      "expected_escalation": false,
+      "observed_escalation": false,
+      "operational_consequence": "partial_coverage_and_mapping_review_suppressed"
+    },
+    {
+      "case_id": "CON-012",
+      "primary_failure": "current_mapping_completeness_understated",
+      "secondary_failure": null,
+      "expected_mapping_completeness": "complete",
+      "observed_mapping_completeness": "partial",
+      "expected_evidence_assessment": "missing_operating_evidence",
+      "observed_evidence_assessment": "missing_operating_evidence",
+      "expected_escalation": false,
+      "observed_escalation": false,
+      "operational_consequence": "routine_evidence_request_replaced_by_mapping_review"
+    }
+  ],
+  "root_causes": [
+    {
+      "cause": "no_human_approved_obligation_element_to_control_coverage_authority",
+      "affected_cases": ["CON-008", "CON-010", "CON-012"],
+      "layer": "mapping_business_data_contract"
+    },
+    {
+      "cause": "no_typed_design_and_operating_evidence_requirement_rulebook",
+      "affected_cases": ["CON-008"],
+      "layer": "evidence_business_data_contract"
+    }
+  ],
+  "not_root_causes": [
+    "provider_transport_contract",
+    "semantic_validation",
+    "case_quarantine",
+    "control_identity_or_owner_resolution",
+    "mapping_evidence_payload_isolation",
+    "deterministic_partial_coverage_precedence",
+    "escalation_policy_calibration",
+    "evaluator_measurement"
+  ],
+  "controls_that_worked": [
+    "canonical_evidence_contract",
+    "all_stage_outputs_checkpointed",
+    "all_transport_and_semantic_validations_passed",
+    "zero_quarantine_and_retry",
+    "exact_source_applicability_gate_control_and_owner_decisions",
+    "mapping_and_evidence_isolation",
+    "deterministic_cross_field_reconciliation",
+    "zero_unnecessary_escalations",
+    "human_review_and_not_determined_conclusion",
+    "release_gate_and_holdout_block"
+  ],
+  "v1_5_decision": {
+    "decision_id": "SA-REG-EVIDENCE-GATED-V1.5-DECISION-001",
+    "status": "selected_for_later_implementation",
+    "selected_architecture": "approved_coverage_and_evidence_rulebook",
+    "v1_5_implemented": false,
+    "v1_5_tested": false,
+    "v1_5_provider_certified": false,
+    "v1_5_frozen": false,
+    "v1_5_regression_executed": false,
+    "v1_5_scored": false
+  },
+  "synthetic_regression_evidence": true,
+  "independent_validation": false,
+  "production_performance": false
+}
