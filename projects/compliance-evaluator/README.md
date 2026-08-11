@@ -246,6 +246,8 @@ The approved [Coverage and Evidence Rulebook v1.0](rulebooks/coverage-evidence-v
 
 The [sole v1.5 regression](results/evidence-gated-v1.5/README.md) completed all 24 terminal cases in 24/24 permitted calls with zero quarantine and zero retry. It was evaluated exactly once and achieved **20/24 end-to-end exact**, with nine of 15 release gates passing. All 12 AML/CFT cases were exact; the four errors were confined to entered market-conduct assurance cases and began with mapping-status differences under the approved rulebook. Escalation produced five true positives, zero false positives and one false negative. v1.5 therefore fails release, remains frozen and will not be tuned, rerun or rescored. The inherited evaluator's `v1.4` report label is retained as an evidence-metadata defect; the run and evaluation identities confirm that v1.5 was scored.
 
+The completed [v1.5 case-level failure analysis](analysis/evidence-gated-v1.5/README.md) separates benchmark authority drift from a genuine policy defect. All four mapping mismatches arise because the frozen labels treat one complaint control as complete while the later approved rulebook requires both establishment/operation and maintenance/oversight coverage. `CON-011` separately proves that partial-coverage precedence can suppress a correctly observed high adverse operating exception and its mandatory escalation. The separately versioned [v1.6 decision](analysis/evidence-gated-v1.5/v1.6-decision.md) therefore requires independent rulebook-versus-label adjudication, immutable original labels, dual-axis coverage and evidence state, concurrent remediation routing, an adverse-evidence escalation floor and corrected evaluator identity controls. It does not implement, execute or score v1.6.
+
 The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
@@ -274,8 +276,9 @@ The immediate build sequence is:
 24. ~~complete the v1.4 case-level failure analysis and make a separately versioned v1.5 decision;~~ **complete**
 25. ~~author and approve the v1.5 Coverage and Evidence Rulebook, then implement, test, certify and freeze v1.5 separately;~~ **complete**
 26. ~~execute frozen v1.5 once and evaluate its complete terminal-case record once;~~ **complete**
-27. **complete the v1.5 case-level failure analysis and make a separately versioned next-workflow decision;** **next**
-27. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
+27. ~~complete the v1.5 case-level failure analysis and make a separately versioned next-workflow decision;~~ **complete**
+28. **complete independent rulebook-versus-label adjudication before implementing v1.6;** **next**
+29. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
 

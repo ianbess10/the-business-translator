@@ -1,0 +1,120 @@
+{
+  "analysis_id": "SA-REG-EVIDENCE-GATED-V1.5-CASE-FAILURE-ANALYSIS-001",
+  "version": "1.5",
+  "analysis_type": "post_regression_case_level_failure_analysis",
+  "run_id": "evidence-gated-v1.5-122b99a0-e4eb-4d88-b48b-64f0317f677f",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "workflow_id": "SA-REG-EVIDENCE-GATED-001",
+  "workflow_version": "1.5",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "workflow_v1_5_modified": false,
+  "workflow_v1_5_rerun": false,
+  "workflow_v1_5_rescored": false,
+  "post_observation_tuning": false,
+  "headline": {
+    "case_count": 24,
+    "end_to_end_exact_count": 20,
+    "end_to_end_accuracy": 0.8333,
+    "release_gate_pass_count": 9,
+    "release_gate_count": 15,
+    "completed_terminal_case_count": 24,
+    "quarantine_count": 0,
+    "requested_api_call_count": 24,
+    "retry_count": 0,
+    "release_decision": "failed_no_holdout_permitted"
+  },
+  "failed_cases": [
+    {
+      "case_id": "CON-006",
+      "primary_finding": "frozen_label_conflicts_with_approved_rulebook_mapping",
+      "rulebook_mapping": "partial",
+      "frozen_label_mapping": "complete",
+      "evidence_observation_correct": true,
+      "operational_consequence": "approved_maintenance_and_oversight_gap_reported_but_benchmark_counts_error"
+    },
+    {
+      "case_id": "CON-007",
+      "primary_finding": "frozen_label_conflicts_with_approved_rulebook_mapping",
+      "rulebook_mapping": "partial",
+      "frozen_label_mapping": "complete",
+      "evidence_observation_correct": true,
+      "operational_consequence": "missing_operating_record_detected_but_single_outcome_reports_mapping_review"
+    },
+    {
+      "case_id": "CON-011",
+      "primary_finding": "adverse_operating_evidence_suppressed_by_partial_coverage_precedence",
+      "secondary_finding": "frozen_label_conflicts_with_approved_rulebook_mapping",
+      "rulebook_mapping": "partial",
+      "frozen_label_mapping": "complete",
+      "evidence_observation_correct": true,
+      "expected_escalation": true,
+      "observed_escalation": false,
+      "operational_consequence": "high_operating_exception_and_mandatory_escalation_suppressed"
+    },
+    {
+      "case_id": "CON-012",
+      "primary_finding": "frozen_label_conflicts_with_approved_rulebook_mapping",
+      "rulebook_mapping": "partial",
+      "frozen_label_mapping": "complete",
+      "evidence_observation_correct": true,
+      "operational_consequence": "missing_management_information_detected_but_single_outcome_reports_mapping_review"
+    }
+  ],
+  "root_causes": [
+    {
+      "cause": "benchmark_authority_drift_between_frozen_labels_and_later_approved_rulebook",
+      "affected_cases": ["CON-006", "CON-007", "CON-011", "CON-012"],
+      "layer": "evaluation_governance"
+    },
+    {
+      "cause": "single_axis_assurance_outcome_suppresses_concurrent_conditions",
+      "affected_cases": ["CON-007", "CON-011", "CON-012"],
+      "layer": "deterministic_policy_composition"
+    },
+    {
+      "cause": "partial_coverage_precedence_suppresses_adverse_operating_evidence",
+      "affected_cases": ["CON-011"],
+      "layer": "deterministic_escalation_policy"
+    },
+    {
+      "cause": "inherited_evaluator_emits_prior_workflow_version_label",
+      "affected_cases": [],
+      "layer": "evaluation_metadata"
+    }
+  ],
+  "not_root_causes": [
+    "provider_transport_contract",
+    "evidence_observation_quality",
+    "deterministic_mapping_calculation_against_rulebook",
+    "control_identity_or_owner_resolution",
+    "case_quarantine",
+    "retry_or_repair_behavior",
+    "source_or_applicability_decision"
+  ],
+  "controls_that_worked": [
+    "approved_rulebook_mapping_authority",
+    "bounded_evidence_observation_extraction",
+    "exact_source_obligation_and_applicability_authority",
+    "exact_control_identity_and_owner_routing",
+    "append_only_stage_evidence",
+    "complete_terminal_case_record",
+    "zero_quarantine_retry_repair_and_tuning",
+    "zero_unnecessary_escalations",
+    "release_gate_and_holdout_block"
+  ],
+  "v1_6_decision": {
+    "decision_id": "SA-REG-EVIDENCE-GATED-V1.6-DECISION-001",
+    "status": "selected_for_later_implementation",
+    "selected_architecture": "adjudicated_benchmark_authority_and_dual_axis_assurance_composition",
+    "v1_6_implemented": false,
+    "v1_6_tested": false,
+    "v1_6_frozen": false,
+    "v1_6_regression_executed": false,
+    "v1_6_scored": false
+  },
+  "synthetic_regression_evidence": true,
+  "independent_validation": false,
+  "production_performance": false
+}
