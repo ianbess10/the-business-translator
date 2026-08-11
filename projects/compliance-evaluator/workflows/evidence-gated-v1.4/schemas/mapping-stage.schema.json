@@ -1,0 +1,18 @@
+{
+  "name": "mapping_stage_v1_3",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["case_id", "proposal_disposition", "current_mapping_control_ids", "candidate_additional_control_ids", "mapping_completeness", "uncovered_obligation_elements", "rationale"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "proposal_disposition": {"type": "string", "enum": ["accept", "amend", "reject"]},
+      "current_mapping_control_ids": {"type": "array", "items": {"type": "string"}},
+      "candidate_additional_control_ids": {"type": "array", "items": {"type": "string"}},
+      "mapping_completeness": {"type": "string", "enum": ["complete", "partial", "no_suitable_control"]},
+      "uncovered_obligation_elements": {"type": "array", "items": {"type": "string"}},
+      "rationale": {"type": "string"}
+    }
+  }
+}
