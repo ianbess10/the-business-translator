@@ -254,6 +254,8 @@ The approved synthetic [Assurance Composition, Severity and Escalation Policy v1
 
 The separate [Evidence-Gated Decision Pipeline v1.6](workflows/evidence-gated-v1.6/README.md) now implements that approved policy without modifying v1.5. It preserves coverage and evidence as concurrent states, unions remediation and escalation deterministically, uses benchmark authority v1.1 only in the evaluator, and fixes workflow/dataset identity checks prospectively. All generic composition, rulebook, routing, provider-subset, ledger, quarantine and evaluator tests pass. Both provider contracts are byte-identical to certified v1.5 lineage, so zero new provider calls were required. The exact workflow is frozen before regression; no v1.6 execution or score exists.
 
+The [sole v1.6 regression](results/evidence-gated-v1.6/README.md) completed all 24 terminal cases in 24/24 calls with zero quarantine and zero retry. It was evaluated exactly once against benchmark authority v1.1 and achieved **23/24 end-to-end exact**, with five of six release gates passing. Escalation was exact at six true positives, zero false positives, 18 true negatives and zero false negatives. `CON-011` now retains concurrent partial coverage, adverse operating remediation and mandatory escalation. The sole error, `CON-008`, reflects a two-condition workflow outcome against an inherited single-condition label and requires separate failure analysis. v1.6 fails release, remains frozen and will not be tuned, rerun or rescored.
+
 The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
@@ -286,8 +288,9 @@ The immediate build sequence is:
 28. ~~complete independent rulebook-versus-label adjudication before implementing v1.6;~~ **complete**
 29. ~~author and approve general v1.6 assurance-composition, severity and escalation policy authority;~~ **complete**
 30. ~~implement, test, certify where required and freeze v1.6 separately before regression;~~ **complete**
-31. **execute frozen v1.6 exactly once and evaluate its complete terminal-case record exactly once;** **next**
-32. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
+31. ~~execute frozen v1.6 exactly once and evaluate its complete terminal-case record exactly once;~~ **complete**
+32. **complete the v1.6 case-level failure analysis and make a separately versioned next-workflow decision;** **next**
+33. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
 
