@@ -39,4 +39,4 @@ The project demonstrates that trustworthy AI-enabled regulatory operations depen
 
 > **AI is the enabler. Faster, traceable and accountable regulatory implementation is the product.**
 
-The benchmark build is complete. The next step, if pursued, is a separately governed operational pilot using approved real-world sources and representative institution facts, measured against the operating baseline above.
+The benchmark build is complete. A separate [Operational Pilot v1.0](pilots/operational-pilot-v1.0/README.md) has now been designed for shadow-mode validation against approved real-world sources and representative institution facts. Its execution remains NO-GO until all named institutional approval, data, security, operating-baseline and independent-assurance gates are satisfied.

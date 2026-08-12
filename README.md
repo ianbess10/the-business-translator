@@ -87,6 +87,8 @@ The result is not presented as automated compliance or production readiness. It 
 
 [Read the regulatory intelligence executive summary](projects/compliance-evaluator/executive-summary.md).
 
+The project has now progressed into a separately governed [shadow-mode operational pilot design](projects/compliance-evaluator/pilots/operational-pilot-v1.0/README.md). Its governance and measurement framework is implemented, but execution is deliberately blocked until a real institution supplies named authorities, approved data and sources, participant assignments, security approval and an accepted operating baseline.
+
 ---
 
 # Evidence Before Claims

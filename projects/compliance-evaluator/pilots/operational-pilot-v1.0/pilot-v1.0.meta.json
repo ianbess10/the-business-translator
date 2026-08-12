@@ -1,0 +1,17 @@
+{
+  "pilot_id": "SA-REG-OP-PILOT-001",
+  "version": "1.0",
+  "status": "governance_design_frozen_execution_not_approved",
+  "execution_count": 0,
+  "work_item_count": 0,
+  "minimum_target_work_items": 40,
+  "artefact_sha256": {
+    "README.md": "77f2fe560f97db29db17951e23e59ac8ceacc46657df354ea50db01b11bed83e",
+    "approval-gates.json": "ece43974937b3a90049c4b9a678afcf84b68e43d12da9c2aa66912de9263e878",
+    "freeze_design.py": "88a19e4abe73475ef19c201043de0d988258b12d31c5766e0b513151f7cf898b",
+    "go-no-go.json": "a164640d0c70a98352dc3bb47007684b467be30a9c0244c12527af1f1ac61a20",
+    "operating-authority.md": "667d9204a81e267f589606579ce4e09d2c64beb861cba639b88b7d8a3b49a251",
+    "pilot-record.schema.json": "395bd5bbffa0844a8b25c012c7c2d8934a31fc0fea5d8a59637e06544de46612",
+    "validate_pilot.py": "8e58759ee97c7492cb69f031cbaa802f522e959b36958dc19d9545947d864672"
+  }
+}

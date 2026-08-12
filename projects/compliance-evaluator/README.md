@@ -6,7 +6,7 @@
 
 ## Project status
 
-**Project 2 complete — Evidence-Gated Decision Pipeline v1.7 passed its frozen 24-case regression and separate 16-case unseen synthetic holdout, each executed and evaluated exactly once.**
+**Benchmark build complete — Evidence-Gated Decision Pipeline v1.7 passed its frozen 24-case regression and separate 16-case unseen synthetic holdout. A separately governed operational pilot v1.0 is now designed and awaiting institutional approval.**
 
 [Read the executive summary](executive-summary.md).
 
@@ -202,6 +202,12 @@ Only then was a separate 16-case [independent synthetic holdout](datasets/holdou
 
 These are controlled synthetic benchmark results, not legal conclusions or production performance. The next responsible step is operational piloting with approved real-world sources, representative institution facts, professional review and measurement of the business outcomes listed above—not further benchmark tuning.
 
+## Separately governed operational pilot
+
+The [Operational Pilot v1.0](pilots/operational-pilot-v1.0/README.md) establishes the next phase as a shadow-mode operating assessment rather than another benchmark version. It defines ten institutional approval gates, a minimum 40-item representative sample, locked current-process baselines, qualified dual review, immutable case evidence, business measures, success thresholds and mandatory stop conditions.
+
+The governance design is frozen, but execution is currently **NO-GO**. No real source, institution or control data has been loaded. Execution requires named institutional authorities, an approved source corpus and institution perimeter, data/security/model-risk approval, assigned reviewers, an operating baseline and independent-assurance acceptance.
+
 ## Human accountability
 
 The capability may prepare analysis and recommendations. It must not:
@@ -324,7 +330,7 @@ The immediate build sequence is:
 36. ~~author, freeze, execute and evaluate a separate unseen synthetic holdout once;~~ **complete — 16/16 exact, all gates passed**
 37. ~~package the executive case study and close benchmark engineering;~~ **complete**
 
-**Portfolio build status: complete.** Further work should be a separately governed operational pilot, not another benchmark workflow version.
+**Benchmark portfolio status: complete. Operational pilot governance: implemented, frozen and awaiting real institutional approval.**
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
 

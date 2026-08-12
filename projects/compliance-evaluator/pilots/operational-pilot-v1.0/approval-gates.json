@@ -1,0 +1,19 @@
+{
+  "pilot_id": "SA-REG-OP-PILOT-001",
+  "version": "1.0",
+  "status": "awaiting_institutional_approval",
+  "execution_permitted": false,
+  "gates": [
+    {"gate_id":"G01","domain":"executive_sponsorship","required_role":"Accountable Compliance Executive","status":"pending","approver_name":null,"decision_at":null,"evidence_reference":null},
+    {"gate_id":"G02","domain":"legal_and_regulatory_scope","required_role":"Qualified Legal or Compliance Authority","status":"pending","approver_name":null,"decision_at":null,"evidence_reference":null},
+    {"gate_id":"G03","domain":"data_protection","required_role":"Data Protection Officer","status":"pending","approver_name":null,"decision_at":null,"evidence_reference":null},
+    {"gate_id":"G04","domain":"information_security","required_role":"Information Security Authority","status":"pending","approver_name":null,"decision_at":null,"evidence_reference":null},
+    {"gate_id":"G05","domain":"model_and_ai_risk","required_role":"Model or AI Risk Authority","status":"pending","approver_name":null,"decision_at":null,"evidence_reference":null},
+    {"gate_id":"G06","domain":"approved_source_corpus","required_role":"Regulatory Change Owner","status":"pending","approver_name":null,"decision_at":null,"evidence_reference":null},
+    {"gate_id":"G07","domain":"institution_profile_and_control_authority","required_role":"Control Framework Owner","status":"pending","approver_name":null,"decision_at":null,"evidence_reference":null},
+    {"gate_id":"G08","domain":"measurement_baseline","required_role":"Operations Performance Owner","status":"pending","approver_name":null,"decision_at":null,"evidence_reference":null},
+    {"gate_id":"G09","domain":"independent_assurance_plan","required_role":"Independent Assurance","status":"pending","approver_name":null,"decision_at":null,"evidence_reference":null},
+    {"gate_id":"G10","domain":"pilot_operations_readiness","required_role":"Pilot Executive","status":"pending","approver_name":null,"decision_at":null,"evidence_reference":null}
+  ],
+  "rule": "execution_permitted may become true only when all ten gates are approved with named approvers, timestamps and evidence references"
+}
