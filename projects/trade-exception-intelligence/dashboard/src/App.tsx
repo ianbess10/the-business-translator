@@ -138,9 +138,9 @@ export default function App() {
   const diagnosis = selected.ai_diagnosis;
 
   return (
-    <div className="flex h-full min-h-screen bg-zinc-950 text-zinc-100">
+    <div className="desk-shell bg-zinc-950 text-zinc-100">
       {/* LEFT SIDEBAR */}
-      <aside className="flex w-56 shrink-0 flex-col border-r border-zinc-800 bg-zinc-950">
+      <aside className="flex flex-col border-r border-zinc-800 bg-zinc-950">
         <div className="border-b border-zinc-800 px-4 py-4">
           <div className="flex items-center gap-2.5">
             <div className="flex h-8 w-8 items-center justify-center rounded border border-cyan-500/40 bg-cyan-500/10">
@@ -183,9 +183,9 @@ export default function App() {
         </div>
       </aside>
 
-      <div className="flex min-w-0 flex-1 flex-col">
+      <div className="desk-main">
         {/* TOP KPI HEADER */}
-        <header className="border-b border-zinc-800 bg-zinc-950/80 px-4 py-3">
+        <header className="border-b border-zinc-800 bg-zinc-950 px-4 py-3">
           <div className="mb-2.5 flex items-end justify-between gap-4">
             <div>
               <h1 className="text-sm font-semibold tracking-tight text-zinc-100">
@@ -204,13 +204,13 @@ export default function App() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-2 xl:grid-cols-4">
             {KPIS.map((kpi) => {
               const Icon = kpi.icon;
               return (
                 <div
                   key={kpi.label}
-                  className={`flex items-center gap-3 rounded border ${kpi.borderClass} bg-zinc-900/70 px-3 py-2.5`}
+                  className={`flex items-center gap-3 rounded border ${kpi.borderClass} bg-zinc-900 px-3 py-2.5`}
                 >
                   <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded border ${kpi.iconClass}`}>
                     <Icon className="h-4 w-4" strokeWidth={1.75} />
@@ -230,24 +230,24 @@ export default function App() {
           </div>
         </header>
 
-        <main className="flex min-h-0 flex-1 flex-col lg:flex-row">
+        <div className="desk-split">
           {/* EXCEPTION QUEUE — Pitch Step 1 */}
-          <section className="flex min-h-0 flex-1 flex-col border-r border-zinc-800 bg-zinc-950/40">
-            <div className="flex items-center justify-between border-b border-zinc-800 px-3 py-2">
-              <div>
-                <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-300">
+          <section className="desk-pane border-r border-zinc-800">
+            <div className="desk-pane-header">
+              <div className="min-w-0">
+                <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-200">
                   Exception Queue
                 </h2>
-                <p className="text-[11px] text-zinc-500">
-                  Unstructured noise your ops team works all day
+                <p className="mt-0.5 truncate text-[11px] leading-normal text-zinc-400">
+                  {EXCEPTIONS.length} pending for review
                 </p>
               </div>
-              <span className="rounded border border-zinc-700 bg-zinc-900 px-2 py-0.5 font-mono text-[10px] text-zinc-400">
+              <span className="shrink-0 rounded border border-zinc-700 bg-zinc-900 px-2 py-0.5 font-mono text-[10px] text-zinc-400">
                 FILTER: OPEN
               </span>
             </div>
 
-            <div className="min-h-0 flex-1 overflow-auto">
+            <div className="desk-pane-body">
               <table className="w-full border-collapse text-left text-[12px]">
                 <thead className="sticky top-0 z-10 bg-zinc-900">
                   <tr className="border-b border-zinc-800 text-[10px] uppercase tracking-[0.12em] text-zinc-500">
@@ -303,25 +303,25 @@ export default function App() {
           </section>
 
           {/* AI DECISION RECORD — Pitch Steps 2–4 */}
-          <section className="flex min-h-0 w-full flex-col bg-zinc-950/70 lg:w-[48%] lg:max-w-xl lg:shrink-0">
-            <div className="flex items-center justify-between border-b border-zinc-800 px-3 py-2">
-              <div className="flex items-center gap-2">
-                <Bot className="h-3.5 w-3.5 text-cyan-400" strokeWidth={2} />
-                <div>
-                  <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-300">
+          <section className="desk-pane">
+            <div className="desk-pane-header">
+              <div className="flex min-w-0 items-center gap-2">
+                <Bot className="h-3.5 w-3.5 shrink-0 text-cyan-400" strokeWidth={2} />
+                <div className="min-w-0">
+                  <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-200">
                     AI Decision Record
                   </h2>
-                  <p className="text-[11px] text-zinc-500">
+                  <p className="mt-0.5 truncate text-[11px] leading-normal text-zinc-400">
                     {selected.id} · Trade Exception Intelligence
                   </p>
                 </div>
               </div>
-              <span className="rounded border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 font-mono text-[10px] text-cyan-300">
+              <span className="shrink-0 rounded border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 font-mono text-[10px] text-cyan-300">
                 v1.5
               </span>
             </div>
 
-            <div className="min-h-0 flex-1 space-y-3 overflow-auto p-3">
+            <div className="desk-pane-body space-y-3 p-3">
               {/* A — Raw Input */}
               <div className="rounded border border-zinc-800 bg-zinc-900/50">
                 <div className="flex items-center gap-2 border-b border-zinc-800 px-3 py-2">
@@ -480,7 +480,7 @@ export default function App() {
               </div>
             </div>
           </section>
-        </main>
+        </div>
       </div>
     </div>
   );
