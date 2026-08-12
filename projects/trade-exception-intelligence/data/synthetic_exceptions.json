@@ -1,0 +1,22 @@
+[
+  {
+    "case_id": "EX-1042",
+    "message_type": "MT515",
+    "exception_narrative": "Trade matching failed. Counterparty SSI does not match internal record for receiving agent. Settlement date is T+1.",
+    "expected_symptom": "Trade matching failure",
+    "expected_root_cause": "Mismatched Standard Settlement Instructions (SSI)",
+    "expected_missing_info": "Authoritative SSI confirmation from counterparty",
+    "expected_routing": "Reference Data / SSI Team",
+    "expected_escalation": false
+  },
+  {
+    "case_id": "EX-1043",
+    "message_type": "Unstructured Email",
+    "exception_narrative": "URGENT: Client fund lacks sufficient USD balance to settle FX leg of the equity purchase. Market deadline in 45 minutes.",
+    "expected_symptom": "Insufficient funds for settlement",
+    "expected_root_cause": "Unfunded FX leg",
+    "expected_missing_info": "Client funding status or credit line availability",
+    "expected_routing": "Client Services / Credit Risk",
+    "expected_escalation": true
+  }
+]
