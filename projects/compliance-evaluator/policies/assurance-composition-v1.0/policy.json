@@ -1,0 +1,155 @@
+{
+  "policy_id": "SA-REG-ASSURANCE-COMPOSITION-001",
+  "version": "1.0",
+  "status": "approved_synthetic",
+  "effective_from": "2026-08-11",
+  "purpose": "Preserve concurrent coverage and evidence conditions, union their remediation and apply every approved escalation floor.",
+  "coverage_rules": {
+    "complete": {
+      "rule_id": "ACP-COV-COMPLETE",
+      "gap_types": [],
+      "severity_floor": "not_applicable",
+      "action_types": []
+    },
+    "partial": {
+      "rule_id": "ACP-COV-PARTIAL",
+      "gap_types": ["partial_coverage"],
+      "severity_floor": "medium",
+      "action_types": ["mapping_review"]
+    },
+    "absent": {
+      "rule_id": "ACP-COV-ABSENT",
+      "gap_types": ["no_control"],
+      "severity_floor": "high",
+      "action_types": ["control_design_change"],
+      "escalation_trigger": "high_control_design_gap"
+    },
+    "not_assessable": {
+      "rule_id": "ACP-COV-NOT-ASSESSABLE",
+      "terminal_disposition": "quarantine_without_policy_conclusion"
+    }
+  },
+  "evidence_rules": {
+    "sufficient": {
+      "rule_id": "ACP-EVD-SUFFICIENT",
+      "gap_types": [],
+      "severity_floor": "not_applicable",
+      "action_types": []
+    },
+    "missing_operating_evidence": {
+      "rule_id": "ACP-EVD-MISSING-OPERATING",
+      "gap_types": ["operating_evidence_missing"],
+      "severity_floor": "unassessed",
+      "action_types": ["evidence_request"]
+    },
+    "design_deficiency": {
+      "rule_id": "ACP-EVD-DESIGN-DEFICIENCY",
+      "gap_types": ["control_design"],
+      "severity_floor": "high",
+      "action_types": ["control_design_change"],
+      "escalation_trigger": "high_control_design_gap"
+    },
+    "adverse_operating_evidence": {
+      "rule_id": "ACP-EVD-ADVERSE-OPERATING",
+      "gap_types": ["operating_exception"],
+      "severity_floor": "high",
+      "action_types": ["operating_remediation"],
+      "escalation_trigger": "high_operating_exception"
+    },
+    "not_assessable": {
+      "rule_id": "ACP-EVD-NOT-ASSESSABLE",
+      "terminal_disposition": "quarantine_without_policy_conclusion"
+    }
+  },
+  "composition": {
+    "rule_id": "ACP-COMPOSE-UNION",
+    "gap_composition": "set_union",
+    "action_composition": "set_union",
+    "routing_composition": "per_action_union",
+    "escalation_composition": "trigger_and_role_union",
+    "deduplication": "exact_value_only",
+    "suppression_permitted": false,
+    "severity_order": ["not_applicable", "medium", "high", "critical"],
+    "unassessed_rule": "Use unassessed only when no assessed gap severity exists and missing evidence is present.",
+    "headline_rules": [
+      {
+        "rule_id": "ACP-HEADLINE-GAP",
+        "when": "any assessed coverage, design or operating gap exists",
+        "assurance_outcome": "potential_control_gap"
+      },
+      {
+        "rule_id": "ACP-HEADLINE-MISSING-EVIDENCE",
+        "when": "no assessed gap exists and missing operating evidence exists",
+        "assurance_outcome": "insufficient_evidence"
+      },
+      {
+        "rule_id": "ACP-HEADLINE-SUFFICIENT",
+        "when": "coverage is complete and evidence is sufficient",
+        "assurance_outcome": "mapped_and_evidenced"
+      },
+      {
+        "rule_id": "ACP-HEADLINE-QUARANTINE",
+        "when": "coverage or evidence is not assessable",
+        "assurance_outcome": null,
+        "terminal_disposition": "quarantine_without_policy_conclusion"
+      }
+    ]
+  },
+  "routing": {
+    "mapping_review": ["mapping_authority_owner"],
+    "control_design_change": ["current_control_owner", "workstream_compliance_authority"],
+    "evidence_request": ["evidence_owner"],
+    "operating_remediation": ["current_control_owner", "workstream_oversight_authority"]
+  },
+  "escalation": {
+    "default": {
+      "rule_id": "ACP-ESC-DEFAULT",
+      "escalation_required": false,
+      "roles": []
+    },
+    "triggers": {
+      "high_control_design_gap": {
+        "rule_id": "ACP-ESC-HIGH-DESIGN",
+        "workstream_roles": {
+          "aml_cft": ["AML Compliance Officer"],
+          "market_conduct": ["Head of Compliance"]
+        }
+      },
+      "high_operating_exception": {
+        "rule_id": "ACP-ESC-HIGH-OPERATING",
+        "workstream_roles": {
+          "aml_cft": ["AML Compliance Officer", "Head of Compliance"],
+          "market_conduct": ["Conduct Risk Officer", "Head of Compliance"]
+        }
+      }
+    }
+  },
+  "authority_controls": {
+    "coverage_source": "approved_coverage_rulebook",
+    "evidence_source": "validated_observations_against_approved_requirements",
+    "severity_source": "this_approved_policy",
+    "escalation_source": "this_approved_policy",
+    "benchmark_labels_are_runtime_authority": false,
+    "case_specific_overrides_permitted": false,
+    "missing_authority_policy": "quarantine_without_policy_conclusion"
+  },
+  "approval": {
+    "author_role": "Regulatory Change Lead",
+    "author_id": "SYN-RCL-002",
+    "challenge_reviewer_role": "Independent Assurance",
+    "challenge_reviewer_id": "SYN-IA-002",
+    "challenge_status": "accepted",
+    "approver_role": "Head of Compliance",
+    "approver_id": "SYN-HC-003",
+    "approval_status": "accepted",
+    "approved_at": "2026-08-11T23:00:00+02:00",
+    "synthetic_identities": true,
+    "decision_rationale": "Approved as general synthetic assurance policy that preserves concurrent conditions and prevents lower-severity coverage states from suppressing adverse evidence or mandatory escalation."
+  },
+  "generality_controls": {
+    "benchmark_case_ids_permitted": false,
+    "benchmark_evidence_ids_permitted": false,
+    "benchmark_labels_used_as_policy_authority": false,
+    "case_specific_exceptions_permitted": false
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "profile_id": "SA-IWM-SYN-001",
+  "version": "1.0",
+  "status": "frozen_for_baseline_design",
+  "frozen_at": "2026-08-09",
+  "fictional": true,
+  "display_name": "Synthetic South African Investment & Wealth Institution",
+  "purpose": "Controlled applicability and obligation-to-control evaluation for South African AML/CFT and FSCA market-conduct use cases.",
+  "disclaimer": "This profile is synthetic. Regulatory classifications and permissions are evaluation assumptions, not legal conclusions about any real institution.",
+  "institution": {
+    "jurisdiction": "South Africa",
+    "legal_form_assumption": "South African private company",
+    "business_model": "Investment and wealth-management institution serving retail and affluent customers.",
+    "customer_segments": [
+      "retail natural persons",
+      "affluent natural persons",
+      "family and inter vivos trusts",
+      "owner-managed private companies"
+    ],
+    "services": [
+      "investment advice",
+      "discretionary portfolio management",
+      "investment-account administration",
+      "portfolio reporting",
+      "client servicing and complaints handling"
+    ],
+    "products": [
+      "collective investment schemes",
+      "exchange-traded funds",
+      "listed equities",
+      "government and corporate bonds",
+      "money-market instruments"
+    ],
+    "channels": [
+      "employed financial advisers",
+      "digital client portal",
+      "client service centre",
+      "approved third-party intermediaries"
+    ],
+    "operating_model": "The institution owns customer relationships, advice, discretionary mandates, onboarding, monitoring, servicing and oversight. Execution, custody and selected administration services are outsourced to approved third parties."
+  },
+  "regulatory_assumptions": {
+    "fic_act": {
+      "assumption": "The institution is assumed to fall within an applicable Financial Intelligence Centre Act accountable-institution category for evaluation purposes.",
+      "human_review_required": "Exact Schedule classification, exclusions, effective dates and activity-level applicability must be confirmed from the approved source corpus."
+    },
+    "fsca": {
+      "assumption": "The institution is assumed to hold the FSCA authorisations and permissions necessary for the synthetic advice, intermediary and discretionary-management activities.",
+      "human_review_required": "Exact licence categories, product permissions and applicable conduct instruments must be confirmed from the approved source corpus."
+    },
+    "applicability_rule": "When a requirement depends on an institution fact not stated in this profile, the required outcome is applicability_uncertain.",
+    "source_rule": "Only sources admitted to the approved source pack may support an obligation or assurance finding."
+  },
+  "geographic_and_customer_risk_features": {
+    "primary_market": "South Africa",
+    "permitted_edge_cases": [
+      "non-resident customer",
+      "foreign beneficial owner",
+      "domestic or foreign politically exposed person",
+      "higher-risk geographic exposure",
+      "complex trust or company ownership",
+      "cross-border funding or withdrawal"
+    ],
+    "excluded_features": [
+      "anonymous accounts",
+      "cash deposits or withdrawals",
+      "virtual-asset products or services"
+    ]
+  },
+  "processes": [
+    {
+      "process_id": "P-REG-001",
+      "name": "Regulatory horizon scanning and source intake",
+      "workstream": "shared"
+    },
+    {
+      "process_id": "P-REG-002",
+      "name": "Regulatory change impact assessment",
+      "workstream": "shared"
+    },
+    {
+      "process_id": "P-AML-001",
+      "name": "AML/CFT risk assessment and RMCP governance",
+      "workstream": "aml_cft"
+    },
+    {
+      "process_id": "P-AML-002",
+      "name": "Customer onboarding and due diligence",
+      "workstream": "aml_cft"
+    },
+    {
+      "process_id": "P-AML-003",
+      "name": "Beneficial-ownership identification and verification",
+      "workstream": "aml_cft"
+    },
+    {
+      "process_id": "P-AML-004",
+      "name": "Screening, customer risk rating and enhanced review",
+      "workstream": "aml_cft"
+    },
+    {
+      "process_id": "P-AML-005",
+      "name": "Ongoing monitoring and customer-information refresh",
+      "workstream": "aml_cft"
+    },
+    {
+      "process_id": "P-AML-006",
+      "name": "Transaction surveillance and internal escalation",
+      "workstream": "aml_cft"
+    },
+    {
+      "process_id": "P-AML-007",
+      "name": "Regulatory reporting and record keeping",
+      "workstream": "aml_cft"
+    },
+    {
+      "process_id": "P-CON-001",
+      "name": "Product and service approval",
+      "workstream": "market_conduct"
+    },
+    {
+      "process_id": "P-CON-002",
+      "name": "Advice, suitability and mandate management",
+      "workstream": "market_conduct"
+    },
+    {
+      "process_id": "P-CON-003",
+      "name": "Customer disclosure, fees and communications",
+      "workstream": "market_conduct"
+    },
+    {
+      "process_id": "P-CON-004",
+      "name": "Order placement, execution oversight and conflicts management",
+      "workstream": "market_conduct"
+    },
+    {
+      "process_id": "P-CON-005",
+      "name": "Customer servicing, complaints and remediation",
+      "workstream": "market_conduct"
+    },
+    {
+      "process_id": "P-CON-006",
+      "name": "Customer-outcomes monitoring and management information",
+      "workstream": "market_conduct"
+    },
+    {
+      "process_id": "P-ASSURE-001",
+      "name": "Control testing, issue management and closure",
+      "workstream": "shared"
+    }
+  ],
+  "controls": [
+    {
+      "control_id": "C-REG-001",
+      "name": "Approved-source status and version verification",
+      "owner_role": "Regulatory Change Lead",
+      "control_type": "preventive"
+    },
+    {
+      "control_id": "C-REG-002",
+      "name": "Regulatory impact assessment and owner acceptance",
+      "owner_role": "Head of Compliance",
+      "control_type": "preventive"
+    },
+    {
+      "control_id": "C-AML-001",
+      "name": "RMCP approval and periodic review",
+      "owner_role": "AML Compliance Officer",
+      "control_type": "preventive"
+    },
+    {
+      "control_id": "C-AML-002",
+      "name": "Customer identification and verification completion",
+      "owner_role": "Head of Client Onboarding",
+      "control_type": "preventive"
+    },
+    {
+      "control_id": "C-AML-003",
+      "name": "Beneficial-ownership verification",
+      "owner_role": "Head of Client Onboarding",
+      "control_type": "preventive"
+    },
+    {
+      "control_id": "C-AML-004",
+      "name": "Sanctions, PEP and adverse-information screening",
+      "owner_role": "AML Operations Manager",
+      "control_type": "preventive_and_detective"
+    },
+    {
+      "control_id": "C-AML-005",
+      "name": "Customer risk-rating approval and enhanced review",
+      "owner_role": "AML Compliance Officer",
+      "control_type": "preventive"
+    },
+    {
+      "control_id": "C-AML-006",
+      "name": "Ongoing and transaction-monitoring alert review",
+      "owner_role": "AML Operations Manager",
+      "control_type": "detective"
+    },
+    {
+      "control_id": "C-AML-007",
+      "name": "Suspicion escalation and reporting decision",
+      "owner_role": "AML Compliance Officer",
+      "control_type": "detective_and_corrective"
+    },
+    {
+      "control_id": "C-AML-008",
+      "name": "AML/CFT record retention and retrieval",
+      "owner_role": "Head of Operations",
+      "control_type": "preventive"
+    },
+    {
+      "control_id": "C-CON-001",
+      "name": "Product approval and target-customer review",
+      "owner_role": "Head of Product",
+      "control_type": "preventive"
+    },
+    {
+      "control_id": "C-CON-002",
+      "name": "Advice suitability and mandate evidence",
+      "owner_role": "Head of Advice",
+      "control_type": "preventive"
+    },
+    {
+      "control_id": "C-CON-003",
+      "name": "Customer disclosure and fee review",
+      "owner_role": "Conduct Risk Officer",
+      "control_type": "preventive"
+    },
+    {
+      "control_id": "C-CON-004",
+      "name": "Conflicts-of-interest declaration and mitigation",
+      "owner_role": "Head of Compliance",
+      "control_type": "preventive"
+    },
+    {
+      "control_id": "C-CON-005",
+      "name": "Execution and outsourced-service oversight",
+      "owner_role": "Head of Investment Operations",
+      "control_type": "detective"
+    },
+    {
+      "control_id": "C-CON-006",
+      "name": "Complaint classification, escalation and remediation",
+      "owner_role": "Complaints Manager",
+      "control_type": "detective_and_corrective"
+    },
+    {
+      "control_id": "C-CON-007",
+      "name": "Customer-outcomes management-information review",
+      "owner_role": "Conduct Risk Officer",
+      "control_type": "detective"
+    },
+    {
+      "control_id": "C-ASSURE-001",
+      "name": "Independent compliance monitoring",
+      "owner_role": "Compliance Monitoring Lead",
+      "control_type": "detective"
+    }
+  ],
+  "roles": [
+    {
+      "role": "Board or delegated governance committee",
+      "authority": "Approves governance frameworks and oversees material implementation risk."
+    },
+    {
+      "role": "Head of Compliance",
+      "authority": "Approves compliance interpretation and regulatory-change disposition within delegated authority."
+    },
+    {
+      "role": "AML Compliance Officer",
+      "authority": "Owns AML/CFT interpretation, escalation and reporting decisions within delegated authority."
+    },
+    {
+      "role": "Legal Counsel",
+      "authority": "Advises on legal interpretation, applicability and source conflict."
+    },
+    {
+      "role": "Regulatory Change Lead",
+      "authority": "Maintains source intake, obligation records, impact workflow and accountable-owner routing."
+    },
+    {
+      "role": "Conduct Risk Officer",
+      "authority": "Coordinates customer-outcomes and market-conduct assessment."
+    },
+    {
+      "role": "Business or Control Owner",
+      "authority": "Accepts impact, implements controls and provides operating evidence."
+    },
+    {
+      "role": "Independent Assurance",
+      "authority": "Tests control design and operation without owning implementation."
+    }
+  ],
+  "evidence_catalogue": [
+    "approved regulatory source and version metadata",
+    "regulatory change impact assessment",
+    "approved policy or RMCP section",
+    "operating procedure",
+    "system rule or configuration evidence",
+    "completed customer or transaction control record",
+    "exception and escalation record",
+    "regulatory submission acknowledgement",
+    "training and competence record",
+    "management information and governance minutes",
+    "control testing result",
+    "remediation and closure evidence"
+  ],
+  "explicit_exclusions": [
+    "deposit-taking and prudential banking regulation",
+    "credit provision",
+    "insurance underwriting",
+    "retirement-fund trusteeship or administration",
+    "virtual-asset products or services",
+    "market-infrastructure operation",
+    "proprietary trading",
+    "tax advice",
+    "legal opinions",
+    "real customer, employee, transaction or institution data"
+  ],
+  "evaluation_rules": [
+    "The model may use this profile only as supplied institution context.",
+    "The model must not infer unstated licences, products, entities or customer facts.",
+    "A missing applicability fact must produce applicability_uncertain.",
+    "A regulatory plan, strategy, draft or consultation document must not be treated as an in-force obligation.",
+    "Every obligation and mapping must cite an approved source locator.",
+    "The model may propose but may not approve applicability, materiality, control adequacy, ownership, risk acceptance or closure.",
+    "No compliant or non_compliant outcome is permitted."
+  ]
+}

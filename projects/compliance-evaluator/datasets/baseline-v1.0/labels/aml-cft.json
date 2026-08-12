@@ -1,0 +1,98 @@
+[
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "AML-001",
+    "workstream": "aml_cft",
+    "expected": {"source_use_disposition": "guidance_only", "obligation_outcome": "guidance_context", "applicability_status": "applicable_candidate", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "Current Guidance Note 7B may inform interpretation but cannot be promoted into a binding obligation or control-assurance record."},
+    "error_tags": ["guidance_boundary"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "AML-002",
+    "workstream": "aml_cft",
+    "expected": {"source_use_disposition": "historical_only", "obligation_outcome": "superseded", "applicability_status": "not_assessed", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "Guidance Note 7A is retained only for historical trace because Guidance Note 7B replaced it."},
+    "error_tags": ["superseded_source"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "AML-003",
+    "workstream": "aml_cft",
+    "expected": {"source_use_disposition": "final_change_event", "obligation_outcome": "final_change_pending_commencement", "applicability_status": "applicability_uncertain", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": true, "escalation_roles": ["AML Compliance Officer", "Legal Counsel"], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The directive is a final change event, but neither Gazette commencement nor profile applicability is verified; no due date or control assessment may be approved."},
+    "error_tags": ["commencement_uncertainty", "missing_applicability_fact", "premature_control_assurance"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "AML-004",
+    "workstream": "aml_cft",
+    "expected": {"source_use_disposition": "draft_watchlist", "obligation_outcome": "draft_or_watchlist", "applicability_status": "not_assessed", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "Draft Directive 12 can support readiness monitoring only and cannot create an in-force submission obligation."},
+    "error_tags": ["draft_boundary", "premature_control_assurance"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "AML-005",
+    "workstream": "aml_cft",
+    "expected": {"source_use_disposition": "blocked", "obligation_outcome": "blocked_source", "applicability_status": "not_assessed", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The original Act source lacks the applied amendment chain required for current binding extraction."},
+    "error_tags": ["blocked_source", "approved_source_gate"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "AML-006",
+    "workstream": "aml_cft",
+    "expected": {"source_use_disposition": "blocked", "obligation_outcome": "blocked_source", "applicability_status": "not_assessed", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The official unofficial compilation is useful for locator discovery but is blocked as binding assessment evidence."},
+    "error_tags": ["unofficial_compilation", "blocked_source"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "AML-007",
+    "workstream": "aml_cft",
+    "expected": {"source_use_disposition": "guidance_only", "obligation_outcome": "guidance_context", "applicability_status": "applicable_candidate", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The source remains guidance and does not support the proposed universal annual-refresh mandate."},
+    "error_tags": ["guidance_boundary", "unsupported_extension"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "AML-008",
+    "workstream": "aml_cft",
+    "expected": {"source_use_disposition": "final_change_event", "obligation_outcome": "final_change_pending_commencement", "applicability_status": "applicability_uncertain", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": true, "escalation_roles": ["AML Compliance Officer", "Legal Counsel"], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "Exact Schedule 1 classification and commencement are decision-critical missing facts, so applicability cannot be approved."},
+    "error_tags": ["missing_applicability_fact", "commencement_uncertainty"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "AML-009",
+    "workstream": "aml_cft",
+    "expected": {"source_use_disposition": "guidance_only", "obligation_outcome": "guidance_context", "applicability_status": "out_of_scope", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "Virtual-asset services are explicitly excluded from the frozen institution profile; the source remains guidance context only."},
+    "error_tags": ["out_of_scope_profile", "guidance_boundary"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "AML-010",
+    "workstream": "aml_cft",
+    "expected": {"source_use_disposition": "guidance_only", "obligation_outcome": "guidance_context", "applicability_status": "applicable_candidate", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The daily universal screening frequency is not supported by the supplied guidance fact and must be removed from the source-backed statement."},
+    "error_tags": ["unsupported_extension", "guidance_boundary"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "AML-011",
+    "workstream": "aml_cft",
+    "expected": {"source_use_disposition": "guidance_only", "obligation_outcome": "guidance_context", "applicability_status": "applicable_candidate", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": false, "escalation_roles": [], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "A control description cannot cure the absence of a human-approved upstream obligation, and guidance cannot silently become the obligation."},
+    "error_tags": ["premature_control_assurance", "human_approval_boundary", "guidance_boundary"]
+  },
+  {
+    "record_kind": "case_label",
+    "dataset_version": "1.0",
+    "case_id": "AML-012",
+    "workstream": "aml_cft",
+    "expected": {"source_use_disposition": "final_change_event", "obligation_outcome": "final_change_pending_commencement", "applicability_status": "applicability_uncertain", "assurance_gate": "not_entered", "mapping_status": "not_applicable", "control_mappings": [], "assurance_outcome": "not_applicable", "gap_types": [], "gap_severity": "not_applicable", "remediation_action_types": [], "escalation_required": true, "escalation_roles": ["AML Compliance Officer", "Legal Counsel"], "human_review_required": true, "compliance_conclusion": "not_determined", "rationale": "The two unresolved gating facts are material to timing and scope and require accountable compliance and legal escalation rather than silent deferral."},
+    "error_tags": ["missed_escalation", "commencement_uncertainty", "missing_applicability_fact"]
+  }
+]

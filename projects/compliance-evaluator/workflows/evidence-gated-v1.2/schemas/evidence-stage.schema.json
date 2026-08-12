@@ -1,0 +1,20 @@
+{
+  "name": "evidence_stage_v1_2",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["case_id", "evidence_assessment", "design_deficiency_evidence_present", "adverse_indicator_present", "severity_recommendation", "rationale"],
+    "properties": {
+      "case_id": {"type": "string", "pattern": "^(AML|CON)-[0-9]{3}$"},
+      "evidence_assessment": {
+        "type": "string",
+        "enum": ["sufficient", "missing_operating_evidence", "design_deficiency", "adverse_operating_evidence", "insufficient_to_assess", "not_assessed_no_current_control"]
+      },
+      "design_deficiency_evidence_present": {"type": "boolean"},
+      "adverse_indicator_present": {"type": "boolean"},
+      "severity_recommendation": {"type": "string", "enum": ["not_applicable", "unassessed", "low", "medium", "high", "critical"]},
+      "rationale": {"type": "string", "minLength": 1}
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "evaluation_id": "evidence-gated-v1.7-97ec2cc0-4d9e-4540-adbe-42418ac7d643-evaluation",
+  "run_id": "evidence-gated-v1.7-97ec2cc0-4d9e-4540-adbe-42418ac7d643",
+  "workflow_version": "1.7",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.2",
+  "benchmark_authority_version": "1.2",
+  "case_count": 24,
+  "quarantine_count": 0,
+  "end_to_end_exact": {
+    "correct": 24,
+    "total": 24,
+    "accuracy": 1.0
+  },
+  "field_metrics": {
+    "source_use_disposition": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "obligation_outcome": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "applicability_status": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "assurance_gate": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "mapping_status": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "control_mappings": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "assurance_outcome": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "gap_types": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "gap_severity": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "remediation_action_types": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "escalation_required": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "escalation_roles": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "human_review_required": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    },
+    "compliance_conclusion": {
+      "correct": 24,
+      "total": 24,
+      "accuracy": 1.0
+    }
+  },
+  "binary_metrics": {
+    "escalation_required": {
+      "true_positive": 6,
+      "false_positive": 0,
+      "true_negative": 18,
+      "false_negative": 0
+    }
+  },
+  "per_case": [
+    {
+      "case_id": "AML-001",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-002",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-003",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-004",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-005",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-006",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-007",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-008",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-009",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-010",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-011",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-012",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-001",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-002",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-003",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-004",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-005",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-006",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-007",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-008",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-009",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-010",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-011",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-012",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    }
+  ],
+  "synthetic_benchmark_evidence": true,
+  "production_performance": false
+}

@@ -1,0 +1,80 @@
+{
+  "name": "source_obligation_stage_v1",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "case_id",
+      "proposal_disposition",
+      "source_classification",
+      "obligation_support",
+      "applicability_assessment",
+      "material_missing_fact_types",
+      "source_conflict_present",
+      "rationale"
+    ],
+    "properties": {
+      "case_id": {
+        "type": "string",
+        "pattern": "^(AML|CON)-[0-9]{3}$"
+      },
+      "proposal_disposition": {
+        "type": "string",
+        "enum": ["accept", "amend", "reject"]
+      },
+      "source_classification": {
+        "type": "string",
+        "enum": [
+          "binding_candidate",
+          "guidance_only",
+          "final_change_event",
+          "draft_watchlist",
+          "historical_only",
+          "strategy_context",
+          "blocked",
+          "source_conflict"
+        ]
+      },
+      "obligation_support": {
+        "type": "string",
+        "enum": [
+          "supported_binding",
+          "guidance_context",
+          "final_pending",
+          "draft_context",
+          "historical_only",
+          "strategy_context",
+          "blocked",
+          "unsupported_extension",
+          "source_conflict"
+        ]
+      },
+      "applicability_assessment": {
+        "type": "string",
+        "enum": ["applicable", "out_of_scope", "uncertain", "not_assessed"]
+      },
+      "material_missing_fact_types": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "commencement",
+            "entity_classification",
+            "licence_or_permission",
+            "activity_or_product",
+            "source_version_or_chain",
+            "other"
+          ]
+        }
+      },
+      "source_conflict_present": {
+        "type": "boolean"
+      },
+      "rationale": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

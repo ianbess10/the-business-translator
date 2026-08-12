@@ -1,0 +1,66 @@
+{
+  "policy_id": "SA-REG-ASSURANCE-DECISION-001",
+  "version": "1.2",
+  "mapping_status": {
+    "complete": "mapped",
+    "partial": "partially_mapped",
+    "no_suitable_control": "no_suitable_control_identified"
+  },
+  "mapping_rules": {
+    "complete": "MAP-RULE-CURRENT-COMPLETE",
+    "partial": "MAP-RULE-CURRENT-PARTIAL",
+    "no_suitable_control": "MAP-RULE-NO-SUITABLE-CURRENT-CONTROL"
+  },
+  "evidence_assessments": {
+    "sufficient": {
+      "rule_id": "EVD-RULE-SUFFICIENT",
+      "assurance_outcome": "mapped_and_evidenced",
+      "gap_types": [],
+      "gap_severity": "not_applicable",
+      "remediation_action_types": []
+    },
+    "missing_operating_evidence": {
+      "rule_id": "EVD-RULE-MISSING-OPERATING-EVIDENCE",
+      "assurance_outcome": "insufficient_evidence",
+      "gap_types": ["operating_evidence_missing"],
+      "gap_severity": "unassessed",
+      "remediation_action_types": ["evidence_request"]
+    },
+    "design_deficiency": {
+      "rule_id": "EVD-RULE-DESIGN-DEFICIENCY",
+      "assurance_outcome": "potential_control_gap",
+      "gap_types": ["control_design"],
+      "gap_severity": "high",
+      "remediation_action_types": ["mapping_review"]
+    },
+    "adverse_operating_evidence": {
+      "rule_id": "EVD-RULE-ADVERSE-OPERATING-EVIDENCE",
+      "assurance_outcome": "potential_control_gap",
+      "gap_types": ["operating_exception"],
+      "gap_severity": "high",
+      "remediation_action_types": ["operating_remediation"]
+    },
+    "insufficient_to_assess": {
+      "rule_id": "EVD-RULE-INSUFFICIENT-TO-ASSESS",
+      "assurance_outcome": "insufficient_evidence",
+      "gap_types": ["operating_evidence_missing"],
+      "gap_severity": "unassessed",
+      "remediation_action_types": ["evidence_request"]
+    },
+    "not_assessed_no_current_control": {
+      "rule_id": "EVD-RULE-NO-CURRENT-CONTROL",
+      "assurance_outcome": "potential_control_gap",
+      "gap_types": ["no_control"],
+      "gap_severity": "high",
+      "remediation_action_types": ["control_design_change"]
+    }
+  },
+  "partial_coverage_precedence": {
+    "rule_id": "EVD-RULE-PARTIAL-COVERAGE",
+    "assurance_outcome": "potential_control_gap",
+    "gap_types": ["partial_coverage"],
+    "gap_severity": "medium",
+    "remediation_action_types": ["mapping_review"],
+    "rule": "Partial current coverage takes precedence unless supplied evidence establishes an actual design deficiency."
+  }
+}

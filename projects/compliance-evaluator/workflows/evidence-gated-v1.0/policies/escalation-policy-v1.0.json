@@ -1,0 +1,43 @@
+{
+  "policy_id": "SA-REG-ESCALATION-001",
+  "version": "1.0",
+  "rules": [
+    {
+      "rule_id": "ESC-001",
+      "trigger": "final_change_pending_commencement_and_applicability_uncertain",
+      "workstream_roles": {
+        "aml_cft": ["AML Compliance Officer", "Legal Counsel"],
+        "market_conduct": ["Head of Compliance", "Legal Counsel"]
+      }
+    },
+    {
+      "rule_id": "ESC-002",
+      "trigger": "source_conflict",
+      "workstream_roles": {
+        "aml_cft": ["AML Compliance Officer", "Legal Counsel"],
+        "market_conduct": ["Head of Compliance", "Legal Counsel"]
+      }
+    },
+    {
+      "rule_id": "ESC-003",
+      "trigger": "high_control_design_gap",
+      "workstream_roles": {
+        "aml_cft": ["AML Compliance Officer"],
+        "market_conduct": ["Head of Compliance"]
+      }
+    },
+    {
+      "rule_id": "ESC-004",
+      "trigger": "high_operating_exception",
+      "workstream_roles": {
+        "aml_cft": ["AML Compliance Officer", "Head of Compliance"],
+        "market_conduct": ["Conduct Risk Officer", "Head of Compliance"]
+      }
+    }
+  ],
+  "default": {
+    "rule_id": "ESC-DEFAULT",
+    "escalation_required": false,
+    "escalation_roles": []
+  }
+}

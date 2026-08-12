@@ -1,0 +1,16 @@
+{
+  "fixture_id": "SYN-EV-CON-001",
+  "title": "Synthetic Complaints Management Framework",
+  "version": "1.0",
+  "approved_by": "SYN-CRO-001",
+  "approved_at": "2026-07-01T10:00:00+02:00",
+  "review_due": "2027-07-01",
+  "control_features": [
+    "complaint identification and classification",
+    "acknowledgement and tracking",
+    "investigation and escalation",
+    "customer remediation",
+    "root-cause and trend reporting"
+  ],
+  "synthetic": true
+}

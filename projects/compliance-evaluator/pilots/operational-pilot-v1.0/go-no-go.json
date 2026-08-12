@@ -1,0 +1,24 @@
+{
+  "decision_id": "SA-REG-OP-PILOT-001-PRESTART",
+  "decision_type": "pilot_execution_readiness",
+  "decision": "no_go",
+  "decision_at": "2026-08-12T12:00:00+02:00",
+  "reason": "The governed pilot design exists, but no real institution has supplied authority, named approvers, an approved source corpus, representative institution facts, participant assignments, security approval or an operating baseline.",
+  "satisfied_conditions": [
+    "synthetic benchmark regression passed",
+    "independent synthetic holdout passed",
+    "shadow-mode operating design documented",
+    "measurement and stop conditions documented",
+    "pilot evidence schema implemented"
+  ],
+  "open_conditions": [
+    "all institutional approval gates",
+    "approved data and source inventory",
+    "named pilot participants and reviewers",
+    "current-process operating baseline",
+    "approved environment and access controls",
+    "independent assurance acceptance of the sampling and evidence plan"
+  ],
+  "reconsideration_rule": "Reassess only when every approval gate contains a named authorised approver, timestamp and evidence reference and the preflight validator passes.",
+  "production_authorisation": false
+}

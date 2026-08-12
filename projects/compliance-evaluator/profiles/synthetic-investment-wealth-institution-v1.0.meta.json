@@ -1,0 +1,11 @@
+{
+  "profile_id": "SA-IWM-SYN-001",
+  "version": "1.0",
+  "status": "frozen_for_baseline_design",
+  "filename": "synthetic-investment-wealth-institution-v1.0.json",
+  "sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+  "frozen_at": "2026-08-09",
+  "fictional": true,
+  "data_policy": "synthetic institution assumptions only",
+  "notes": "Do not edit the frozen profile in place. Create a new version when assumptions or scope change."
+}

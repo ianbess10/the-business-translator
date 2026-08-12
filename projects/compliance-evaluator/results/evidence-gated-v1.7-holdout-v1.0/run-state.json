@@ -1,0 +1,23 @@
+{
+  "run_id": "evidence-gated-v1.7-holdout-v1.0-05388075-cc1a-454b-ab56-674aa820c287",
+  "status": "completed",
+  "started_at": "2026-08-12T11:03:06.028533Z",
+  "completed_at": "2026-08-12T11:03:37.163466Z",
+  "dataset_id": "SA-REG-HOLDOUT-001",
+  "dataset_version": "1.0",
+  "workflow_id": "SA-REG-EVIDENCE-GATED-001",
+  "workflow_version": "1.7",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "case_count": 16,
+  "maximum_api_call_count": 16,
+  "requested_api_call_count": 16,
+  "semantically_valid_api_call_count": 16,
+  "completed_case_count": 16,
+  "quarantined_case_count": 0,
+  "active_case_id": null,
+  "active_stage": null,
+  "tuning_after_observation": false,
+  "retry_count": 0,
+  "error": null
+}

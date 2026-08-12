@@ -1,0 +1,36 @@
+{
+  "analysis_id": "SA-REG-EVIDENCE-GATED-V1.0-FAILURE-ANALYSIS-001",
+  "version": "1.0",
+  "status": "complete",
+  "completed_at": "2026-08-10",
+  "workflow_id": "SA-REG-EVIDENCE-GATED-001",
+  "workflow_version": "1.0",
+  "run_id": "evidence-gated-v1.0-f9e573a2-ca62-44b0-a6f5-89a9fd70c8fa",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "case_count": 24,
+  "failed_case_count": 9,
+  "failed_release_gate_count": 1,
+  "workflow_v1_modified": false,
+  "workflow_v1_rerun": false,
+  "post_observation_tuning": false,
+  "v1_1_decision_id": "SA-REG-EVIDENCE-GATED-V1.1-DECISION-001",
+  "v1_1_decision_status": "selected_for_implementation",
+  "synthetic_regression_evidence": true,
+  "independent_validation": false,
+  "production_performance": false,
+  "artefact_sha256": {
+    "analyse_failures.py": "5bafe41dfc2bcee21ffb8983a98a4eaa5551598b3155ff06f6aed6ec64ab9dbd",
+    "failure-analysis.json": "38d21d41692451acb39df5fe76c978abccc8f7cecac323add20645b3650ba896",
+    "README.md": "cc91071f7a3e6021edf190bfdcbaaf072c4e5db7d21e310bcff9595f4e226244",
+    "v1.1-decision.md": "28acbd2ffa47e029addb2f13448c19a11bfdc424fb259daeddc97365fa46bfde",
+    "v1.1-decision.meta.json": "998eee53d0777036281a36fa78b63d9a9894306b14bdeee269e0e56f8e58c361"
+  },
+  "source_evidence_sha256": {
+    "run-state.json": "3654c9a69fa236b0a51487fe5154c672aba5b72d1c419d683ae7a6f9f473d61d",
+    "predictions.json": "efb8b9d8c32198f5a8e2f5a0056c7a6c45f937f43f98a91749881d7c5a22a767",
+    "evaluation.json": "6b286757a031d9c3ca8e2726e825f4b8e0498752286f5985309176b31af8defb",
+    "baseline-comparison.json": "b28862b32dfd67a9021dd62cb081d8c871ee4563f60bcbdb2bbb356410a1364a"
+  },
+  "notes": "Post-run analysis only. The frozen v1.0 workflow, inputs, labels, results and evaluator were not modified or rerun."
+}

@@ -1,0 +1,51 @@
+{
+  "approval_record_id": "SA-REG-ASSURANCE-COMPOSITION-APPROVAL-001",
+  "policy_id": "SA-REG-ASSURANCE-COMPOSITION-001",
+  "policy_version": "1.0",
+  "status": "approved_synthetic",
+  "approved_at": "2026-08-11T23:00:00+02:00",
+  "author": {
+    "id": "SYN-RCL-002",
+    "role": "Regulatory Change Lead",
+    "synthetic_identity": true,
+    "decision": "submitted"
+  },
+  "challenge_review": {
+    "id": "SYN-IA-002",
+    "role": "Independent Assurance",
+    "synthetic_identity": true,
+    "decision": "accepted",
+    "findings": [
+      "Coverage and evidence remain independently visible.",
+      "Action and escalation union prevents lower-severity suppression.",
+      "Missing authority produces quarantine without a policy conclusion.",
+      "Policy authority contains no benchmark identities or case exceptions."
+    ]
+  },
+  "approval": {
+    "id": "SYN-HC-003",
+    "role": "Head of Compliance",
+    "synthetic_identity": true,
+    "decision": "accepted",
+    "rationale": "The policy provides a general, auditable authority for concurrent assurance conditions, proportionate remediation and mandatory escalation floors before v1.6 implementation."
+  },
+  "validation": {
+    "schema_valid": true,
+    "profile_roles_valid": true,
+    "generality_scan_passed": true,
+    "boundary_fixture_count": 9,
+    "boundary_fixture_pass_count": 9,
+    "provider_calls_made": 0,
+    "benchmark_cases_executed": 0
+  },
+  "limitations": [
+    "All identities and approvals are fictional portfolio controls.",
+    "This is not legal advice, a compliance opinion or production governance approval.",
+    "Approval does not implement, certify, freeze, execute or score v1.6."
+  ],
+  "v1_6_implemented": false,
+  "v1_6_provider_certified": false,
+  "v1_6_frozen": false,
+  "v1_6_executed": false,
+  "v1_6_scored": false
+}

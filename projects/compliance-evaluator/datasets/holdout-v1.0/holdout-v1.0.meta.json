@@ -1,0 +1,17 @@
+{
+  "dataset_id": "SA-REG-HOLDOUT-001",
+  "dataset_version": "1.0",
+  "status": "frozen_pre_execution",
+  "case_count": 16,
+  "source_stage_case_count": 8,
+  "entered_assurance_case_count": 8,
+  "execution_count": 0,
+  "evaluation_count": 0,
+  "created_after_v1_7_regression_commit": "2d5f5f1",
+  "artefact_sha256": {
+    "inputs-aml-cft.json": "4f7c943dc296e70ae7898302c8165c113be14c672c44b82302ebfcb8162902df",
+    "inputs-market-conduct.json": "75139feba0546723432971771da091f4115a2442e475fdb07789c9f30e1af624",
+    "expected-decisions.json": "b52c9b824d37705c968e4c7d87197c6847634748c579da1a99e075ff0a4bd9a0",
+    "entered-assurance-authority.json": "61836d5cab5cd05fd5c780489e3664ee99e7a0399e04c18e18050ae8ae1f6934"
+  }
+}

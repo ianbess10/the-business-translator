@@ -1,0 +1,20 @@
+{
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.2",
+  "record_kind": "complete_entered_assurance_authority",
+  "base_input_version": "1.0",
+  "status": "approved_synthetic",
+  "adjudication_id": "SA-REG-DUAL-AXIS-ADJUDICATION-001",
+  "applies_to_future_workflow_versions": ["1.7"],
+  "retrospective_scoring_permitted": false,
+  "records": [
+    {"case_id":"CON-005","coverage_state":"complete","covered_element_ids":["OEL-CON-ESTABLISH-001","OEL-CON-MAINTAIN-001"],"uncovered_element_ids":[],"evidence_condition":"sufficient","gap_types":[],"gap_severity":"not_applicable","remediation_action_types":[],"remediation_routing":{},"escalation_required":false,"escalation_roles":[]},
+    {"case_id":"CON-006","coverage_state":"partial","covered_element_ids":["OEL-CON-ESTABLISH-001"],"uncovered_element_ids":["OEL-CON-MAINTAIN-001"],"evidence_condition":"sufficient","gap_types":["partial_coverage"],"gap_severity":"medium","remediation_action_types":["mapping_review"],"remediation_routing":{"mapping_review":["Conduct Risk Officer"]},"escalation_required":false,"escalation_roles":[]},
+    {"case_id":"CON-007","coverage_state":"partial","covered_element_ids":["OEL-CON-ESTABLISH-001"],"uncovered_element_ids":["OEL-CON-MAINTAIN-001"],"evidence_condition":"missing_operating_evidence","gap_types":["operating_evidence_missing","partial_coverage"],"gap_severity":"medium","remediation_action_types":["evidence_request","mapping_review"],"remediation_routing":{"evidence_request":["Complaints Manager"],"mapping_review":["Conduct Risk Officer"]},"escalation_required":false,"escalation_roles":[]},
+    {"case_id":"CON-008","coverage_state":"partial","covered_element_ids":["OEL-CON-ESTABLISH-001"],"uncovered_element_ids":["OEL-CON-MAINTAIN-001"],"evidence_condition":"design_deficiency","gap_types":["control_design","partial_coverage"],"gap_severity":"high","remediation_action_types":["control_design_change","mapping_review"],"remediation_routing":{"control_design_change":["Complaints Manager","Head of Compliance"],"mapping_review":["Conduct Risk Officer"]},"escalation_required":true,"escalation_roles":["Head of Compliance"]},
+    {"case_id":"CON-009","coverage_state":"complete","covered_element_ids":["OEL-CON-ESTABLISH-001","OEL-CON-MAINTAIN-001"],"uncovered_element_ids":[],"evidence_condition":"sufficient","gap_types":[],"gap_severity":"not_applicable","remediation_action_types":[],"remediation_routing":{},"escalation_required":false,"escalation_roles":[]},
+    {"case_id":"CON-010","coverage_state":"partial","covered_element_ids":["OEL-CON-ESTABLISH-001"],"uncovered_element_ids":["OEL-CON-MAINTAIN-001"],"evidence_condition":"sufficient","gap_types":["partial_coverage"],"gap_severity":"medium","remediation_action_types":["mapping_review"],"remediation_routing":{"mapping_review":["Conduct Risk Officer"]},"escalation_required":false,"escalation_roles":[]},
+    {"case_id":"CON-011","coverage_state":"partial","covered_element_ids":["OEL-CON-ESTABLISH-001"],"uncovered_element_ids":["OEL-CON-MAINTAIN-001"],"evidence_condition":"adverse_operating_evidence","gap_types":["operating_exception","partial_coverage"],"gap_severity":"high","remediation_action_types":["mapping_review","operating_remediation"],"remediation_routing":{"mapping_review":["Conduct Risk Officer"],"operating_remediation":["Complaints Manager","Conduct Risk Officer"]},"escalation_required":true,"escalation_roles":["Conduct Risk Officer","Head of Compliance"]},
+    {"case_id":"CON-012","coverage_state":"partial","covered_element_ids":["OEL-CON-MAINTAIN-001"],"uncovered_element_ids":["OEL-CON-ESTABLISH-001"],"evidence_condition":"missing_operating_evidence","gap_types":["operating_evidence_missing","partial_coverage"],"gap_severity":"medium","remediation_action_types":["evidence_request","mapping_review"],"remediation_routing":{"evidence_request":["Conduct Risk Officer"],"mapping_review":["Conduct Risk Officer"]},"escalation_required":false,"escalation_roles":[]}
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "obligation_id": "OBL-CONDUCT-0001",
+  "record_type": "candidate_obligation",
+  "lifecycle_status": "generated_candidate",
+  "source": {
+    "source_pack_id": "SA-REG-SOURCE-PACK-001",
+    "source_pack_version": "1.0",
+    "source_id": "SA-CONDUCT-SP-003",
+    "source_title": "Amendment of the General Code of Conduct for Authorised FSPs and Representatives, 2020",
+    "source_status": "in_force_with_staged_commencement",
+    "instrument_type": "amendment_notice",
+    "document_sha256": "0ba264a18f2e4659c1af10ddaebfba1433c82d26ec13554bc3f92c6cd51f8d1d",
+    "hash_verified": true,
+    "status_verified_at": "2026-08-09",
+    "locator": {
+      "locator_text": "Schedule A, paragraph 12, inserted section 17(1)",
+      "page_label": "Schedule A - complaints management framework",
+      "section": "17(1)",
+      "clause": null,
+      "paragraph": "12",
+      "quote": "A provider must establish and maintain an adequate complaints management framework."
+    }
+  },
+  "source_gate": {
+    "manifest_candidate_statement_extraction": "allowed_from_amendment_text_with_commencement_locator",
+    "manifest_binding_obligation_extraction": "allowed_with_human_review_and_staged_date_control",
+    "record_use": "binding_candidate",
+    "gate_passed": true,
+    "gate_reason": "The source pack permits amendment-specific candidate obligations when the staged commencement table and human review are preserved."
+  },
+  "classification": {
+    "normative_strength": "binding_candidate",
+    "legal_effect": "in_force_staged",
+    "source_use_disposition": "binding_candidate",
+    "effective_from": "2021-06-26",
+    "transition_end": null,
+    "classification_rationale": "The amendment is an in-force Gazette notice. The example uses a provision subject to the notice's staged commencement control and remains a candidate until reviewed."
+  },
+  "obligation": {
+    "atomic": true,
+    "actor": "authorised financial services provider",
+    "modality": "must",
+    "action": "establish and maintain",
+    "object_or_outcome": "an adequate complaints management framework",
+    "trigger_conditions": [
+      "the institution renders regulated financial services as an authorised provider"
+    ],
+    "timing": {
+      "type": "continuous",
+      "value": "while the regulated activity is performed",
+      "source_supported": true
+    },
+    "exceptions_and_dependencies": [
+      "provision-level commencement must be confirmed from the notice's staged commencement table",
+      "the synthetic institution's assumed licence and activity scope require human confirmation"
+    ],
+    "evidence_or_reporting_requirements": [
+      "documented complaints management framework",
+      "operating records showing that the framework is maintained"
+    ],
+    "atomic_summary": "An authorised provider must establish and maintain an adequate complaints management framework.",
+    "interpretation_notes": [
+      "The record does not conclude that the framework is adequate or operating effectively.",
+      "The evidence items are candidate assurance needs and do not extend the source obligation."
+    ],
+    "support_status": "fully_supported",
+    "unsupported_extension_detected": false
+  },
+  "applicability": {
+    "profile_id": "SA-IWM-SYN-001",
+    "profile_version": "1.0",
+    "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+    "status": "applicable_candidate",
+    "facts_used": [
+      {
+        "fact_path": "institution.services[0]",
+        "fact_value": "investment advice"
+      },
+      {
+        "fact_path": "institution.services[4]",
+        "fact_value": "client servicing and complaints handling"
+      },
+      {
+        "fact_path": "regulatory_assumptions.FSCA",
+        "fact_value": "assumed relevant authorisations and permissions"
+      }
+    ],
+    "missing_facts": [],
+    "assumptions": [
+      "The synthetic institution is treated as an authorised provider for evaluation only."
+    ],
+    "rationale": "The synthetic profile includes advice and complaints handling and expressly assumes the relevant FSCA permissions, making applicability suitable for a candidate record rather than a legal conclusion.",
+    "human_confirmation_required": true
+  },
+  "change": {
+    "change_type": "amended",
+    "previous_source_id": "SA-CONDUCT-SP-002",
+    "previous_obligation_id": null,
+    "change_summary": "Government Notice 706 of 2020 inserted a structured complaints-management framework into the General Code amendment chain."
+  },
+  "operating_impact": {
+    "impact_status": "candidate",
+    "affected_process_ids": [
+      "P-CON-005",
+      "P-CON-006"
+    ],
+    "affected_control_ids": [
+      "C-CON-006",
+      "C-CON-007"
+    ],
+    "affected_roles": [
+      "Conduct Risk Officer",
+      "Business or Control Owner"
+    ],
+    "affected_artifacts": [
+      "policy",
+      "procedure",
+      "management_information",
+      "control_evidence"
+    ],
+    "rationale": "The candidate obligation concerns the design and maintenance of the complaints framework and related customer-outcomes oversight."
+  },
+  "routing": {
+    "proposed_owner_role": "Conduct Risk Officer",
+    "required_reviewer_roles": [
+      "Head of Compliance",
+      "Business or Control Owner"
+    ],
+    "escalation_required": false,
+    "escalation_reason": null
+  },
+  "assessment": {
+    "outcome": "candidate_binding_obligation",
+    "confidence": 0.88,
+    "limitations": [
+      "This is a synthetic applicability assessment.",
+      "The complete current General Code amendment chain has not been represented as a consolidated source.",
+      "A qualified reviewer must confirm provision-level commencement and applicability."
+    ],
+    "next_action": "Route to the Head of Compliance and Conduct Risk Officer for source, commencement and applicability approval."
+  },
+  "generation": {
+    "workflow_version": "regulatory-change-v1.0",
+    "model_id": "synthetic-example",
+    "prompt_version": "not-yet-baselined",
+    "generated_at": "2026-08-09T19:30:00+02:00",
+    "run_id": "schema-example-binding-001"
+  },
+  "human_review": {
+    "required": true,
+    "status": "pending",
+    "reviewer_role": null,
+    "reviewer_id": null,
+    "decision_rationale": null,
+    "reviewed_at": null
+  },
+  "audit": {
+    "created_at": "2026-08-09T19:30:00+02:00",
+    "updated_at": "2026-08-09T19:30:00+02:00",
+    "created_by": "ai_assisted",
+    "change_log": [
+      {
+        "timestamp": "2026-08-09T19:30:00+02:00",
+        "actor": "schema-example-builder",
+        "change": "Created synthetic candidate obligation example."
+      }
+    ]
+  }
+}

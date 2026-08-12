@@ -1,0 +1,19 @@
+{
+  "name": "evidence_observation_stage_v1_5",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["case_id", "observations", "rationale"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "observations": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["evidence_id", "requirement_id", "observed_state", "rationale"], "properties": {
+        "evidence_id": {"type": "string"},
+        "requirement_id": {"type": "string"},
+        "observed_state": {"type": "string", "enum": ["present_complete", "present_deficient", "missing", "adverse_indicator_present", "not_assessable"]},
+        "rationale": {"type": "string"}
+      }}},
+      "rationale": {"type": "string"}
+    }
+  }
+}

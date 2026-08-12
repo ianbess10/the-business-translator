@@ -1,0 +1,38 @@
+{
+  "comparison_id": "evidence-gated-v1.6-092a9ca7-1dd9-4ca0-ad21-1a6ee201c404-regression-comparison",
+  "workflow_version": "1.6",
+  "dataset_version": "1.1",
+  "evidence_boundary": "frozen_regression_not_independent_validation",
+  "end_to_end_exact": {
+    "correct": 23,
+    "total": 24,
+    "accuracy": 0.9583
+  },
+  "quarantine_count": 0,
+  "acceptance_gates": {
+    "complete_terminal_coverage": {
+      "passed": true
+    },
+    "no_quarantined_cases": {
+      "passed": true,
+      "case_ids": []
+    },
+    "exact_dual_axis_authority": {
+      "passed": true,
+      "failure_case_ids": []
+    },
+    "all_mandatory_escalations_detected": {
+      "passed": true,
+      "false_negative": 0
+    },
+    "zero_unnecessary_escalations": {
+      "passed": true,
+      "false_positive": 0
+    },
+    "all_decision_fields_exact": {
+      "passed": false,
+      "exact_case_count": 23
+    }
+  },
+  "all_acceptance_gates_passed": false
+}

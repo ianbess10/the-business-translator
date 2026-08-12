@@ -1,0 +1,14 @@
+{
+  "name": "evidence_stage_v1_4",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["case_id", "evidence_assessment", "rationale"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "evidence_assessment": {"type": "string", "enum": ["sufficient", "missing_operating_evidence", "design_deficiency", "adverse_operating_evidence", "insufficient_to_assess", "not_assessed_no_current_control"]},
+      "rationale": {"type": "string"}
+    }
+  }
+}

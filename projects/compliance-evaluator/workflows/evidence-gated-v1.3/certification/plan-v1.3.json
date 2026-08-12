@@ -1,0 +1,117 @@
+{
+  "certification_plan_id": "SA-REG-EVIDENCE-GATED-V1.3-CONTRACT-CERTIFICATION-PLAN-001",
+  "version": "1.3",
+  "purpose": "provider_contract_certification_not_model_quality_evaluation",
+  "benchmark_cases_used": false,
+  "evaluator_labels_used": false,
+  "stages": [
+    {
+      "stage": "source_support",
+      "case_id": "CERT-SOURCE-001",
+      "prompt_path": "prompts/source-support-stage-v1.3.md",
+      "schema_path": "schemas/source-support-stage.schema.json",
+      "input": {
+        "case_id": "CERT-SOURCE-001",
+        "source_records": [
+          {
+            "source_id": "CERT-SRC-001",
+            "status": "in_force",
+            "permitted_use": "generic contract certification only"
+          }
+        ],
+        "source_excerpt_or_fact": "A generic approved policy requires an annual review.",
+        "institution_facts": ["The generic institution performs the activity."],
+        "missing_facts": [],
+        "candidate_statement": "The generic institution must perform an annual review.",
+        "proposal_under_test": {
+          "source_use_disposition": "binding_candidate",
+          "obligation_outcome": "candidate_binding_obligation",
+          "applicability_status": "applicable_candidate"
+        },
+        "review_question": "Can the exact transport schema be accepted and populated?"
+      },
+      "expected_output": {
+        "case_id": "CERT-SOURCE-001",
+        "proposal_disposition": "accept",
+        "source_classification": "binding_candidate",
+        "statement_support": "exact_supported",
+        "legal_readiness": "human_review_required",
+        "applicability_assessment": "applicable",
+        "material_missing_fact_types": [],
+        "source_conflict_present": false,
+        "unsupported_elements": [],
+        "rationale": "Generic non-benchmark provider contract certification."
+      }
+    },
+    {
+      "stage": "mapping",
+      "case_id": "CERT-MAPPING-001",
+      "prompt_path": "prompts/mapping-stage-v1.3.md",
+      "schema_path": "schemas/mapping-stage.schema.json",
+      "input": {
+        "case_id": "CERT-MAPPING-001",
+        "approved_obligation": {
+          "obligation_id": "CERT-OBL-001",
+          "atomic_summary": "Perform an annual generic review.",
+          "human_review_status": "accepted"
+        },
+        "proposed_mapping": {
+          "control_ids": ["C-CERT-001"]
+        },
+        "relevant_control_catalogue": [
+          {
+            "control_id": "C-CERT-001",
+            "name": "Generic annual review",
+            "owner_role": "Generic Control Owner",
+            "control_type": "preventive"
+          }
+        ]
+      },
+      "expected_output": {
+        "case_id": "CERT-MAPPING-001",
+        "proposal_disposition": "accept",
+        "current_mapping_control_ids": ["C-CERT-001"],
+        "candidate_additional_control_ids": [],
+        "mapping_completeness": "complete",
+        "uncovered_obligation_elements": [],
+        "rationale": "Generic non-benchmark provider contract certification."
+      }
+    },
+    {
+      "stage": "evidence",
+      "case_id": "CERT-EVIDENCE-001",
+      "prompt_path": "prompts/evidence-stage-v1.3.md",
+      "schema_path": "schemas/evidence-stage.schema.json",
+      "input": {
+        "case_id": "CERT-EVIDENCE-001",
+        "approved_obligation": {
+          "obligation_id": "CERT-OBL-001",
+          "atomic_summary": "Perform an annual generic review."
+        },
+        "validated_current_mapping": {
+          "control_ids": ["C-CERT-001"],
+          "mapping_completeness": "complete",
+          "uncovered_obligation_elements": []
+        },
+        "current_control_catalogue": [
+          {
+            "control_id": "C-CERT-001",
+            "name": "Generic annual review",
+            "owner_role": "Generic Control Owner",
+            "control_type": "preventive"
+          }
+        ],
+        "presented_evidence": ["Signed generic annual review record."],
+        "review_question": "Can the exact transport schema be accepted and populated?"
+      },
+      "expected_output": {
+        "case_id": "CERT-EVIDENCE-001",
+        "evidence_assessment": "sufficient",
+        "design_deficiency_evidence_present": false,
+        "adverse_indicator_present": false,
+        "severity_recommendation": "not_applicable",
+        "rationale": "Generic non-benchmark provider contract certification."
+      }
+    }
+  ]
+}

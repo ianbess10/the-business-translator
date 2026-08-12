@@ -1,0 +1,32 @@
+{
+  "certification_plan_id": "evidence-gated-v1.4-changed-contract-certification",
+  "purpose": "provider_contract_certification_not_model_quality_evaluation",
+  "benchmark_cases_used": false,
+  "evaluator_labels_used": false,
+  "planned_call_count": 1,
+  "inherited_contracts": [
+    {"stage": "source_support", "certification_version": "1.3", "requires_exact_schema_prompt_model_endpoint_hash_match": true},
+    {"stage": "mapping", "certification_version": "1.3", "requires_exact_schema_prompt_model_endpoint_hash_match": true}
+  ],
+  "stages": [
+    {
+      "stage": "evidence",
+      "case_id": "CERT-EVIDENCE-V14-001",
+      "prompt_path": "prompts/evidence-stage-v1.4.md",
+      "schema_path": "schemas/evidence-stage.schema.json",
+      "input": {
+        "case_id": "CERT-EVIDENCE-V14-001",
+        "approved_obligation": {"obligation_id": "CERT-OBL-V14-001", "atomic_summary": "Perform a generic periodic review."},
+        "validated_current_mapping": {"control_ids": ["C-CERT-V14-001"], "mapping_completeness": "complete", "uncovered_obligation_elements": []},
+        "current_control_catalogue": [{"control_id": "C-CERT-V14-001", "name": "Generic periodic review", "owner_role": "Generic Control Owner", "control_type": "preventive"}],
+        "presented_evidence": ["Signed generic periodic review record."],
+        "review_question": "Can the exact canonical evidence transport contract be accepted and populated?"
+      },
+      "expected_output": {
+        "case_id": "CERT-EVIDENCE-V14-001",
+        "evidence_assessment": "sufficient",
+        "rationale": "Generic non-benchmark provider contract certification."
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "run_id": "evidence-gated-v1.2-a9972172-5cb7-4d7f-89ad-0011586d37db",
+  "status": "failed",
+  "started_at": "2026-08-10T20:12:04.425478Z",
+  "completed_at": "2026-08-10T20:12:06.079359Z",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "workflow_id": "SA-REG-EVIDENCE-GATED-001",
+  "workflow_version": "1.2",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "case_count": 24,
+  "expected_api_call_count": 32,
+  "completed_api_call_count": 0,
+  "completed_case_count": 0,
+  "tuning_after_observation": false,
+  "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for response_format 'source_support_stage_v1_2': In context=(), 'allOf' is not permitted.\", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}"
+}

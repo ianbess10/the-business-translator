@@ -1,0 +1,40 @@
+{
+  "decision_id": "SA-REG-EVIDENCE-GATED-V1.1-DECISION-001",
+  "version": "1.1",
+  "status": "selected_for_implementation",
+  "decided_at": "2026-08-10",
+  "based_on_analysis_id": "SA-REG-EVIDENCE-GATED-V1.0-FAILURE-ANALYSIS-001",
+  "based_on_run_id": "evidence-gated-v1.0-f9e573a2-ca62-44b0-a6f5-89a9fd70c8fa",
+  "decision": "implement_targeted_evidence_gated_v1.1",
+  "target_workflow_version": "1.1",
+  "selected_changes": [
+    "approved_obligation_authority_boundary",
+    "orthogonal_mapping_and_evidence_decisions",
+    "partial_coverage_precedence"
+  ],
+  "controls_retained": [
+    "authoritative_source_transition",
+    "approved_obligation_assurance_gate",
+    "catalogue_owner_resolution",
+    "evidence_decision_taxonomy",
+    "mandatory_escalation_triggers",
+    "cross_field_reconciliation",
+    "human_review_boundary",
+    "runner_label_isolation"
+  ],
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "workflow_v1_modified": false,
+  "workflow_v1_rerun": false,
+  "v1_1_implemented": false,
+  "v1_1_frozen": false,
+  "v1_1_executed": false,
+  "synthetic_regression_evidence": true,
+  "independent_validation": false,
+  "production_performance": false,
+  "decision_record_sha256": "28acbd2ffa47e029addb2f13448c19a11bfdc424fb259daeddc97365fa46bfde",
+  "failure_analysis_sha256": "38d21d41692451acb39df5fe76c978abccc8f7cecac323add20645b3650ba896",
+  "notes": "This authorises a separately versioned implementation only. It does not authorise modifying or rerunning v1.0."
+}

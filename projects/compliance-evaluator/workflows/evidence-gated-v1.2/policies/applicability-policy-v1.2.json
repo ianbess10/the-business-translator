@@ -1,0 +1,24 @@
+{
+  "policy_id": "SA-REG-APPLICABILITY-001",
+  "version": "1.2",
+  "approved_obligation_authority": {
+    "rule_id": "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+    "allowed_source_use_dispositions": ["binding_candidate"],
+    "allowed_obligation_outcomes": ["candidate_binding_obligation"],
+    "allowed_applicability_statuses": ["applicable_candidate", "applicability_uncertain", "out_of_scope"],
+    "rule": "Use the accepted approved-obligation record; do not reopen source, obligation or applicability in assurance."
+  },
+  "fact_based_model_assessed": {
+    "rule_id": "APP-RULE-FACT-BASED",
+    "fallback_rule_id": "APP-RULE-MODEL-FALLBACK",
+    "out_of_scope_terms": ["explicitly excluded", "out of scope", "does not provide", "not offered"],
+    "out_of_scope_status": "out_of_scope",
+    "missing_fact_status": "applicability_uncertain",
+    "supported_fact_status": "applicable_candidate",
+    "rule": "Use institution facts and missing facts independently from source authority and legal readiness."
+  },
+  "fixed_modes": {
+    "fixed_not_assessed": {"rule_id": "APP-RULE-FIXED-NOT-ASSESSED", "status": "not_assessed"},
+    "fixed_uncertain": {"rule_id": "APP-RULE-FIXED-UNCERTAIN", "status": "applicability_uncertain"}
+  }
+}

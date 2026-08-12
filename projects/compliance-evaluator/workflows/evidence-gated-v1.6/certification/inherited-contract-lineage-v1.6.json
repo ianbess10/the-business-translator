@@ -1,0 +1,42 @@
+{
+  "lineage_id": "SA-REG-EVIDENCE-GATED-V1.6-CONTRACT-LINEAGE-001",
+  "workflow_version": "1.6",
+  "status": "accepted_no_new_provider_call_required",
+  "reviewed_at": "2026-08-12",
+  "provider": "openai",
+  "endpoint": "chat_completions",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "changed_provider_contract_count": 0,
+  "new_certification_call_count": 0,
+  "contracts": [
+    {
+      "stage": "source_support",
+      "certification_source": "workflows/evidence-gated-v1.3/certification/contract-certification-v1.3.json",
+      "certification_source_sha256": "7254e61658675a04f35c7098d7ebe425552fb6a477db85a92d5abd5515827848",
+      "prompt_sha256": "2fde7e07a4e359576b68135db894e7de89f1b193ff1370d90dbf3a5958bc682f",
+      "schema_sha256": "c9db66d1e5731ab048731e4fd2ebc6dd9a049ae9d574d45f2dacb1e6404c6198",
+      "provider_contract_changed": false,
+      "inheritance_accepted": true
+    },
+    {
+      "stage": "evidence",
+      "certification_source": "workflows/evidence-gated-v1.5/certification/contract-certification-v1.5.json",
+      "certification_source_sha256": "d0c86a70298c9881022fb437b0f57d73c4b7b9114d78c7b808ece98f408f6dd3",
+      "prompt_sha256": "c78270d49da6d33e6bc4d21e98df34651ee6a66928a45078e099995208843452",
+      "schema_sha256": "8bf6ac0ccbe4e5a2e0a8b6d0d3c46bad1756ba5e013693b38139a73a8922fba4",
+      "provider_contract_changed": false,
+      "inheritance_accepted": true
+    }
+  ],
+  "shared_request_components": {
+    "provider_contract_module_sha256": "36660bc29cbbc069caa1b12e9ea22fbd0338f7352a24acc602b793a8e96721ea",
+    "execution_contract_module_sha256": "88c4f51412232d0629a6d8f8b63858e81c950b724a45bddd998f98b57820847e",
+    "request_function_source": "workflows/evidence-gated-v1.4/run_regression.py",
+    "request_function_source_sha256": "d375dac6f459cc024601cd05c991837f4bf1ca02c8239d3052ab316d362b3fd4"
+  },
+  "decision": "No provider-facing schema, prompt, endpoint, model, temperature or request function changed. New live certification would duplicate an already certified contract and is therefore not required.",
+  "benchmark_cases_used": false,
+  "evaluator_labels_used": false,
+  "regression_executed": false
+}

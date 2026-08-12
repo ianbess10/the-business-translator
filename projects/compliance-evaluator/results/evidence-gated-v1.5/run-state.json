@@ -1,0 +1,23 @@
+{
+  "run_id": "evidence-gated-v1.5-122b99a0-e4eb-4d88-b48b-64f0317f677f",
+  "status": "completed",
+  "started_at": "2026-08-11T20:36:21.514881Z",
+  "completed_at": "2026-08-11T20:37:04.935772Z",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "workflow_id": "SA-REG-EVIDENCE-GATED-001",
+  "workflow_version": "1.5",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "case_count": 24,
+  "maximum_api_call_count": 24,
+  "requested_api_call_count": 24,
+  "semantically_valid_api_call_count": 24,
+  "completed_case_count": 24,
+  "quarantined_case_count": 0,
+  "active_case_id": null,
+  "active_stage": null,
+  "tuning_after_observation": false,
+  "retry_count": 0,
+  "error": null
+}

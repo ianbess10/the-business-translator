@@ -1,0 +1,12 @@
+{
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.2",
+  "status": "approved_synthetic_authority",
+  "base_input_version": "1.0",
+  "authority_sha256": "9d356f25d15d74d4291a8e2ae16192223bdeaa94297c92ab268326badbdd2b9e",
+  "adjudication_sha256": "07f6b068ca91581b13c7e8901bf83bf492f36b28abe0ff6496e6e35c56f0c266",
+  "entered_case_count": 8,
+  "entered_case_ids": ["CON-005", "CON-006", "CON-007", "CON-008", "CON-009", "CON-010", "CON-011", "CON-012"],
+  "runtime_authority": false,
+  "retrospective_scoring_permitted": false
+}

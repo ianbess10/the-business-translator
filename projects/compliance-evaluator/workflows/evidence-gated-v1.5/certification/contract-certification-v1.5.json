@@ -1,0 +1,35 @@
+{
+  "certification_id": "v1.5-50088e18-1167-4401-b8dc-637e999cc88c",
+  "status": "completed",
+  "started_at": "2026-08-11T19:46:26.357042Z",
+  "completed_at": "2026-08-11T19:46:28.049901Z",
+  "purpose": "provider_contract_certification_not_model_quality_evaluation",
+  "provider": "openai",
+  "endpoint": "chat_completions",
+  "model_requested": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "planned_call_count": 1,
+  "completed_call_count": 1,
+  "benchmark_cases_used": false,
+  "evaluator_labels_used": false,
+  "model_quality_scored": false,
+  "records": [
+    {
+      "stage": "evidence",
+      "case_id": "CERT-EVIDENCE-V15-001",
+      "benchmark_case": false,
+      "response_format_name": "evidence_observation_stage_v1_5",
+      "schema_sha256": "8bf6ac0ccbe4e5a2e0a8b6d0d3c46bad1756ba5e013693b38139a73a8922fba4",
+      "prompt_sha256": "c78270d49da6d33e6bc4d21e98df34651ee6a66928a45078e099995208843452",
+      "response_id": "chatcmpl-EBmiZ3BsObpN3dc8HrGSYmP63iON3",
+      "response_model": "gpt-4o-mini-2024-07-18",
+      "finish_reason": "stop",
+      "provider_schema_accepted": true,
+      "transport_output_valid": true,
+      "semantic_output_valid": true,
+      "latency_ms": 1667,
+      "certified_at": "2026-08-11T19:46:28.049862Z"
+    }
+  ],
+  "error": null
+}

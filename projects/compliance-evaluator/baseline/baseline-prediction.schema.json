@@ -1,0 +1,172 @@
+{
+  "name": "regulatory_intelligence_baseline_prediction",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "case_id",
+      "source_use_disposition",
+      "obligation_outcome",
+      "applicability_status",
+      "assurance_gate",
+      "mapping_status",
+      "control_mappings",
+      "assurance_outcome",
+      "gap_types",
+      "gap_severity",
+      "remediation_action_types",
+      "escalation_required",
+      "escalation_roles",
+      "human_review_required",
+      "compliance_conclusion",
+      "rationale"
+    ],
+    "properties": {
+      "case_id": {
+        "type": "string",
+        "pattern": "^(AML|CON)-[0-9]{3}$"
+      },
+      "source_use_disposition": {
+        "type": "string",
+        "enum": [
+          "binding_candidate",
+          "guidance_only",
+          "final_change_event",
+          "draft_watchlist",
+          "historical_only",
+          "strategy_context",
+          "blocked"
+        ]
+      },
+      "obligation_outcome": {
+        "type": "string",
+        "enum": [
+          "candidate_binding_obligation",
+          "guidance_context",
+          "final_change_pending_commencement",
+          "draft_or_watchlist",
+          "strategy_context",
+          "superseded",
+          "applicability_uncertain",
+          "out_of_scope",
+          "source_conflict",
+          "unsupported_obligation",
+          "blocked_source"
+        ]
+      },
+      "applicability_status": {
+        "type": "string",
+        "enum": [
+          "applicable_candidate",
+          "not_applicable_candidate",
+          "applicability_uncertain",
+          "out_of_scope",
+          "not_assessed"
+        ]
+      },
+      "assurance_gate": {
+        "type": "string",
+        "enum": ["not_entered", "entered"]
+      },
+      "mapping_status": {
+        "type": "string",
+        "enum": [
+          "not_applicable",
+          "mapped",
+          "partially_mapped",
+          "no_suitable_control_identified"
+        ]
+      },
+      "control_mappings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["control_id", "owner_role"],
+          "properties": {
+            "control_id": {
+              "type": "string",
+              "pattern": "^C-[A-Z]+-[0-9]{3}$"
+            },
+            "owner_role": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      "assurance_outcome": {
+        "type": "string",
+        "enum": [
+          "not_applicable",
+          "mapped_and_evidenced",
+          "insufficient_evidence",
+          "potential_control_gap"
+        ]
+      },
+      "gap_types": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "no_control",
+            "partial_coverage",
+            "control_design",
+            "operating_evidence_missing",
+            "operating_exception",
+            "ownership",
+            "evidence_integrity",
+            "independent_testing"
+          ]
+        }
+      },
+      "gap_severity": {
+        "type": "string",
+        "enum": [
+          "not_applicable",
+          "unassessed",
+          "low",
+          "medium",
+          "high",
+          "critical"
+        ]
+      },
+      "remediation_action_types": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "evidence_request",
+            "mapping_review",
+            "control_design_change",
+            "operating_remediation",
+            "ownership_confirmation",
+            "independent_testing"
+          ]
+        }
+      },
+      "escalation_required": {
+        "type": "boolean"
+      },
+      "escalation_roles": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "human_review_required": {
+        "type": "boolean"
+      },
+      "compliance_conclusion": {
+        "type": "string",
+        "enum": ["not_determined"]
+      },
+      "rationale": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

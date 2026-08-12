@@ -1,0 +1,16 @@
+{
+  "schema_id": "obligation-record",
+  "version": "1.0",
+  "status": "frozen_for_control_and_evidence_schema_design",
+  "schema_filename": "obligation-record.schema.json",
+  "schema_sha256": "94866c50e1e9bec75cdaa175ba794426637dcf466705d40e8f5e1685f46f7fe6",
+  "frozen_at": "2026-08-09",
+  "source_pack_id": "SA-REG-SOURCE-PACK-001",
+  "source_pack_version": "1.0",
+  "institution_profile_id": "SA-IWM-SYN-001",
+  "institution_profile_version": "1.0",
+  "valid_example_count": 3,
+  "prohibited_state_test_count": 6,
+  "legal_reliance": false,
+  "notes": "Do not edit the frozen v1.0 schema in place. Create a new version when fields, controlled vocabularies, source gates or decision rules change."
+}

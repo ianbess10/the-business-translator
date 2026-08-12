@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "obligation_id": "OBL-AML-0002",
+  "record_type": "candidate_obligation",
+  "lifecycle_status": "generated_candidate",
+  "source": {
+    "source_pack_id": "SA-REG-SOURCE-PACK-001",
+    "source_pack_version": "1.0",
+    "source_id": "SA-AML-SP-W01",
+    "source_title": "Draft Directive 12 on the submission of risk management and compliance programmes",
+    "source_status": "draft_consultation",
+    "instrument_type": "draft_directive",
+    "document_sha256": "844cbdabb47b3c02d8337d06a22ce069a7d7971774ed722fbd9e53241153f13a",
+    "hash_verified": true,
+    "status_verified_at": "2026-08-09",
+    "locator": {
+      "locator_text": "Draft Directive 12, paragraphs 4-6, page 1 of 2",
+      "page_label": "Page 1 of 2 - FOR CONSULTATION PURPOSES ONLY",
+      "section": null,
+      "clause": null,
+      "paragraph": "4-6",
+      "quote": "Every accountable institution subject to this Directive must make its RMCP available annually."
+    }
+  },
+  "source_gate": {
+    "manifest_candidate_statement_extraction": "allowed_as_proposed_requirement_only",
+    "manifest_binding_obligation_extraction": "blocked",
+    "record_use": "draft_watchlist",
+    "gate_passed": true,
+    "gate_reason": "The source pack admits the draft for watchlist and readiness analysis only."
+  },
+  "classification": {
+    "normative_strength": "proposed",
+    "legal_effect": "not_in_force_draft",
+    "source_use_disposition": "draft_or_watchlist",
+    "effective_from": null,
+    "transition_end": null,
+    "classification_rationale": "The instrument is visibly marked for consultation purposes only and no final directive is recorded in the frozen pack."
+  },
+  "obligation": {
+    "atomic": true,
+    "actor": "specified accountable institution",
+    "modality": "must",
+    "action": "make available",
+    "object_or_outcome": "a copy of the documentation describing its RMCP",
+    "trigger_conditions": [
+      "the institution is within a Schedule 1 item listed in the draft"
+    ],
+    "timing": {
+      "type": "periodic",
+      "value": "annually under the proposed timetable",
+      "source_supported": true
+    },
+    "exceptions_and_dependencies": [
+      "the draft must be finalised before any binding obligation can arise",
+      "the institution's exact Schedule 1 item must be confirmed",
+      "the consultation notice's weekday and date conflict requires human resolution"
+    ],
+    "evidence_or_reporting_requirements": [
+      "readiness assessment only",
+      "monitoring record for finalisation, withdrawal or replacement"
+    ],
+    "atomic_summary": "The draft proposes annual RMCP submission for specified accountable institutions.",
+    "interpretation_notes": [
+      "Mandatory language inside a draft does not make the proposal legally effective.",
+      "No implementation deadline may be assigned from this record."
+    ],
+    "support_status": "fully_supported",
+    "unsupported_extension_detected": false
+  },
+  "applicability": {
+    "profile_id": "SA-IWM-SYN-001",
+    "profile_version": "1.0",
+    "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+    "status": "applicability_uncertain",
+    "facts_used": [
+      {
+        "fact_path": "regulatory_assumptions.FIC",
+        "fact_value": "assumed applicable accountable-institution category"
+      }
+    ],
+    "missing_facts": [
+      "exact FIC Act Schedule 1 item for the synthetic institution"
+    ],
+    "assumptions": [
+      "The profile assumption is sufficient for readiness analysis but not final applicability."
+    ],
+    "rationale": "The draft lists selected Schedule 1 items, while the frozen profile intentionally does not decide the institution's exact item.",
+    "human_confirmation_required": true
+  },
+  "change": {
+    "change_type": "new",
+    "previous_source_id": null,
+    "previous_obligation_id": null,
+    "change_summary": "The consultation draft proposes a new annual RMCP submission mechanism for specified accountable institutions."
+  },
+  "operating_impact": {
+    "impact_status": "candidate",
+    "affected_process_ids": [
+      "P-REG-001",
+      "P-REG-002",
+      "P-AML-001"
+    ],
+    "affected_control_ids": [
+      "C-REG-001",
+      "C-REG-002",
+      "C-AML-001"
+    ],
+    "affected_roles": [
+      "Regulatory Change Lead",
+      "AML Compliance Officer"
+    ],
+    "affected_artifacts": [
+      "RMCP",
+      "regulatory_submission",
+      "control_evidence"
+    ],
+    "rationale": "If finalised and applicable, the proposal could create an annual submission workflow and evidence requirement."
+  },
+  "routing": {
+    "proposed_owner_role": "Regulatory Change Lead",
+    "required_reviewer_roles": [
+      "AML Compliance Officer",
+      "Legal Counsel"
+    ],
+    "escalation_required": true,
+    "escalation_reason": "The source is a draft, exact applicability is unresolved and the consultation notice contains a weekday/date conflict."
+  },
+  "assessment": {
+    "outcome": "draft_or_watchlist",
+    "confidence": 0.99,
+    "limitations": [
+      "The proposed requirement is not legally effective.",
+      "The synthetic institution's exact Schedule 1 item is not supplied.",
+      "The consultation deadline source text contains an unresolved weekday/date conflict."
+    ],
+    "next_action": "Monitor the consultation outcome and route any final instrument through a new source-pack version before obligation extraction."
+  },
+  "generation": {
+    "workflow_version": "regulatory-change-v1.0",
+    "model_id": "synthetic-example",
+    "prompt_version": "not-yet-baselined",
+    "generated_at": "2026-08-09T19:32:00+02:00",
+    "run_id": "schema-example-draft-001"
+  },
+  "human_review": {
+    "required": true,
+    "status": "pending",
+    "reviewer_role": null,
+    "reviewer_id": null,
+    "decision_rationale": null,
+    "reviewed_at": null
+  },
+  "audit": {
+    "created_at": "2026-08-09T19:32:00+02:00",
+    "updated_at": "2026-08-09T19:32:00+02:00",
+    "created_by": "ai_assisted",
+    "change_log": [
+      {
+        "timestamp": "2026-08-09T19:32:00+02:00",
+        "actor": "schema-example-builder",
+        "change": "Created synthetic draft-watchlist example."
+      }
+    ]
+  }
+}

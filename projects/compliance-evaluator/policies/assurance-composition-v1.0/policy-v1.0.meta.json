@@ -1,0 +1,39 @@
+{
+  "policy_id": "SA-REG-ASSURANCE-COMPOSITION-001",
+  "version": "1.0",
+  "status": "approved_synthetic",
+  "effective_from": "2026-08-11",
+  "approval_record_id": "SA-REG-ASSURANCE-COMPOSITION-APPROVAL-001",
+  "based_on_decision_id": "SA-REG-EVIDENCE-GATED-V1.6-DECISION-001",
+  "based_on_adjudication_id": "SA-REG-COVERAGE-LABEL-ADJUDICATION-001",
+  "coverage_state_count": 4,
+  "evidence_condition_count": 5,
+  "escalation_trigger_count": 2,
+  "boundary_fixture_count": 9,
+  "boundary_fixture_pass_count": 9,
+  "schema_valid": true,
+  "profile_roles_valid": true,
+  "generality_scan_passed": true,
+  "provider_calls_made": 0,
+  "benchmark_cases_executed": 0,
+  "v1_6_implemented": false,
+  "v1_6_provider_certified": false,
+  "v1_6_frozen": false,
+  "v1_6_executed": false,
+  "v1_6_scored": false,
+  "artefact_sha256": {
+    "README.md": "a577987ce454d34cad82260b1e3aa74af8308da324cad0d3676f2958706a3502",
+    "policy.json": "afc8beae98c3aae5c4ca668cd8ccdd375be95e5c0346e8cf2783614f1e3719d8",
+    "policy.schema.json": "aef2a87009621e756be111a48e949964ad633e653a5cba211fda1e8d56cfa3c8",
+    "boundary-fixtures.json": "66179ae2de11239d4f7e03ae7a7d230aa012f77b99a80102b98045e28dc02787",
+    "approval-record.json": "6985e1823722e1d4c12dc92ef6c9d56025b297cc798b3cb6447a77dd526536d5"
+  },
+  "source_authority_sha256": {
+    "v1.6-decision.md": "c9602b4eaabf5c66682512e7c1e76500a6b3b91d63820816598954f196289053",
+    "adjudication.json": "6a4720ba063651150bbb7e69a350464a4a1a712b2e6361008a2fa3f01b8d62cf",
+    "label-authority-overlay.json": "81b4e533afb92e234ae6a3e6121b62dc7ecabc99c1951121cb176319d81340fe",
+    "escalation-policy-v1.2.json": "4ef86430a1fb62cfd71fb77cab63c01df26c0157d79b33f8d929945fe70665ff",
+    "institution-profile.json": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4"
+  },
+  "notes": "Approved synthetic policy authority only. No v1.6 workflow implementation, provider call, regression execution or score exists."
+}

@@ -1,0 +1,439 @@
+#!/usr/bin/env python3
+"""Run the frozen Evidence-Gated Decision Pipeline once against input-only regression cases."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import os
+import sys
+import time
+import uuid
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+from jsonschema import Draft202012Validator
+from openai import OpenAI
+
+from pipeline import compose_final_decision
+
+
+WORKFLOW_DIR = Path(__file__).resolve().parent
+PROJECT_DIR = WORKFLOW_DIR.parents[1]
+DATASET_DIR = PROJECT_DIR / "datasets" / "baseline-v1.0"
+RESULTS_DIR = PROJECT_DIR / "results" / "evidence-gated-v1.0"
+META_PATH = WORKFLOW_DIR / "workflow-v1.0.meta.json"
+SOURCE_PACK_PATH = PROJECT_DIR / "source-packs" / "source-pack-v1.0" / "manifest.json"
+PROFILE_PATH = PROJECT_DIR / "profiles" / "synthetic-investment-wealth-institution-v1.0.json"
+FINAL_SCHEMA_PATH = PROJECT_DIR / "baseline" / "baseline-prediction.schema.json"
+INPUT_PATHS = (
+    DATASET_DIR / "inputs" / "aml-cft.json",
+    DATASET_DIR / "inputs" / "market-conduct.json",
+)
+
+
+def load_json(path: Path) -> Any:
+    with path.open(encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def write_json(path: Path, payload: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    with temporary.open("w", encoding="utf-8") as handle:
+        json.dump(payload, handle, indent=2, ensure_ascii=False)
+        handle.write("\n")
+    temporary.replace(path)
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(65536), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def utc_now() -> str:
+    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+
+
+def verify_frozen_artefacts(meta: dict[str, Any]) -> None:
+    mismatches: list[str] = []
+    for relative_path, expected_hash in meta["artefact_sha256"].items():
+        path = PROJECT_DIR / relative_path
+        if not path.exists():
+            mismatches.append(f"missing: {relative_path}")
+            continue
+        actual_hash = sha256_file(path)
+        if actual_hash != expected_hash:
+            mismatches.append(
+                f"{relative_path}: expected {expected_hash}, found {actual_hash}"
+            )
+    if mismatches:
+        raise RuntimeError("Frozen workflow verification failed:\n" + "\n".join(mismatches))
+    if meta["status"] != "frozen_pre_regression":
+        raise RuntimeError("Workflow metadata is not frozen for regression")
+    if meta["regression_run_count"] != 0:
+        raise RuntimeError("Workflow metadata does not represent the pre-regression state")
+
+
+def usage_payload(usage: Any) -> dict[str, int | None]:
+    if usage is None:
+        return {"prompt_tokens": None, "completion_tokens": None, "total_tokens": None}
+    return {
+        "prompt_tokens": getattr(usage, "prompt_tokens", None),
+        "completion_tokens": getattr(usage, "completion_tokens", None),
+        "total_tokens": getattr(usage, "total_tokens", None),
+    }
+
+
+def request_stage(
+    client: OpenAI,
+    model: str,
+    temperature: float,
+    prompt: str,
+    response_format: dict[str, Any],
+    payload: dict[str, Any],
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    started = time.monotonic()
+    response = client.chat.completions.create(
+        model=model,
+        temperature=temperature,
+        messages=[
+            {"role": "system", "content": prompt},
+            {
+                "role": "user",
+                "content": json.dumps(payload, ensure_ascii=False),
+            },
+        ],
+        response_format={"type": "json_schema", "json_schema": response_format},
+    )
+    message = response.choices[0].message
+    refusal = getattr(message, "refusal", None)
+    if refusal:
+        raise RuntimeError(f"Model refusal: {refusal}")
+    stage_output = json.loads((message.content or "").strip())
+    api_record = {
+        "response_id": response.id,
+        "response_model": response.model,
+        "finish_reason": response.choices[0].finish_reason,
+        "usage": usage_payload(response.usage),
+        "latency_ms": round((time.monotonic() - started) * 1000),
+    }
+    return stage_output, api_record
+
+
+def source_payload(
+    case: dict[str, Any], source_records: dict[str, dict[str, Any]]
+) -> dict[str, Any]:
+    permitted_source_fields = (
+        "source_id",
+        "domain",
+        "issuing_authority",
+        "title",
+        "instrument_type",
+        "status",
+        "effective_date",
+        "effective_date_note",
+        "version_position",
+        "candidate_statement_extraction",
+        "binding_obligation_extraction",
+        "permitted_use",
+        "prohibited_use",
+        "unresolved_issues",
+    )
+    records = []
+    for source_id in case["source_ids"]:
+        if source_id not in source_records:
+            raise ValueError(f"Unknown source ID in frozen input: {source_id}")
+        source = source_records[source_id]
+        records.append({field: source.get(field) for field in permitted_source_fields})
+    proposal = case["proposal_under_test"]
+    return {
+        "case_id": case["case_id"],
+        "source_records": records,
+        "source_excerpt_or_fact": case["source_excerpt_or_fact"],
+        "institution_facts": case["institution_facts"],
+        "missing_facts": case["missing_facts"],
+        "candidate_statement": case["candidate_statement"],
+        "proposal_under_test": {
+            "source_use_disposition": proposal["source_use_disposition"],
+            "obligation_outcome": proposal["obligation_outcome"],
+            "applicability_status": proposal["applicability_status"],
+        },
+        "review_question": case["review_question"],
+    }
+
+
+def assurance_payload(
+    case: dict[str, Any],
+    source_stage: dict[str, Any],
+    profile: dict[str, Any],
+) -> dict[str, Any]:
+    proposal = case["proposal_under_test"]
+    return {
+        "case_id": case["case_id"],
+        "approved_obligation_context": {
+            "upstream_obligation": case["upstream_obligation"],
+            "candidate_statement": case["candidate_statement"],
+            "source_stage_rationale": source_stage["rationale"],
+        },
+        "institution_facts": case["institution_facts"],
+        "missing_facts": case["missing_facts"],
+        "authoritative_control_catalogue": [
+            {
+                "control_id": control["control_id"],
+                "name": control["name"],
+                "owner_role": control["owner_role"],
+                "control_type": control["control_type"],
+            }
+            for control in profile["controls"]
+        ],
+        "proposed_mapping": case["proposed_mapping"],
+        "presented_evidence": case["presented_evidence"],
+        "proposal_under_test": {
+            "assurance_outcome": proposal["assurance_outcome"],
+            "gap_claim": proposal["gap_claim"],
+            "escalation_required": proposal["escalation_required"],
+        },
+        "review_question": case["review_question"],
+    }
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    action = parser.add_mutually_exclusive_group(required=True)
+    action.add_argument(
+        "--preflight",
+        action="store_true",
+        help="Verify the frozen workflow without making an API call.",
+    )
+    action.add_argument(
+        "--execute",
+        action="store_true",
+        help="Execute the single frozen regression run.",
+    )
+    args = parser.parse_args()
+
+    meta = load_json(META_PATH)
+    verify_frozen_artefacts(meta)
+
+    inputs: list[dict[str, Any]] = []
+    for path in INPUT_PATHS:
+        inputs.extend(load_json(path))
+    if len(inputs) != meta["case_count"]:
+        raise RuntimeError(f"Expected {meta['case_count']} inputs; found {len(inputs)}")
+    if len({case["case_id"] for case in inputs}) != len(inputs):
+        raise RuntimeError("Duplicate case ID in frozen regression inputs")
+
+    source_pack = load_json(SOURCE_PACK_PATH)
+    source_records = {item["source_id"]: item for item in source_pack["sources"]}
+    profile = load_json(PROFILE_PATH)
+    source_policy = load_json(
+        WORKFLOW_DIR / "policies" / "source-transition-policy-v1.0.json"
+    )
+    evidence_policy = load_json(
+        WORKFLOW_DIR / "policies" / "evidence-decision-policy-v1.0.json"
+    )
+    escalation_policy = load_json(
+        WORKFLOW_DIR / "policies" / "escalation-policy-v1.0.json"
+    )
+    if set(source_policy["sources"]) != set(source_records):
+        raise RuntimeError("Source policy does not cover the frozen source pack exactly")
+
+    source_prompt = (
+        WORKFLOW_DIR / "prompts" / "source-obligation-stage-v1.0.md"
+    ).read_text(encoding="utf-8")
+    assurance_prompt = (
+        WORKFLOW_DIR / "prompts" / "control-evidence-stage-v1.0.md"
+    ).read_text(encoding="utf-8")
+    source_format = load_json(
+        WORKFLOW_DIR / "schemas" / "source-obligation-stage.schema.json"
+    )
+    assurance_format = load_json(
+        WORKFLOW_DIR / "schemas" / "control-evidence-stage.schema.json"
+    )
+    final_format = load_json(FINAL_SCHEMA_PATH)
+    source_validator = Draft202012Validator(source_format["schema"])
+    assurance_validator = Draft202012Validator(assurance_format["schema"])
+    final_validator = Draft202012Validator(final_format["schema"])
+
+    entered_count = sum(
+        case["upstream_obligation"]["supplied"] is True
+        and case["upstream_obligation"]["status"] == "approved"
+        for case in inputs
+    )
+    expected_calls = len(inputs) + entered_count
+    if expected_calls != meta["expected_api_call_count"]:
+        raise RuntimeError(
+            f"Expected API-call count changed: metadata={meta['expected_api_call_count']}, "
+            f"calculated={expected_calls}"
+        )
+
+    if args.preflight:
+        print(
+            f"Evidence-gated preflight passed: {len(inputs)} cases, {entered_count} assurance "
+            f"entries, {expected_calls} future API calls, model {meta['model']}. No API call made."
+        )
+        return 0
+
+    if not os.environ.get("OPENAI_API_KEY"):
+        raise RuntimeError("OPENAI_API_KEY is required; no mock or fallback run is permitted")
+
+    marker_path = RESULTS_DIR / "run-state.json"
+    predictions_path = RESULTS_DIR / "predictions.json"
+    if marker_path.exists() or predictions_path.exists():
+        raise RuntimeError(
+            "Evidence-gated regression already started or completed; refusing to overwrite it"
+        )
+
+    run_id = f"evidence-gated-v1.0-{uuid.uuid4()}"
+    run_state: dict[str, Any] = {
+        "run_id": run_id,
+        "status": "running",
+        "started_at": utc_now(),
+        "completed_at": None,
+        "dataset_id": meta["dataset_id"],
+        "dataset_version": meta["dataset_version"],
+        "workflow_id": meta["workflow_id"],
+        "workflow_version": meta["version"],
+        "model": meta["model"],
+        "temperature": meta["temperature"],
+        "case_count": len(inputs),
+        "expected_api_call_count": expected_calls,
+        "completed_api_call_count": 0,
+        "completed_case_count": 0,
+        "tuning_after_observation": False,
+        "error": None,
+    }
+    write_json(marker_path, run_state)
+
+    base_url = os.environ.get("OPENAI_BASE_URL", "").strip() or "https://api.openai.com/v1"
+    client = OpenAI(api_key=os.environ["OPENAI_API_KEY"], base_url=base_url)
+    prediction_records: list[dict[str, Any]] = []
+    completed_calls = 0
+
+    try:
+        for index, case in enumerate(inputs, start=1):
+            stage_one, source_api = request_stage(
+                client,
+                meta["model"],
+                meta["temperature"],
+                source_prompt,
+                source_format,
+                source_payload(case, source_records),
+            )
+            source_validator.validate(stage_one)
+            completed_calls += 1
+
+            assurance_entered = (
+                case["upstream_obligation"]["supplied"] is True
+                and case["upstream_obligation"]["status"] == "approved"
+            )
+            if assurance_entered:
+                stage_two, assurance_api = request_stage(
+                    client,
+                    meta["model"],
+                    meta["temperature"],
+                    assurance_prompt,
+                    assurance_format,
+                    assurance_payload(case, stage_one, profile),
+                )
+                assurance_validator.validate(stage_two)
+                completed_calls += 1
+            else:
+                stage_two = None
+                assurance_api = None
+
+            final_decision, policy_trace = compose_final_decision(
+                case,
+                stage_one,
+                stage_two,
+                source_policy,
+                evidence_policy,
+                escalation_policy,
+                profile,
+            )
+            final_validator.validate(final_decision)
+            prediction_records.append(
+                {
+                    "input_case_id": case["case_id"],
+                    "workstream": case["workstream"],
+                    "case_stage": case["case_stage"],
+                    "prediction": final_decision,
+                    "stage_outputs": {
+                        "source_obligation": stage_one,
+                        "control_evidence": stage_two,
+                    },
+                    "policy_trace": policy_trace,
+                    "reconciliation": {
+                        "passed": True,
+                        "manual_correction": False,
+                    },
+                    "api": {
+                        "source_obligation": source_api,
+                        "control_evidence": assurance_api,
+                    },
+                }
+            )
+            run_state["completed_api_call_count"] = completed_calls
+            run_state["completed_case_count"] = index
+            write_json(marker_path, run_state)
+            print(
+                f"[{index:02d}/{len(inputs)}] {case['case_id']} completed "
+                f"({completed_calls}/{expected_calls} calls)",
+                flush=True,
+            )
+
+        completed_at = utc_now()
+        result = {
+            "run_id": run_id,
+            "status": "completed",
+            "started_at": run_state["started_at"],
+            "completed_at": completed_at,
+            "dataset_id": meta["dataset_id"],
+            "dataset_version": meta["dataset_version"],
+            "workflow_id": meta["workflow_id"],
+            "workflow_version": meta["version"],
+            "provider": "openai",
+            "model_requested": meta["model"],
+            "temperature": meta["temperature"],
+            "run_attempt_count": 1,
+            "api_call_count": completed_calls,
+            "tuning_after_observation": False,
+            "workflow_meta_sha256": sha256_file(META_PATH),
+            "artefact_sha256": meta["artefact_sha256"],
+            "predictions": prediction_records,
+        }
+        write_json(predictions_path, result)
+        run_state.update(
+            {
+                "status": "completed",
+                "completed_at": completed_at,
+                "completed_api_call_count": completed_calls,
+                "completed_case_count": len(inputs),
+            }
+        )
+        write_json(marker_path, run_state)
+        print(f"Completed one frozen evidence-gated regression: {predictions_path}")
+        return 0
+    except Exception as exc:
+        run_state.update({"status": "failed", "completed_at": utc_now(), "error": str(exc)})
+        if prediction_records:
+            write_json(
+                RESULTS_DIR / "partial-predictions.json",
+                {"run_id": run_id, "predictions": prediction_records},
+            )
+        write_json(marker_path, run_state)
+        raise
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except Exception as exc:
+        print(f"ERROR: {exc}", file=sys.stderr)
+        raise SystemExit(1)

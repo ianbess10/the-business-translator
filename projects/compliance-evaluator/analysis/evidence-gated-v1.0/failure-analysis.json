@@ -1,0 +1,760 @@
+{
+  "analysis_id": "SA-REG-EVIDENCE-GATED-V1.0-FAILURE-ANALYSIS-001",
+  "version": "1.0",
+  "analysis_type": "post_regression_case_level_failure_analysis",
+  "run_id": "evidence-gated-v1.0-f9e573a2-ca62-44b0-a6f5-89a9fd70c8fa",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.0",
+  "workflow_id": "SA-REG-EVIDENCE-GATED-001",
+  "workflow_version": "1.0",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "synthetic_regression_evidence": true,
+  "independent_validation": false,
+  "production_performance": false,
+  "workflow_v1_modified": false,
+  "workflow_v1_rerun": false,
+  "post_observation_tuning": false,
+  "source_evidence_hashes": {
+    "run_state_sha256": "3654c9a69fa236b0a51487fe5154c672aba5b72d1c419d683ae7a6f9f473d61d",
+    "predictions_sha256": "efb8b9d8c32198f5a8e2f5a0056c7a6c45f937f43f98a91749881d7c5a22a767",
+    "evaluation_sha256": "6b286757a031d9c3ca8e2726e825f4b8e0498752286f5985309176b31af8defb",
+    "baseline_comparison_sha256": "b28862b32dfd67a9021dd62cb081d8c871ee4563f60bcbdb2bbb356410a1364a",
+    "aml_cft_inputs_sha256": "759e16f1ee60fc18e9aa567635cd0e4b592484a24692147a34fe84f5abc66977",
+    "market_conduct_inputs_sha256": "be1c36a5793cee96d6a5f2c08a135389fc89461afd8d6e6d5c1b4a6ee1adc3f2",
+    "aml_cft_labels_sha256": "e606784ebc604af92140dc2c4f4a10e8dfe2bd21859197ebde85703456c0f716",
+    "market_conduct_labels_sha256": "8cf778b67911269c7fe735e8ffd2a0f27e0e05da5886c2b88bb8b26fd459f2b3"
+  },
+  "headline": {
+    "case_count": 24,
+    "end_to_end_exact_count": 15,
+    "failed_case_count": 9,
+    "failed_case_ids": [
+      "AML-011",
+      "CON-005",
+      "CON-006",
+      "CON-007",
+      "CON-008",
+      "CON-009",
+      "CON-010",
+      "CON-011",
+      "CON-012"
+    ],
+    "failed_field_count": 26,
+    "failed_release_gate_count": 1,
+    "failed_release_gates": [
+      "zero_unnecessary_escalations"
+    ]
+  },
+  "root_cause_case_counts": {
+    "applicability_dimension_conflation": 9,
+    "mapping_evidence_dimension_conflation": 5,
+    "partial_coverage_misclassified_as_design_deficiency": 1
+  },
+  "mismatch_field_case_counts": {
+    "applicability_status": 9,
+    "assurance_outcome": 2,
+    "escalation_required": 1,
+    "escalation_roles": 1,
+    "gap_severity": 3,
+    "gap_types": 3,
+    "mapping_status": 5,
+    "remediation_action_types": 2
+  },
+  "latent_control_case_counts": {
+    "authoritative_obligation_outcome_protected": 9,
+    "authoritative_source_disposition_protected": 9,
+    "source_classification_corrected_by_policy": 8
+  },
+  "preserved_strengths": {
+    "source_use_disposition_correct": 24,
+    "obligation_outcome_correct": 24,
+    "assurance_gate_correct": 24,
+    "catalogue_owner_routing_correct": 24,
+    "mandatory_escalations_detected": 6,
+    "mandatory_escalations_missed": 0,
+    "prohibited_compliance_conclusions": 0
+  },
+  "case_register": [
+    {
+      "case_id": "AML-011",
+      "workstream": "aml_cft",
+      "case_stage": "control_assurance",
+      "error_tags": [
+        "premature_control_assurance",
+        "human_approval_boundary",
+        "guidance_boundary"
+      ],
+      "mismatched_fields": [
+        "applicability_status"
+      ],
+      "root_causes": [
+        "applicability_dimension_conflation"
+      ],
+      "root_fields": [
+        "applicability_status"
+      ],
+      "cascade_fields": [],
+      "latent_control_observations": [
+        "authoritative_source_disposition_protected",
+        "authoritative_obligation_outcome_protected"
+      ],
+      "operational_consequence": "Applicability was changed by source or obligation reasoning even though it is a separate operating decision.",
+      "expected": {
+        "applicability_status": "applicable_candidate",
+        "mapping_status": "not_applicable",
+        "control_ids": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "observed": {
+        "source_stage_model_classification": "guidance_only",
+        "source_stage_applicability_assessment": "out_of_scope",
+        "assurance_stage_mapping_completeness": null,
+        "assurance_stage_evidence_assessment": null,
+        "applicability_status": "out_of_scope",
+        "mapping_status": "not_applicable",
+        "control_ids": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "applied_policy_rules": [
+          "SRC-AML-003",
+          "ESC-DEFAULT"
+        ]
+      },
+      "model_rationales": {
+        "source_obligation": "The candidate statement proposes a mandatory obligation based on guidance, which is not permissible as the guidance context does not support binding obligations. The source explicitly states that it is guidance only and cannot be used to impose mandatory requirements.",
+        "control_evidence": null
+      }
+    },
+    {
+      "case_id": "CON-005",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "error_tags": [
+        "correct_mapping",
+        "owner_routing"
+      ],
+      "mismatched_fields": [
+        "applicability_status",
+        "mapping_status",
+        "assurance_outcome",
+        "gap_severity",
+        "gap_types",
+        "remediation_action_types"
+      ],
+      "root_causes": [
+        "applicability_dimension_conflation",
+        "mapping_evidence_dimension_conflation"
+      ],
+      "root_fields": [
+        "applicability_status",
+        "mapping_status"
+      ],
+      "cascade_fields": [
+        "assurance_outcome",
+        "gap_severity",
+        "gap_types",
+        "remediation_action_types"
+      ],
+      "latent_control_observations": [
+        "source_classification_corrected_by_policy",
+        "authoritative_source_disposition_protected",
+        "authoritative_obligation_outcome_protected"
+      ],
+      "operational_consequence": "A valid control relationship was understated because evidence completeness or control performance was allowed to change mapping completeness.",
+      "expected": {
+        "applicability_status": "applicable_candidate",
+        "mapping_status": "mapped",
+        "control_ids": [
+          "C-CON-006",
+          "C-CON-007"
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "observed": {
+        "source_stage_model_classification": "final_change_event",
+        "source_stage_applicability_assessment": "uncertain",
+        "assurance_stage_mapping_completeness": "partial",
+        "assurance_stage_evidence_assessment": "sufficient",
+        "applicability_status": "applicability_uncertain",
+        "mapping_status": "partially_mapped",
+        "control_ids": [
+          "C-CON-006",
+          "C-CON-007"
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "partial_coverage"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "mapping_review"
+        ],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "applied_policy_rules": [
+          "SRC-CON-003",
+          "EVD-007",
+          "ESC-DEFAULT"
+        ]
+      },
+      "model_rationales": {
+        "source_obligation": "The source is an amendment notice with staged commencement, meaning that not all provisions are currently in effect. The candidate statement cannot be fully supported until the specific provisions' commencement dates are verified. Therefore, the proposal is rejected as it assumes applicability without confirming the necessary commencement details.",
+        "control_evidence": "The proposed mapping includes controls C-CON-006 and C-CON-007, which are relevant to the complaints framework. The evidence provided includes an approved complaints management framework, a complaint register, and customer-outcomes management information, which collectively demonstrate sufficient design and operation of the mapped controls. However, the mapping is considered partial because the obligation's applicability is contingent on the commencement of specific provisions, which have not been verified. Therefore, while the evidence supports the controls mapped, the overall assurance outcome cannot be fully accepted until the commencement details are confirmed."
+      }
+    },
+    {
+      "case_id": "CON-006",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "error_tags": [
+        "owner_routing",
+        "correct_mapping"
+      ],
+      "mismatched_fields": [
+        "applicability_status",
+        "mapping_status",
+        "assurance_outcome",
+        "gap_severity",
+        "gap_types",
+        "remediation_action_types"
+      ],
+      "root_causes": [
+        "applicability_dimension_conflation",
+        "mapping_evidence_dimension_conflation"
+      ],
+      "root_fields": [
+        "applicability_status",
+        "mapping_status"
+      ],
+      "cascade_fields": [
+        "assurance_outcome",
+        "gap_severity",
+        "gap_types",
+        "remediation_action_types"
+      ],
+      "latent_control_observations": [
+        "source_classification_corrected_by_policy",
+        "authoritative_source_disposition_protected",
+        "authoritative_obligation_outcome_protected"
+      ],
+      "operational_consequence": "A valid control relationship was understated because evidence completeness or control performance was allowed to change mapping completeness.",
+      "expected": {
+        "applicability_status": "applicable_candidate",
+        "mapping_status": "mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "observed": {
+        "source_stage_model_classification": "final_change_event",
+        "source_stage_applicability_assessment": "uncertain",
+        "assurance_stage_mapping_completeness": "partial",
+        "assurance_stage_evidence_assessment": "sufficient",
+        "applicability_status": "applicability_uncertain",
+        "mapping_status": "partially_mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "partial_coverage"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "mapping_review"
+        ],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "applied_policy_rules": [
+          "SRC-CON-003",
+          "EVD-007",
+          "ESC-DEFAULT"
+        ]
+      },
+      "model_rationales": {
+        "source_obligation": "The source record indicates that the amendment has staged commencement, which means that not all provisions are currently in force. Therefore, the proposal to assess the obligation against C-CON-006 cannot be accepted as binding without confirming the specific provisions that are effective. The mapping and ownership assignment is also uncertain due to the frozen profile assigning C-CON-006 to the Complaints Manager, which may not align with the current obligations under the amendment.",
+        "control_evidence": "The proposed mapping includes C-CON-006, which is supported by the evidence of an approved complaints management framework and a completed complaint register. However, the owner role assigned in the proposed mapping (Conduct Risk Officer) conflicts with the authoritative control catalogue, which assigns C-CON-006 to the Complaints Manager. Therefore, while the control is valid, the mapping is incomplete due to the incorrect owner assignment."
+      }
+    },
+    {
+      "case_id": "CON-007",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "error_tags": [
+        "operating_evidence_missing",
+        "unnecessary_escalation"
+      ],
+      "mismatched_fields": [
+        "applicability_status",
+        "mapping_status"
+      ],
+      "root_causes": [
+        "applicability_dimension_conflation",
+        "mapping_evidence_dimension_conflation"
+      ],
+      "root_fields": [
+        "applicability_status",
+        "mapping_status"
+      ],
+      "cascade_fields": [],
+      "latent_control_observations": [
+        "source_classification_corrected_by_policy",
+        "authoritative_source_disposition_protected",
+        "authoritative_obligation_outcome_protected"
+      ],
+      "operational_consequence": "A valid control relationship was understated because evidence completeness or control performance was allowed to change mapping completeness.",
+      "expected": {
+        "applicability_status": "applicable_candidate",
+        "mapping_status": "mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "insufficient_evidence",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "unassessed",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "observed": {
+        "source_stage_model_classification": "final_change_event",
+        "source_stage_applicability_assessment": "uncertain",
+        "assurance_stage_mapping_completeness": "partial",
+        "assurance_stage_evidence_assessment": "missing_operating_evidence",
+        "applicability_status": "applicability_uncertain",
+        "mapping_status": "partially_mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "insufficient_evidence",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "unassessed",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "applied_policy_rules": [
+          "SRC-CON-003",
+          "EVD-002",
+          "ESC-DEFAULT"
+        ]
+      },
+      "model_rationales": {
+        "source_obligation": "The source material indicates that the amendment notice is in force with staged commencement, but it does not provide sufficient evidence to support the claim that complaint classification and remediation operated effectively. The missing complaint register and completed case records prevent a definitive conclusion on the effectiveness of the control.",
+        "control_evidence": "The proposed mapping includes control C-CON-006, which is relevant to complaint classification and remediation. However, the evidence presented is insufficient to demonstrate effective operation. The approved complaints management framework indicates design but does not prove operation, and the missing complaint register means there is no operating evidence. Additionally, the absence of completed case records indicates adverse operating evidence, as it prevents a definitive conclusion on the effectiveness of the control."
+      }
+    },
+    {
+      "case_id": "CON-008",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "error_tags": [
+        "genuine_control_gap",
+        "partial_mapping",
+        "missed_escalation"
+      ],
+      "mismatched_fields": [
+        "applicability_status"
+      ],
+      "root_causes": [
+        "applicability_dimension_conflation"
+      ],
+      "root_fields": [
+        "applicability_status"
+      ],
+      "cascade_fields": [],
+      "latent_control_observations": [
+        "source_classification_corrected_by_policy",
+        "authoritative_source_disposition_protected",
+        "authoritative_obligation_outcome_protected"
+      ],
+      "operational_consequence": "Applicability was changed by source or obligation reasoning even though it is a separate operating decision.",
+      "expected": {
+        "applicability_status": "applicable_candidate",
+        "mapping_status": "partially_mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "control_design"
+        ],
+        "gap_severity": "high",
+        "remediation_action_types": [
+          "mapping_review"
+        ],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Head of Compliance"
+        ]
+      },
+      "observed": {
+        "source_stage_model_classification": "final_change_event",
+        "source_stage_applicability_assessment": "uncertain",
+        "assurance_stage_mapping_completeness": "partial",
+        "assurance_stage_evidence_assessment": "design_deficiency",
+        "applicability_status": "applicability_uncertain",
+        "mapping_status": "partially_mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "control_design"
+        ],
+        "gap_severity": "high",
+        "remediation_action_types": [
+          "mapping_review"
+        ],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Head of Compliance"
+        ],
+        "applied_policy_rules": [
+          "SRC-CON-003",
+          "EVD-003",
+          "ESC-003"
+        ]
+      },
+      "model_rationales": {
+        "source_obligation": "The candidate statement claims that the complaint procedure fully addresses the establishment and maintenance of the framework, but the source excerpt indicates that there are significant gaps, including the absence of an approval record, framework owner, or review cycle. Additionally, there is a missing fact regarding the ownership of framework maintenance, which further undermines the completeness of the candidate statement.",
+        "control_evidence": "The proposed mapping to control C-CON-006 is valid as it relates to complaint classification, escalation, and remediation. However, the presented evidence is insufficient as it only provides a partial complaint procedure without governance fields, indicating a design deficiency. Additionally, there are significant gaps in the framework, including missing approval records and ownership details, which are adverse indicators of operational effectiveness."
+      }
+    },
+    {
+      "case_id": "CON-009",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "error_tags": [
+        "false_positive_gap",
+        "unnecessary_escalation",
+        "correct_mapping"
+      ],
+      "mismatched_fields": [
+        "applicability_status"
+      ],
+      "root_causes": [
+        "applicability_dimension_conflation"
+      ],
+      "root_fields": [
+        "applicability_status"
+      ],
+      "cascade_fields": [],
+      "latent_control_observations": [
+        "source_classification_corrected_by_policy",
+        "authoritative_source_disposition_protected",
+        "authoritative_obligation_outcome_protected"
+      ],
+      "operational_consequence": "Applicability was changed by source or obligation reasoning even though it is a separate operating decision.",
+      "expected": {
+        "applicability_status": "applicable_candidate",
+        "mapping_status": "mapped",
+        "control_ids": [
+          "C-CON-006",
+          "C-CON-007"
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "observed": {
+        "source_stage_model_classification": "final_change_event",
+        "source_stage_applicability_assessment": "out_of_scope",
+        "assurance_stage_mapping_completeness": "complete",
+        "assurance_stage_evidence_assessment": "sufficient",
+        "applicability_status": "out_of_scope",
+        "mapping_status": "mapped",
+        "control_ids": [
+          "C-CON-006",
+          "C-CON-007"
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "applied_policy_rules": [
+          "SRC-CON-003",
+          "EVD-001",
+          "ESC-DEFAULT"
+        ]
+      },
+      "model_rationales": {
+        "source_obligation": "The candidate statement proposes a control-design gap related to complaints obligations, which is not supported by the source records. The source indicates that obligations are subject to human review and staged commencement, and there is no evidence in the provided facts to support the claim of a gap. Therefore, the proposal is rejected.",
+        "control_evidence": "The proposed mapping includes controls C-CON-006 and C-CON-007, which are supported by sufficient evidence including an approved complaints management framework, a complete complaint register extract, and reviewed customer-outcomes management information. The candidate statement suggesting a control-design gap is not supported by the evidence, which demonstrates that the controls are in place and functioning as intended."
+      }
+    },
+    {
+      "case_id": "CON-010",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "error_tags": [
+        "partial_mapping",
+        "correct_mapping"
+      ],
+      "mismatched_fields": [
+        "applicability_status",
+        "gap_severity",
+        "escalation_required",
+        "gap_types",
+        "escalation_roles"
+      ],
+      "root_causes": [
+        "applicability_dimension_conflation",
+        "partial_coverage_misclassified_as_design_deficiency"
+      ],
+      "root_fields": [
+        "applicability_status",
+        "gap_types"
+      ],
+      "cascade_fields": [
+        "gap_severity",
+        "escalation_required",
+        "escalation_roles"
+      ],
+      "latent_control_observations": [
+        "source_classification_corrected_by_policy",
+        "authoritative_source_disposition_protected",
+        "authoritative_obligation_outcome_protected"
+      ],
+      "operational_consequence": "A partial mapping became a high design gap, creating the sole unnecessary management escalation.",
+      "expected": {
+        "applicability_status": "applicable_candidate",
+        "mapping_status": "partially_mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "partial_coverage"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "mapping_review"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "observed": {
+        "source_stage_model_classification": "final_change_event",
+        "source_stage_applicability_assessment": "uncertain",
+        "assurance_stage_mapping_completeness": "partial",
+        "assurance_stage_evidence_assessment": "design_deficiency",
+        "applicability_status": "applicability_uncertain",
+        "mapping_status": "partially_mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "control_design"
+        ],
+        "gap_severity": "high",
+        "remediation_action_types": [
+          "mapping_review"
+        ],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Head of Compliance"
+        ],
+        "applied_policy_rules": [
+          "SRC-CON-003",
+          "EVD-003",
+          "ESC-003"
+        ]
+      },
+      "model_rationales": {
+        "source_obligation": "The candidate statement claims that C-CON-006 alone fully covers the approved obligation, which is not supported by the source records. The source indicates that both C-CON-006 and C-CON-007 are necessary for compliance, and the staged commencement of the amendment notice introduces uncertainty regarding the applicability of the obligations.",
+        "control_evidence": "The proposed mapping claims that C-CON-006 alone covers the approved obligation, which is contradicted by the source records indicating that both C-CON-006 and C-CON-007 are necessary for compliance. The evidence provided includes a policy framework and a complaint register extract, which demonstrate design but do not confirm the operation of the controls. Therefore, the mapping is incomplete and does not sufficiently support the obligation."
+      }
+    },
+    {
+      "case_id": "CON-011",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "error_tags": [
+        "genuine_control_gap",
+        "missed_escalation"
+      ],
+      "mismatched_fields": [
+        "applicability_status",
+        "mapping_status"
+      ],
+      "root_causes": [
+        "applicability_dimension_conflation",
+        "mapping_evidence_dimension_conflation"
+      ],
+      "root_fields": [
+        "applicability_status",
+        "mapping_status"
+      ],
+      "cascade_fields": [],
+      "latent_control_observations": [
+        "source_classification_corrected_by_policy",
+        "authoritative_source_disposition_protected",
+        "authoritative_obligation_outcome_protected"
+      ],
+      "operational_consequence": "A valid control relationship was understated because evidence completeness or control performance was allowed to change mapping completeness.",
+      "expected": {
+        "applicability_status": "applicable_candidate",
+        "mapping_status": "mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "operating_exception"
+        ],
+        "gap_severity": "high",
+        "remediation_action_types": [
+          "operating_remediation"
+        ],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Conduct Risk Officer",
+          "Head of Compliance"
+        ]
+      },
+      "observed": {
+        "source_stage_model_classification": "final_change_event",
+        "source_stage_applicability_assessment": "uncertain",
+        "assurance_stage_mapping_completeness": "partial",
+        "assurance_stage_evidence_assessment": "adverse_operating_evidence",
+        "applicability_status": "applicability_uncertain",
+        "mapping_status": "partially_mapped",
+        "control_ids": [
+          "C-CON-006"
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "operating_exception"
+        ],
+        "gap_severity": "high",
+        "remediation_action_types": [
+          "operating_remediation"
+        ],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Conduct Risk Officer",
+          "Head of Compliance"
+        ],
+        "applied_policy_rules": [
+          "SRC-CON-003",
+          "EVD-004",
+          "ESC-004"
+        ]
+      },
+      "model_rationales": {
+        "source_obligation": "The source is a final change event with staged commencement, meaning that not all provisions are currently in effect. The candidate statement suggests recording an exception without clear guidance on the specific provisions that apply, which is uncertain due to the staged commencement. Therefore, the proposal cannot be accepted as binding without further clarification on the applicable provisions.",
+        "control_evidence": "The proposed mapping includes control C-CON-006, which is relevant to complaint classification, escalation, and remediation. However, the presented evidence indicates repeated overdue high-impact complaints and incomplete remediation, which constitutes adverse operating evidence. This suggests that while the control is mapped, it is not operating effectively, leading to a partial mapping completeness. The candidate statement lacks clarity on specific provisions due to the staged commencement, and thus cannot be accepted as binding."
+      }
+    },
+    {
+      "case_id": "CON-012",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "error_tags": [
+        "operating_evidence_missing",
+        "unnecessary_escalation"
+      ],
+      "mismatched_fields": [
+        "applicability_status",
+        "mapping_status"
+      ],
+      "root_causes": [
+        "applicability_dimension_conflation",
+        "mapping_evidence_dimension_conflation"
+      ],
+      "root_fields": [
+        "applicability_status",
+        "mapping_status"
+      ],
+      "cascade_fields": [],
+      "latent_control_observations": [
+        "source_classification_corrected_by_policy",
+        "authoritative_source_disposition_protected",
+        "authoritative_obligation_outcome_protected"
+      ],
+      "operational_consequence": "A valid control relationship was understated because evidence completeness or control performance was allowed to change mapping completeness.",
+      "expected": {
+        "applicability_status": "applicable_candidate",
+        "mapping_status": "mapped",
+        "control_ids": [
+          "C-CON-007"
+        ],
+        "assurance_outcome": "insufficient_evidence",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "unassessed",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": []
+      },
+      "observed": {
+        "source_stage_model_classification": "final_change_event",
+        "source_stage_applicability_assessment": "out_of_scope",
+        "assurance_stage_mapping_completeness": "partial",
+        "assurance_stage_evidence_assessment": "missing_operating_evidence",
+        "applicability_status": "out_of_scope",
+        "mapping_status": "partially_mapped",
+        "control_ids": [
+          "C-CON-007"
+        ],
+        "assurance_outcome": "insufficient_evidence",
+        "gap_types": [
+          "operating_evidence_missing"
+        ],
+        "gap_severity": "unassessed",
+        "remediation_action_types": [
+          "evidence_request"
+        ],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "applied_policy_rules": [
+          "SRC-CON-003",
+          "EVD-002",
+          "ESC-DEFAULT"
+        ]
+      },
+      "model_rationales": {
+        "source_obligation": "The candidate statement regarding escalating the missing monthly report does not align with the binding obligations derived from the source records, which emphasize the need for human review and verification of provision-level commencement. Therefore, the proposal is rejected as it is out of scope given the current status of the source.",
+        "control_evidence": "The proposed mapping includes control C-CON-007, which is relevant to customer-outcomes management-information review. However, the presented evidence indicates that the latest monthly customer-outcomes report is missing, which constitutes missing operating evidence. This absence of evidence suggests that the control may not be effectively operating, leading to an adverse indicator. Therefore, while one control is supported, the overall mapping is incomplete due to the lack of sufficient operating evidence."
+      }
+    }
+  ]
+}

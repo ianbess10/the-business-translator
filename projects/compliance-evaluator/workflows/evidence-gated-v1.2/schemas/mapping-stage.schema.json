@@ -1,0 +1,32 @@
+{
+  "name": "mapping_stage_v1_2",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["case_id", "proposal_disposition", "current_mapping_control_ids", "candidate_additional_control_ids", "mapping_completeness", "uncovered_obligation_elements", "rationale"],
+    "properties": {
+      "case_id": {"type": "string", "pattern": "^(AML|CON)-[0-9]{3}$"},
+      "proposal_disposition": {"type": "string", "enum": ["accept", "amend", "reject"]},
+      "current_mapping_control_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^C-[A-Z]+-[0-9]{3}$"}},
+      "candidate_additional_control_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^C-[A-Z]+-[0-9]{3}$"}},
+      "mapping_completeness": {"type": "string", "enum": ["complete", "partial", "no_suitable_control"]},
+      "uncovered_obligation_elements": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+      "rationale": {"type": "string", "minLength": 1}
+    },
+    "allOf": [
+      {
+        "if": {"properties": {"mapping_completeness": {"const": "complete"}}, "required": ["mapping_completeness"]},
+        "then": {"properties": {"current_mapping_control_ids": {"minItems": 1}, "uncovered_obligation_elements": {"maxItems": 0}}}
+      },
+      {
+        "if": {"properties": {"mapping_completeness": {"const": "partial"}}, "required": ["mapping_completeness"]},
+        "then": {"properties": {"current_mapping_control_ids": {"minItems": 1}, "uncovered_obligation_elements": {"minItems": 1}}}
+      },
+      {
+        "if": {"properties": {"mapping_completeness": {"const": "no_suitable_control"}}, "required": ["mapping_completeness"]},
+        "then": {"properties": {"current_mapping_control_ids": {"maxItems": 0}, "uncovered_obligation_elements": {"minItems": 1}}}
+      }
+    ]
+  }
+}

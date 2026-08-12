@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0",
+  "assurance_record_id": "ACE-CONDUCT-0003",
+  "record_type": "obligation_control_evidence_assessment",
+  "lifecycle_status": "generated_assessment",
+  "obligation_reference": {
+    "obligation_schema_version": "1.0",
+    "obligation_id": "OBL-CONDUCT-0001",
+    "obligation_record_sha256": "55e9026bdd168a7e5f4c5571c3aa2eaa8db4ff6217e2264831257086b56bb2ce",
+    "lifecycle_status": "approved",
+    "source_id": "SA-CONDUCT-SP-003",
+    "atomic_summary": "An authorised provider must establish and maintain an adequate complaints management framework.",
+    "approved_applicability": "applicable_with_conditions",
+    "approved_by_role": "Head of Compliance",
+    "approved_by_id": "SYN-HC-001",
+    "approval_rationale": "Accepted for synthetic assurance design subject to the fictional licensing assumption.",
+    "approved_at": "2026-08-09T20:00:00+02:00"
+  },
+  "institution_profile": {
+    "profile_id": "SA-IWM-SYN-001",
+    "profile_version": "1.0",
+    "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4"
+  },
+  "assessment_scope": {
+    "assessment_type": "design_only",
+    "as_of_date": "2026-08-09",
+    "period_start": null,
+    "period_end": null,
+    "in_scope_process_ids": [
+      "P-CON-005"
+    ],
+    "scope_limitations": [
+      "The assessment is limited to the supplied partial procedure and frozen control catalogue.",
+      "No operating evidence was assessed."
+    ]
+  },
+  "mapping": {
+    "status": "partially_mapped",
+    "coverage_rationale": "The complaint-handling steps map to C-CON-006, but the supplied design does not allocate framework maintenance ownership or a periodic adequacy review.",
+    "unmapped_obligation_elements": [
+      "accountable maintenance of the complaints management framework",
+      "periodic review of framework adequacy"
+    ]
+  },
+  "control_mappings": [
+    {
+      "mapping_id": "MAP-CON-006-003",
+      "control_id": "C-CON-006",
+      "control_name": "Complaint classification, escalation and remediation",
+      "catalog_owner_role": "Complaints Manager",
+      "control_type": "detective_and_corrective",
+      "coverage": "partial",
+      "mapping_rationale": "The control covers case handling but the supplied design does not demonstrate ownership and periodic review of the overall framework.",
+      "control_objective": "Complaints are consistently identified, recorded, investigated, escalated and remediated under an accountable framework.",
+      "control_description": "The supplied procedure defines complaint-handling steps but does not state who maintains or approves the framework.",
+      "operator_role": "Complaints Manager",
+      "execution_type": "manual",
+      "frequency_or_trigger": "For every complaint",
+      "design_status": "partially_documented",
+      "expected_evidence": [
+        {
+          "evidence_requirement_id": "ER-CON-006-GOVERN",
+          "evidence_type": "procedure",
+          "assurance_purpose": "design",
+          "description": "Approved procedure identifying framework maintenance ownership and review cycle",
+          "acceptance_criteria": [
+            "identifies the accountable framework owner",
+            "states the approval authority",
+            "defines a periodic review cycle",
+            "links case handling to management oversight"
+          ],
+          "mandatory": true,
+          "period_or_trigger": "Current at the assessment date",
+          "owner_role": "Conduct Risk Officer"
+        }
+      ],
+      "supplied_evidence": [
+        {
+          "evidence_ref_id": "EV-CON-004",
+          "evidence_requirement_id": "ER-CON-006-GOVERN",
+          "evidence_type": "procedure",
+          "title": "Synthetic Complaint Handling Procedure - Partial Design Case",
+          "status": "supplied",
+          "location_or_reference": "fixtures/evidence/complaints-procedure-partial.json",
+          "document_sha256": "6497eefb6aa3339c520fe7583ba1024ff22708fb944d8f081e01dc2d29977e13",
+          "period_covered": "Draft version 0.4",
+          "provided_by_role": "Complaints Manager",
+          "collected_at": "2026-08-09T20:25:00+02:00",
+          "limitations": [
+            "The document is a deliberately incomplete synthetic fixture."
+          ]
+        }
+      ],
+      "evidence_assessment": {
+        "status": "insufficient",
+        "design_evidence": "partial",
+        "operating_evidence": "not_required",
+        "testing_evidence": "not_required",
+        "rationale": "The procedure evidences case-handling steps but does not meet the defined ownership, approval and review-cycle criteria.",
+        "limitations": [
+          "A reviewer must confirm whether another approved document provides the missing governance design."
+        ]
+      }
+    }
+  ],
+  "assurance_assessment": {
+    "outcome": "potential_control_gap",
+    "decision_status": "proposed",
+    "confidence": 0.83,
+    "rationale": "The supplied design appears not to cover accountable framework maintenance and periodic adequacy review, but a human reviewer must confirm whether other controls or documents address these elements.",
+    "limitations": [
+      "The result is a potential gap, not a confirmed control failure.",
+      "The review did not search outside the supplied synthetic evidence."
+    ],
+    "compliance_conclusion": "not_determined"
+  },
+  "assurance_gaps": [
+    {
+      "gap_id": "GAP-DESIGN-001",
+      "gap_type": "control_design",
+      "status": "potential",
+      "affected_control_ids": [
+        "C-CON-006"
+      ],
+      "affected_obligation_elements": [
+        "maintain an adequate complaints management framework"
+      ],
+      "statement": "The supplied control design does not identify accountable ownership or a periodic review cycle for maintaining framework adequacy.",
+      "evidence_basis": [
+        "EV-CON-004 has no approval record, review cycle or framework maintenance owner"
+      ],
+      "severity": "high",
+      "materiality_rationale": "If confirmed, unclear ownership and review could weaken maintenance of a customer-facing regulatory framework; severity remains a proposed calibration.",
+      "compliance_conclusion": "not_determined"
+    }
+  ],
+  "remediation_actions": [
+    {
+      "action_id": "ACT-DESIGN-001",
+      "linked_gap_ids": [
+        "GAP-DESIGN-001"
+      ],
+      "action_type": "mapping_review",
+      "action": "Confirm whether another approved control or document assigns framework ownership and periodic adequacy review; if none exists, prepare a control-design change for approval.",
+      "accountable_owner_role": "Conduct Risk Officer",
+      "supporting_roles": [
+        "Complaints Manager",
+        "Head of Compliance"
+      ],
+      "target_date": "2026-08-14",
+      "priority": "elevated",
+      "status": "proposed",
+      "escalation": {
+        "required": true,
+        "route_to_role": "Head of Compliance",
+        "reason": "The potential gap affects ownership and maintenance of a customer-facing regulatory framework and requires interpretation and materiality review."
+      },
+      "closure_evidence_refs": []
+    }
+  ],
+  "routing": {
+    "assessment_owner_role": "Conduct Risk Officer",
+    "required_reviewer_roles": [
+      "Head of Compliance",
+      "Complaints Manager"
+    ],
+    "routing_rationale": "Conduct Risk owns the framework assessment; the operating owner confirms actual design; Compliance approves the gap disposition and any required change."
+  },
+  "human_review": {
+    "required": true,
+    "status": "pending",
+    "reviewer_role": null,
+    "reviewer_id": null,
+    "decision_rationale": null,
+    "reviewed_at": null
+  },
+  "closure": {
+    "status": "not_ready",
+    "closure_authority_role": null,
+    "closure_authority_id": null,
+    "closure_rationale": null,
+    "closure_evidence_refs": [],
+    "closed_at": null
+  },
+  "generation": {
+    "workflow_version": "obligation-assurance-v1.0",
+    "model_id": "synthetic-example",
+    "prompt_version": "not-yet-baselined",
+    "generated_at": "2026-08-09T20:45:00+02:00",
+    "run_id": "schema-example-assurance-003"
+  },
+  "audit": {
+    "created_at": "2026-08-09T20:45:00+02:00",
+    "updated_at": "2026-08-09T20:45:00+02:00",
+    "created_by": "ai_assisted",
+    "change_log": [
+      {
+        "timestamp": "2026-08-09T20:45:00+02:00",
+        "actor": "schema-example-builder",
+        "change": "Created the synthetic potential-control-gap assessment and proposed escalation route."
+      }
+    ]
+  }
+}
