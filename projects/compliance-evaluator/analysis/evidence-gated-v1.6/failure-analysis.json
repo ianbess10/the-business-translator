@@ -1,0 +1,93 @@
+{
+  "analysis_id": "SA-REG-EVIDENCE-GATED-V1.6-CASE-FAILURE-ANALYSIS-001",
+  "version": "1.6",
+  "analysis_type": "post_regression_case_level_failure_analysis",
+  "run_id": "evidence-gated-v1.6-092a9ca7-1dd9-4ca0-ad21-1a6ee201c404",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.1",
+  "benchmark_authority_version": "1.1",
+  "workflow_id": "SA-REG-EVIDENCE-GATED-001",
+  "workflow_version": "1.6",
+  "model": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "workflow_v1_6_modified": false,
+  "workflow_v1_6_rerun": false,
+  "workflow_v1_6_rescored": false,
+  "post_observation_tuning": false,
+  "headline": {
+    "case_count": 24,
+    "end_to_end_exact_count": 23,
+    "end_to_end_accuracy": 0.9583,
+    "release_gate_pass_count": 5,
+    "release_gate_count": 6,
+    "completed_terminal_case_count": 24,
+    "quarantine_count": 0,
+    "requested_api_call_count": 24,
+    "retry_count": 0,
+    "release_decision": "failed_no_holdout_permitted"
+  },
+  "failed_cases": [
+    {
+      "case_id": "CON-008",
+      "mismatched_fields": ["gap_types", "remediation_action_types"],
+      "coverage_state": "partial",
+      "evidence_condition": "design_deficiency",
+      "observed_gap_types": ["control_design", "partial_coverage"],
+      "authority_gap_types": ["control_design"],
+      "observed_remediation_action_types": ["control_design_change", "mapping_review"],
+      "authority_remediation_action_types": ["mapping_review"],
+      "primary_finding": "workflow_correct_under_approved_concurrent_composition_policy",
+      "measurement_finding": "case_inherited_legacy_single_axis_authority",
+      "operational_consequence": "valid_concurrent_gap_and_design_action_counted_as_error"
+    }
+  ],
+  "root_causes": [
+    {
+      "cause": "benchmark_authority_v1_1_migrated_only_four_previously_disputed_cases",
+      "affected_cases": ["CON-008"],
+      "layer": "evaluation_authority_scope"
+    },
+    {
+      "cause": "legacy_single_axis_fields_inherited_for_non_overlaid_entered_assurance_cases",
+      "affected_cases": ["CON-008"],
+      "layer": "benchmark_authority_model"
+    }
+  ],
+  "not_root_causes": [
+    "provider_transport_contract",
+    "evidence_observation_quality",
+    "deterministic_mapping",
+    "approved_assurance_composition_policy",
+    "severity_calibration",
+    "remediation_routing",
+    "escalation_policy",
+    "case_quarantine",
+    "workflow_or_dataset_identity"
+  ],
+  "controls_that_worked": [
+    "exact_provider_contracts",
+    "approved_rulebook_mapping",
+    "bounded_evidence_observation",
+    "concurrent_condition_preservation",
+    "action_and_routing_union",
+    "severity_and_escalation_floor",
+    "perfect_escalation_confusion_matrix",
+    "runner_label_isolation",
+    "complete_terminal_record",
+    "zero_quarantine_retry_repair_and_tuning",
+    "release_gate_and_holdout_block"
+  ],
+  "v1_7_decision": {
+    "decision_id": "SA-REG-EVIDENCE-GATED-V1.7-DECISION-001",
+    "status": "selected_for_later_implementation_after_authority_audit",
+    "selected_intervention": "complete_dual_axis_authority_audit_and_fail_closed_evaluator_coverage",
+    "v1_7_implemented": false,
+    "v1_7_tested": false,
+    "v1_7_frozen": false,
+    "v1_7_regression_executed": false,
+    "v1_7_scored": false
+  },
+  "synthetic_regression_evidence": true,
+  "independent_validation": false,
+  "production_performance": false
+}

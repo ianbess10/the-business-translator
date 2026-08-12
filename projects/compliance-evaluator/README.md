@@ -256,6 +256,8 @@ The separate [Evidence-Gated Decision Pipeline v1.6](workflows/evidence-gated-v1
 
 The [sole v1.6 regression](results/evidence-gated-v1.6/README.md) completed all 24 terminal cases in 24/24 calls with zero quarantine and zero retry. It was evaluated exactly once against benchmark authority v1.1 and achieved **23/24 end-to-end exact**, with five of six release gates passing. Escalation was exact at six true positives, zero false positives, 18 true negatives and zero false negatives. `CON-011` now retains concurrent partial coverage, adverse operating remediation and mandatory escalation. The sole error, `CON-008`, reflects a two-condition workflow outcome against an inherited single-condition label and requires separate failure analysis. v1.6 fails release, remains frozen and will not be tuned, rerun or rescored.
 
+The completed [v1.6 case-level failure analysis](analysis/evidence-gated-v1.6/README.md) confirms that `CON-008` is correct under the approved rulebook and composition policy: partial coverage and design deficiency coexist, requiring both mapping review and control design change. The mismatch arises because benchmark authority v1.1 migrated only four earlier disputes and silently inherited `CON-008`'s legacy single-axis fields. The separately versioned [v1.7 decision](analysis/evidence-gated-v1.6/v1.7-decision.md) therefore requires an independent audit of all eight entered-assurance cases, a complete self-contained authority v1.2 and an evaluator that fails closed on missing authority. It retains the v1.6 runtime by default and does not implement, execute or score v1.7.
+
 The immediate build sequence is:
 
 1. ~~freeze the synthetic institution and applicability profile;~~ **complete**
@@ -289,8 +291,9 @@ The immediate build sequence is:
 29. ~~author and approve general v1.6 assurance-composition, severity and escalation policy authority;~~ **complete**
 30. ~~implement, test, certify where required and freeze v1.6 separately before regression;~~ **complete**
 31. ~~execute frozen v1.6 exactly once and evaluate its complete terminal-case record exactly once;~~ **complete**
-32. **complete the v1.6 case-level failure analysis and make a separately versioned next-workflow decision;** **next**
-33. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
+32. ~~complete the v1.6 case-level failure analysis and make a separately versioned next-workflow decision;~~ **complete**
+33. **complete an independent dual-axis authority audit for all eight entered-assurance cases before implementing v1.7;** **next**
+34. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
 
