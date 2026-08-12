@@ -79,6 +79,14 @@ The project is framed around tangible measures: time to diagnose, touches per ex
 
 [Read the executive summary](projects/trade-exception-manager/executive-summary.md).
 
+## Completed second case study: Regulatory Change & Obligation-to-Control Intelligence
+
+[Regulatory Change & Obligation-to-Control Intelligence](projects/compliance-evaluator/README.md) demonstrates how AI-assisted analysis can be placed inside a controlled operating workflow for source triage, obligation structuring, control mapping, evidence assessment, routing and escalation. Its final frozen workflow achieved 24/24 exact decisions on the synthetic regression set and 16/16 on a separately frozen unseen synthetic holdout, with no missed or unnecessary escalations.
+
+The result is not presented as automated compliance or production readiness. It demonstrates the Business Translator proposition: the valuable product is a faster, traceable and accountable regulatory operating outcome; AI is one enabling component beneath approved business authority and professional judgment.
+
+[Read the regulatory intelligence executive summary](projects/compliance-evaluator/executive-summary.md).
+
 ---
 
 # Evidence Before Claims

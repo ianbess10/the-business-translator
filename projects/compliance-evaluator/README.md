@@ -6,7 +6,9 @@
 
 ## Project status
 
-**Project 2 — Evidence-Gated Decision Pipeline v1.2 frozen and executed once. The provider rejected the frozen source-stage schema before producing predictions, so no scoring was possible and no rerun occurred.**
+**Project 2 complete — Evidence-Gated Decision Pipeline v1.7 passed its frozen 24-case regression and separate 16-case unseen synthetic holdout, each executed and evaluated exactly once.**
+
+[Read the executive summary](executive-summary.md).
 
 This project will test an AI-assisted capability for regulated financial institutions, starting with:
 
@@ -176,6 +178,30 @@ No `compliant` or `non_compliant` outcome is permitted.
 
 No benefit will be claimed until measured against a defined operating baseline.
 
+## Executive proposition
+
+The operating product is not a prompt. It is a controlled regulatory decision pipeline that helps an institution move from source change to accountable action while preserving the boundaries that matter:
+
+- an external source is not silently promoted into a binding obligation;
+- an approved obligation is not confused with an effective control;
+- incomplete coverage is not hidden by supplied evidence;
+- missing evidence is not automatically treated as a control failure;
+- a material operating exception is not suppressed by a lower-severity mapping issue;
+- routing and escalation follow approved authority; and
+- qualified professionals retain interpretation, approval and closure accountability.
+
+The portfolio evidence now supports a practical proposition: AI can reduce the work required to structure, triage and route regulatory change, provided business authority, evidence gates and human decision rights are designed into the operating workflow.
+
+## Final validation evidence
+
+The complete [benchmark authority v1.2](datasets/baseline-v1.2/README.md) independently adjudicates both coverage and evidence for all eight entered-assurance cases. The separate [v1.7 workflow](workflows/evidence-gated-v1.7/README.md) retains the certified model contracts and deterministic v1.6 runtime while requiring complete evaluator authority with no legacy fallback.
+
+Frozen v1.7 was executed once and evaluated once against the 24-case regression set. It achieved **24/24 end-to-end exact decisions**, zero quarantines, six required escalations detected, zero missed escalations and zero unnecessary escalations. All six release gates passed.
+
+Only then was a separate 16-case [independent synthetic holdout](datasets/holdout-v1.0/README.md) authored and frozen. It contained eight new source/applicability variants and eight new entered-assurance variants. The frozen workflow was executed once and evaluated once, achieving **16/16 end-to-end exact decisions**, zero quarantines, four required escalations detected, zero missed escalations and zero unnecessary escalations. All six holdout gates passed.
+
+These are controlled synthetic benchmark results, not legal conclusions or production performance. The next responsible step is operational piloting with approved real-world sources, representative institution facts, professional review and measurement of the business outcomes listed above—not further benchmark tuning.
+
 ## Human accountability
 
 The capability may prepare analysis and recommendations. It must not:
@@ -292,8 +318,13 @@ The immediate build sequence is:
 30. ~~implement, test, certify where required and freeze v1.6 separately before regression;~~ **complete**
 31. ~~execute frozen v1.6 exactly once and evaluate its complete terminal-case record exactly once;~~ **complete**
 32. ~~complete the v1.6 case-level failure analysis and make a separately versioned next-workflow decision;~~ **complete**
-33. **complete an independent dual-axis authority audit for all eight entered-assurance cases before implementing v1.7;** **next**
-34. only after a future frozen version passes every release gate, author and freeze a separate unseen holdout.
+33. ~~complete an independent dual-axis authority audit for all eight entered-assurance cases before implementing v1.7;~~ **complete**
+34. ~~implement, test, certify where required and freeze v1.7 separately;~~ **complete**
+35. ~~execute frozen v1.7 once and evaluate it once against complete authority v1.2;~~ **complete — 24/24 exact, all gates passed**
+36. ~~author, freeze, execute and evaluate a separate unseen synthetic holdout once;~~ **complete — 16/16 exact, all gates passed**
+37. ~~package the executive case study and close benchmark engineering;~~ **complete**
+
+**Portfolio build status: complete.** Further work should be a separately governed operational pilot, not another benchmark workflow version.
 
 See the [operating model](operating-model.md) and [first-release plan](first-release-plan.md).
 
