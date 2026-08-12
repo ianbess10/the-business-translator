@@ -1,0 +1,4584 @@
+{
+  "run_id": "evidence-gated-v1.7-97ec2cc0-4d9e-4540-adbe-42418ac7d643",
+  "status": "completed",
+  "dataset_id": "SA-REG-BASELINE-001",
+  "dataset_version": "1.2",
+  "workflow_id": "SA-REG-EVIDENCE-GATED-001",
+  "workflow_version": "1.7",
+  "workflow_meta_sha256": "ce459cb42da14323b1e94113cc72001d31bb1038113e557eb621765997ad8ae0",
+  "model_requested": "gpt-4o-mini-2024-07-18",
+  "temperature": 0,
+  "run_attempt_count": 1,
+  "requested_api_call_count": 24,
+  "retry_count": 0,
+  "tuning_after_observation": false,
+  "case_count": 24,
+  "predictions": [
+    {
+      "input_case_id": "AML-001",
+      "workstream": "aml_cft",
+      "case_stage": "source_classification",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "AML-001",
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The candidate statement aligns with the source records, which confirm that Guidance Note 7B is current official guidance and can be used as interpretive context for the risk-based approach. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-AML-GUIDANCE-CONTEXT, SUP-RULE-EXACT-SOURCE-SUPPORT, APP-RULE-FACT-BASED, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "AML-001",
+          "proposal_disposition": "accept",
+          "source_classification": "guidance_only",
+          "statement_support": "exact_supported",
+          "legal_readiness": "ready_for_candidate",
+          "applicability_assessment": "applicable",
+          "material_missing_fact_types": [],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "The candidate statement aligns with the source records, which confirm that Guidance Note 7B is current official guidance and can be used as interpretive context for the risk-based approach."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-AML-GUIDANCE-CONTEXT",
+          "SUP-RULE-EXACT-SOURCE-SUPPORT",
+          "APP-RULE-FACT-BASED",
+          "ESC-RULE-DEFAULT-NO-ESCALATION"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "exact_supported",
+        "legal_readiness": "ready_for_candidate",
+        "applicability_rule_id": "APP-RULE-FACT-BASED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "guidance_only",
+            "decided": "guidance_only",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "guidance_context",
+            "decided": "guidance_context",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": null,
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xDhOWkDeHNtWNkAZ1rvRrbm7Ne",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 803,
+            "completion_tokens": 101,
+            "total_tokens": 904
+          },
+          "latency_ms": 3202
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "AML-002",
+      "workstream": "aml_cft",
+      "case_stage": "source_classification",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "AML-002",
+        "source_use_disposition": "historical_only",
+        "obligation_outcome": "superseded",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: Guidance Note 7A has been superseded by Guidance Note 7B, making it historical and not suitable for current guidance. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-AML-HISTORICAL-SOURCE, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FIXED-NOT-ASSESSED, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "AML-002",
+          "proposal_disposition": "reject",
+          "source_classification": "historical_only",
+          "statement_support": "not_assessable",
+          "legal_readiness": "blocked_source",
+          "applicability_assessment": "out_of_scope",
+          "material_missing_fact_types": [],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "Guidance Note 7A has been superseded by Guidance Note 7B, making it historical and not suitable for current guidance."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-AML-HISTORICAL-SOURCE",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FIXED-NOT-ASSESSED",
+          "ESC-RULE-DEFAULT-NO-ESCALATION"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "blocked_source",
+        "applicability_rule_id": "APP-RULE-FIXED-NOT-ASSESSED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "guidance_only",
+            "decided": "historical_only",
+            "changed": true
+          },
+          "obligation_outcome": {
+            "proposed": "guidance_context",
+            "decided": "superseded",
+            "changed": true
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "not_assessed",
+            "changed": true
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": null,
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xHFKqVkskEMLNq3cikwLcEtTH4",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 743,
+            "completion_tokens": 95,
+            "total_tokens": 838
+          },
+          "latency_ms": 4012
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "AML-003",
+      "workstream": "aml_cft",
+      "case_stage": "obligation_assessment",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "AML-003",
+        "source_use_disposition": "final_change_event",
+        "obligation_outcome": "final_change_pending_commencement",
+        "applicability_status": "applicability_uncertain",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": true,
+        "escalation_roles": [
+          "AML Compliance Officer",
+          "Legal Counsel"
+        ],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The candidate statement proposes an implementation deadline that cannot be supported due to the lack of verified commencement from the Government Gazette publication, which is a prerequisite for the directive's enforceability. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-AML-FINAL-PENDING-COMMENCEMENT, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FIXED-UNCERTAIN, ESC-RULE-PENDING-COMMENCEMENT-AND-APPLICABILITY."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "AML-003",
+          "proposal_disposition": "reject",
+          "source_classification": "final_change_event",
+          "statement_support": "not_assessable",
+          "legal_readiness": "pending_commencement",
+          "applicability_assessment": "uncertain",
+          "material_missing_fact_types": [
+            "commencement",
+            "other"
+          ],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "The candidate statement proposes an implementation deadline that cannot be supported due to the lack of verified commencement from the Government Gazette publication, which is a prerequisite for the directive's enforceability."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-AML-FINAL-PENDING-COMMENCEMENT",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FIXED-UNCERTAIN",
+          "ESC-RULE-PENDING-COMMENCEMENT-AND-APPLICABILITY"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "pending_commencement",
+        "applicability_rule_id": "APP-RULE-FIXED-UNCERTAIN",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "final_change_event",
+            "changed": true
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "final_change_pending_commencement",
+            "changed": true
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicability_uncertain",
+            "changed": true
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": true,
+            "changed": true
+          }
+        },
+        "proposed_owner": "Head of Client Onboarding",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xJ1JKlOkfSD9H93G4aPFLaLNOk",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 826,
+            "completion_tokens": 108,
+            "total_tokens": 934
+          },
+          "latency_ms": 2648
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "AML-004",
+      "workstream": "aml_cft",
+      "case_stage": "source_classification",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "AML-004",
+        "source_use_disposition": "draft_watchlist",
+        "obligation_outcome": "draft_or_watchlist",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: Draft Directive 12 is not an in-force directive and cannot be treated as a binding obligation. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-AML-DRAFT-WATCHLIST, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FIXED-NOT-ASSESSED, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "AML-004",
+          "proposal_disposition": "reject",
+          "source_classification": "draft_watchlist",
+          "statement_support": "not_assessable",
+          "legal_readiness": "pending_commencement",
+          "applicability_assessment": "applicable",
+          "material_missing_fact_types": [],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "Draft Directive 12 is not an in-force directive and cannot be treated as a binding obligation."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-AML-DRAFT-WATCHLIST",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FIXED-NOT-ASSESSED",
+          "ESC-RULE-DEFAULT-NO-ESCALATION"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "pending_commencement",
+        "applicability_rule_id": "APP-RULE-FIXED-NOT-ASSESSED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "draft_watchlist",
+            "changed": true
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "draft_or_watchlist",
+            "changed": true
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "not_assessed",
+            "changed": true
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "AML Compliance Officer",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xMkAKvGhjnlZGeuJRbNPTVdWru",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 794,
+            "completion_tokens": 87,
+            "total_tokens": 881
+          },
+          "latency_ms": 1795
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "AML-005",
+      "workstream": "aml_cft",
+      "case_stage": "source_classification",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "AML-005",
+        "source_use_disposition": "blocked",
+        "obligation_outcome": "blocked_source",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The original Act source is blocked for candidate and binding obligation extraction, preventing support for a current binding obligation record. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-AML-GAZETTE-DEPENDENCY, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FIXED-NOT-ASSESSED, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "AML-005",
+          "proposal_disposition": "reject",
+          "source_classification": "blocked",
+          "statement_support": "not_assessable",
+          "legal_readiness": "blocked_source",
+          "applicability_assessment": "out_of_scope",
+          "material_missing_fact_types": [],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "The original Act source is blocked for candidate and binding obligation extraction, preventing support for a current binding obligation record."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-AML-GAZETTE-DEPENDENCY",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FIXED-NOT-ASSESSED",
+          "ESC-RULE-DEFAULT-NO-ESCALATION"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "blocked_source",
+        "applicability_rule_id": "APP-RULE-FIXED-NOT-ASSESSED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "blocked",
+            "changed": true
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "blocked_source",
+            "changed": true
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "not_assessed",
+            "changed": true
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "Head of Client Onboarding",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xOtWaU61VwuXnO8CMTbMiZI2bU",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 806,
+            "completion_tokens": 88,
+            "total_tokens": 894
+          },
+          "latency_ms": 2232
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "AML-006",
+      "workstream": "aml_cft",
+      "case_stage": "source_classification",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "AML-006",
+        "source_use_disposition": "blocked",
+        "obligation_outcome": "blocked_source",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The source is an unofficial compilation and explicitly blocked for binding extraction, making it unsuitable as a binding record-retention obligation. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-AML-CONSOLIDATION-BLOCK, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FIXED-NOT-ASSESSED, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "AML-006",
+          "proposal_disposition": "reject",
+          "source_classification": "guidance_only",
+          "statement_support": "not_assessable",
+          "legal_readiness": "blocked_source",
+          "applicability_assessment": "applicable",
+          "material_missing_fact_types": [],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "The source is an unofficial compilation and explicitly blocked for binding extraction, making it unsuitable as a binding record-retention obligation."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-AML-CONSOLIDATION-BLOCK",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FIXED-NOT-ASSESSED",
+          "ESC-RULE-DEFAULT-NO-ESCALATION"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "blocked_source",
+        "applicability_rule_id": "APP-RULE-FIXED-NOT-ASSESSED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "blocked",
+            "changed": true
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "blocked_source",
+            "changed": true
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "not_assessed",
+            "changed": true
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "Head of Operations",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xQUZbPqYKUxsDy3qcVqXN2qM1u",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 773,
+            "completion_tokens": 91,
+            "total_tokens": 864
+          },
+          "latency_ms": 2185
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "AML-007",
+      "workstream": "aml_cft",
+      "case_stage": "obligation_assessment",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "AML-007",
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The candidate statement imposes a binding obligation that is not supported by the guidance note, which only provides interpretive context and does not mandate specific actions. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-AML-GUIDANCE-CONTEXT, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FACT-BASED, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "AML-007",
+          "proposal_disposition": "reject",
+          "source_classification": "guidance_only",
+          "statement_support": "not_assessable",
+          "legal_readiness": "pending_commencement",
+          "applicability_assessment": "applicable",
+          "material_missing_fact_types": [],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "The candidate statement imposes a binding obligation that is not supported by the guidance note, which only provides interpretive context and does not mandate specific actions."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-AML-GUIDANCE-CONTEXT",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FACT-BASED",
+          "ESC-RULE-DEFAULT-NO-ESCALATION"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "pending_commencement",
+        "applicability_rule_id": "APP-RULE-FACT-BASED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "guidance_only",
+            "changed": true
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "guidance_context",
+            "changed": true
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "AML Operations Manager",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xSrnCK0VS3w0UCV2AG4mSx6tqh",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 787,
+            "completion_tokens": 98,
+            "total_tokens": 885
+          },
+          "latency_ms": 2109
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "AML-008",
+      "workstream": "aml_cft",
+      "case_stage": "obligation_assessment",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "AML-008",
+        "source_use_disposition": "final_change_event",
+        "obligation_outcome": "final_change_pending_commencement",
+        "applicability_status": "applicability_uncertain",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": true,
+        "escalation_roles": [
+          "AML Compliance Officer",
+          "Legal Counsel"
+        ],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The directive's applicability is contingent on the verification of the Government Gazette publication and the institution's exact Schedule 1 item, which are currently unresolved. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-AML-FINAL-PENDING-COMMENCEMENT, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FIXED-UNCERTAIN, ESC-RULE-PENDING-COMMENCEMENT-AND-APPLICABILITY."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "AML-008",
+          "proposal_disposition": "reject",
+          "source_classification": "final_change_event",
+          "statement_support": "not_assessable",
+          "legal_readiness": "pending_commencement",
+          "applicability_assessment": "uncertain",
+          "material_missing_fact_types": [
+            "commencement",
+            "activity_or_product"
+          ],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "The directive's applicability is contingent on the verification of the Government Gazette publication and the institution's exact Schedule 1 item, which are currently unresolved."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-AML-FINAL-PENDING-COMMENCEMENT",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FIXED-UNCERTAIN",
+          "ESC-RULE-PENDING-COMMENCEMENT-AND-APPLICABILITY"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "pending_commencement",
+        "applicability_rule_id": "APP-RULE-FIXED-UNCERTAIN",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "final_change_event",
+            "decided": "final_change_event",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "final_change_pending_commencement",
+            "decided": "final_change_pending_commencement",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicability_uncertain",
+            "changed": true
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": true,
+            "changed": true
+          }
+        },
+        "proposed_owner": "Head of Client Onboarding",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xUfDX6on74qjoLI1wN5wW0C8hj",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 824,
+            "completion_tokens": 104,
+            "total_tokens": 928
+          },
+          "latency_ms": 1435
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "AML-009",
+      "workstream": "aml_cft",
+      "case_stage": "obligation_assessment",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "AML-009",
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "out_of_scope",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The candidate statement proposes an update to controls for virtual-asset services, which are explicitly excluded from the institution's current profile. Therefore, the statement is not assessable and is out of scope. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-AML-GUIDANCE-CONTEXT, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FACT-BASED, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "AML-009",
+          "proposal_disposition": "reject",
+          "source_classification": "guidance_only",
+          "statement_support": "not_assessable",
+          "legal_readiness": "pending_commencement",
+          "applicability_assessment": "out_of_scope",
+          "material_missing_fact_types": [],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "The candidate statement proposes an update to controls for virtual-asset services, which are explicitly excluded from the institution's current profile. Therefore, the statement is not assessable and is out of scope."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-AML-GUIDANCE-CONTEXT",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FACT-BASED",
+          "ESC-RULE-DEFAULT-NO-ESCALATION"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "pending_commencement",
+        "applicability_rule_id": "APP-RULE-FACT-BASED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "guidance_only",
+            "decided": "guidance_only",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "guidance_context",
+            "decided": "guidance_context",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "out_of_scope",
+            "changed": true
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "AML Compliance Officer",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xVWLBAVOCSkYKQS33DynFwuU3I",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 805,
+            "completion_tokens": 108,
+            "total_tokens": 913
+          },
+          "latency_ms": 1824
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "AML-010",
+      "workstream": "aml_cft",
+      "case_stage": "obligation_assessment",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "AML-010",
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The candidate statement imposes a requirement (daily rescreening) that is not supported by the guidance, which only discusses risk-based controls without specifying a frequency. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-AML-GUIDANCE-CONTEXT, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FACT-BASED, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "AML-010",
+          "proposal_disposition": "reject",
+          "source_classification": "guidance_only",
+          "statement_support": "not_assessable",
+          "legal_readiness": "pending_commencement",
+          "applicability_assessment": "applicable",
+          "material_missing_fact_types": [],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "The candidate statement imposes a requirement (daily rescreening) that is not supported by the guidance, which only discusses risk-based controls without specifying a frequency."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-AML-GUIDANCE-CONTEXT",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FACT-BASED",
+          "ESC-RULE-DEFAULT-NO-ESCALATION"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "pending_commencement",
+        "applicability_rule_id": "APP-RULE-FACT-BASED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "guidance_only",
+            "decided": "guidance_only",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "guidance_context",
+            "decided": "guidance_context",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "AML Operations Manager",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xX8unY0NRS3TDbEk1c0qWNzA2f",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 796,
+            "completion_tokens": 100,
+            "total_tokens": 896
+          },
+          "latency_ms": 1428
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "AML-011",
+      "workstream": "aml_cft",
+      "case_stage": "control_assurance",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "AML-011",
+        "source_use_disposition": "guidance_only",
+        "obligation_outcome": "guidance_context",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The candidate statement proposes a mandatory obligation based on guidance that is not approved as binding, thus it cannot be assessed as a control. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-AML-GUIDANCE-CONTEXT, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FACT-BASED, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "AML-011",
+          "proposal_disposition": "reject",
+          "source_classification": "guidance_only",
+          "statement_support": "not_assessable",
+          "legal_readiness": "human_review_required",
+          "applicability_assessment": "applicable",
+          "material_missing_fact_types": [],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "The candidate statement proposes a mandatory obligation based on guidance that is not approved as binding, thus it cannot be assessed as a control."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-AML-GUIDANCE-CONTEXT",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FACT-BASED",
+          "ESC-RULE-DEFAULT-NO-ESCALATION"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "human_review_required",
+        "applicability_rule_id": "APP-RULE-FACT-BASED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "guidance_only",
+            "decided": "guidance_only",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "guidance_context",
+            "decided": "guidance_context",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": "mapped_and_evidenced",
+            "decided": "not_applicable",
+            "changed": true
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "AML Operations Manager",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xZCkDWlcchG9iSsCA3O9AyVRtm",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 792,
+            "completion_tokens": 94,
+            "total_tokens": 886
+          },
+          "latency_ms": 2147
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "AML-012",
+      "workstream": "aml_cft",
+      "case_stage": "end_to_end",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "AML-012",
+        "source_use_disposition": "final_change_event",
+        "obligation_outcome": "final_change_pending_commencement",
+        "applicability_status": "applicability_uncertain",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": true,
+        "escalation_roles": [
+          "AML Compliance Officer",
+          "Legal Counsel"
+        ],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The directive is final-issued but lacks verified commencement, which affects the applicability and the proposed statement's assertion of deferral without escalation. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-AML-FINAL-PENDING-COMMENCEMENT, SUP-RULE-PARTIAL-SOURCE-SUPPORT, APP-RULE-FIXED-UNCERTAIN, ESC-RULE-PENDING-COMMENCEMENT-AND-APPLICABILITY."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "AML-012",
+          "proposal_disposition": "amend",
+          "source_classification": "final_change_event",
+          "statement_support": "partially_supported",
+          "legal_readiness": "pending_commencement",
+          "applicability_assessment": "uncertain",
+          "material_missing_fact_types": [
+            "commencement",
+            "other"
+          ],
+          "source_conflict_present": false,
+          "unsupported_elements": [
+            "defer the issue without escalation"
+          ],
+          "rationale": "The directive is final-issued but lacks verified commencement, which affects the applicability and the proposed statement's assertion of deferral without escalation."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-AML-FINAL-PENDING-COMMENCEMENT",
+          "SUP-RULE-PARTIAL-SOURCE-SUPPORT",
+          "APP-RULE-FIXED-UNCERTAIN",
+          "ESC-RULE-PENDING-COMMENCEMENT-AND-APPLICABILITY"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "partially_supported",
+        "legal_readiness": "pending_commencement",
+        "applicability_rule_id": "APP-RULE-FIXED-UNCERTAIN",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "final_change_event",
+            "decided": "final_change_event",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "final_change_pending_commencement",
+            "decided": "final_change_pending_commencement",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicability_uncertain",
+            "decided": "applicability_uncertain",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": true,
+            "changed": true
+          }
+        },
+        "proposed_owner": "Regulatory Change Lead",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xbLLsRpke6Y9z8UjsHkqRSWMJQ",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 828,
+            "completion_tokens": 106,
+            "total_tokens": 934
+          },
+          "latency_ms": 2056
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "CON-001",
+      "workstream": "market_conduct",
+      "case_stage": "obligation_assessment",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "CON-001",
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The candidate statement is directly supported by the source records, specifically the requirement for an authorised provider to establish and maintain an adequate complaints management framework as outlined in the amendment notice. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-CONDUCT-AMENDMENT-CANDIDATE, SUP-RULE-EXACT-SOURCE-SUPPORT, APP-RULE-FACT-BASED, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "CON-001",
+          "proposal_disposition": "accept",
+          "source_classification": "binding_candidate",
+          "statement_support": "exact_supported",
+          "legal_readiness": "ready_for_candidate",
+          "applicability_assessment": "applicable",
+          "material_missing_fact_types": [],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "The candidate statement is directly supported by the source records, specifically the requirement for an authorised provider to establish and maintain an adequate complaints management framework as outlined in the amendment notice."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-CONDUCT-AMENDMENT-CANDIDATE",
+          "SUP-RULE-EXACT-SOURCE-SUPPORT",
+          "APP-RULE-FACT-BASED",
+          "ESC-RULE-DEFAULT-NO-ESCALATION"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "exact_supported",
+        "legal_readiness": "ready_for_candidate",
+        "applicability_rule_id": "APP-RULE-FACT-BASED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "binding_candidate",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "candidate_binding_obligation",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "Conduct Risk Officer",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xdJ7RWwo1cRhkguQjK59q2TF9I",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 866,
+            "completion_tokens": 99,
+            "total_tokens": 965
+          },
+          "latency_ms": 1550
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "CON-002",
+      "workstream": "market_conduct",
+      "case_stage": "source_classification",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "CON-002",
+        "source_use_disposition": "blocked",
+        "obligation_outcome": "blocked_source",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The 2003 General Code is blocked as a standalone binding source and cannot support the proposed obligation. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-CONDUCT-BASE-CODE-BLOCK, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FIXED-NOT-ASSESSED, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "CON-002",
+          "proposal_disposition": "reject",
+          "source_classification": "blocked",
+          "statement_support": "not_assessable",
+          "legal_readiness": "blocked_source",
+          "applicability_assessment": "out_of_scope",
+          "material_missing_fact_types": [],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "The 2003 General Code is blocked as a standalone binding source and cannot support the proposed obligation."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-CONDUCT-BASE-CODE-BLOCK",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FIXED-NOT-ASSESSED",
+          "ESC-RULE-DEFAULT-NO-ESCALATION"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "blocked_source",
+        "applicability_rule_id": "APP-RULE-FIXED-NOT-ASSESSED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "blocked",
+            "changed": true
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "blocked_source",
+            "changed": true
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "not_assessed",
+            "changed": true
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "Complaints Manager",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xfblbcJsgwJYVUFXsqQfFYs1Dk",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 826,
+            "completion_tokens": 86,
+            "total_tokens": 912
+          },
+          "latency_ms": 1404
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "CON-003",
+      "workstream": "market_conduct",
+      "case_stage": "source_classification",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "CON-003",
+        "source_use_disposition": "strategy_context",
+        "obligation_outcome": "strategy_context",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The FSCA Regulatory Strategy 2025-2028 is not a binding instrument and cannot be implemented as a mandatory control. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-CONDUCT-STRATEGY-CONTEXT, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FIXED-NOT-ASSESSED, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "CON-003",
+          "proposal_disposition": "reject",
+          "source_classification": "strategy_context",
+          "statement_support": "not_assessable",
+          "legal_readiness": "pending_commencement",
+          "applicability_assessment": "applicable",
+          "material_missing_fact_types": [],
+          "source_conflict_present": false,
+          "unsupported_elements": [],
+          "rationale": "The FSCA Regulatory Strategy 2025-2028 is not a binding instrument and cannot be implemented as a mandatory control."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-CONDUCT-STRATEGY-CONTEXT",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FIXED-NOT-ASSESSED",
+          "ESC-RULE-DEFAULT-NO-ESCALATION"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "pending_commencement",
+        "applicability_rule_id": "APP-RULE-FIXED-NOT-ASSESSED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "strategy_context",
+            "changed": true
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "strategy_context",
+            "changed": true
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "not_assessed",
+            "changed": true
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "Head of Compliance",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xgVV1Mde8rI1nv2V7afe8qz5NF",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 763,
+            "completion_tokens": 92,
+            "total_tokens": 855
+          },
+          "latency_ms": 1829
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "CON-004",
+      "workstream": "market_conduct",
+      "case_stage": "obligation_assessment",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "CON-004",
+        "source_use_disposition": "blocked",
+        "obligation_outcome": "source_conflict",
+        "applicability_status": "not_assessed",
+        "assurance_gate": "not_entered",
+        "mapping_status": "not_applicable",
+        "control_mappings": [],
+        "assurance_outcome": "not_applicable",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Head of Compliance",
+          "Legal Counsel"
+        ],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: The proposal cannot be supported as the complete amendment chain and provision-level reconciliation are missing, leading to a source conflict. Assurance was not entered; downstream fields were normalised. Policy rules: SRC-RULE-MULTI-SOURCE-CONFLICT, SUP-RULE-NOT-ASSESSABLE, APP-RULE-FIXED-NOT-ASSESSED, ESC-RULE-SOURCE-CONFLICT."
+      },
+      "stage_outputs": {
+        "source_support": {
+          "case_id": "CON-004",
+          "proposal_disposition": "reject",
+          "source_classification": "source_conflict",
+          "statement_support": "not_assessable",
+          "legal_readiness": "blocked_source",
+          "applicability_assessment": "uncertain",
+          "material_missing_fact_types": [
+            "source_version_or_chain",
+            "other"
+          ],
+          "source_conflict_present": true,
+          "unsupported_elements": [],
+          "rationale": "The proposal cannot be supported as the complete amendment chain and provision-level reconciliation are missing, leading to a source conflict."
+        },
+        "mapping": null,
+        "evidence_observations": null,
+        "approved_obligation_authority": null
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "SRC-RULE-MULTI-SOURCE-CONFLICT",
+          "SUP-RULE-NOT-ASSESSABLE",
+          "APP-RULE-FIXED-NOT-ASSESSED",
+          "ESC-RULE-SOURCE-CONFLICT"
+        ],
+        "approved_obligation_authority_used": false,
+        "source_stage_bypassed": false,
+        "statement_support": "not_assessable",
+        "legal_readiness": "blocked_source",
+        "applicability_rule_id": "APP-RULE-FIXED-NOT-ASSESSED",
+        "current_mapping_control_ids": [],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": null,
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "blocked",
+            "changed": true
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "source_conflict",
+            "changed": true
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "not_assessed",
+            "changed": true
+          },
+          "assurance_outcome": {
+            "proposed": null,
+            "decided": "not_applicable",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": true,
+            "changed": true
+          }
+        },
+        "proposed_owner": "Complaints Manager",
+        "resolved_control_owners": {},
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": {
+          "response_id": "chatcmpl-EC0xivqm0AmXg55eyCOZR2PugsQ14",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 1124,
+            "completion_tokens": 97,
+            "total_tokens": 1221
+          },
+          "latency_ms": 1470
+        },
+        "mapping": null,
+        "evidence": null
+      }
+    },
+    {
+      "input_case_id": "CON-005",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "CON-005",
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          },
+          {
+            "control_id": "C-CON-007",
+            "owner_role": "Conduct Risk Officer"
+          }
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: Reviewed approved-obligation authority supplied source, obligation and applicability decisions. Mapping stage: Deterministically derived from the approved obligation-element coverage rulebook. Evidence stage: All supplied evidence items meet the approved requirements. Policy rules: APP-RULE-APPROVED-OBLIGATION-AUTHORITY, MAP-RULE-CURRENT-COMPLETE, EVD-RULE-SUFFICIENT, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": null,
+        "mapping": {
+          "case_id": "CON-005",
+          "proposal_disposition": "accept",
+          "current_mapping_control_ids": [
+            "C-CON-006",
+            "C-CON-007"
+          ],
+          "candidate_additional_control_ids": [],
+          "mapping_completeness": "complete",
+          "uncovered_obligation_elements": [],
+          "rationale": "Deterministically derived from the approved obligation-element coverage rulebook."
+        },
+        "evidence_observations": {
+          "case_id": "CON-005",
+          "observations": [
+            {
+              "evidence_id": "EV-CON-001",
+              "requirement_id": "ER-CON-DESIGN-001",
+              "observed_state": "present_complete",
+              "rationale": "The approved complaints management framework is supplied and meets the requirement for governance, ownership, and review arrangements."
+            },
+            {
+              "evidence_id": "EV-CON-002",
+              "requirement_id": "ER-CON-OPERATE-001",
+              "observed_state": "present_complete",
+              "rationale": "The complaint register for the assessment period is supplied and fulfills the requirement for completed complaint records."
+            },
+            {
+              "evidence_id": "EV-CON-003",
+              "requirement_id": "ER-CON-MAINTAIN-001",
+              "observed_state": "present_complete",
+              "rationale": "The customer-outcomes management information with review evidence is supplied and meets the requirement for periodic review."
+            }
+          ],
+          "rationale": "All supplied evidence items meet the approved requirements."
+        },
+        "approved_obligation_authority": {
+          "schema_version": "1.0",
+          "obligation_id": "OBL-CONDUCT-0001",
+          "record_type": "candidate_obligation",
+          "lifecycle_status": "approved",
+          "source": {
+            "source_pack_id": "SA-REG-SOURCE-PACK-001",
+            "source_pack_version": "1.0",
+            "source_id": "SA-CONDUCT-SP-003",
+            "source_title": "Amendment of the General Code of Conduct for Authorised FSPs and Representatives, 2020",
+            "source_status": "in_force_with_staged_commencement",
+            "instrument_type": "amendment_notice",
+            "document_sha256": "0ba264a18f2e4659c1af10ddaebfba1433c82d26ec13554bc3f92c6cd51f8d1d",
+            "hash_verified": true,
+            "status_verified_at": "2026-08-09",
+            "locator": {
+              "locator_text": "Schedule A, paragraph 12, inserted section 17(1)",
+              "page_label": "Schedule A - complaints management framework",
+              "section": "17(1)",
+              "clause": null,
+              "paragraph": "12",
+              "quote": "A provider must establish and maintain an adequate complaints management framework."
+            }
+          },
+          "source_gate": {
+            "manifest_candidate_statement_extraction": "allowed_from_amendment_text_with_commencement_locator",
+            "manifest_binding_obligation_extraction": "allowed_with_human_review_and_staged_date_control",
+            "record_use": "binding_candidate",
+            "gate_passed": true,
+            "gate_reason": "The source pack permits amendment-specific candidate obligations when the staged commencement table and human review are preserved."
+          },
+          "classification": {
+            "normative_strength": "binding_candidate",
+            "legal_effect": "in_force_staged",
+            "source_use_disposition": "binding_candidate",
+            "effective_from": "2021-06-26",
+            "transition_end": null,
+            "classification_rationale": "The amendment is an in-force Gazette notice. The staged commencement control was retained and reviewed before approval of this synthetic obligation record."
+          },
+          "obligation": {
+            "atomic": true,
+            "actor": "authorised financial services provider",
+            "modality": "must",
+            "action": "establish and maintain",
+            "object_or_outcome": "an adequate complaints management framework",
+            "trigger_conditions": [
+              "the institution renders regulated financial services as an authorised provider"
+            ],
+            "timing": {
+              "type": "continuous",
+              "value": "while the regulated activity is performed",
+              "source_supported": true
+            },
+            "exceptions_and_dependencies": [
+              "the assessment remains limited to the synthetic institution profile and supplied amendment source"
+            ],
+            "evidence_or_reporting_requirements": [
+              "documented complaints management framework",
+              "operating records showing that the framework is maintained"
+            ],
+            "atomic_summary": "An authorised provider must establish and maintain an adequate complaints management framework.",
+            "interpretation_notes": [
+              "Approval confirms the synthetic obligation record and applicability assumption, not control effectiveness or institutional compliance.",
+              "The evidence items are assurance needs and do not extend the source obligation."
+            ],
+            "support_status": "fully_supported",
+            "unsupported_extension_detected": false
+          },
+          "applicability": {
+            "profile_id": "SA-IWM-SYN-001",
+            "profile_version": "1.0",
+            "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+            "status": "applicable_candidate",
+            "facts_used": [
+              {
+                "fact_path": "institution.services[0]",
+                "fact_value": "investment advice"
+              },
+              {
+                "fact_path": "institution.services[4]",
+                "fact_value": "client servicing and complaints handling"
+              },
+              {
+                "fact_path": "regulatory_assumptions.FSCA",
+                "fact_value": "assumed relevant authorisations and permissions"
+              }
+            ],
+            "missing_facts": [],
+            "assumptions": [
+              "The fictional institution is treated as an authorised provider for this controlled evaluation."
+            ],
+            "rationale": "A qualified synthetic reviewer accepted applicability for the evaluation profile, subject to the stated fictional licensing assumption.",
+            "human_confirmation_required": true
+          },
+          "change": {
+            "change_type": "amended",
+            "previous_source_id": "SA-CONDUCT-SP-002",
+            "previous_obligation_id": null,
+            "change_summary": "Government Notice 706 of 2020 inserted a structured complaints-management framework into the General Code amendment chain."
+          },
+          "operating_impact": {
+            "impact_status": "candidate",
+            "affected_process_ids": [
+              "P-CON-005",
+              "P-CON-006"
+            ],
+            "affected_control_ids": [
+              "C-CON-006",
+              "C-CON-007"
+            ],
+            "affected_roles": [
+              "Conduct Risk Officer",
+              "Business or Control Owner"
+            ],
+            "affected_artifacts": [
+              "policy",
+              "procedure",
+              "management_information",
+              "control_evidence"
+            ],
+            "rationale": "The approved obligation concerns the design and maintenance of the complaints framework and related customer-outcomes oversight. Control mapping remains separately reviewable."
+          },
+          "routing": {
+            "proposed_owner_role": "Conduct Risk Officer",
+            "required_reviewer_roles": [
+              "Head of Compliance",
+              "Business or Control Owner"
+            ],
+            "escalation_required": false,
+            "escalation_reason": null
+          },
+          "assessment": {
+            "outcome": "candidate_binding_obligation",
+            "confidence": 0.91,
+            "limitations": [
+              "This is a synthetic applicability approval, not legal advice.",
+              "The complete current General Code amendment chain is not represented as a consolidated source."
+            ],
+            "next_action": "Assess the approved obligation against the frozen control catalogue and supplied evidence."
+          },
+          "generation": {
+            "workflow_version": "regulatory-change-v1.0",
+            "model_id": "synthetic-example",
+            "prompt_version": "not-yet-baselined",
+            "generated_at": "2026-08-09T19:30:00+02:00",
+            "run_id": "schema-example-binding-001"
+          },
+          "human_review": {
+            "required": true,
+            "status": "accepted",
+            "reviewer_role": "Head of Compliance",
+            "reviewer_id": "SYN-HC-001",
+            "decision_rationale": "Accepted for synthetic control-assurance design after confirming the supplied source locator, staged commencement treatment and fictional institution applicability assumption.",
+            "reviewed_at": "2026-08-09T20:00:00+02:00"
+          },
+          "audit": {
+            "created_at": "2026-08-09T19:30:00+02:00",
+            "updated_at": "2026-08-09T20:00:00+02:00",
+            "created_by": "ai_assisted",
+            "change_log": [
+              {
+                "timestamp": "2026-08-09T19:30:00+02:00",
+                "actor": "schema-example-builder",
+                "change": "Created synthetic candidate obligation example."
+              },
+              {
+                "timestamp": "2026-08-09T20:00:00+02:00",
+                "actor": "SYN-HC-001",
+                "change": "Approved the synthetic obligation record for downstream control-and-evidence assessment."
+              }
+            ]
+          }
+        }
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+          "MAP-RULE-CURRENT-COMPLETE",
+          "EVD-RULE-SUFFICIENT",
+          "ESC-RULE-DEFAULT-NO-ESCALATION",
+          "ACP-COV-COMPLETE",
+          "ACP-EVD-SUFFICIENT",
+          "ACP-COMPOSE-UNION"
+        ],
+        "approved_obligation_authority_used": true,
+        "source_stage_bypassed": true,
+        "statement_support": null,
+        "legal_readiness": null,
+        "applicability_rule_id": "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+        "current_mapping_control_ids": [
+          "C-CON-006",
+          "C-CON-007"
+        ],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": "complete",
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "binding_candidate",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "candidate_binding_obligation",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": "mapped_and_evidenced",
+            "decided": "mapped_and_evidenced",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "Conduct Risk Officer",
+        "resolved_control_owners": {
+          "C-CON-006": "Complaints Manager",
+          "C-CON-007": "Conduct Risk Officer"
+        },
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true,
+        "coverage_state": "complete",
+        "evidence_condition": "sufficient",
+        "concurrent_conditions_preserved": true,
+        "remediation_routing": {},
+        "escalation_triggers": [],
+        "composition_policy_id": "SA-REG-ASSURANCE-COMPOSITION-001",
+        "composition_policy_version": "1.0"
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": null,
+        "mapping": null,
+        "evidence": {
+          "response_id": "chatcmpl-EC0xjc03JlsezalY1ym3LNASBsxYx",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 1068,
+            "completion_tokens": 180,
+            "total_tokens": 1248
+          },
+          "latency_ms": 4809
+        }
+      }
+    },
+    {
+      "input_case_id": "CON-006",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "CON-006",
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "partially_mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "partial_coverage"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "mapping_review"
+        ],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: Reviewed approved-obligation authority supplied source, obligation and applicability decisions. Mapping stage: Deterministically derived from the approved obligation-element coverage rulebook. Evidence stage: Both pieces of evidence supplied meet the approved requirements. Policy rules: APP-RULE-APPROVED-OBLIGATION-AUTHORITY, MAP-RULE-CURRENT-PARTIAL, EVD-RULE-PARTIAL-COVERAGE, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": null,
+        "mapping": {
+          "case_id": "CON-006",
+          "proposal_disposition": "amend",
+          "current_mapping_control_ids": [
+            "C-CON-006"
+          ],
+          "candidate_additional_control_ids": [
+            "C-CON-007"
+          ],
+          "mapping_completeness": "partial",
+          "uncovered_obligation_elements": [
+            "OEL-CON-MAINTAIN-001"
+          ],
+          "rationale": "Deterministically derived from the approved obligation-element coverage rulebook."
+        },
+        "evidence_observations": {
+          "case_id": "CON-006",
+          "observations": [
+            {
+              "evidence_id": "EV-CON-001",
+              "requirement_id": "ER-CON-DESIGN-001",
+              "observed_state": "present_complete",
+              "rationale": "The approved complaints management framework is supplied and meets the requirement for governance, ownership, and review arrangements."
+            },
+            {
+              "evidence_id": "EV-CON-002",
+              "requirement_id": "ER-CON-OPERATE-001",
+              "observed_state": "present_complete",
+              "rationale": "The complaint register for the assessment period is supplied and meets the requirement for completed operating records."
+            }
+          ],
+          "rationale": "Both pieces of evidence supplied meet the approved requirements."
+        },
+        "approved_obligation_authority": {
+          "schema_version": "1.0",
+          "obligation_id": "OBL-CONDUCT-0001",
+          "record_type": "candidate_obligation",
+          "lifecycle_status": "approved",
+          "source": {
+            "source_pack_id": "SA-REG-SOURCE-PACK-001",
+            "source_pack_version": "1.0",
+            "source_id": "SA-CONDUCT-SP-003",
+            "source_title": "Amendment of the General Code of Conduct for Authorised FSPs and Representatives, 2020",
+            "source_status": "in_force_with_staged_commencement",
+            "instrument_type": "amendment_notice",
+            "document_sha256": "0ba264a18f2e4659c1af10ddaebfba1433c82d26ec13554bc3f92c6cd51f8d1d",
+            "hash_verified": true,
+            "status_verified_at": "2026-08-09",
+            "locator": {
+              "locator_text": "Schedule A, paragraph 12, inserted section 17(1)",
+              "page_label": "Schedule A - complaints management framework",
+              "section": "17(1)",
+              "clause": null,
+              "paragraph": "12",
+              "quote": "A provider must establish and maintain an adequate complaints management framework."
+            }
+          },
+          "source_gate": {
+            "manifest_candidate_statement_extraction": "allowed_from_amendment_text_with_commencement_locator",
+            "manifest_binding_obligation_extraction": "allowed_with_human_review_and_staged_date_control",
+            "record_use": "binding_candidate",
+            "gate_passed": true,
+            "gate_reason": "The source pack permits amendment-specific candidate obligations when the staged commencement table and human review are preserved."
+          },
+          "classification": {
+            "normative_strength": "binding_candidate",
+            "legal_effect": "in_force_staged",
+            "source_use_disposition": "binding_candidate",
+            "effective_from": "2021-06-26",
+            "transition_end": null,
+            "classification_rationale": "The amendment is an in-force Gazette notice. The staged commencement control was retained and reviewed before approval of this synthetic obligation record."
+          },
+          "obligation": {
+            "atomic": true,
+            "actor": "authorised financial services provider",
+            "modality": "must",
+            "action": "establish and maintain",
+            "object_or_outcome": "an adequate complaints management framework",
+            "trigger_conditions": [
+              "the institution renders regulated financial services as an authorised provider"
+            ],
+            "timing": {
+              "type": "continuous",
+              "value": "while the regulated activity is performed",
+              "source_supported": true
+            },
+            "exceptions_and_dependencies": [
+              "the assessment remains limited to the synthetic institution profile and supplied amendment source"
+            ],
+            "evidence_or_reporting_requirements": [
+              "documented complaints management framework",
+              "operating records showing that the framework is maintained"
+            ],
+            "atomic_summary": "An authorised provider must establish and maintain an adequate complaints management framework.",
+            "interpretation_notes": [
+              "Approval confirms the synthetic obligation record and applicability assumption, not control effectiveness or institutional compliance.",
+              "The evidence items are assurance needs and do not extend the source obligation."
+            ],
+            "support_status": "fully_supported",
+            "unsupported_extension_detected": false
+          },
+          "applicability": {
+            "profile_id": "SA-IWM-SYN-001",
+            "profile_version": "1.0",
+            "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+            "status": "applicable_candidate",
+            "facts_used": [
+              {
+                "fact_path": "institution.services[0]",
+                "fact_value": "investment advice"
+              },
+              {
+                "fact_path": "institution.services[4]",
+                "fact_value": "client servicing and complaints handling"
+              },
+              {
+                "fact_path": "regulatory_assumptions.FSCA",
+                "fact_value": "assumed relevant authorisations and permissions"
+              }
+            ],
+            "missing_facts": [],
+            "assumptions": [
+              "The fictional institution is treated as an authorised provider for this controlled evaluation."
+            ],
+            "rationale": "A qualified synthetic reviewer accepted applicability for the evaluation profile, subject to the stated fictional licensing assumption.",
+            "human_confirmation_required": true
+          },
+          "change": {
+            "change_type": "amended",
+            "previous_source_id": "SA-CONDUCT-SP-002",
+            "previous_obligation_id": null,
+            "change_summary": "Government Notice 706 of 2020 inserted a structured complaints-management framework into the General Code amendment chain."
+          },
+          "operating_impact": {
+            "impact_status": "candidate",
+            "affected_process_ids": [
+              "P-CON-005",
+              "P-CON-006"
+            ],
+            "affected_control_ids": [
+              "C-CON-006",
+              "C-CON-007"
+            ],
+            "affected_roles": [
+              "Conduct Risk Officer",
+              "Business or Control Owner"
+            ],
+            "affected_artifacts": [
+              "policy",
+              "procedure",
+              "management_information",
+              "control_evidence"
+            ],
+            "rationale": "The approved obligation concerns the design and maintenance of the complaints framework and related customer-outcomes oversight. Control mapping remains separately reviewable."
+          },
+          "routing": {
+            "proposed_owner_role": "Conduct Risk Officer",
+            "required_reviewer_roles": [
+              "Head of Compliance",
+              "Business or Control Owner"
+            ],
+            "escalation_required": false,
+            "escalation_reason": null
+          },
+          "assessment": {
+            "outcome": "candidate_binding_obligation",
+            "confidence": 0.91,
+            "limitations": [
+              "This is a synthetic applicability approval, not legal advice.",
+              "The complete current General Code amendment chain is not represented as a consolidated source."
+            ],
+            "next_action": "Assess the approved obligation against the frozen control catalogue and supplied evidence."
+          },
+          "generation": {
+            "workflow_version": "regulatory-change-v1.0",
+            "model_id": "synthetic-example",
+            "prompt_version": "not-yet-baselined",
+            "generated_at": "2026-08-09T19:30:00+02:00",
+            "run_id": "schema-example-binding-001"
+          },
+          "human_review": {
+            "required": true,
+            "status": "accepted",
+            "reviewer_role": "Head of Compliance",
+            "reviewer_id": "SYN-HC-001",
+            "decision_rationale": "Accepted for synthetic control-assurance design after confirming the supplied source locator, staged commencement treatment and fictional institution applicability assumption.",
+            "reviewed_at": "2026-08-09T20:00:00+02:00"
+          },
+          "audit": {
+            "created_at": "2026-08-09T19:30:00+02:00",
+            "updated_at": "2026-08-09T20:00:00+02:00",
+            "created_by": "ai_assisted",
+            "change_log": [
+              {
+                "timestamp": "2026-08-09T19:30:00+02:00",
+                "actor": "schema-example-builder",
+                "change": "Created synthetic candidate obligation example."
+              },
+              {
+                "timestamp": "2026-08-09T20:00:00+02:00",
+                "actor": "SYN-HC-001",
+                "change": "Approved the synthetic obligation record for downstream control-and-evidence assessment."
+              }
+            ]
+          }
+        }
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+          "MAP-RULE-CURRENT-PARTIAL",
+          "EVD-RULE-PARTIAL-COVERAGE",
+          "ESC-RULE-DEFAULT-NO-ESCALATION",
+          "ACP-COV-PARTIAL",
+          "ACP-EVD-SUFFICIENT",
+          "ACP-COMPOSE-UNION"
+        ],
+        "approved_obligation_authority_used": true,
+        "source_stage_bypassed": true,
+        "statement_support": null,
+        "legal_readiness": null,
+        "applicability_rule_id": "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+        "current_mapping_control_ids": [
+          "C-CON-006"
+        ],
+        "candidate_additional_control_ids": [
+          "C-CON-007"
+        ],
+        "uncovered_obligation_elements": [
+          "OEL-CON-MAINTAIN-001"
+        ],
+        "mapping_completeness_decided": "partial",
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "binding_candidate",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "candidate_binding_obligation",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": "mapped_and_evidenced",
+            "decided": "potential_control_gap",
+            "changed": true
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "Conduct Risk Officer",
+        "resolved_control_owners": {
+          "C-CON-006": "Complaints Manager"
+        },
+        "candidate_control_owners": {
+          "C-CON-007": "Conduct Risk Officer"
+        },
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true,
+        "coverage_state": "partial",
+        "evidence_condition": "sufficient",
+        "concurrent_conditions_preserved": true,
+        "remediation_routing": {
+          "mapping_review": [
+            "Conduct Risk Officer"
+          ]
+        },
+        "escalation_triggers": [],
+        "composition_policy_id": "SA-REG-ASSURANCE-COMPOSITION-001",
+        "composition_policy_version": "1.0"
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": null,
+        "mapping": null,
+        "evidence": {
+          "response_id": "chatcmpl-EC0xo0AuvfUDViO3ik47LkwzSlBcf",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 977,
+            "completion_tokens": 129,
+            "total_tokens": 1106
+          },
+          "latency_ms": 1534
+        }
+      }
+    },
+    {
+      "input_case_id": "CON-007",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "CON-007",
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "partially_mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "operating_evidence_missing",
+          "partial_coverage"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "evidence_request",
+          "mapping_review"
+        ],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: Reviewed approved-obligation authority supplied source, obligation and applicability decisions. Mapping stage: Deterministically derived from the approved obligation-element coverage rulebook. Evidence stage: The observations indicate that while the complaints management framework is present and complete, the required operating record of the complaint register is missing. Policy rules: APP-RULE-APPROVED-OBLIGATION-AUTHORITY, MAP-RULE-CURRENT-PARTIAL, EVD-RULE-PARTIAL-COVERAGE, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": null,
+        "mapping": {
+          "case_id": "CON-007",
+          "proposal_disposition": "amend",
+          "current_mapping_control_ids": [
+            "C-CON-006"
+          ],
+          "candidate_additional_control_ids": [
+            "C-CON-007"
+          ],
+          "mapping_completeness": "partial",
+          "uncovered_obligation_elements": [
+            "OEL-CON-MAINTAIN-001"
+          ],
+          "rationale": "Deterministically derived from the approved obligation-element coverage rulebook."
+        },
+        "evidence_observations": {
+          "case_id": "CON-007",
+          "observations": [
+            {
+              "evidence_id": "EV-CON-001",
+              "requirement_id": "ER-CON-DESIGN-001",
+              "observed_state": "present_complete",
+              "rationale": "The approved complaints management framework is supplied and meets the requirement for governance, ownership, and review arrangements."
+            },
+            {
+              "evidence_id": "EV-CON-005",
+              "requirement_id": "ER-CON-OPERATE-001",
+              "observed_state": "missing",
+              "rationale": "The complaint register for the assessment period is explicitly marked as missing."
+            }
+          ],
+          "rationale": "The observations indicate that while the complaints management framework is present and complete, the required operating record of the complaint register is missing."
+        },
+        "approved_obligation_authority": {
+          "schema_version": "1.0",
+          "obligation_id": "OBL-CONDUCT-0001",
+          "record_type": "candidate_obligation",
+          "lifecycle_status": "approved",
+          "source": {
+            "source_pack_id": "SA-REG-SOURCE-PACK-001",
+            "source_pack_version": "1.0",
+            "source_id": "SA-CONDUCT-SP-003",
+            "source_title": "Amendment of the General Code of Conduct for Authorised FSPs and Representatives, 2020",
+            "source_status": "in_force_with_staged_commencement",
+            "instrument_type": "amendment_notice",
+            "document_sha256": "0ba264a18f2e4659c1af10ddaebfba1433c82d26ec13554bc3f92c6cd51f8d1d",
+            "hash_verified": true,
+            "status_verified_at": "2026-08-09",
+            "locator": {
+              "locator_text": "Schedule A, paragraph 12, inserted section 17(1)",
+              "page_label": "Schedule A - complaints management framework",
+              "section": "17(1)",
+              "clause": null,
+              "paragraph": "12",
+              "quote": "A provider must establish and maintain an adequate complaints management framework."
+            }
+          },
+          "source_gate": {
+            "manifest_candidate_statement_extraction": "allowed_from_amendment_text_with_commencement_locator",
+            "manifest_binding_obligation_extraction": "allowed_with_human_review_and_staged_date_control",
+            "record_use": "binding_candidate",
+            "gate_passed": true,
+            "gate_reason": "The source pack permits amendment-specific candidate obligations when the staged commencement table and human review are preserved."
+          },
+          "classification": {
+            "normative_strength": "binding_candidate",
+            "legal_effect": "in_force_staged",
+            "source_use_disposition": "binding_candidate",
+            "effective_from": "2021-06-26",
+            "transition_end": null,
+            "classification_rationale": "The amendment is an in-force Gazette notice. The staged commencement control was retained and reviewed before approval of this synthetic obligation record."
+          },
+          "obligation": {
+            "atomic": true,
+            "actor": "authorised financial services provider",
+            "modality": "must",
+            "action": "establish and maintain",
+            "object_or_outcome": "an adequate complaints management framework",
+            "trigger_conditions": [
+              "the institution renders regulated financial services as an authorised provider"
+            ],
+            "timing": {
+              "type": "continuous",
+              "value": "while the regulated activity is performed",
+              "source_supported": true
+            },
+            "exceptions_and_dependencies": [
+              "the assessment remains limited to the synthetic institution profile and supplied amendment source"
+            ],
+            "evidence_or_reporting_requirements": [
+              "documented complaints management framework",
+              "operating records showing that the framework is maintained"
+            ],
+            "atomic_summary": "An authorised provider must establish and maintain an adequate complaints management framework.",
+            "interpretation_notes": [
+              "Approval confirms the synthetic obligation record and applicability assumption, not control effectiveness or institutional compliance.",
+              "The evidence items are assurance needs and do not extend the source obligation."
+            ],
+            "support_status": "fully_supported",
+            "unsupported_extension_detected": false
+          },
+          "applicability": {
+            "profile_id": "SA-IWM-SYN-001",
+            "profile_version": "1.0",
+            "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+            "status": "applicable_candidate",
+            "facts_used": [
+              {
+                "fact_path": "institution.services[0]",
+                "fact_value": "investment advice"
+              },
+              {
+                "fact_path": "institution.services[4]",
+                "fact_value": "client servicing and complaints handling"
+              },
+              {
+                "fact_path": "regulatory_assumptions.FSCA",
+                "fact_value": "assumed relevant authorisations and permissions"
+              }
+            ],
+            "missing_facts": [],
+            "assumptions": [
+              "The fictional institution is treated as an authorised provider for this controlled evaluation."
+            ],
+            "rationale": "A qualified synthetic reviewer accepted applicability for the evaluation profile, subject to the stated fictional licensing assumption.",
+            "human_confirmation_required": true
+          },
+          "change": {
+            "change_type": "amended",
+            "previous_source_id": "SA-CONDUCT-SP-002",
+            "previous_obligation_id": null,
+            "change_summary": "Government Notice 706 of 2020 inserted a structured complaints-management framework into the General Code amendment chain."
+          },
+          "operating_impact": {
+            "impact_status": "candidate",
+            "affected_process_ids": [
+              "P-CON-005",
+              "P-CON-006"
+            ],
+            "affected_control_ids": [
+              "C-CON-006",
+              "C-CON-007"
+            ],
+            "affected_roles": [
+              "Conduct Risk Officer",
+              "Business or Control Owner"
+            ],
+            "affected_artifacts": [
+              "policy",
+              "procedure",
+              "management_information",
+              "control_evidence"
+            ],
+            "rationale": "The approved obligation concerns the design and maintenance of the complaints framework and related customer-outcomes oversight. Control mapping remains separately reviewable."
+          },
+          "routing": {
+            "proposed_owner_role": "Conduct Risk Officer",
+            "required_reviewer_roles": [
+              "Head of Compliance",
+              "Business or Control Owner"
+            ],
+            "escalation_required": false,
+            "escalation_reason": null
+          },
+          "assessment": {
+            "outcome": "candidate_binding_obligation",
+            "confidence": 0.91,
+            "limitations": [
+              "This is a synthetic applicability approval, not legal advice.",
+              "The complete current General Code amendment chain is not represented as a consolidated source."
+            ],
+            "next_action": "Assess the approved obligation against the frozen control catalogue and supplied evidence."
+          },
+          "generation": {
+            "workflow_version": "regulatory-change-v1.0",
+            "model_id": "synthetic-example",
+            "prompt_version": "not-yet-baselined",
+            "generated_at": "2026-08-09T19:30:00+02:00",
+            "run_id": "schema-example-binding-001"
+          },
+          "human_review": {
+            "required": true,
+            "status": "accepted",
+            "reviewer_role": "Head of Compliance",
+            "reviewer_id": "SYN-HC-001",
+            "decision_rationale": "Accepted for synthetic control-assurance design after confirming the supplied source locator, staged commencement treatment and fictional institution applicability assumption.",
+            "reviewed_at": "2026-08-09T20:00:00+02:00"
+          },
+          "audit": {
+            "created_at": "2026-08-09T19:30:00+02:00",
+            "updated_at": "2026-08-09T20:00:00+02:00",
+            "created_by": "ai_assisted",
+            "change_log": [
+              {
+                "timestamp": "2026-08-09T19:30:00+02:00",
+                "actor": "schema-example-builder",
+                "change": "Created synthetic candidate obligation example."
+              },
+              {
+                "timestamp": "2026-08-09T20:00:00+02:00",
+                "actor": "SYN-HC-001",
+                "change": "Approved the synthetic obligation record for downstream control-and-evidence assessment."
+              }
+            ]
+          }
+        }
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+          "MAP-RULE-CURRENT-PARTIAL",
+          "EVD-RULE-PARTIAL-COVERAGE",
+          "ESC-RULE-DEFAULT-NO-ESCALATION",
+          "ACP-COV-PARTIAL",
+          "ACP-EVD-MISSING-OPERATING",
+          "ACP-COMPOSE-UNION"
+        ],
+        "approved_obligation_authority_used": true,
+        "source_stage_bypassed": true,
+        "statement_support": null,
+        "legal_readiness": null,
+        "applicability_rule_id": "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+        "current_mapping_control_ids": [
+          "C-CON-006"
+        ],
+        "candidate_additional_control_ids": [
+          "C-CON-007"
+        ],
+        "uncovered_obligation_elements": [
+          "OEL-CON-MAINTAIN-001"
+        ],
+        "mapping_completeness_decided": "partial",
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "binding_candidate",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "candidate_binding_obligation",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": "mapped_and_evidenced",
+            "decided": "potential_control_gap",
+            "changed": true
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "Complaints Manager",
+        "resolved_control_owners": {
+          "C-CON-006": "Complaints Manager"
+        },
+        "candidate_control_owners": {
+          "C-CON-007": "Conduct Risk Officer"
+        },
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true,
+        "coverage_state": "partial",
+        "evidence_condition": "missing_operating_evidence",
+        "concurrent_conditions_preserved": true,
+        "remediation_routing": {
+          "evidence_request": [
+            "Complaints Manager"
+          ],
+          "mapping_review": [
+            "Conduct Risk Officer"
+          ]
+        },
+        "escalation_triggers": [],
+        "composition_policy_id": "SA-REG-ASSURANCE-COMPOSITION-001",
+        "composition_policy_version": "1.0"
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": null,
+        "mapping": null,
+        "evidence": {
+          "response_id": "chatcmpl-EC0xqAeTFSysIfCuhsZh9u2rbIJPn",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 976,
+            "completion_tokens": 138,
+            "total_tokens": 1114
+          },
+          "latency_ms": 1827
+        }
+      }
+    },
+    {
+      "input_case_id": "CON-008",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "CON-008",
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "partially_mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "control_design",
+          "partial_coverage"
+        ],
+        "gap_severity": "high",
+        "remediation_action_types": [
+          "control_design_change",
+          "mapping_review"
+        ],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Head of Compliance"
+        ],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: Reviewed approved-obligation authority supplied source, obligation and applicability decisions. Mapping stage: Deterministically derived from the approved obligation-element coverage rulebook. Evidence stage: The evidence provided does not meet the complete requirements for establishing a complaints management framework. Policy rules: APP-RULE-APPROVED-OBLIGATION-AUTHORITY, MAP-RULE-CURRENT-PARTIAL, EVD-RULE-PARTIAL-COVERAGE, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": null,
+        "mapping": {
+          "case_id": "CON-008",
+          "proposal_disposition": "amend",
+          "current_mapping_control_ids": [
+            "C-CON-006"
+          ],
+          "candidate_additional_control_ids": [
+            "C-CON-007"
+          ],
+          "mapping_completeness": "partial",
+          "uncovered_obligation_elements": [
+            "OEL-CON-MAINTAIN-001"
+          ],
+          "rationale": "Deterministically derived from the approved obligation-element coverage rulebook."
+        },
+        "evidence_observations": {
+          "case_id": "CON-008",
+          "observations": [
+            {
+              "evidence_id": "EV-CON-004",
+              "requirement_id": "ER-CON-DESIGN-001",
+              "observed_state": "present_deficient",
+              "rationale": "The supplied procedure is partial and lacks necessary governance fields."
+            }
+          ],
+          "rationale": "The evidence provided does not meet the complete requirements for establishing a complaints management framework."
+        },
+        "approved_obligation_authority": {
+          "schema_version": "1.0",
+          "obligation_id": "OBL-CONDUCT-0001",
+          "record_type": "candidate_obligation",
+          "lifecycle_status": "approved",
+          "source": {
+            "source_pack_id": "SA-REG-SOURCE-PACK-001",
+            "source_pack_version": "1.0",
+            "source_id": "SA-CONDUCT-SP-003",
+            "source_title": "Amendment of the General Code of Conduct for Authorised FSPs and Representatives, 2020",
+            "source_status": "in_force_with_staged_commencement",
+            "instrument_type": "amendment_notice",
+            "document_sha256": "0ba264a18f2e4659c1af10ddaebfba1433c82d26ec13554bc3f92c6cd51f8d1d",
+            "hash_verified": true,
+            "status_verified_at": "2026-08-09",
+            "locator": {
+              "locator_text": "Schedule A, paragraph 12, inserted section 17(1)",
+              "page_label": "Schedule A - complaints management framework",
+              "section": "17(1)",
+              "clause": null,
+              "paragraph": "12",
+              "quote": "A provider must establish and maintain an adequate complaints management framework."
+            }
+          },
+          "source_gate": {
+            "manifest_candidate_statement_extraction": "allowed_from_amendment_text_with_commencement_locator",
+            "manifest_binding_obligation_extraction": "allowed_with_human_review_and_staged_date_control",
+            "record_use": "binding_candidate",
+            "gate_passed": true,
+            "gate_reason": "The source pack permits amendment-specific candidate obligations when the staged commencement table and human review are preserved."
+          },
+          "classification": {
+            "normative_strength": "binding_candidate",
+            "legal_effect": "in_force_staged",
+            "source_use_disposition": "binding_candidate",
+            "effective_from": "2021-06-26",
+            "transition_end": null,
+            "classification_rationale": "The amendment is an in-force Gazette notice. The staged commencement control was retained and reviewed before approval of this synthetic obligation record."
+          },
+          "obligation": {
+            "atomic": true,
+            "actor": "authorised financial services provider",
+            "modality": "must",
+            "action": "establish and maintain",
+            "object_or_outcome": "an adequate complaints management framework",
+            "trigger_conditions": [
+              "the institution renders regulated financial services as an authorised provider"
+            ],
+            "timing": {
+              "type": "continuous",
+              "value": "while the regulated activity is performed",
+              "source_supported": true
+            },
+            "exceptions_and_dependencies": [
+              "the assessment remains limited to the synthetic institution profile and supplied amendment source"
+            ],
+            "evidence_or_reporting_requirements": [
+              "documented complaints management framework",
+              "operating records showing that the framework is maintained"
+            ],
+            "atomic_summary": "An authorised provider must establish and maintain an adequate complaints management framework.",
+            "interpretation_notes": [
+              "Approval confirms the synthetic obligation record and applicability assumption, not control effectiveness or institutional compliance.",
+              "The evidence items are assurance needs and do not extend the source obligation."
+            ],
+            "support_status": "fully_supported",
+            "unsupported_extension_detected": false
+          },
+          "applicability": {
+            "profile_id": "SA-IWM-SYN-001",
+            "profile_version": "1.0",
+            "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+            "status": "applicable_candidate",
+            "facts_used": [
+              {
+                "fact_path": "institution.services[0]",
+                "fact_value": "investment advice"
+              },
+              {
+                "fact_path": "institution.services[4]",
+                "fact_value": "client servicing and complaints handling"
+              },
+              {
+                "fact_path": "regulatory_assumptions.FSCA",
+                "fact_value": "assumed relevant authorisations and permissions"
+              }
+            ],
+            "missing_facts": [],
+            "assumptions": [
+              "The fictional institution is treated as an authorised provider for this controlled evaluation."
+            ],
+            "rationale": "A qualified synthetic reviewer accepted applicability for the evaluation profile, subject to the stated fictional licensing assumption.",
+            "human_confirmation_required": true
+          },
+          "change": {
+            "change_type": "amended",
+            "previous_source_id": "SA-CONDUCT-SP-002",
+            "previous_obligation_id": null,
+            "change_summary": "Government Notice 706 of 2020 inserted a structured complaints-management framework into the General Code amendment chain."
+          },
+          "operating_impact": {
+            "impact_status": "candidate",
+            "affected_process_ids": [
+              "P-CON-005",
+              "P-CON-006"
+            ],
+            "affected_control_ids": [
+              "C-CON-006",
+              "C-CON-007"
+            ],
+            "affected_roles": [
+              "Conduct Risk Officer",
+              "Business or Control Owner"
+            ],
+            "affected_artifacts": [
+              "policy",
+              "procedure",
+              "management_information",
+              "control_evidence"
+            ],
+            "rationale": "The approved obligation concerns the design and maintenance of the complaints framework and related customer-outcomes oversight. Control mapping remains separately reviewable."
+          },
+          "routing": {
+            "proposed_owner_role": "Conduct Risk Officer",
+            "required_reviewer_roles": [
+              "Head of Compliance",
+              "Business or Control Owner"
+            ],
+            "escalation_required": false,
+            "escalation_reason": null
+          },
+          "assessment": {
+            "outcome": "candidate_binding_obligation",
+            "confidence": 0.91,
+            "limitations": [
+              "This is a synthetic applicability approval, not legal advice.",
+              "The complete current General Code amendment chain is not represented as a consolidated source."
+            ],
+            "next_action": "Assess the approved obligation against the frozen control catalogue and supplied evidence."
+          },
+          "generation": {
+            "workflow_version": "regulatory-change-v1.0",
+            "model_id": "synthetic-example",
+            "prompt_version": "not-yet-baselined",
+            "generated_at": "2026-08-09T19:30:00+02:00",
+            "run_id": "schema-example-binding-001"
+          },
+          "human_review": {
+            "required": true,
+            "status": "accepted",
+            "reviewer_role": "Head of Compliance",
+            "reviewer_id": "SYN-HC-001",
+            "decision_rationale": "Accepted for synthetic control-assurance design after confirming the supplied source locator, staged commencement treatment and fictional institution applicability assumption.",
+            "reviewed_at": "2026-08-09T20:00:00+02:00"
+          },
+          "audit": {
+            "created_at": "2026-08-09T19:30:00+02:00",
+            "updated_at": "2026-08-09T20:00:00+02:00",
+            "created_by": "ai_assisted",
+            "change_log": [
+              {
+                "timestamp": "2026-08-09T19:30:00+02:00",
+                "actor": "schema-example-builder",
+                "change": "Created synthetic candidate obligation example."
+              },
+              {
+                "timestamp": "2026-08-09T20:00:00+02:00",
+                "actor": "SYN-HC-001",
+                "change": "Approved the synthetic obligation record for downstream control-and-evidence assessment."
+              }
+            ]
+          }
+        }
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+          "MAP-RULE-CURRENT-PARTIAL",
+          "EVD-RULE-PARTIAL-COVERAGE",
+          "ESC-RULE-DEFAULT-NO-ESCALATION",
+          "ACP-COV-PARTIAL",
+          "ACP-EVD-DESIGN-DEFICIENCY",
+          "ACP-COMPOSE-UNION"
+        ],
+        "approved_obligation_authority_used": true,
+        "source_stage_bypassed": true,
+        "statement_support": null,
+        "legal_readiness": null,
+        "applicability_rule_id": "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+        "current_mapping_control_ids": [
+          "C-CON-006"
+        ],
+        "candidate_additional_control_ids": [
+          "C-CON-007"
+        ],
+        "uncovered_obligation_elements": [
+          "OEL-CON-MAINTAIN-001"
+        ],
+        "mapping_completeness_decided": "partial",
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "binding_candidate",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "candidate_binding_obligation",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": "mapped_and_evidenced",
+            "decided": "potential_control_gap",
+            "changed": true
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "Complaints Manager",
+        "resolved_control_owners": {
+          "C-CON-006": "Complaints Manager"
+        },
+        "candidate_control_owners": {
+          "C-CON-007": "Conduct Risk Officer"
+        },
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true,
+        "coverage_state": "partial",
+        "evidence_condition": "design_deficiency",
+        "concurrent_conditions_preserved": true,
+        "remediation_routing": {
+          "control_design_change": [
+            "Complaints Manager",
+            "Head of Compliance"
+          ],
+          "mapping_review": [
+            "Conduct Risk Officer"
+          ]
+        },
+        "escalation_triggers": [
+          "high_control_design_gap"
+        ],
+        "composition_policy_id": "SA-REG-ASSURANCE-COMPOSITION-001",
+        "composition_policy_version": "1.0"
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": null,
+        "mapping": null,
+        "evidence": {
+          "response_id": "chatcmpl-EC0xsQzXeNNTC7MmdvreVGBCF4pG9",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 951,
+            "completion_tokens": 77,
+            "total_tokens": 1028
+          },
+          "latency_ms": 1470
+        }
+      }
+    },
+    {
+      "input_case_id": "CON-009",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "CON-009",
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          },
+          {
+            "control_id": "C-CON-007",
+            "owner_role": "Conduct Risk Officer"
+          }
+        ],
+        "assurance_outcome": "mapped_and_evidenced",
+        "gap_types": [],
+        "gap_severity": "not_applicable",
+        "remediation_action_types": [],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: Reviewed approved-obligation authority supplied source, obligation and applicability decisions. Mapping stage: Deterministically derived from the approved obligation-element coverage rulebook. Evidence stage: All supplied evidence items meet the approved requirements. Policy rules: APP-RULE-APPROVED-OBLIGATION-AUTHORITY, MAP-RULE-CURRENT-COMPLETE, EVD-RULE-SUFFICIENT, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": null,
+        "mapping": {
+          "case_id": "CON-009",
+          "proposal_disposition": "accept",
+          "current_mapping_control_ids": [
+            "C-CON-006",
+            "C-CON-007"
+          ],
+          "candidate_additional_control_ids": [],
+          "mapping_completeness": "complete",
+          "uncovered_obligation_elements": [],
+          "rationale": "Deterministically derived from the approved obligation-element coverage rulebook."
+        },
+        "evidence_observations": {
+          "case_id": "CON-009",
+          "observations": [
+            {
+              "evidence_id": "EV-CON-001",
+              "requirement_id": "ER-CON-DESIGN-001",
+              "observed_state": "present_complete",
+              "rationale": "The approved complaints management framework is supplied and meets the requirement for governance, ownership, and review arrangements."
+            },
+            {
+              "evidence_id": "EV-CON-002",
+              "requirement_id": "ER-CON-OPERATE-001",
+              "observed_state": "present_complete",
+              "rationale": "The complete complaint register extract is supplied and fulfills the requirement for completed complaint records for the assessment period."
+            },
+            {
+              "evidence_id": "EV-CON-003",
+              "requirement_id": "ER-CON-MAINTAIN-001",
+              "observed_state": "present_complete",
+              "rationale": "The reviewed customer-outcomes management information is supplied and meets the requirement for periodic management information with review evidence."
+            }
+          ],
+          "rationale": "All supplied evidence items meet the approved requirements."
+        },
+        "approved_obligation_authority": {
+          "schema_version": "1.0",
+          "obligation_id": "OBL-CONDUCT-0001",
+          "record_type": "candidate_obligation",
+          "lifecycle_status": "approved",
+          "source": {
+            "source_pack_id": "SA-REG-SOURCE-PACK-001",
+            "source_pack_version": "1.0",
+            "source_id": "SA-CONDUCT-SP-003",
+            "source_title": "Amendment of the General Code of Conduct for Authorised FSPs and Representatives, 2020",
+            "source_status": "in_force_with_staged_commencement",
+            "instrument_type": "amendment_notice",
+            "document_sha256": "0ba264a18f2e4659c1af10ddaebfba1433c82d26ec13554bc3f92c6cd51f8d1d",
+            "hash_verified": true,
+            "status_verified_at": "2026-08-09",
+            "locator": {
+              "locator_text": "Schedule A, paragraph 12, inserted section 17(1)",
+              "page_label": "Schedule A - complaints management framework",
+              "section": "17(1)",
+              "clause": null,
+              "paragraph": "12",
+              "quote": "A provider must establish and maintain an adequate complaints management framework."
+            }
+          },
+          "source_gate": {
+            "manifest_candidate_statement_extraction": "allowed_from_amendment_text_with_commencement_locator",
+            "manifest_binding_obligation_extraction": "allowed_with_human_review_and_staged_date_control",
+            "record_use": "binding_candidate",
+            "gate_passed": true,
+            "gate_reason": "The source pack permits amendment-specific candidate obligations when the staged commencement table and human review are preserved."
+          },
+          "classification": {
+            "normative_strength": "binding_candidate",
+            "legal_effect": "in_force_staged",
+            "source_use_disposition": "binding_candidate",
+            "effective_from": "2021-06-26",
+            "transition_end": null,
+            "classification_rationale": "The amendment is an in-force Gazette notice. The staged commencement control was retained and reviewed before approval of this synthetic obligation record."
+          },
+          "obligation": {
+            "atomic": true,
+            "actor": "authorised financial services provider",
+            "modality": "must",
+            "action": "establish and maintain",
+            "object_or_outcome": "an adequate complaints management framework",
+            "trigger_conditions": [
+              "the institution renders regulated financial services as an authorised provider"
+            ],
+            "timing": {
+              "type": "continuous",
+              "value": "while the regulated activity is performed",
+              "source_supported": true
+            },
+            "exceptions_and_dependencies": [
+              "the assessment remains limited to the synthetic institution profile and supplied amendment source"
+            ],
+            "evidence_or_reporting_requirements": [
+              "documented complaints management framework",
+              "operating records showing that the framework is maintained"
+            ],
+            "atomic_summary": "An authorised provider must establish and maintain an adequate complaints management framework.",
+            "interpretation_notes": [
+              "Approval confirms the synthetic obligation record and applicability assumption, not control effectiveness or institutional compliance.",
+              "The evidence items are assurance needs and do not extend the source obligation."
+            ],
+            "support_status": "fully_supported",
+            "unsupported_extension_detected": false
+          },
+          "applicability": {
+            "profile_id": "SA-IWM-SYN-001",
+            "profile_version": "1.0",
+            "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+            "status": "applicable_candidate",
+            "facts_used": [
+              {
+                "fact_path": "institution.services[0]",
+                "fact_value": "investment advice"
+              },
+              {
+                "fact_path": "institution.services[4]",
+                "fact_value": "client servicing and complaints handling"
+              },
+              {
+                "fact_path": "regulatory_assumptions.FSCA",
+                "fact_value": "assumed relevant authorisations and permissions"
+              }
+            ],
+            "missing_facts": [],
+            "assumptions": [
+              "The fictional institution is treated as an authorised provider for this controlled evaluation."
+            ],
+            "rationale": "A qualified synthetic reviewer accepted applicability for the evaluation profile, subject to the stated fictional licensing assumption.",
+            "human_confirmation_required": true
+          },
+          "change": {
+            "change_type": "amended",
+            "previous_source_id": "SA-CONDUCT-SP-002",
+            "previous_obligation_id": null,
+            "change_summary": "Government Notice 706 of 2020 inserted a structured complaints-management framework into the General Code amendment chain."
+          },
+          "operating_impact": {
+            "impact_status": "candidate",
+            "affected_process_ids": [
+              "P-CON-005",
+              "P-CON-006"
+            ],
+            "affected_control_ids": [
+              "C-CON-006",
+              "C-CON-007"
+            ],
+            "affected_roles": [
+              "Conduct Risk Officer",
+              "Business or Control Owner"
+            ],
+            "affected_artifacts": [
+              "policy",
+              "procedure",
+              "management_information",
+              "control_evidence"
+            ],
+            "rationale": "The approved obligation concerns the design and maintenance of the complaints framework and related customer-outcomes oversight. Control mapping remains separately reviewable."
+          },
+          "routing": {
+            "proposed_owner_role": "Conduct Risk Officer",
+            "required_reviewer_roles": [
+              "Head of Compliance",
+              "Business or Control Owner"
+            ],
+            "escalation_required": false,
+            "escalation_reason": null
+          },
+          "assessment": {
+            "outcome": "candidate_binding_obligation",
+            "confidence": 0.91,
+            "limitations": [
+              "This is a synthetic applicability approval, not legal advice.",
+              "The complete current General Code amendment chain is not represented as a consolidated source."
+            ],
+            "next_action": "Assess the approved obligation against the frozen control catalogue and supplied evidence."
+          },
+          "generation": {
+            "workflow_version": "regulatory-change-v1.0",
+            "model_id": "synthetic-example",
+            "prompt_version": "not-yet-baselined",
+            "generated_at": "2026-08-09T19:30:00+02:00",
+            "run_id": "schema-example-binding-001"
+          },
+          "human_review": {
+            "required": true,
+            "status": "accepted",
+            "reviewer_role": "Head of Compliance",
+            "reviewer_id": "SYN-HC-001",
+            "decision_rationale": "Accepted for synthetic control-assurance design after confirming the supplied source locator, staged commencement treatment and fictional institution applicability assumption.",
+            "reviewed_at": "2026-08-09T20:00:00+02:00"
+          },
+          "audit": {
+            "created_at": "2026-08-09T19:30:00+02:00",
+            "updated_at": "2026-08-09T20:00:00+02:00",
+            "created_by": "ai_assisted",
+            "change_log": [
+              {
+                "timestamp": "2026-08-09T19:30:00+02:00",
+                "actor": "schema-example-builder",
+                "change": "Created synthetic candidate obligation example."
+              },
+              {
+                "timestamp": "2026-08-09T20:00:00+02:00",
+                "actor": "SYN-HC-001",
+                "change": "Approved the synthetic obligation record for downstream control-and-evidence assessment."
+              }
+            ]
+          }
+        }
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+          "MAP-RULE-CURRENT-COMPLETE",
+          "EVD-RULE-SUFFICIENT",
+          "ESC-RULE-DEFAULT-NO-ESCALATION",
+          "ACP-COV-COMPLETE",
+          "ACP-EVD-SUFFICIENT",
+          "ACP-COMPOSE-UNION"
+        ],
+        "approved_obligation_authority_used": true,
+        "source_stage_bypassed": true,
+        "statement_support": null,
+        "legal_readiness": null,
+        "applicability_rule_id": "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+        "current_mapping_control_ids": [
+          "C-CON-006",
+          "C-CON-007"
+        ],
+        "candidate_additional_control_ids": [],
+        "uncovered_obligation_elements": [],
+        "mapping_completeness_decided": "complete",
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "binding_candidate",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "candidate_binding_obligation",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": "potential_control_gap",
+            "decided": "mapped_and_evidenced",
+            "changed": true
+          },
+          "escalation_required": {
+            "proposed": true,
+            "decided": false,
+            "changed": true
+          }
+        },
+        "proposed_owner": "Conduct Risk Officer",
+        "resolved_control_owners": {
+          "C-CON-006": "Complaints Manager",
+          "C-CON-007": "Conduct Risk Officer"
+        },
+        "candidate_control_owners": {},
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true,
+        "coverage_state": "complete",
+        "evidence_condition": "sufficient",
+        "concurrent_conditions_preserved": true,
+        "remediation_routing": {},
+        "escalation_triggers": [],
+        "composition_policy_id": "SA-REG-ASSURANCE-COMPOSITION-001",
+        "composition_policy_version": "1.0"
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": null,
+        "mapping": null,
+        "evidence": {
+          "response_id": "chatcmpl-EC0xtTNZLxEk4bYI954QKZz82hRAe",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 1049,
+            "completion_tokens": 184,
+            "total_tokens": 1233
+          },
+          "latency_ms": 2793
+        }
+      }
+    },
+    {
+      "input_case_id": "CON-010",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "CON-010",
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "partially_mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "partial_coverage"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "mapping_review"
+        ],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: Reviewed approved-obligation authority supplied source, obligation and applicability decisions. Mapping stage: Deterministically derived from the approved obligation-element coverage rulebook. Evidence stage: The observations indicate that while the complaints management framework is complete, the operating records are deficient. Policy rules: APP-RULE-APPROVED-OBLIGATION-AUTHORITY, MAP-RULE-CURRENT-PARTIAL, EVD-RULE-PARTIAL-COVERAGE, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": null,
+        "mapping": {
+          "case_id": "CON-010",
+          "proposal_disposition": "amend",
+          "current_mapping_control_ids": [
+            "C-CON-006"
+          ],
+          "candidate_additional_control_ids": [
+            "C-CON-007"
+          ],
+          "mapping_completeness": "partial",
+          "uncovered_obligation_elements": [
+            "OEL-CON-MAINTAIN-001"
+          ],
+          "rationale": "Deterministically derived from the approved obligation-element coverage rulebook."
+        },
+        "evidence_observations": {
+          "case_id": "CON-010",
+          "observations": [
+            {
+              "evidence_id": "EV-CON-001",
+              "requirement_id": "ER-CON-DESIGN-001",
+              "observed_state": "present_complete",
+              "rationale": "The approved complaints management framework is supplied and meets the requirement for governance, ownership, and review arrangements."
+            },
+            {
+              "evidence_id": "EV-CON-002",
+              "requirement_id": "ER-CON-OPERATE-001",
+              "observed_state": "present_deficient",
+              "rationale": "The complaint register extract is supplied but does not cover the complete assessment period as required."
+            }
+          ],
+          "rationale": "The observations indicate that while the complaints management framework is complete, the operating records are deficient."
+        },
+        "approved_obligation_authority": {
+          "schema_version": "1.0",
+          "obligation_id": "OBL-CONDUCT-0001",
+          "record_type": "candidate_obligation",
+          "lifecycle_status": "approved",
+          "source": {
+            "source_pack_id": "SA-REG-SOURCE-PACK-001",
+            "source_pack_version": "1.0",
+            "source_id": "SA-CONDUCT-SP-003",
+            "source_title": "Amendment of the General Code of Conduct for Authorised FSPs and Representatives, 2020",
+            "source_status": "in_force_with_staged_commencement",
+            "instrument_type": "amendment_notice",
+            "document_sha256": "0ba264a18f2e4659c1af10ddaebfba1433c82d26ec13554bc3f92c6cd51f8d1d",
+            "hash_verified": true,
+            "status_verified_at": "2026-08-09",
+            "locator": {
+              "locator_text": "Schedule A, paragraph 12, inserted section 17(1)",
+              "page_label": "Schedule A - complaints management framework",
+              "section": "17(1)",
+              "clause": null,
+              "paragraph": "12",
+              "quote": "A provider must establish and maintain an adequate complaints management framework."
+            }
+          },
+          "source_gate": {
+            "manifest_candidate_statement_extraction": "allowed_from_amendment_text_with_commencement_locator",
+            "manifest_binding_obligation_extraction": "allowed_with_human_review_and_staged_date_control",
+            "record_use": "binding_candidate",
+            "gate_passed": true,
+            "gate_reason": "The source pack permits amendment-specific candidate obligations when the staged commencement table and human review are preserved."
+          },
+          "classification": {
+            "normative_strength": "binding_candidate",
+            "legal_effect": "in_force_staged",
+            "source_use_disposition": "binding_candidate",
+            "effective_from": "2021-06-26",
+            "transition_end": null,
+            "classification_rationale": "The amendment is an in-force Gazette notice. The staged commencement control was retained and reviewed before approval of this synthetic obligation record."
+          },
+          "obligation": {
+            "atomic": true,
+            "actor": "authorised financial services provider",
+            "modality": "must",
+            "action": "establish and maintain",
+            "object_or_outcome": "an adequate complaints management framework",
+            "trigger_conditions": [
+              "the institution renders regulated financial services as an authorised provider"
+            ],
+            "timing": {
+              "type": "continuous",
+              "value": "while the regulated activity is performed",
+              "source_supported": true
+            },
+            "exceptions_and_dependencies": [
+              "the assessment remains limited to the synthetic institution profile and supplied amendment source"
+            ],
+            "evidence_or_reporting_requirements": [
+              "documented complaints management framework",
+              "operating records showing that the framework is maintained"
+            ],
+            "atomic_summary": "An authorised provider must establish and maintain an adequate complaints management framework.",
+            "interpretation_notes": [
+              "Approval confirms the synthetic obligation record and applicability assumption, not control effectiveness or institutional compliance.",
+              "The evidence items are assurance needs and do not extend the source obligation."
+            ],
+            "support_status": "fully_supported",
+            "unsupported_extension_detected": false
+          },
+          "applicability": {
+            "profile_id": "SA-IWM-SYN-001",
+            "profile_version": "1.0",
+            "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+            "status": "applicable_candidate",
+            "facts_used": [
+              {
+                "fact_path": "institution.services[0]",
+                "fact_value": "investment advice"
+              },
+              {
+                "fact_path": "institution.services[4]",
+                "fact_value": "client servicing and complaints handling"
+              },
+              {
+                "fact_path": "regulatory_assumptions.FSCA",
+                "fact_value": "assumed relevant authorisations and permissions"
+              }
+            ],
+            "missing_facts": [],
+            "assumptions": [
+              "The fictional institution is treated as an authorised provider for this controlled evaluation."
+            ],
+            "rationale": "A qualified synthetic reviewer accepted applicability for the evaluation profile, subject to the stated fictional licensing assumption.",
+            "human_confirmation_required": true
+          },
+          "change": {
+            "change_type": "amended",
+            "previous_source_id": "SA-CONDUCT-SP-002",
+            "previous_obligation_id": null,
+            "change_summary": "Government Notice 706 of 2020 inserted a structured complaints-management framework into the General Code amendment chain."
+          },
+          "operating_impact": {
+            "impact_status": "candidate",
+            "affected_process_ids": [
+              "P-CON-005",
+              "P-CON-006"
+            ],
+            "affected_control_ids": [
+              "C-CON-006",
+              "C-CON-007"
+            ],
+            "affected_roles": [
+              "Conduct Risk Officer",
+              "Business or Control Owner"
+            ],
+            "affected_artifacts": [
+              "policy",
+              "procedure",
+              "management_information",
+              "control_evidence"
+            ],
+            "rationale": "The approved obligation concerns the design and maintenance of the complaints framework and related customer-outcomes oversight. Control mapping remains separately reviewable."
+          },
+          "routing": {
+            "proposed_owner_role": "Conduct Risk Officer",
+            "required_reviewer_roles": [
+              "Head of Compliance",
+              "Business or Control Owner"
+            ],
+            "escalation_required": false,
+            "escalation_reason": null
+          },
+          "assessment": {
+            "outcome": "candidate_binding_obligation",
+            "confidence": 0.91,
+            "limitations": [
+              "This is a synthetic applicability approval, not legal advice.",
+              "The complete current General Code amendment chain is not represented as a consolidated source."
+            ],
+            "next_action": "Assess the approved obligation against the frozen control catalogue and supplied evidence."
+          },
+          "generation": {
+            "workflow_version": "regulatory-change-v1.0",
+            "model_id": "synthetic-example",
+            "prompt_version": "not-yet-baselined",
+            "generated_at": "2026-08-09T19:30:00+02:00",
+            "run_id": "schema-example-binding-001"
+          },
+          "human_review": {
+            "required": true,
+            "status": "accepted",
+            "reviewer_role": "Head of Compliance",
+            "reviewer_id": "SYN-HC-001",
+            "decision_rationale": "Accepted for synthetic control-assurance design after confirming the supplied source locator, staged commencement treatment and fictional institution applicability assumption.",
+            "reviewed_at": "2026-08-09T20:00:00+02:00"
+          },
+          "audit": {
+            "created_at": "2026-08-09T19:30:00+02:00",
+            "updated_at": "2026-08-09T20:00:00+02:00",
+            "created_by": "ai_assisted",
+            "change_log": [
+              {
+                "timestamp": "2026-08-09T19:30:00+02:00",
+                "actor": "schema-example-builder",
+                "change": "Created synthetic candidate obligation example."
+              },
+              {
+                "timestamp": "2026-08-09T20:00:00+02:00",
+                "actor": "SYN-HC-001",
+                "change": "Approved the synthetic obligation record for downstream control-and-evidence assessment."
+              }
+            ]
+          }
+        }
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+          "MAP-RULE-CURRENT-PARTIAL",
+          "EVD-RULE-PARTIAL-COVERAGE",
+          "ESC-RULE-DEFAULT-NO-ESCALATION",
+          "ACP-COV-PARTIAL",
+          "ACP-EVD-SUFFICIENT",
+          "ACP-COMPOSE-UNION"
+        ],
+        "approved_obligation_authority_used": true,
+        "source_stage_bypassed": true,
+        "statement_support": null,
+        "legal_readiness": null,
+        "applicability_rule_id": "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+        "current_mapping_control_ids": [
+          "C-CON-006"
+        ],
+        "candidate_additional_control_ids": [
+          "C-CON-007"
+        ],
+        "uncovered_obligation_elements": [
+          "OEL-CON-MAINTAIN-001"
+        ],
+        "mapping_completeness_decided": "partial",
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "binding_candidate",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "candidate_binding_obligation",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": "mapped_and_evidenced",
+            "decided": "potential_control_gap",
+            "changed": true
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "Complaints Manager",
+        "resolved_control_owners": {
+          "C-CON-006": "Complaints Manager"
+        },
+        "candidate_control_owners": {
+          "C-CON-007": "Conduct Risk Officer"
+        },
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true,
+        "coverage_state": "partial",
+        "evidence_condition": "sufficient",
+        "concurrent_conditions_preserved": true,
+        "remediation_routing": {
+          "mapping_review": [
+            "Conduct Risk Officer"
+          ]
+        },
+        "escalation_triggers": [],
+        "composition_policy_id": "SA-REG-ASSURANCE-COMPOSITION-001",
+        "composition_policy_version": "1.0"
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": null,
+        "mapping": null,
+        "evidence": {
+          "response_id": "chatcmpl-EC0xwekXbN4XlSfzGe8qKCy7liSzy",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 966,
+            "completion_tokens": 137,
+            "total_tokens": 1103
+          },
+          "latency_ms": 2578
+        }
+      }
+    },
+    {
+      "input_case_id": "CON-011",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "CON-011",
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "partially_mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-006",
+            "owner_role": "Complaints Manager"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "operating_exception",
+          "partial_coverage"
+        ],
+        "gap_severity": "high",
+        "remediation_action_types": [
+          "mapping_review",
+          "operating_remediation"
+        ],
+        "escalation_required": true,
+        "escalation_roles": [
+          "Conduct Risk Officer",
+          "Head of Compliance"
+        ],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: Reviewed approved-obligation authority supplied source, obligation and applicability decisions. Mapping stage: Deterministically derived from the approved obligation-element coverage rulebook. Evidence stage: The supplied evidence indicates an adverse operating condition related to complaints management. Policy rules: APP-RULE-APPROVED-OBLIGATION-AUTHORITY, MAP-RULE-CURRENT-PARTIAL, EVD-RULE-PARTIAL-COVERAGE, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": null,
+        "mapping": {
+          "case_id": "CON-011",
+          "proposal_disposition": "amend",
+          "current_mapping_control_ids": [
+            "C-CON-006"
+          ],
+          "candidate_additional_control_ids": [
+            "C-CON-007"
+          ],
+          "mapping_completeness": "partial",
+          "uncovered_obligation_elements": [
+            "OEL-CON-MAINTAIN-001"
+          ],
+          "rationale": "Deterministically derived from the approved obligation-element coverage rulebook."
+        },
+        "evidence_observations": {
+          "case_id": "CON-011",
+          "observations": [
+            {
+              "evidence_id": "EV-CON-011",
+              "requirement_id": "ER-CON-ADVERSE-001",
+              "observed_state": "adverse_indicator_present",
+              "rationale": "The evidence describes repeated overdue high-impact complaints, indicating unresolved operating exceptions."
+            }
+          ],
+          "rationale": "The supplied evidence indicates an adverse operating condition related to complaints management."
+        },
+        "approved_obligation_authority": {
+          "schema_version": "1.0",
+          "obligation_id": "OBL-CONDUCT-0001",
+          "record_type": "candidate_obligation",
+          "lifecycle_status": "approved",
+          "source": {
+            "source_pack_id": "SA-REG-SOURCE-PACK-001",
+            "source_pack_version": "1.0",
+            "source_id": "SA-CONDUCT-SP-003",
+            "source_title": "Amendment of the General Code of Conduct for Authorised FSPs and Representatives, 2020",
+            "source_status": "in_force_with_staged_commencement",
+            "instrument_type": "amendment_notice",
+            "document_sha256": "0ba264a18f2e4659c1af10ddaebfba1433c82d26ec13554bc3f92c6cd51f8d1d",
+            "hash_verified": true,
+            "status_verified_at": "2026-08-09",
+            "locator": {
+              "locator_text": "Schedule A, paragraph 12, inserted section 17(1)",
+              "page_label": "Schedule A - complaints management framework",
+              "section": "17(1)",
+              "clause": null,
+              "paragraph": "12",
+              "quote": "A provider must establish and maintain an adequate complaints management framework."
+            }
+          },
+          "source_gate": {
+            "manifest_candidate_statement_extraction": "allowed_from_amendment_text_with_commencement_locator",
+            "manifest_binding_obligation_extraction": "allowed_with_human_review_and_staged_date_control",
+            "record_use": "binding_candidate",
+            "gate_passed": true,
+            "gate_reason": "The source pack permits amendment-specific candidate obligations when the staged commencement table and human review are preserved."
+          },
+          "classification": {
+            "normative_strength": "binding_candidate",
+            "legal_effect": "in_force_staged",
+            "source_use_disposition": "binding_candidate",
+            "effective_from": "2021-06-26",
+            "transition_end": null,
+            "classification_rationale": "The amendment is an in-force Gazette notice. The staged commencement control was retained and reviewed before approval of this synthetic obligation record."
+          },
+          "obligation": {
+            "atomic": true,
+            "actor": "authorised financial services provider",
+            "modality": "must",
+            "action": "establish and maintain",
+            "object_or_outcome": "an adequate complaints management framework",
+            "trigger_conditions": [
+              "the institution renders regulated financial services as an authorised provider"
+            ],
+            "timing": {
+              "type": "continuous",
+              "value": "while the regulated activity is performed",
+              "source_supported": true
+            },
+            "exceptions_and_dependencies": [
+              "the assessment remains limited to the synthetic institution profile and supplied amendment source"
+            ],
+            "evidence_or_reporting_requirements": [
+              "documented complaints management framework",
+              "operating records showing that the framework is maintained"
+            ],
+            "atomic_summary": "An authorised provider must establish and maintain an adequate complaints management framework.",
+            "interpretation_notes": [
+              "Approval confirms the synthetic obligation record and applicability assumption, not control effectiveness or institutional compliance.",
+              "The evidence items are assurance needs and do not extend the source obligation."
+            ],
+            "support_status": "fully_supported",
+            "unsupported_extension_detected": false
+          },
+          "applicability": {
+            "profile_id": "SA-IWM-SYN-001",
+            "profile_version": "1.0",
+            "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+            "status": "applicable_candidate",
+            "facts_used": [
+              {
+                "fact_path": "institution.services[0]",
+                "fact_value": "investment advice"
+              },
+              {
+                "fact_path": "institution.services[4]",
+                "fact_value": "client servicing and complaints handling"
+              },
+              {
+                "fact_path": "regulatory_assumptions.FSCA",
+                "fact_value": "assumed relevant authorisations and permissions"
+              }
+            ],
+            "missing_facts": [],
+            "assumptions": [
+              "The fictional institution is treated as an authorised provider for this controlled evaluation."
+            ],
+            "rationale": "A qualified synthetic reviewer accepted applicability for the evaluation profile, subject to the stated fictional licensing assumption.",
+            "human_confirmation_required": true
+          },
+          "change": {
+            "change_type": "amended",
+            "previous_source_id": "SA-CONDUCT-SP-002",
+            "previous_obligation_id": null,
+            "change_summary": "Government Notice 706 of 2020 inserted a structured complaints-management framework into the General Code amendment chain."
+          },
+          "operating_impact": {
+            "impact_status": "candidate",
+            "affected_process_ids": [
+              "P-CON-005",
+              "P-CON-006"
+            ],
+            "affected_control_ids": [
+              "C-CON-006",
+              "C-CON-007"
+            ],
+            "affected_roles": [
+              "Conduct Risk Officer",
+              "Business or Control Owner"
+            ],
+            "affected_artifacts": [
+              "policy",
+              "procedure",
+              "management_information",
+              "control_evidence"
+            ],
+            "rationale": "The approved obligation concerns the design and maintenance of the complaints framework and related customer-outcomes oversight. Control mapping remains separately reviewable."
+          },
+          "routing": {
+            "proposed_owner_role": "Conduct Risk Officer",
+            "required_reviewer_roles": [
+              "Head of Compliance",
+              "Business or Control Owner"
+            ],
+            "escalation_required": false,
+            "escalation_reason": null
+          },
+          "assessment": {
+            "outcome": "candidate_binding_obligation",
+            "confidence": 0.91,
+            "limitations": [
+              "This is a synthetic applicability approval, not legal advice.",
+              "The complete current General Code amendment chain is not represented as a consolidated source."
+            ],
+            "next_action": "Assess the approved obligation against the frozen control catalogue and supplied evidence."
+          },
+          "generation": {
+            "workflow_version": "regulatory-change-v1.0",
+            "model_id": "synthetic-example",
+            "prompt_version": "not-yet-baselined",
+            "generated_at": "2026-08-09T19:30:00+02:00",
+            "run_id": "schema-example-binding-001"
+          },
+          "human_review": {
+            "required": true,
+            "status": "accepted",
+            "reviewer_role": "Head of Compliance",
+            "reviewer_id": "SYN-HC-001",
+            "decision_rationale": "Accepted for synthetic control-assurance design after confirming the supplied source locator, staged commencement treatment and fictional institution applicability assumption.",
+            "reviewed_at": "2026-08-09T20:00:00+02:00"
+          },
+          "audit": {
+            "created_at": "2026-08-09T19:30:00+02:00",
+            "updated_at": "2026-08-09T20:00:00+02:00",
+            "created_by": "ai_assisted",
+            "change_log": [
+              {
+                "timestamp": "2026-08-09T19:30:00+02:00",
+                "actor": "schema-example-builder",
+                "change": "Created synthetic candidate obligation example."
+              },
+              {
+                "timestamp": "2026-08-09T20:00:00+02:00",
+                "actor": "SYN-HC-001",
+                "change": "Approved the synthetic obligation record for downstream control-and-evidence assessment."
+              }
+            ]
+          }
+        }
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+          "MAP-RULE-CURRENT-PARTIAL",
+          "EVD-RULE-PARTIAL-COVERAGE",
+          "ESC-RULE-DEFAULT-NO-ESCALATION",
+          "ACP-COV-PARTIAL",
+          "ACP-EVD-ADVERSE-OPERATING",
+          "ACP-COMPOSE-UNION"
+        ],
+        "approved_obligation_authority_used": true,
+        "source_stage_bypassed": true,
+        "statement_support": null,
+        "legal_readiness": null,
+        "applicability_rule_id": "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+        "current_mapping_control_ids": [
+          "C-CON-006"
+        ],
+        "candidate_additional_control_ids": [
+          "C-CON-007"
+        ],
+        "uncovered_obligation_elements": [
+          "OEL-CON-MAINTAIN-001"
+        ],
+        "mapping_completeness_decided": "partial",
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "binding_candidate",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "candidate_binding_obligation",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": "potential_control_gap",
+            "decided": "potential_control_gap",
+            "changed": false
+          },
+          "escalation_required": {
+            "proposed": false,
+            "decided": false,
+            "changed": false
+          }
+        },
+        "proposed_owner": "Complaints Manager",
+        "resolved_control_owners": {
+          "C-CON-006": "Complaints Manager"
+        },
+        "candidate_control_owners": {
+          "C-CON-007": "Conduct Risk Officer"
+        },
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true,
+        "coverage_state": "partial",
+        "evidence_condition": "adverse_operating_evidence",
+        "concurrent_conditions_preserved": true,
+        "remediation_routing": {
+          "mapping_review": [
+            "Conduct Risk Officer"
+          ],
+          "operating_remediation": [
+            "Complaints Manager",
+            "Conduct Risk Officer"
+          ]
+        },
+        "escalation_triggers": [
+          "high_operating_exception"
+        ],
+        "composition_policy_id": "SA-REG-ASSURANCE-COMPOSITION-001",
+        "composition_policy_version": "1.0"
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": null,
+        "mapping": null,
+        "evidence": {
+          "response_id": "chatcmpl-EC0xyUf8uStKdkYfhICi4wEBuxjAN",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 945,
+            "completion_tokens": 78,
+            "total_tokens": 1023
+          },
+          "latency_ms": 1740
+        }
+      }
+    },
+    {
+      "input_case_id": "CON-012",
+      "workstream": "market_conduct",
+      "case_stage": "control_assurance",
+      "terminal_status": "completed",
+      "prediction": {
+        "case_id": "CON-012",
+        "source_use_disposition": "binding_candidate",
+        "obligation_outcome": "candidate_binding_obligation",
+        "applicability_status": "applicable_candidate",
+        "assurance_gate": "entered",
+        "mapping_status": "partially_mapped",
+        "control_mappings": [
+          {
+            "control_id": "C-CON-007",
+            "owner_role": "Conduct Risk Officer"
+          }
+        ],
+        "assurance_outcome": "potential_control_gap",
+        "gap_types": [
+          "operating_evidence_missing",
+          "partial_coverage"
+        ],
+        "gap_severity": "medium",
+        "remediation_action_types": [
+          "evidence_request",
+          "mapping_review"
+        ],
+        "escalation_required": false,
+        "escalation_roles": [],
+        "human_review_required": true,
+        "compliance_conclusion": "not_determined",
+        "rationale": "Source/obligation authority: Reviewed approved-obligation authority supplied source, obligation and applicability decisions. Mapping stage: Deterministically derived from the approved obligation-element coverage rulebook. Evidence stage: The observation is based on the supplied evidence indicating the absence of the required management information. Policy rules: APP-RULE-APPROVED-OBLIGATION-AUTHORITY, MAP-RULE-CURRENT-PARTIAL, EVD-RULE-PARTIAL-COVERAGE, ESC-RULE-DEFAULT-NO-ESCALATION."
+      },
+      "stage_outputs": {
+        "source_support": null,
+        "mapping": {
+          "case_id": "CON-012",
+          "proposal_disposition": "amend",
+          "current_mapping_control_ids": [
+            "C-CON-007"
+          ],
+          "candidate_additional_control_ids": [
+            "C-CON-006"
+          ],
+          "mapping_completeness": "partial",
+          "uncovered_obligation_elements": [
+            "OEL-CON-ESTABLISH-001"
+          ],
+          "rationale": "Deterministically derived from the approved obligation-element coverage rulebook."
+        },
+        "evidence_observations": {
+          "case_id": "CON-012",
+          "observations": [
+            {
+              "evidence_id": "EV-CON-012",
+              "requirement_id": "ER-CON-MAINTAIN-001",
+              "observed_state": "missing",
+              "rationale": "The latest monthly customer-outcomes report is explicitly marked as missing."
+            }
+          ],
+          "rationale": "The observation is based on the supplied evidence indicating the absence of the required management information."
+        },
+        "approved_obligation_authority": {
+          "schema_version": "1.0",
+          "obligation_id": "OBL-CONDUCT-0001",
+          "record_type": "candidate_obligation",
+          "lifecycle_status": "approved",
+          "source": {
+            "source_pack_id": "SA-REG-SOURCE-PACK-001",
+            "source_pack_version": "1.0",
+            "source_id": "SA-CONDUCT-SP-003",
+            "source_title": "Amendment of the General Code of Conduct for Authorised FSPs and Representatives, 2020",
+            "source_status": "in_force_with_staged_commencement",
+            "instrument_type": "amendment_notice",
+            "document_sha256": "0ba264a18f2e4659c1af10ddaebfba1433c82d26ec13554bc3f92c6cd51f8d1d",
+            "hash_verified": true,
+            "status_verified_at": "2026-08-09",
+            "locator": {
+              "locator_text": "Schedule A, paragraph 12, inserted section 17(1)",
+              "page_label": "Schedule A - complaints management framework",
+              "section": "17(1)",
+              "clause": null,
+              "paragraph": "12",
+              "quote": "A provider must establish and maintain an adequate complaints management framework."
+            }
+          },
+          "source_gate": {
+            "manifest_candidate_statement_extraction": "allowed_from_amendment_text_with_commencement_locator",
+            "manifest_binding_obligation_extraction": "allowed_with_human_review_and_staged_date_control",
+            "record_use": "binding_candidate",
+            "gate_passed": true,
+            "gate_reason": "The source pack permits amendment-specific candidate obligations when the staged commencement table and human review are preserved."
+          },
+          "classification": {
+            "normative_strength": "binding_candidate",
+            "legal_effect": "in_force_staged",
+            "source_use_disposition": "binding_candidate",
+            "effective_from": "2021-06-26",
+            "transition_end": null,
+            "classification_rationale": "The amendment is an in-force Gazette notice. The staged commencement control was retained and reviewed before approval of this synthetic obligation record."
+          },
+          "obligation": {
+            "atomic": true,
+            "actor": "authorised financial services provider",
+            "modality": "must",
+            "action": "establish and maintain",
+            "object_or_outcome": "an adequate complaints management framework",
+            "trigger_conditions": [
+              "the institution renders regulated financial services as an authorised provider"
+            ],
+            "timing": {
+              "type": "continuous",
+              "value": "while the regulated activity is performed",
+              "source_supported": true
+            },
+            "exceptions_and_dependencies": [
+              "the assessment remains limited to the synthetic institution profile and supplied amendment source"
+            ],
+            "evidence_or_reporting_requirements": [
+              "documented complaints management framework",
+              "operating records showing that the framework is maintained"
+            ],
+            "atomic_summary": "An authorised provider must establish and maintain an adequate complaints management framework.",
+            "interpretation_notes": [
+              "Approval confirms the synthetic obligation record and applicability assumption, not control effectiveness or institutional compliance.",
+              "The evidence items are assurance needs and do not extend the source obligation."
+            ],
+            "support_status": "fully_supported",
+            "unsupported_extension_detected": false
+          },
+          "applicability": {
+            "profile_id": "SA-IWM-SYN-001",
+            "profile_version": "1.0",
+            "profile_sha256": "b55c0ed45adebc43efa45f81feab1d80633de0f6c6701de3994b08d76df866f4",
+            "status": "applicable_candidate",
+            "facts_used": [
+              {
+                "fact_path": "institution.services[0]",
+                "fact_value": "investment advice"
+              },
+              {
+                "fact_path": "institution.services[4]",
+                "fact_value": "client servicing and complaints handling"
+              },
+              {
+                "fact_path": "regulatory_assumptions.FSCA",
+                "fact_value": "assumed relevant authorisations and permissions"
+              }
+            ],
+            "missing_facts": [],
+            "assumptions": [
+              "The fictional institution is treated as an authorised provider for this controlled evaluation."
+            ],
+            "rationale": "A qualified synthetic reviewer accepted applicability for the evaluation profile, subject to the stated fictional licensing assumption.",
+            "human_confirmation_required": true
+          },
+          "change": {
+            "change_type": "amended",
+            "previous_source_id": "SA-CONDUCT-SP-002",
+            "previous_obligation_id": null,
+            "change_summary": "Government Notice 706 of 2020 inserted a structured complaints-management framework into the General Code amendment chain."
+          },
+          "operating_impact": {
+            "impact_status": "candidate",
+            "affected_process_ids": [
+              "P-CON-005",
+              "P-CON-006"
+            ],
+            "affected_control_ids": [
+              "C-CON-006",
+              "C-CON-007"
+            ],
+            "affected_roles": [
+              "Conduct Risk Officer",
+              "Business or Control Owner"
+            ],
+            "affected_artifacts": [
+              "policy",
+              "procedure",
+              "management_information",
+              "control_evidence"
+            ],
+            "rationale": "The approved obligation concerns the design and maintenance of the complaints framework and related customer-outcomes oversight. Control mapping remains separately reviewable."
+          },
+          "routing": {
+            "proposed_owner_role": "Conduct Risk Officer",
+            "required_reviewer_roles": [
+              "Head of Compliance",
+              "Business or Control Owner"
+            ],
+            "escalation_required": false,
+            "escalation_reason": null
+          },
+          "assessment": {
+            "outcome": "candidate_binding_obligation",
+            "confidence": 0.91,
+            "limitations": [
+              "This is a synthetic applicability approval, not legal advice.",
+              "The complete current General Code amendment chain is not represented as a consolidated source."
+            ],
+            "next_action": "Assess the approved obligation against the frozen control catalogue and supplied evidence."
+          },
+          "generation": {
+            "workflow_version": "regulatory-change-v1.0",
+            "model_id": "synthetic-example",
+            "prompt_version": "not-yet-baselined",
+            "generated_at": "2026-08-09T19:30:00+02:00",
+            "run_id": "schema-example-binding-001"
+          },
+          "human_review": {
+            "required": true,
+            "status": "accepted",
+            "reviewer_role": "Head of Compliance",
+            "reviewer_id": "SYN-HC-001",
+            "decision_rationale": "Accepted for synthetic control-assurance design after confirming the supplied source locator, staged commencement treatment and fictional institution applicability assumption.",
+            "reviewed_at": "2026-08-09T20:00:00+02:00"
+          },
+          "audit": {
+            "created_at": "2026-08-09T19:30:00+02:00",
+            "updated_at": "2026-08-09T20:00:00+02:00",
+            "created_by": "ai_assisted",
+            "change_log": [
+              {
+                "timestamp": "2026-08-09T19:30:00+02:00",
+                "actor": "schema-example-builder",
+                "change": "Created synthetic candidate obligation example."
+              },
+              {
+                "timestamp": "2026-08-09T20:00:00+02:00",
+                "actor": "SYN-HC-001",
+                "change": "Approved the synthetic obligation record for downstream control-and-evidence assessment."
+              }
+            ]
+          }
+        }
+      },
+      "policy_trace": {
+        "applied_policy_rules": [
+          "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+          "MAP-RULE-CURRENT-PARTIAL",
+          "EVD-RULE-PARTIAL-COVERAGE",
+          "ESC-RULE-DEFAULT-NO-ESCALATION",
+          "ACP-COV-PARTIAL",
+          "ACP-EVD-MISSING-OPERATING",
+          "ACP-COMPOSE-UNION"
+        ],
+        "approved_obligation_authority_used": true,
+        "source_stage_bypassed": true,
+        "statement_support": null,
+        "legal_readiness": null,
+        "applicability_rule_id": "APP-RULE-APPROVED-OBLIGATION-AUTHORITY",
+        "current_mapping_control_ids": [
+          "C-CON-007"
+        ],
+        "candidate_additional_control_ids": [
+          "C-CON-006"
+        ],
+        "uncovered_obligation_elements": [
+          "OEL-CON-ESTABLISH-001"
+        ],
+        "mapping_completeness_decided": "partial",
+        "mapping_stage_received_evidence_status": false,
+        "mapping_stage_received_escalation_proposal": false,
+        "evidence_stage_can_change_mapping": false,
+        "proposal_comparison": {
+          "source_use_disposition": {
+            "proposed": "binding_candidate",
+            "decided": "binding_candidate",
+            "changed": false
+          },
+          "obligation_outcome": {
+            "proposed": "candidate_binding_obligation",
+            "decided": "candidate_binding_obligation",
+            "changed": false
+          },
+          "applicability_status": {
+            "proposed": "applicable_candidate",
+            "decided": "applicable_candidate",
+            "changed": false
+          },
+          "assurance_outcome": {
+            "proposed": "insufficient_evidence",
+            "decided": "potential_control_gap",
+            "changed": true
+          },
+          "escalation_required": {
+            "proposed": true,
+            "decided": false,
+            "changed": true
+          }
+        },
+        "proposed_owner": "Conduct Risk Officer",
+        "resolved_control_owners": {
+          "C-CON-007": "Conduct Risk Officer"
+        },
+        "candidate_control_owners": {
+          "C-CON-006": "Complaints Manager"
+        },
+        "case_specific_override": false,
+        "rule_identity_case_id_collision": false,
+        "reconciliation_passed": true,
+        "human_review_required": true,
+        "coverage_state": "partial",
+        "evidence_condition": "missing_operating_evidence",
+        "concurrent_conditions_preserved": true,
+        "remediation_routing": {
+          "evidence_request": [
+            "Conduct Risk Officer"
+          ],
+          "mapping_review": [
+            "Conduct Risk Officer"
+          ]
+        },
+        "escalation_triggers": [],
+        "composition_policy_id": "SA-REG-ASSURANCE-COMPOSITION-001",
+        "composition_policy_version": "1.0"
+      },
+      "reconciliation": {
+        "passed": true,
+        "manual_correction": false
+      },
+      "api": {
+        "source_support": null,
+        "mapping": null,
+        "evidence": {
+          "response_id": "chatcmpl-EC0y0Nd5loMEsQBGSdEXUT5ko233i",
+          "response_model": "gpt-4o-mini-2024-07-18",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 935,
+            "completion_tokens": 79,
+            "total_tokens": 1014
+          },
+          "latency_ms": 1346
+        }
+      }
+    }
+  ],
+  "quarantines": []
+}
