@@ -1,31 +1,7 @@
-# Responsible AI Checklist
+# Responsible AI & Data Governance Checklist
 
-## Data
-- [ ] No confidential production data used without approval.
-- [ ] Personal information minimised.
-- [ ] Synthetic or appropriately controlled test data used.
-- [ ] Data classification understood.
-
-## Sources
-- [ ] Approved sources defined.
-- [ ] Source currency checked.
-- [ ] Claims grounded in evidence.
-- [ ] Unsupported claims explicitly identified.
-
-## Human authority
-- [ ] Decision owner identified.
-- [ ] Escalation conditions defined.
-- [ ] AI cannot independently make consequential decisions.
-- [ ] Reviewer can inspect evidence.
-
-## Auditability
-- [ ] Prompt version recorded.
-- [ ] Model/version recorded.
-- [ ] Test-set version recorded.
-- [ ] Output retained where appropriate.
-- [ ] Evaluation result recorded.
-
-## Lifecycle
-- [ ] Capability owner identified.
-- [ ] Review date defined.
-- [ ] Continue / rework / retire decision defined.
+- [ ] **No Confidential Data:** Synthetic data is used for benchmark development. No unapproved real, personal, or confidential institutional data is present in these workflows.
+- [ ] **Source Grounding:** All consequential claims are grounded in an approved source set (e.g., enacted legislation, approved syllabi).
+- [ ] **Version Control:** Use-case identity, workflow version, input identity, and model settings are retained for auditability.
+- [ ] **Separation of Duties:** Workflow development is strictly separated from evaluation authority, professional review, and executive pilot approval.
+- [ ] **Operational Pilot Gates:** Shadow-mode operational pilots remain blocked until explicit data protection, information security, and institutional approvals are granted.
