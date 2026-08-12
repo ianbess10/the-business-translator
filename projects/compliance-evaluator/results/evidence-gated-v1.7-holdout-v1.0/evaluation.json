@@ -1,0 +1,179 @@
+{
+  "evaluation_id": "evidence-gated-v1.7-holdout-v1.0-05388075-cc1a-454b-ab56-674aa820c287-evaluation",
+  "run_id": "evidence-gated-v1.7-holdout-v1.0-05388075-cc1a-454b-ab56-674aa820c287",
+  "workflow_version": "1.7",
+  "dataset_id": "SA-REG-HOLDOUT-001",
+  "dataset_version": "1.0",
+  "benchmark_authority_version": "1.0",
+  "case_count": 16,
+  "quarantine_count": 0,
+  "end_to_end_exact": {
+    "correct": 16,
+    "total": 16,
+    "accuracy": 1.0
+  },
+  "field_metrics": {
+    "source_use_disposition": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "obligation_outcome": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "applicability_status": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "assurance_gate": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "mapping_status": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "control_mappings": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "assurance_outcome": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "gap_types": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "gap_severity": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "remediation_action_types": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "escalation_required": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "escalation_roles": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "human_review_required": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    },
+    "compliance_conclusion": {
+      "correct": 16,
+      "total": 16,
+      "accuracy": 1.0
+    }
+  },
+  "binary_metrics": {
+    "escalation_required": {
+      "true_positive": 4,
+      "false_positive": 0,
+      "true_negative": 12,
+      "false_negative": 0
+    }
+  },
+  "per_case": [
+    {
+      "case_id": "AML-101",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-102",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-103",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "AML-104",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-101",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-102",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-103",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-104",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-105",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-106",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-107",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-108",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-109",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-110",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-111",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    },
+    {
+      "case_id": "CON-112",
+      "end_to_end_exact": true,
+      "mismatched_fields": []
+    }
+  ],
+  "synthetic_benchmark_evidence": true,
+  "production_performance": false
+}
