@@ -1,0 +1,44 @@
+{
+  "name": "source_support_stage_v1_3",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "case_id",
+      "proposal_disposition",
+      "source_classification",
+      "statement_support",
+      "legal_readiness",
+      "applicability_assessment",
+      "material_missing_fact_types",
+      "source_conflict_present",
+      "unsupported_elements",
+      "rationale"
+    ],
+    "properties": {
+      "case_id": {"type": "string"},
+      "proposal_disposition": {"type": "string", "enum": ["accept", "amend", "reject"]},
+      "source_classification": {
+        "type": "string",
+        "enum": ["binding_candidate", "guidance_only", "final_change_event", "draft_watchlist", "historical_only", "strategy_context", "blocked", "source_conflict"]
+      },
+      "statement_support": {
+        "type": "string",
+        "enum": ["exact_supported", "partially_supported", "unsupported_extension", "not_assessable"]
+      },
+      "legal_readiness": {
+        "type": "string",
+        "enum": ["ready_for_candidate", "pending_commencement", "human_review_required", "blocked_source", "source_conflict"]
+      },
+      "applicability_assessment": {"type": "string", "enum": ["applicable", "out_of_scope", "uncertain", "not_assessed"]},
+      "material_missing_fact_types": {
+        "type": "array",
+        "items": {"type": "string", "enum": ["commencement", "entity_classification", "licence_or_permission", "activity_or_product", "source_version_or_chain", "other"]}
+      },
+      "source_conflict_present": {"type": "boolean"},
+      "unsupported_elements": {"type": "array", "items": {"type": "string"}},
+      "rationale": {"type": "string"}
+    }
+  }
+}

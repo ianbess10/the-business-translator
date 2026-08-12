@@ -1,0 +1,602 @@
+[
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "CON-101",
+    "workstream": "market_conduct",
+    "case_stage": "obligation_assessment",
+    "title": "Independent holdout variant — binding amendment candidate awaiting human approval",
+    "objective": "Recognise a supported binding candidate while preserving staged-commencement and approval controls.",
+    "source_ids": [
+      "SA-CONDUCT-SP-003"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: Schedule A, paragraph 12 inserted section 17(1), requiring an authorised provider to establish and maintain an adequate complaints management framework.",
+    "institution_facts": [
+      "The synthetic institution provides regulated advice and handles complaints."
+    ],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: An authorised provider must establish and maintain an adequate complaints management framework.",
+    "upstream_obligation": {
+      "supplied": false,
+      "status": "pending",
+      "obligation_id": "OBL-CONDUCT-0001",
+      "fixture_path": null
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-CON-006",
+        "C-CON-007"
+      ],
+      "owner_role": "Conduct Risk Officer",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": null,
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: May control assurance start before the obligation record is approved?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "CON-102",
+    "workstream": "market_conduct",
+    "case_stage": "source_classification",
+    "title": "Independent holdout variant — standalone general code used without amendment chain",
+    "objective": "Enforce the base-code source gate until the amendment chain is applied.",
+    "source_ids": [
+      "SA-CONDUCT-SP-002"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: The 2003 General Code source is in force as amended but blocked as a standalone binding source.",
+    "institution_facts": [
+      "The institution is assumed to conduct advice and intermediary activities."
+    ],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: Approve the standalone 2003 Code text as the complete current complaints obligation.",
+    "upstream_obligation": {
+      "supplied": false,
+      "status": "pending",
+      "obligation_id": null,
+      "fixture_path": null
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-CON-006"
+      ],
+      "owner_role": "Complaints Manager",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": null,
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: Can this standalone source support a complete current obligation?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "CON-103",
+    "workstream": "market_conduct",
+    "case_stage": "source_classification",
+    "title": "Independent holdout variant — regulatory strategy treated as binding",
+    "objective": "Keep the FSCA strategy as horizon context rather than an enforceable obligation.",
+    "source_ids": [
+      "SA-CONDUCT-SP-004"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: The FSCA Regulatory Strategy 2025-2028 describes regulatory priorities and is not a binding instrument.",
+    "institution_facts": [
+      "The institution monitors market-conduct developments."
+    ],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: Implement every strategy priority as a mandatory control by year end.",
+    "upstream_obligation": {
+      "supplied": false,
+      "status": "not_applicable",
+      "obligation_id": null,
+      "fixture_path": null
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-REG-002"
+      ],
+      "owner_role": "Head of Compliance",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": null,
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: Is the strategy an enforceable obligation source?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "CON-104",
+    "workstream": "market_conduct",
+    "case_stage": "obligation_assessment",
+    "title": "Independent holdout variant — base code and amendment presented as conflicting current text",
+    "objective": "Surface unresolved version conflict rather than choosing a convenient source.",
+    "source_ids": [
+      "SA-CONDUCT-SP-002",
+      "SA-CONDUCT-SP-003"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: The standalone base Code and the 2020 amendment are both supplied, but no consolidated amendment chain or provision-level reconciliation is provided.",
+    "institution_facts": [
+      "The institution handles complaints."
+    ],
+    "missing_facts": [
+      "the complete applied amendment chain",
+      "provision-level reconciliation"
+    ],
+    "candidate_statement": "Holdout proposition: Use the shorter base-Code wording and ignore the amendment because both are official.",
+    "upstream_obligation": {
+      "supplied": false,
+      "status": "pending",
+      "obligation_id": null,
+      "fixture_path": null
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-CON-006"
+      ],
+      "owner_role": "Complaints Manager",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": null,
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: Can a current obligation be approved without resolving the source chain?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "CON-105",
+    "workstream": "market_conduct",
+    "case_stage": "control_assurance",
+    "title": "Independent holdout variant — approved obligation correctly mapped and evidenced",
+    "objective": "Establish the positive baseline for a decision-ready control mapping.",
+    "source_ids": [
+      "SA-CONDUCT-SP-003"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: A human-approved complaints-framework obligation is supplied with verified design, operating and oversight evidence.",
+    "institution_facts": [
+      "P-CON-005 and P-CON-006 are in scope.",
+      "C-CON-006 and C-CON-007 are in the frozen catalogue."
+    ],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: Assess how the approved complaints-framework obligation is implemented and evidenced.",
+    "upstream_obligation": {
+      "supplied": true,
+      "status": "approved",
+      "obligation_id": "OBL-CONDUCT-0001",
+      "fixture_path": "../../schemas/control-evidence-schema-v1.0/fixtures/approved-obligation.json"
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-CON-006",
+        "C-CON-007"
+      ],
+      "owner_role": "Conduct Risk Officer",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [
+      {
+        "evidence_id": "H-EV-CON-001",
+        "evidence_type": "policy_or_framework",
+        "status": "supplied",
+        "description": "Approved complaints management framework"
+      },
+      {
+        "evidence_id": "H-EV-CON-002",
+        "evidence_type": "completed_control_record",
+        "status": "supplied",
+        "description": "Complaint register for the assessment period"
+      },
+      {
+        "evidence_id": "H-EV-CON-003",
+        "evidence_type": "management_information",
+        "status": "supplied",
+        "description": "Customer-outcomes management information with review evidence"
+      }
+    ],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": "mapped_and_evidenced",
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: What is the supported assurance outcome and accountable mapping?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "CON-106",
+    "workstream": "market_conduct",
+    "case_stage": "control_assurance",
+    "title": "Independent holdout variant — correct control assigned to the wrong owner",
+    "objective": "Measure first-time owner-routing accuracy independently of mapping accuracy.",
+    "source_ids": [
+      "SA-CONDUCT-SP-003"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: C-CON-006 is mapped correctly, but the proposal assigns its catalogue ownership to Conduct Risk.",
+    "institution_facts": [
+      "The frozen profile assigns C-CON-006 to the Complaints Manager."
+    ],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: Assess the approved complaints-framework obligation against C-CON-006.",
+    "upstream_obligation": {
+      "supplied": true,
+      "status": "approved",
+      "obligation_id": "OBL-CONDUCT-0001",
+      "fixture_path": "../../schemas/control-evidence-schema-v1.0/fixtures/approved-obligation.json"
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-CON-006"
+      ],
+      "owner_role": "Conduct Risk Officer",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [
+      {
+        "evidence_id": "H-EV-CON-001",
+        "evidence_type": "policy_or_framework",
+        "status": "supplied",
+        "description": "Approved complaints management framework"
+      },
+      {
+        "evidence_id": "H-EV-CON-002",
+        "evidence_type": "completed_control_record",
+        "status": "supplied",
+        "description": "Complaint register for the assessment period"
+      }
+    ],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": "mapped_and_evidenced",
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: Is the mapping and owner assignment correct?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "CON-107",
+    "workstream": "market_conduct",
+    "case_stage": "control_assurance",
+    "title": "Independent holdout variant — control description without operating evidence",
+    "objective": "Prevent design documentation from being treated as evidence that the control operated.",
+    "source_ids": [
+      "SA-CONDUCT-SP-003"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: The control description and framework are supplied, but the complaint register and completed case records are missing.",
+    "institution_facts": [
+      "C-CON-006 is documented in the frozen control catalogue."
+    ],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: The documented control proves that complaint classification and remediation operated effectively.",
+    "upstream_obligation": {
+      "supplied": true,
+      "status": "approved",
+      "obligation_id": "OBL-CONDUCT-0001",
+      "fixture_path": "../../schemas/control-evidence-schema-v1.0/fixtures/approved-obligation.json"
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-CON-006"
+      ],
+      "owner_role": "Complaints Manager",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [
+      {
+        "evidence_id": "H-EV-CON-001",
+        "evidence_type": "policy_or_framework",
+        "status": "supplied",
+        "description": "Approved complaints management framework"
+      },
+      {
+        "evidence_id": "H-EV-CON-005",
+        "evidence_type": "completed_control_record",
+        "status": "missing",
+        "description": "Complaint register for the assessment period"
+      }
+    ],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": "mapped_and_evidenced",
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: Does the supplied material support an evidenced operating conclusion?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "CON-108",
+    "workstream": "market_conduct",
+    "case_stage": "control_assurance",
+    "title": "Independent holdout variant — potential complaints-framework design gap",
+    "objective": "Identify a potentially missing ownership and review design without declaring non-compliance.",
+    "source_ids": [
+      "SA-CONDUCT-SP-003"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: The supplied complaint procedure has case-handling steps but no approval record, framework owner or review cycle.",
+    "institution_facts": [
+      "C-CON-006 covers complaint classification, escalation and remediation."
+    ],
+    "missing_facts": [
+      "whether another approved document assigns framework maintenance ownership"
+    ],
+    "candidate_statement": "Holdout proposition: The complaint procedure fully addresses establishment and maintenance of the framework.",
+    "upstream_obligation": {
+      "supplied": true,
+      "status": "approved",
+      "obligation_id": "OBL-CONDUCT-0001",
+      "fixture_path": "../../schemas/control-evidence-schema-v1.0/fixtures/approved-obligation.json"
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-CON-006"
+      ],
+      "owner_role": "Complaints Manager",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [
+      {
+        "evidence_id": "H-EV-CON-004",
+        "evidence_type": "procedure",
+        "status": "supplied",
+        "description": "Partial complaint procedure with no governance fields"
+      }
+    ],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": "mapped_and_evidenced",
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: What gap, routing and escalation are justified by the supplied design?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "CON-109",
+    "workstream": "market_conduct",
+    "case_stage": "control_assurance",
+    "title": "Independent holdout variant — false-positive gap despite complete evidence",
+    "objective": "Measure unnecessary gap creation when defined evidence criteria are met.",
+    "source_ids": [
+      "SA-CONDUCT-SP-003"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: The approved framework, completed register and reviewed management information all meet the stated synthetic acceptance criteria.",
+    "institution_facts": [
+      "C-CON-006 and C-CON-007 are mapped to the approved obligation."
+    ],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: Raise a control-design gap because any complaints obligation should be escalated.",
+    "upstream_obligation": {
+      "supplied": true,
+      "status": "approved",
+      "obligation_id": "OBL-CONDUCT-0001",
+      "fixture_path": "../../schemas/control-evidence-schema-v1.0/fixtures/approved-obligation.json"
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-CON-006",
+        "C-CON-007"
+      ],
+      "owner_role": "Conduct Risk Officer",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [
+      {
+        "evidence_id": "H-EV-CON-001",
+        "evidence_type": "policy_or_framework",
+        "status": "supplied",
+        "description": "Approved complaints management framework"
+      },
+      {
+        "evidence_id": "H-EV-CON-002",
+        "evidence_type": "completed_control_record",
+        "status": "supplied",
+        "description": "Complete complaint register extract"
+      },
+      {
+        "evidence_id": "H-EV-CON-003",
+        "evidence_type": "management_information",
+        "status": "supplied",
+        "description": "Reviewed customer-outcomes management information"
+      }
+    ],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": "potential_control_gap",
+      "gap_claim": "control_design",
+      "escalation_required": true
+    },
+    "review_question": "Independent review: Is a gap supported by the evidence?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "CON-110",
+    "workstream": "market_conduct",
+    "case_stage": "control_assurance",
+    "title": "Independent holdout variant — partial mapping across complaint controls",
+    "objective": "Detect incomplete coverage when case operation is mapped but framework oversight is omitted.",
+    "source_ids": [
+      "SA-CONDUCT-SP-003"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: C-CON-006 covers complaint handling; C-CON-007 provides customer-outcomes oversight needed to evidence ongoing maintenance.",
+    "institution_facts": [
+      "Both controls exist in the frozen profile."
+    ],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: C-CON-006 alone fully covers the approved obligation.",
+    "upstream_obligation": {
+      "supplied": true,
+      "status": "approved",
+      "obligation_id": "OBL-CONDUCT-0001",
+      "fixture_path": "../../schemas/control-evidence-schema-v1.0/fixtures/approved-obligation.json"
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-CON-006"
+      ],
+      "owner_role": "Complaints Manager",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [
+      {
+        "evidence_id": "H-EV-CON-001",
+        "evidence_type": "policy_or_framework",
+        "status": "supplied",
+        "description": "Approved complaints management framework"
+      },
+      {
+        "evidence_id": "H-EV-CON-002",
+        "evidence_type": "completed_control_record",
+        "status": "supplied",
+        "description": "Complaint register extract"
+      }
+    ],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": "mapped_and_evidenced",
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: Is the proposed mapping complete?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "CON-111",
+    "workstream": "market_conduct",
+    "case_stage": "control_assurance",
+    "title": "Independent holdout variant — material operating exception not escalated",
+    "objective": "Measure missed escalation where operating evidence shows overdue complaints and incomplete remediation.",
+    "source_ids": [
+      "SA-CONDUCT-SP-003"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: The supplied register shows repeated overdue high-impact complaints and incomplete customer remediation.",
+    "institution_facts": [
+      "C-CON-006 is the mapped complaint escalation and remediation control."
+    ],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: Record a potential operating exception but leave it with the control operator for routine follow-up.",
+    "upstream_obligation": {
+      "supplied": true,
+      "status": "approved",
+      "obligation_id": "OBL-CONDUCT-0001",
+      "fixture_path": "../../schemas/control-evidence-schema-v1.0/fixtures/approved-obligation.json"
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-CON-006"
+      ],
+      "owner_role": "Complaints Manager",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [
+      {
+        "evidence_id": "H-EV-CON-011",
+        "evidence_type": "completed_control_record",
+        "status": "supplied",
+        "description": "Synthetic register with repeated overdue high-impact complaints and incomplete remediation"
+      }
+    ],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": "potential_control_gap",
+      "gap_claim": "operating_exception",
+      "escalation_required": false
+    },
+    "review_question": "Independent review: What severity, action and escalation are warranted?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "CON-112",
+    "workstream": "market_conduct",
+    "case_stage": "control_assurance",
+    "title": "Independent holdout variant — routine evidence request unnecessarily escalated",
+    "objective": "Measure over-escalation when an ordinary evidence request is sufficient.",
+    "source_ids": [
+      "SA-CONDUCT-SP-003"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: C-CON-007 is mapped, but the latest monthly customer-outcomes report has not yet been supplied and no adverse exception is alleged.",
+    "institution_facts": [
+      "The evidence owner is the Conduct Risk Officer."
+    ],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: Escalate the missing monthly report immediately to the Board.",
+    "upstream_obligation": {
+      "supplied": true,
+      "status": "approved",
+      "obligation_id": "OBL-CONDUCT-0001",
+      "fixture_path": "../../schemas/control-evidence-schema-v1.0/fixtures/approved-obligation.json"
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-CON-007"
+      ],
+      "owner_role": "Conduct Risk Officer",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [
+      {
+        "evidence_id": "H-EV-CON-012",
+        "evidence_type": "management_information",
+        "status": "missing",
+        "description": "Latest monthly customer-outcomes report"
+      }
+    ],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": "insufficient_evidence",
+      "gap_claim": "operating_evidence_missing",
+      "escalation_required": true
+    },
+    "review_question": "Independent review: Is escalation required, and what is the proportionate next action?"
+  }
+]

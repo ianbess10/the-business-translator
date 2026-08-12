@@ -1,0 +1,164 @@
+[
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "AML-101",
+    "workstream": "aml_cft",
+    "case_stage": "source_classification",
+    "title": "Independent holdout variant — current guidance kept as guidance",
+    "objective": "Test correct classification of current official guidance without creating a binding obligation.",
+    "source_ids": [
+      "SA-AML-SP-003"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: Guidance Note 7B is marked current official guidance and replaces Guidance Note 7A.",
+    "institution_facts": [
+      "The synthetic institution is assumed to be an accountable institution."
+    ],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: Use Guidance Note 7B as interpretive context for the risk-based approach and RMCP review.",
+    "upstream_obligation": {
+      "supplied": false,
+      "status": "not_applicable",
+      "obligation_id": null,
+      "fixture_path": null
+    },
+    "proposed_mapping": {
+      "control_ids": [],
+      "owner_role": null,
+      "mapping_status": null
+    },
+    "presented_evidence": [],
+    "proposal_under_test": {
+      "source_use_disposition": "guidance_only",
+      "obligation_outcome": "guidance_context",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": null,
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: How should the source be used and may it enter control assurance?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "AML-102",
+    "workstream": "aml_cft",
+    "case_stage": "source_classification",
+    "title": "Independent holdout variant — superseded guidance presented as current",
+    "objective": "Detect use of a superseded guidance note as current interpretive authority.",
+    "source_ids": [
+      "SA-AML-SP-004"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: Revised Guidance Note 7A has been replaced by Guidance Note 7B.",
+    "institution_facts": [],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: Treat Guidance Note 7A as the current basis for the RMCP refresh.",
+    "upstream_obligation": {
+      "supplied": false,
+      "status": "not_applicable",
+      "obligation_id": null,
+      "fixture_path": null
+    },
+    "proposed_mapping": {
+      "control_ids": [],
+      "owner_role": null,
+      "mapping_status": null
+    },
+    "presented_evidence": [],
+    "proposal_under_test": {
+      "source_use_disposition": "guidance_only",
+      "obligation_outcome": "guidance_context",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": null,
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: Should this source be used as current guidance?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "AML-103",
+    "workstream": "aml_cft",
+    "case_stage": "obligation_assessment",
+    "title": "Independent holdout variant — final directive with unverified commencement",
+    "objective": "Prevent a final-issued directive from being treated as in force before Gazette commencement is verified.",
+    "source_ids": [
+      "SA-AML-SP-005"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: Directive 10 clause 7 makes commencement dependent on Government Gazette publication, which was not verified at source-pack freeze.",
+    "institution_facts": [
+      "The institution has South African and cross-border customer relationships."
+    ],
+    "missing_facts": [
+      "Government Gazette publication date",
+      "the institution's exact Schedule 1 item"
+    ],
+    "candidate_statement": "Holdout proposition: Implement geographic-location information changes by 31 August 2026.",
+    "upstream_obligation": {
+      "supplied": false,
+      "status": "pending",
+      "obligation_id": null,
+      "fixture_path": null
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-AML-002",
+        "C-AML-003"
+      ],
+      "owner_role": "Head of Client Onboarding",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": null,
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: Can an implementation deadline and control mapping be approved now?"
+  },
+  {
+    "record_kind": "case_input",
+    "dataset_version": "holdout-1.0",
+    "case_id": "AML-104",
+    "workstream": "aml_cft",
+    "case_stage": "source_classification",
+    "title": "Independent holdout variant — draft directive treated as in force",
+    "objective": "Detect a consultation draft being promoted into an enforceable implementation requirement.",
+    "source_ids": [
+      "SA-AML-SP-W01"
+    ],
+    "source_excerpt_or_fact": "Independent synthetic formulation: Draft Directive 12 is consultation material and not an in-force directive.",
+    "institution_facts": [
+      "The institution maintains an RMCP."
+    ],
+    "missing_facts": [],
+    "candidate_statement": "Holdout proposition: Submit the RMCP under Directive 12 by the consultation deadline.",
+    "upstream_obligation": {
+      "supplied": false,
+      "status": "not_applicable",
+      "obligation_id": null,
+      "fixture_path": null
+    },
+    "proposed_mapping": {
+      "control_ids": [
+        "C-AML-001"
+      ],
+      "owner_role": "AML Compliance Officer",
+      "mapping_status": "mapped"
+    },
+    "presented_evidence": [],
+    "proposal_under_test": {
+      "source_use_disposition": "binding_candidate",
+      "obligation_outcome": "candidate_binding_obligation",
+      "applicability_status": "applicable_candidate",
+      "assurance_outcome": null,
+      "gap_claim": null,
+      "escalation_required": false
+    },
+    "review_question": "Independent review: Is this an in-force obligation or a watchlist item?"
+  }
+]
