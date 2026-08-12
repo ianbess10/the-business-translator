@@ -1,0 +1,35 @@
+{
+  "adjudication_id": "SA-REG-DUAL-AXIS-ADJUDICATION-001",
+  "version": "1.0",
+  "status": "approved_synthetic",
+  "scope_case_ids": ["CON-005", "CON-006", "CON-007", "CON-008", "CON-009", "CON-010", "CON-011", "CON-012"],
+  "authorities_applied": [
+    "SA-REG-COVERAGE-EVIDENCE-RULEBOOK-001/v1.0",
+    "SA-REG-ASSURANCE-COMPOSITION-001/v1.0"
+  ],
+  "method": "Independent case-by-case review of proposed controls and presented evidence against approved coverage elements, evidence requirements, composition, severity, routing and escalation rules.",
+  "findings": {
+    "entered_cases": 8,
+    "complete_coverage": 2,
+    "partial_coverage": 6,
+    "sufficient_evidence": 4,
+    "missing_operating_evidence": 2,
+    "design_deficiency": 1,
+    "adverse_operating_evidence": 1,
+    "legacy_fallback_permitted": false
+  },
+  "decision": "Publish a complete self-contained benchmark authority v1.2 and require future evaluators to fail closed if any entered case authority is missing, duplicated or invalid.",
+  "retrospective_scoring_permitted": false,
+  "approval": {
+    "author_role": "Regulatory Change Lead",
+    "author_id": "SYN-RCL-003",
+    "challenge_reviewer_role": "Independent Assurance",
+    "challenge_reviewer_id": "SYN-IA-003",
+    "challenge_status": "accepted",
+    "approver_role": "Head of Compliance",
+    "approver_id": "SYN-HC-004",
+    "approval_status": "accepted",
+    "approved_at": "2026-08-12T09:00:00+02:00",
+    "synthetic_identities": true
+  }
+}

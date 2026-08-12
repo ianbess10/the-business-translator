@@ -1,0 +1,10 @@
+{
+  "adjudication_id": "SA-REG-DUAL-AXIS-ADJUDICATION-001",
+  "version": "1.0",
+  "status": "approved_synthetic",
+  "adjudication_sha256": "07f6b068ca91581b13c7e8901bf83bf492f36b28abe0ff6496e6e35c56f0c266",
+  "rulebook_sha256": "62210904b7e6f85bf5f0693e2901dfcb024a290026d93f4eb0a2822d275630d9",
+  "composition_policy_sha256": "afc8beae98c3aae5c4ca668cd8ccdd375be95e5c0346e8cf2783614f1e3719d8",
+  "entered_case_count": 8,
+  "retrospective_scoring_permitted": false
+}
